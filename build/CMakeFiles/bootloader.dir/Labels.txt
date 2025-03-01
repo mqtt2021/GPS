@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/CMakeFiles/bootloader
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/CMakeFiles/bootloader.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/CMakeFiles/bootloader-complete.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

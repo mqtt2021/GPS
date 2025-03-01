@@ -1,0 +1,524 @@
+�) boot: Multicore boo�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 26 2025 23:29:01[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ea2ch ( 59948) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0001ea54 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001ea64 vaddr=3ffb0000 size=015b4h (  5556) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=2a19ch (172444) map[0m
+[0;32mI (205) esp_image: segment 4: paddr=0004a1c4 vaddr=3ffb15b4 size=00c7ch (  3196) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=0004ae48 vaddr=40080000 size=0eacch ( 60108) load[0m
+[0;32mI (236) esp_image: segment 6: paddr=0005991c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (236) esp_image: segment 7: paddr=00059988 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (249) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (249) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (265) cpu_start: Pro cpu up.[0m
+[0;32mI (265) cpu_start: Starting app cpu, entry point is 0x40081478[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (282) cpu_start: Pro cpu start user code[0m
+[0;32mI (282) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (283) cpu_start: Application information:[0m
+[0;32mI (287) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (293) cpu_start: App version:      1[0m
+[0;32mI (297) cpu_start: Compile time:     Feb 26 2025 23:28:57[0m
+[0;32mI (303) cpu_start: ELF file SHA256:  9bb37497617e137a...[0m
+[0;32mI (309) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (314) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (319) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (324) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (329) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (336) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (342) heap_init: At 3FFB2CC8 len 0002D338 (180 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (355) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (361) heap_init: At 4008EACC len 00011534 (69 KiB): IRAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (389) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (397) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (406) app_start: Starting scheduler on CPU0[0m
+[0;32mI (411) app_start: Starting scheduler on CPU1[0m
+[0;32mI (411) main_task: Started on CPU0[0m
+[0;32mI (421) main_task: Calling app_main()[0m
+[0;32mI (424) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (434) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (462) example: I2C initialized successfully[0m
+[0;32mI (466) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (479) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (484) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (489) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (1496) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1516) SIM_A7680C: Response: ERROR[0m
+[0;32mI (1516) SIM_A7680C: Total Response: AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+
+[0m
+[0;32mI (1518) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (1524) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (2530) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2550) SIM_A7680C: Response: OK[0m
+[0;32mI (2550) SIM_A7680C: Total Response: AT+CMQTTREL=0
+OK
+
+[0m
+[0;32mI (2550) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (2555) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+U�ѥ��ɕ�bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ea2ch ( 59948) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0001ea54 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001ea64 vaddr=3ffb0000 size=015b4h (  5556) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=2a19ch (172444) map[0m
+[0;32mI (205) esp_image: segment 4: paddr=0004a1c4 vaddr=3ffb15b4 size=00c7ch (  3196) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=0004ae48 vaddr=40080000 size=0eacch ( 60108) load[0m
+[0;32mI (236) esp_image: segment 6: paddr=0005991c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (236) esp_image: segment 7: paddr=00059988 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (249) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (249) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (265) cpu_start: Pro cpu up.[0m
+[0;32mI (265) cpu_start: Starting app cpu, entry point is 0x40081478[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (282) cpu_start: Pro cpu start user code[0m
+[0;32mI (282) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (283) cpu_start: Application information:[0m
+[0;32mI (287) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (293) cpu_start: App version:      1[0m
+[0;32mI (297) cpu_start: Compile time:     Feb 26 2025 23:28:57[0m
+[0;32mI (303) cpu_start: ELF file SHA256:  9bb37497617e137a...[0m
+[0;32mI (309) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (314) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (319) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (324) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (329) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (336) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (342) heap_init: At 3FFB2CC8 len 0002D338 (180 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (355) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (361) heap_init: At 4008EACC len 00011534 (69 KiB): IRAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (389) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (397) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (406) app_start: Starting scheduler on CPU0[0m
+[0;32mI (411) app_start: Starting scheduler on CPU1[0m
+[0;32mI (411) main_task: Started on CPU0[0m
+[0;32mI (421) main_task: Calling app_main()[0m
+[0;32mI (424) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (434) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (462) example: I2C initialized successfully[0m
+[0;32mI (466) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (479) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (484) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (489) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (1496) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1516) SIM_A7680C: Response: ERROR[0m
+[0;32mI (1516) SIM_A7680C: Total Response: AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+
+[0m
+[0;32mI (1518) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (1524) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (2530) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2550) SIM_A7680C: Response: ERROR[0m
+[0;32mI (2550) SIM_A7680C: Total Response: AT+CMQTTREL=0
+ERROR
+
+[0m
+[0;32mI (2550) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (2556) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (3562) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3582) SIM_A7680C: Response: ERROR[0m
+[0;32mI (3582) SIM_A7680C: Total Response: AT+CMQTTSTOP
+ERROR
+
+[0m
+[0;32mI (3582) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (3588) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4594) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4614) SIM_A7680C: Response: OK[0m
+[0;32mI (4614) SIM_A7680C: Total Response: AT+CMQTTSTART
+OK
+
++CMQTTSTART: 0
+
+[0m
+[0;32mI (4615) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (4621) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5627) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5647) SIM_A7680C: Response: OK[0m
+[0;32mI (5647) SIM_A7680C: Total Response: AT+CMQTTACCQ=0,"ESP32",0
+OK
+
+[0m
+[0;32mI (5647) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (5653) SIM_A7680C: Begin send AT command: tcp://52.140.102.169:1883
+[0m
+[0;32mI (6661) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6681) SIM_A7680C: Response: OK[0m
+[0;32mI (6681) SIM_A7680C: Total Response: AT+CMQTTCONNECT=0,"tcp://52.140.102.169:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+
+[0m
+[0;32mI (6685) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (6691) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;32mI (17727) SIM_A7680C: Total Response: AT+CMQTTTOPIC=0,15
+>
+[0m
+[0;32mI (17727) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (18749) SIM_A7680C: Response: OK[0m
+[0;32mI (18749) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (18749) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (29783) SIM_A7680C: Total Response: AT+CMQTTPAYLOAD=0,293
+>
+[0m
+[0;32mI (29783) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (30825) SIM_A7680C: Response: OK[0m
+[0;32mI (30825) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (30825) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (31849) SIM_A7680C: Response: OK[0m
+[0;32mI (31849) SIM_A7680C: Total Response: AT+CMQTTPUB=0,1,60,1
+OK
+
++CMQTTPUB: 0,0
+
+[0m
+[0;32mI (31850) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (31857) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (31862) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (31867) example: Starting Reading GPS Data[0m
+[0;32mI (31873) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (33878) example: Creating uart2_task...[0m
+[0;32mI (33878) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (33878) example: Creating uart0_task...[0m
+[0;32mI (33882) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+buffer chua xu li: AT+CMQTTSUBTOPIC=0,16,1
+>
+buffer sau xu li: AT+CMQTTSUBTOPIC=0,16,1
+[0;32mI (34889) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (44899) SIM_A7680C: No response or timeout[0m
+[0;32mI (44899) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+buffer chua xu li: >
+OK
+
+buffer sau xu li: >
+buffer sau xu li: OK
+[0;32mI (45899) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (55909) SIM_A7680C: No response or timeout[0m
+[0;32mI (55909) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+buffer chua xu li: AT+CMQTTSUB=0
+OK
+
+buffer sau xu li: AT+CMQTTSUB=0
+buffer sau xu li: OK
+buffer chua xu li: 
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+
+buffer sau xu li: 
+buffer sau xu li: +CMQTTSUB: 0,0
+buffer sau xu li: 
+buffer sau xu li: +CMQTTRXSTART: 0,16,148
+buffer sau xu li: +CMQTTRXTOPIC: 0,16
+buffer sau xu li: GPS/Setting/G001
+buffer sau xu li: +CMQTTRXPAYLOAD: 0,148
+buffer sau xu li: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
+buffer sau xu li: +CMQTTRXEND: 0
+[0;32mI (56909) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (66932) SIM_A7680C: No response or timeout[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277644
+CurrentTime: ܋@0
+AlarmTime: 
+BlueTooth: 
+[0;32mI (67437) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+buffer chua xu li: AT+CMQTTSUBTOPIC=0,16,1
+>
+buffer sau xu li: AT+CMQTTSUBTOPIC=0,16,1
+[0;32mI (68437) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (78462) SIM_A7680C: No response or timeout[0m
+[0;32mI (78462) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+buffer chua xu li: >
+OK
+
+buffer sau xu li: >
+buffer sau xu li: OK
+[0;32mI (79462) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (89472) SIM_A7680C: No response or timeout[0m
+[0;32mI (89472) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+buffer chua xu li: AT+CMQTTSUB=0
+OK
+
+buffer sau xu li: AT+CMQTTSUB=0
+buffer sau xu li: OK
+buffer chua xu li: 
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+
+buffer sau xu li: 
+buffer sau xu li: +CMQTTSUB: 0,0
+buffer sau xu li: 
+buffer sau xu li: +CMQTTRXSTART: 0,16,148
+buffer sau xu li: +CMQTTRXTOPIC: 0,16
+buffer sau xu li: GPS/Setting/G001
+buffer sau xu li: +CMQTTRXPAYLOAD: 0,148
+buffer sau xu li: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
+buffer sau xu li: +CMQTTRXEND: 0
+[0;32mI (90472) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (93889) example: Stopping UART tasks...[0m
+[0;32mI (94302) example: uart2_task exiting...[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400894ff  PS      : 0x00060333  A0      : 0x8008a3f3  A1      : 0x3ffb6910  
+A2      : 0x3ffba5d0  A3      : 0x00060320  A4      : 0x00000000  A5      : 0x00060323  
+A6      : 0xb33fffff  A7      : 0xb33fffff  A8      : 0x00000000  A9      : 0x3ffb24f0  
+A10     : 0x3ffb24f0  A11     : 0x00000000  A12     : 0x00000000  A13     : 0x3ffb6930  
+A14     : 0x3ffb6910  A15     : 0x0000000c  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000004  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x400894fc:0x3ffb6910 0x4008a3f0:0x3ffb6930 0x400d68be:0x3ffb6950 0x400d6ac4:0x3ffb6970 0x400f98e8:0x3ffb69c0 0x40088be2:0x3ffb69f0
+
+
+
+
+ELF file SHA256: 9bb37497617e137a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 26 2025 23:29:01[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ea2ch ( 59948) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0001ea54 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=0001ea64 vaddr=3ffb0000 size=015b4h (  5556) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=2a19ch (172444) map[0m
+[0;32mI (205) esp_image: segment 4: paddr=0004a1c4 vaddr=3ffb15b4 size=00c7ch (  3196) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=0004ae48 vaddr=40080000 size=0eacch ( 60108) load[0m
+[0;32mI (236) esp_image: segment 6: paddr=0005991c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (236) esp_image: segment 7: paddr=00059988 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (249) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (249) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (265) cpu_start: Pro cpu up.[0m
+[0;32mI (265) cpu_start: Starting app cpu, entry point is 0x40081478[0m
+[0;32mI (251) cpu_start: App cpu up.[0m
+[0;32mI (283) cpu_start: Pro cpu start user code[0m
+[0;32mI (283) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (283) cpu_start: Application information:[0m
+[0;32mI (287) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (293) cpu_start: App version:      1[0m
+[0;32mI (297) cpu_start: Compile time:     Feb 26 2025 23:28:57[0m
+[0;32mI (303) cpu_start: ELF file SHA256:  9bb37497617e137a...[0m
+[0;32mI (309) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (315) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (319) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (324) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (329) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (336) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (342) heap_init: At 3FFB2CC8 len 0002D338 (180 KiB): DRAM[0m
+[0;32mI (348) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (355) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (361) heap_init: At 4008EACC len 00011534 (69 KiB): IRAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (389) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (398) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (406) app_start: Starting scheduler on CPU0[0m
+[0;32mI (411) app_start: Starting scheduler on CPU1[0m
+[0;32mI (411) main_task: Started on CPU0[0m
+[0;32mI (421) main_task: Calling app_main()[0m
+[0;32mI (424) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (434) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (462) example: I2C initialized successfully[0m
+[0;32mI (466) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (479) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (484) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (489) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (1496) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1516) SIM_A7680C: Response: OK[0m
+[0;32mI (1516) SIM_A7680C: Total Response: AT+CMQTTDISC=0,60
+OK
+
++CMQTTDISC: 0,0
+
+[0m
+[0;32mI (1517) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (1523) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (2530) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2550) SIM_A7680C: Response: OK[0m
+[0;32mI (2550) SIM_A7680C: Total Response: AT+CMQTTREL=0
+OK
+
+[0m
+[0;32mI (2550) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (2555) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (3561) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3581) SIM_A7680C: Response: OK[0m
+[0;32mI (3581) SIM_A7680C: Total Response: AT+CMQTTSTOP
+OK
+
++CMQTTSTOP: 0
+
+[0m
+[0;32mI (3581) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (3588) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4594) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4614) SIM_A7680C: Response: OK[0m
+[0;32mI (4614) SIM_A7680C: Total Response: AT+CMQTTSTART
+OK
+
++CMQTTSTART: 0
+
+[0m
+[0;32mI (4615) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (4621) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5627) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5647) SIM_A7680C: Response: OK[0m
+[0;32mI (5647) SIM_A7680C: Total Response: AT+CMQTTACCQ=0,"ESP32",0
+OK
+
+[0m
+[0;32mI (5647) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (5653) SIM_A7680C: Begin send AT command: tcp://52.140.102.169:1883
+[0m
+[0;32mI (6661) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6681) SIM_A7680C: Response: OK[0m
+[0;32mI (6681) SIM_A7680C: Total Response: AT+CMQTTCONNECT=0,"tcp://52.140.102.169:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+
+[0m
+[0;32mI (6685) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (6691) SIM_A7680C: CONNECTED SUCESSFULLY[0m

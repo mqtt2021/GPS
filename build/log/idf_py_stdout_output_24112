@@ -1,0 +1,355 @@
+�� Multicore bootl�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 28 2025 01:27:19[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c82ch ( 51244) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0001c854 vaddr=3ffb0000 size=02220h (  8736) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001ea7c vaddr=40080000 size=0159ch (  5532) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1e620h (124448) map[0m
+[0;32mI (184) esp_image: segment 4: paddr=0003e648 vaddr=4008159c size=0c2bch ( 49852) load[0m
+[0;32mI (212) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (212) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Multicore app[0m
+[0;32mI (225) cpu_start: Pro cpu up.[0m
+[0;32mI (225) cpu_start: Starting app cpu, entry point is 0x40081244[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (242) cpu_start: Pro cpu start user code[0m
+[0;32mI (242) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (242) cpu_start: Application information:[0m
+[0;32mI (247) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (252) cpu_start: App version:      1[0m
+[0;32mI (256) cpu_start: Compile time:     Feb 28 2025 01:27:09[0m
+[0;32mI (263) cpu_start: ELF file SHA256:  0f0227d54478c63d...[0m
+[0;32mI (269) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (274) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (279) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (283) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (288) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (296) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (301) heap_init: At 3FFB2DE8 len 0002D218 (180 KiB): DRAM[0m
+[0;32mI (308) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (314) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (321) heap_init: At 4008D858 len 000127A8 (73 KiB): IRAM[0m
+[0;32mI (328) spi_flash: detected chip: generic[0m
+[0;32mI (331) spi_flash: flash io: dio[0m
+[0;33mW (335) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (348) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (357) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (366) app_start: Starting scheduler on CPU0[0m
+[0;32mI (370) app_start: Starting scheduler on CPU1[0m
+[0;32mI (370) main_task: Started on CPU0[0m
+[0;32mI (380) main_task: Calling app_main()[0m
+[0;32mI (383) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (392) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (402) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (411) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (421) example: I2C initialized successfully[0m
+[0;32mI (425) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (436) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (442) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (447) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (452) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (1459) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1459) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (2459) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2459) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (3459) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3459) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4459) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4459) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5459) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (6459) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6459) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;32mI (11459) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (11459) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (11459) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (11464) example: Creating uart2_task...[0m
+[0;32mI (11468) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (61475) example: Stopping UART tasks...[0m
+[0;32mI (61475) example: Waiting for UART tasks to stop...[0m
+[0;32mI (61975) example: uart2_task exiting...[0m
+[0;32mI (61975) example: UART tasks stopped.[0m
+[0;32mI (61975) example: READ_GPS_TASK finish[0m
+[0;32mI (61977) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (66988) example: Creating uart2_task...[0m
+[0;32mI (66988) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (116988) example: Stopping UART tasks...[0m
+[0;32mI (116988) example: Waiting for UART tasks to stop...[0m
+[0;32mI (117488) example: uart2_task exiting...[0m
+[0;32mI (117488) example: UART tasks stopped.[0m
+[0;32mI (117488) example: READ_GPS_TASK finish[0m
+[0;32mI (117490) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (122501) example: Creating uart2_task...[0m
+[0;32mI (122501) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (172501) example: Stopping UART tasks...[0m
+[0;32mI (172501) example: Waiting for UART tasks to stop...[0m
+[0;32mI (173001) example: uart2_task exiting...[0m
+[0;32mI (173001) example: UART tasks stopped.[0m
+[0;32mI (173001) example: READ_GPS_TASK finish[0m
+[0;32mI (173003) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (178014) example: Creating uart2_task...[0m
+[0;32mI (178014) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (228014) example: Stopping UART tasks...[0m
+[0;32mI (228014) example: Waiting for UART tasks to stop...[0m
+[0;32mI (228514) example: uart2_task exiting...[0m
+[0;32mI (228514) example: UART tasks stopped.[0m
+[0;32mI (228514) example: READ_GPS_TASK finish[0m
+[0;32mI (228516) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (233527) example: Creating uart2_task...[0m
+[0;32mI (233527) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (283527) example: Stopping UART tasks...[0m
+[0;32mI (283527) example: Waiting for UART tasks to stop...[0m
+[0;32mI (284027) example: uart2_task exiting...[0m
+[0;32mI (284027) example: UART tasks stopped.[0m
+[0;32mI (284027) example: READ_GPS_TASK finish[0m
+[0;32mI (284029) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (289040) example: Creating uart2_task...[0m
+[0;32mI (289040) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (339040) example: Stopping UART tasks...[0m
+[0;32mI (339040) example: Waiting for UART tasks to stop...[0m
+[0;32mI (339540) example: uart2_task exiting...[0m
+[0;32mI (339540) example: UART tasks stopped.[0m
+[0;32mI (339540) example: READ_GPS_TASK finish[0m
+[0;32mI (339542) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (344553) example: Creating uart2_task...[0m
+[0;32mI (344553) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (394553) example: Stopping UART tasks...[0m
+[0;32mI (394553) example: Waiting for UART tasks to stop...[0m
+[0;32mI (395053) example: uart2_task exiting...[0m
+[0;32mI (395053) example: UART tasks stopped.[0m
+[0;32mI (395053) example: READ_GPS_TASK finish[0m
+[0;32mI (395055) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (400066) example: Creating uart2_task...[0m
+[0;32mI (400066) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (450066) example: Stopping UART tasks...[0m
+[0;32mI (450066) example: Waiting for UART tasks to stop...[0m
+[0;32mI (450566) example: uart2_task exiting...[0m
+[0;32mI (450566) example: UART tasks stopped.[0m
+[0;32mI (450566) example: READ_GPS_TASK finish[0m
+[0;32mI (450568) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (455579) example: Creating uart2_task...[0m
+[0;32mI (455579) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (505579) example: Stopping UART tasks...[0m
+[0;32mI (505579) example: Waiting for UART tasks to stop...[0m
+[0;32mI (506079) example: uart2_task exiting...[0m
+[0;32mI (506079) example: UART tasks stopped.[0m
+[0;32mI (506079) example: READ_GPS_TASK finish[0m
+[0;32mI (506081) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (511092) example: Creating uart2_task...[0m
+[0;32mI (511092) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (561092) example: Stopping UART tasks...[0m
+[0;32mI (561092) example: Waiting for UART tasks to stop...[0m
+[0;32mI (561592) example: uart2_task exiting...[0m
+[0;32mI (561592) example: UART tasks stopped.[0m
+[0;32mI (561592) example: READ_GPS_TASK finish[0m
+[0;32mI (561594) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (566605) example: Creating uart2_task...[0m
+[0;32mI (566605) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (616605) example: Stopping UART tasks...[0m
+[0;32mI (616605) example: Waiting for UART tasks to stop...[0m
+[0;32mI (617105) example: uart2_task exiting...[0m
+[0;32mI (617105) example: UART tasks stopped.[0m
+[0;32mI (617105) example: READ_GPS_TASK finish[0m
+[0;32mI (617107) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (622118) example: Creating uart2_task...[0m
+[0;32mI (622118) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (672118) example: Stopping UART tasks...[0m
+[0;32mI (672118) example: Waiting for UART tasks to stop...[0m
+[0;32mI (672618) example: uart2_task exiting...[0m
+[0;32mI (672618) example: UART tasks stopped.[0m
+[0;32mI (672618) example: READ_GPS_TASK finish[0m
+[0;32mI (672620) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (677631) example: Creating uart2_task...[0m
+[0;32mI (677631) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (727631) example: Stopping UART tasks...[0m
+[0;32mI (727631) example: Waiting for UART tasks to stop...[0m
+[0;32mI (728131) example: uart2_task exiting...[0m
+[0;32mI (728131) example: UART tasks stopped.[0m
+[0;32mI (728131) example: READ_GPS_TASK finish[0m
+[0;32mI (728133) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (733144) example: Creating uart2_task...[0m
+[0;32mI (733144) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (783144) example: Stopping UART tasks...[0m
+[0;32mI (783144) example: Waiting for UART tasks to stop...[0m
+[0;32mI (783644) example: uart2_task exiting...[0m
+[0;32mI (783644) example: UART tasks stopped.[0m
+[0;32mI (783644) example: READ_GPS_TASK finish[0m
+[0;32mI (783646) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (788657) example: Creating uart2_task...[0m
+[0;32mI (788657) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (838657) example: Stopping UART tasks...[0m
+[0;32mI (838657) example: Waiting for UART tasks to stop...[0m
+[0;32mI (839157) example: uart2_task exiting...[0m
+[0;32mI (839157) example: UART tasks stopped.[0m
+[0;32mI (839157) example: READ_GPS_TASK finish[0m
+[0;32mI (839159) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (844170) example: Creating uart2_task...[0m
+[0;32mI (844170) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (894170) example: Stopping UART tasks...[0m
+[0;32mI (894170) example: Waiting for UART tasks to stop...[0m
+[0;32mI (894670) example: uart2_task exiting...[0m
+[0;32mI (894670) example: UART tasks stopped.[0m
+[0;32mI (894670) example: READ_GPS_TASK finish[0m
+[0;32mI (894672) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (899683) example: Creating uart2_task...[0m
+[0;32mI (899683) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (949683) example: Stopping UART tasks...[0m
+[0;32mI (949683) example: Waiting for UART tasks to stop...[0m
+[0;32mI (950183) example: uart2_task exiting...[0m
+[0;32mI (950183) example: UART tasks stopped.[0m
+[0;32mI (950183) example: READ_GPS_TASK finish[0m
+[0;32mI (950185) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (955196) MY_TIMER_MODULE: ✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------[0m
+[0;32mI (955197) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (955203) example: Creating uart2_task...[0m
+[0;32mI (955208) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1005214) example: Stopping UART tasks...[0m
+[0;32mI (1005214) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1005714) example: uart2_task exiting...[0m
+[0;32mI (1005714) example: UART tasks stopped.[0m
+[0;32mI (1005714) example: READ_GPS_TASK finish[0m
+[0;32mI (1005717) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1010728) example: Creating uart2_task...[0m
+[0;32mI (1010728) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1060728) example: Stopping UART tasks...[0m
+[0;32mI (1060728) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1061228) example: uart2_task exiting...[0m
+[0;32mI (1061228) example: UART tasks stopped.[0m
+[0;32mI (1061228) example: READ_GPS_TASK finish[0m
+[0;32mI (1061231) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1066241) example: Creating uart2_task...[0m
+[0;32mI (1066241) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1116241) example: Stopping UART tasks...[0m
+[0;32mI (1116241) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1116741) example: uart2_task exiting...[0m
+[0;32mI (1116741) example: UART tasks stopped.[0m
+[0;32mI (1116741) example: READ_GPS_TASK finish[0m
+[0;32mI (1116744) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1121754) example: Creating uart2_task...[0m
+[0;32mI (1121754) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1171754) example: Stopping UART tasks...[0m
+[0;32mI (1171754) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1172254) example: uart2_task exiting...[0m
+[0;32mI (1172254) example: UART tasks stopped.[0m
+[0;32mI (1172254) example: READ_GPS_TASK finish[0m
+[0;32mI (1172257) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1177267) example: Creating uart2_task...[0m
+[0;32mI (1177267) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1227267) example: Stopping UART tasks...[0m
+[0;32mI (1227267) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1227767) example: uart2_task exiting...[0m
+[0;32mI (1227767) example: UART tasks stopped.[0m
+[0;32mI (1227767) example: READ_GPS_TASK finish[0m
+[0;32mI (1227770) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1232780) example: Creating uart2_task...[0m
+[0;32mI (1232780) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1282780) example: Stopping UART tasks...[0m
+[0;32mI (1282780) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1283280) example: uart2_task exiting...[0m
+[0;32mI (1283280) example: UART tasks stopped.[0m
+[0;32mI (1283280) example: READ_GPS_TASK finish[0m
+[0;32mI (1283283) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1288293) example: Creating uart2_task...[0m
+[0;32mI (1288293) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1338293) example: Stopping UART tasks...[0m
+[0;32mI (1338293) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1338793) example: uart2_task exiting...[0m
+[0;32mI (1338793) example: UART tasks stopped.[0m
+[0;32mI (1338793) example: READ_GPS_TASK finish[0m
+[0;32mI (1338796) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1343806) example: Creating uart2_task...[0m
+[0;32mI (1343806) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1393806) example: Stopping UART tasks...[0m
+[0;32mI (1393806) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1394306) example: uart2_task exiting...[0m
+[0;32mI (1394306) example: UART tasks stopped.[0m
+[0;32mI (1394306) example: READ_GPS_TASK finish[0m
+[0;32mI (1394309) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1399319) example: Creating uart2_task...[0m
+[0;32mI (1399319) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1449319) example: Stopping UART tasks...[0m
+[0;32mI (1449319) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1449819) example: uart2_task exiting...[0m
+[0;32mI (1449819) example: UART tasks stopped.[0m
+[0;32mI (1449819) example: READ_GPS_TASK finish[0m
+[0;32mI (1449822) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1454832) example: Creating uart2_task...[0m
+[0;32mI (1454832) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1504832) example: Stopping UART tasks...[0m
+[0;32mI (1504832) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1505332) example: uart2_task exiting...[0m
+[0;32mI (1505332) example: UART tasks stopped.[0m
+[0;32mI (1505332) example: READ_GPS_TASK finish[0m
+[0;32mI (1505335) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1510345) example: Creating uart2_task...[0m
+[0;32mI (1510345) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1560345) example: Stopping UART tasks...[0m
+[0;32mI (1560345) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1560845) example: uart2_task exiting...[0m
+[0;32mI (1560845) example: UART tasks stopped.[0m
+[0;32mI (1560845) example: READ_GPS_TASK finish[0m
+[0;32mI (1560848) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1565858) example: Creating uart2_task...[0m
+[0;32mI (1565858) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1615858) example: Stopping UART tasks...[0m
+[0;32mI (1615858) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1616358) example: uart2_task exiting...[0m
+[0;32mI (1616358) example: UART tasks stopped.[0m
+[0;32mI (1616358) example: READ_GPS_TASK finish[0m
+[0;32mI (1616361) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1621371) example: Creating uart2_task...[0m
+[0;32mI (1621371) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1671371) example: Stopping UART tasks...[0m
+[0;32mI (1671371) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1671871) example: uart2_task exiting...[0m
+[0;32mI (1671871) example: UART tasks stopped.[0m
+[0;32mI (1671871) example: READ_GPS_TASK finish[0m
+[0;32mI (1671874) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1676884) example: Creating uart2_task...[0m
+[0;32mI (1676884) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1726884) example: Stopping UART tasks...[0m
+[0;32mI (1726884) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1727384) example: uart2_task exiting...[0m
+[0;32mI (1727384) example: UART tasks stopped.[0m
+[0;32mI (1727384) example: READ_GPS_TASK finish[0m
+[0;32mI (1727387) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1732397) example: Creating uart2_task...[0m
+[0;32mI (1732397) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (1782397) example: Stopping UART tasks...[0m
+[0;32mI (1782397) example: Waiting for UART tasks to stop...[0m
+[0;32mI (1782897) example: uart2_task exiting...[0m
+[0;32mI (1782897) example: UART tasks stopped.[0m
+[0;32mI (1782897) example: READ_GPS_TASK finish[0m
+[0;32mI (1782900) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (1787910) example: Creating uart2_task...[0m
+[0;32mI (1787910) example: Start uart2_task, monitoring UART2 data...[0m

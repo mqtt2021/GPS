@@ -1,0 +1,3282 @@
+: Multicore bootloaderets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 27 2025 17:00:40[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dc5ch ( 56412) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001dc84 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001dc94 vaddr=3ffb0000 size=02230h (  8752) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0001fecc vaddr=40080000 size=0014ch (   332) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=22f3ch (143164) map[0m
+[0;32mI (201) esp_image: segment 5: paddr=00042f64 vaddr=4008014c size=0e7fch ( 59388) load[0m
+[0;32mI (226) esp_image: segment 6: paddr=00051768 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (227) esp_image: segment 7: paddr=000517d4 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (240) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (255) cpu_start: Multicore app[0m
+[0;32mI (256) cpu_start: Pro cpu up.[0m
+[0;32mI (256) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (273) cpu_start: Pro cpu start user code[0m
+[0;32mI (273) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (273) cpu_start: Application information:[0m
+[0;32mI (278) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (283) cpu_start: App version:      1[0m
+[0;32mI (288) cpu_start: Compile time:     Feb 27 2025 17:00:30[0m
+[0;32mI (294) cpu_start: ELF file SHA256:  4f554c4d72a0f582...[0m
+[0;32mI (300) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (305) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (310) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (315) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (320) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (327) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (333) heap_init: At 3FFB2E48 len 0002D1B8 (180 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (345) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (352) heap_init: At 4008E948 len 000116B8 (69 KiB): IRAM[0m
+[0;32mI (360) spi_flash: detected chip: generic[0m
+[0;32mI (363) spi_flash: flash io: dio[0m
+[0;33mW (367) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (380) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (388) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (397) app_start: Starting scheduler on CPU0[0m
+[0;32mI (402) app_start: Starting scheduler on CPU1[0m
+[0;32mI (402) main_task: Started on CPU0[0m
+[0;32mI (412) main_task: Calling app_main()[0m
+[0;32mI (415) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (425) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (434) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (453) example: I2C initialized successfully[0m
+[0;32mI (457) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (468) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (474) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (479) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (484) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (599) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (599) SIM_A7680C: 📩 Received Data:
+AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+[0m
+[0;32mI (1491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1491) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (1596) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (1596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTREL=0
+ERROR
+[0m
+[0;32mI (2491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2491) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;33mW (2596) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTOP
+ERROR
+[0m
+[0;32mI (3491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3491) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (3596) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (3596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTART
+OK
+[0m
+[0;32mI (4491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4491) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (4598) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (4598) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+AT+CMQTTACCQ=0,"ESP32",0
+OK
+[0m
+[0;32mI (5491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5823) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (5823) SIM_A7680C: 📩 Received Data:
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+[0m
+[0;32mI (6491) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6491) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;32mI (7596) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (7596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (9620) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (9620) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (10598) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (10598) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (11492) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (11492) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (11492) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (11497) example: Creating uart2_task...[0m
+[0;32mI (11501) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (11508) example: Creating uart0_task...[0m
+[0;32mI (11513) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (12520) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (12520) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (12625) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (12625) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (13520) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (13520) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (13625) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (13625) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (14520) SIM_A7680C: Begin read_uart_response[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (17704) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (17704) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,149
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,149
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (21845) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (21845) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (25945) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (25945) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (30045) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (30045) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (34145) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (34145) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (38245) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (38245) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (42345) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (42345) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (46445) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (46445) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (50545) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (50545) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (54645) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (54645) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;32mI (61520) example: Stopping UART tasks...[0m
+[0;32mI (61520) example: Waiting for UART tasks to stop...[0m
+[0;32mI (61897) example: uart0_task exiting...[0m
+[0;32mI (62008) example: uart2_task exiting...[0m
+[0;32mI (62020) example: UART tasks stopped.[0m
+[0;32mI (62020) example: READ_GPS_TASK finish[0m
+[0;32mI (62020) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (63133) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (63133) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (65157) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (65157) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (66135) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (66135) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (67029) example: Creating uart2_task...[0m
+[0;32mI (67029) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (67029) example: Creating uart0_task...[0m
+[0;32mI (67034) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (68040) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (68040) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (68145) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (68145) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (69040) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (69040) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (69145) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (69145) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (70040) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (73220) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (73220) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,149
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,149
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (77361) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (77361) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (81461) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (81461) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (85561) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (85561) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (89661) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (89661) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (93761) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (93761) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (97861) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (97861) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (101961) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (101961) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;32mI (117040) example: Stopping UART tasks...[0m
+[0;32mI (117040) example: Waiting for UART tasks to stop...[0m
+[0;32mI (117421) example: uart0_task exiting...[0m
+[0;32mI (117529) example: uart2_task exiting...[0m
+[0;32mI (117540) example: UART tasks stopped.[0m
+[0;32mI (117540) example: READ_GPS_TASK finish[0m
+[0;32mI (117540) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (118653) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (118653) SIM_A7680C: 📩 Received Data:
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (120677) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (120677) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (121655) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (121655) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (122549) example: Creating uart2_task...[0m
+[0;32mI (122549) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (122549) example: Creating uart0_task...[0m
+[0;32mI (122554) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (123561) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (123561) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (123666) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (123666) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (124561) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (124561) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (124666) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (124666) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (125561) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (128702) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (128702) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (132843) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (132843) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (136943) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (136943) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (141043) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (141043) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (145143) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (145143) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (149243) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (149243) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (153343) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (153343) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (157443) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (157443) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (161543) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (161543) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (165643) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (165643) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (169743) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (169743) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;32mI (172561) example: Stopping UART tasks...[0m
+[0;32mI (172561) example: Waiting for UART tasks to stop...[0m
+[0;32mI (172942) example: uart0_task exiting...[0m
+[0;32mI (173049) example: uart2_task exiting...[0m
+[0;32mI (173061) example: UART tasks stopped.[0m
+[0;32mI (173061) example: READ_GPS_TASK finish[0m
+[0;32mI (173061) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (174174) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (174174) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (176198) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (176198) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (177176) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (177176) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (178070) example: Creating uart2_task...[0m
+[0;32mI (178070) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (178070) example: Creating uart0_task...[0m
+[0;32mI (178075) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (179082) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (179082) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (179187) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (179187) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (180082) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (180082) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (180187) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (180187) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (181082) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (184271) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (184271) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (188412) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (188412) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (192512) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (192512) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (196612) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (196612) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (200712) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (200712) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (204812) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (204812) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (208912) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (208912) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (213012) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (213012) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;32mI (228082) example: Stopping UART tasks...[0m
+[0;32mI (228082) example: Waiting for UART tasks to stop...[0m
+[0;32mI (228463) example: uart0_task exiting...[0m
+[0;32mI (228570) example: uart2_task exiting...[0m
+[0;32mI (228582) example: UART tasks stopped.[0m
+[0;32mI (228582) example: READ_GPS_TASK finish[0m
+[0;32mI (228582) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (229695) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (229695) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
++CMQTTRXSTART: 0,16,149
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,149
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
++CMQTTRXEND: 0
+
+OK
+[0m
+[0;32mI (231719) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (231719) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (232697) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (232697) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (233591) example: Creating uart2_task...[0m
+[0;32mI (233591) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (233591) example: Creating uart0_task...[0m
+[0;32mI (233596) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (234603) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (234603) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (234708) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (234708) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (235603) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (235603) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (235708) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (235708) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (236603) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'on'
+Bật BUZZER
+[0;33mW (239715) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (239715) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,149
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,149
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"off"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (243856) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (243856) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (247956) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (247956) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (252032) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (252032) SIM_A7680C: 📩 Received Data:
+
+*ATREADY: 1
+
+*ISIMAID: "A0000000871004FFFFF00189000001FF"
+
++CPIN: READY
+
+SMS DONE
+
++SMS FULL
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (256098) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (256098) SIM_A7680C: 📩 Received Data:
+
++CGEV: NW PDN ACT 1
+
++CCIOTOPTI: 1
+
++CGEV: ME PDN ACT 8,4
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (260139) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (260139) SIM_A7680C: 📩 Received Data:
+
+*ATREADY: 1
+
+*ISIMAID: "A0000000871004FFFFF00189000001FF"
+
++CPIN: READY
+
+SMS DONE
+
++SMS FULL
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (264172) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (264172) SIM_A7680C: 📩 Received Data:
+
++CGEV: NW PDN ACT 1
+
++CCIOTOPTI: 1
+
++CGEV: ME PDN ACT 8,4
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (268277) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (268277) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (272377) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (272377) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (276477) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (276477) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (280577) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (280577) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;32mI (283603) example: Stopping UART tasks...[0m
+[0;32mI (283603) example: Waiting for UART tasks to stop...[0m
+[0;32mI (283984) example: uart0_task exiting...[0m
+[0;32mI (284091) example: uart2_task exiting...[0m
+[0;32mI (284103) example: UART tasks stopped.[0m
+[0;32mI (284103) example: READ_GPS_TASK finish[0m
+[0;32mI (284103) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (284218) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (284218) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+ERROR
+[0m
+[0;33mW (285217) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (285217) SIM_A7680C: 📩 Received Data:
+GPS/Status/G001
+ERROR
+[0m
+[0;33mW (286218) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (286218) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+ERROR
+[0m
+[0;33mW (287242) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (287242) SIM_A7680C: 📩 Received Data:
+[{"name":"Latitude","value":9094,"timestamp":""},{"name":"Longitude","value":0.00000,"timestamp":""},{"name":"Battery","value":"0%","timestamp":""},{"name":"Stolen","value":false,"timestamp":""},{"name":"Bluetooth","value":false,"timestamp":""},{"name":"Move","value":false,"timestamp":""}]
+ERROR
+[0m
+[0;33mW (288218) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (288218) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+ERROR
+[0m
+[0;32mI (289112) example: Creating uart2_task...[0m
+[0;32mI (289112) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (289112) example: Creating uart0_task...[0m
+[0;32mI (289117) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;33mW (289231) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (289231) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUBTOPIC=0,16,1
+ERROR
+[0m
+[0;32mI (290124) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (290124) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (291124) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (291124) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;33mW (291229) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (291229) SIM_A7680C: 📩 Received Data:
+GPS/Setting/G001AT+CMQTTSUB=0
+ERROR
+[0m
+start NULL
+[0;32mI (292124) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (295332) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (295332) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (299432) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (299432) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (303532) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (303532) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (307632) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (307632) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (311732) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (311732) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (315832) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (315832) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (319932) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (319932) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (324032) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (324032) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;33mW (328132) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (328132) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: off
+🔊 Bật BUZZER - BlueTooth có dữ liệu: 'off'
+Tắt BUZZER
+[0;32mI (339124) example: Stopping UART tasks...[0m
+[0;32mI (339124) example: Waiting for UART tasks to stop...[0m
+[0;32mI (339505) example: uart0_task exiting...[0m
+[0;32mI (339612) example: uart2_task exiting...[0m
+[0;32mI (339624) example: UART tasks stopped.[0m
+[0;32mI (339624) example: READ_GPS_TASK finish[0m
+[0;32mI (339624) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (339739) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (339739) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+ERROR
+[0m
+[0;33mW (340738) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (340738) SIM_A7680C: 📩 Received Data:
+GPS/Status/G001
+ERROR
+[0m
+[0;33mW (341739) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (341739) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+ERROR
+[0m
+[0;33mW (342763) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (342763) SIM_A7680C: 📩 Received Data:
+[{"name":"Latitude","value":9095,"timestamp":""},{"name":"Longitude","value":0.00000,"timestamp":""},{"name":"Battery","value":"0%","timestamp":""},{"name":"Stolen","value":false,"timestamp":""},{"name":"Bluetooth","value":false,"timestamp":""},{"name":"Move","value":false,"timestamp":""}]
+ERROR
+[0m
+[0;33mW (343739) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (343739) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+ERROR
+[0m
+[0;32mI (344633) MY_TIMER_MODULE: ✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------[0m
+[0;32mI (344634) example: Checking dif_location condition...[0m
+[0;32mI (344640) example: Safe Location => Go to deep sleep.[0m
+[0;32mI (344646) i2c-tools: 🚀 Bắt đầu lại timer...[0m
+[0;32mI (345652) i2c-tools: Gyro Offset: X=28748.00, Y=16447.00, Z=-12182.00[0m
+[0;32mI (345653) i2c-tools: Roll: 2.76°  Pitch: -4.01°  Yaw: 0.02°[0m
+[0;32mI (345665) i2c-tools: Roll: 4.69°  Pitch: -8.07°  Yaw: 0.05°[0m
+[0;32mI (345675) i2c-tools: Roll: 7.23°  Pitch: -11.67°  Yaw: 0.07°[0m
+[0;32mI (345685) i2c-tools: Roll: 9.51°  Pitch: -15.14°  Yaw: 0.10°[0m
+[0;32mI (345696) i2c-tools: Roll: 11.56°  Pitch: -18.48°  Yaw: 0.12°[0m
+[0;32mI (345706) i2c-tools: Roll: 13.75°  Pitch: -21.56°  Yaw: 0.15°[0m
+[0;32mI (345716) i2c-tools: Roll: 15.83°  Pitch: -24.49°  Yaw: 0.17°[0m
+[0;32mI (345726) i2c-tools: Roll: 17.80°  Pitch: -27.28°  Yaw: 0.19°[0m
+[0;32mI (345736) i2c-tools: Roll: 19.67°  Pitch: -29.92°  Yaw: 0.22°[0m
+[0;32mI (345746) i2c-tools: Roll: 21.45°  Pitch: -32.43°  Yaw: 0.24°[0m
+[0;32mI (345756) i2c-tools: Roll: 23.14°  Pitch: -34.82°  Yaw: 0.26°[0m
+[0;32mI (345766) i2c-tools: Roll: 24.75°  Pitch: -37.09°  Yaw: 0.29°[0m
+[0;32mI (345776) i2c-tools: Roll: 26.28°  Pitch: -39.24°  Yaw: 0.31°[0m
+[0;32mI (345786) i2c-tools: Roll: 27.62°  Pitch: -41.33°  Yaw: 0.33°[0m
+[0;32mI (345797) i2c-tools: Roll: 28.75°  Pitch: -43.36°  Yaw: 0.36°[0m
+[0;32mI (345807) i2c-tools: Roll: 30.08°  Pitch: -45.20°  Yaw: 0.38°[0m
+[0;32mI (345817) i2c-tools: Roll: 31.34°  Pitch: -46.95°  Yaw: 0.41°[0m
+[0;32mI (345827) i2c-tools: Roll: 32.54°  Pitch: -48.61°  Yaw: 0.43°[0m
+[0;32mI (345837) i2c-tools: Roll: 33.68°  Pitch: -50.19°  Yaw: 0.45°[0m
+[0;32mI (345847) i2c-tools: Roll: 34.75°  Pitch: -51.69°  Yaw: 0.47°[0m
+[0;32mI (345857) i2c-tools: Roll: 35.78°  Pitch: -53.11°  Yaw: 0.50°[0m
+[0;32mI (345867) i2c-tools: Roll: 36.75°  Pitch: -54.46°  Yaw: 0.52°[0m
+[0;32mI (345877) i2c-tools: Roll: 37.68°  Pitch: -55.75°  Yaw: 0.54°[0m
+[0;32mI (345887) i2c-tools: Roll: 38.46°  Pitch: -57.01°  Yaw: 0.57°[0m
+[0;32mI (345898) i2c-tools: Roll: 39.05°  Pitch: -58.26°  Yaw: 0.59°[0m
+[0;32mI (345908) i2c-tools: Roll: 39.86°  Pitch: -59.35°  Yaw: 0.62°[0m
+[0;32mI (345918) i2c-tools: Roll: 40.63°  Pitch: -60.39°  Yaw: 0.64°[0m
+[0;32mI (345928) i2c-tools: Roll: 41.36°  Pitch: -61.38°  Yaw: 0.66°[0m
+[0;32mI (345938) i2c-tools: Roll: 42.06°  Pitch: -62.32°  Yaw: 0.69°[0m
+[0;32mI (345948) i2c-tools: Roll: 42.72°  Pitch: -63.21°  Yaw: 0.71°[0m
+[0;32mI (345958) i2c-tools: Roll: 43.35°  Pitch: -64.06°  Yaw: 0.73°[0m
+[0;32mI (345968) i2c-tools: Roll: 43.94°  Pitch: -64.87°  Yaw: 0.76°[0m
+[0;32mI (345978) i2c-tools: Roll: 44.51°  Pitch: -65.63°  Yaw: 0.78°[0m
+[0;32mI (345988) i2c-tools: Roll: 44.94°  Pitch: -66.40°  Yaw: 0.80°[0m
+[0;32mI (345999) i2c-tools: Roll: 45.21°  Pitch: -67.18°  Yaw: 0.83°[0m
+[0;32mI (346009) i2c-tools: Roll: 45.71°  Pitch: -67.83°  Yaw: 0.85°[0m
+[0;32mI (346019) i2c-tools: Roll: 46.19°  Pitch: -68.44°  Yaw: 0.88°[0m
+[0;32mI (346029) i2c-tools: Roll: 46.65°  Pitch: -69.03°  Yaw: 0.90°[0m
+[0;32mI (346039) i2c-tools: Roll: 47.08°  Pitch: -69.59°  Yaw: 0.92°[0m
+[0;32mI (346049) i2c-tools: Roll: 47.49°  Pitch: -70.12°  Yaw: 0.95°[0m
+[0;32mI (346059) i2c-tools: Roll: 47.88°  Pitch: -70.62°  Yaw: 0.97°[0m
+[0;32mI (346069) i2c-tools: Roll: 48.25°  Pitch: -71.10°  Yaw: 0.99°[0m
+[0;32mI (346079) i2c-tools: Roll: 48.60°  Pitch: -71.55°  Yaw: 1.02°[0m
+[0;32mI (346089) i2c-tools: Roll: 48.83°  Pitch: -72.02°  Yaw: 1.04°[0m
+[0;32mI (346100) i2c-tools: Roll: 48.90°  Pitch: -72.52°  Yaw: 1.06°[0m
+[0;32mI (346110) i2c-tools: Roll: 49.22°  Pitch: -72.90°  Yaw: 1.09°[0m
+[0;32mI (346120) i2c-tools: Roll: 49.52°  Pitch: -73.26°  Yaw: 1.11°[0m
+[0;32mI (346130) i2c-tools: Roll: 49.81°  Pitch: -73.61°  Yaw: 1.13°[0m
+[0;32mI (346140) i2c-tools: Roll: 50.05°  Pitch: -73.95°  Yaw: 1.16°[0m
+[0;32mI (346150) i2c-tools: Roll: 50.34°  Pitch: -74.25°  Yaw: 1.18°[0m
+[0;32mI (346160) i2c-tools: Roll: 50.59°  Pitch: -74.54°  Yaw: 1.20°[0m
+[0;32mI (346170) i2c-tools: Roll: 50.83°  Pitch: -74.82°  Yaw: 1.23°[0m
+[0;32mI (346180) i2c-tools: Roll: 51.05°  Pitch: -75.09°  Yaw: 1.25°[0m
+[0;32mI (346190) i2c-tools: Roll: 51.15°  Pitch: -75.38°  Yaw: 1.27°[0m
+[0;32mI (346201) i2c-tools: Roll: 51.11°  Pitch: -75.71°  Yaw: 1.30°[0m
+[0;32mI (346211) i2c-tools: Roll: 51.32°  Pitch: -75.94°  Yaw: 1.32°[0m
+[0;32mI (346221) i2c-tools: Roll: 51.52°  Pitch: -76.15°  Yaw: 1.35°[0m
+[0;32mI (346231) i2c-tools: Roll: 51.70°  Pitch: -76.35°  Yaw: 1.37°[0m
+[0;32mI (346241) i2c-tools: Roll: 51.89°  Pitch: -76.54°  Yaw: 1.39°[0m
+[0;32mI (346251) i2c-tools: Roll: 52.05°  Pitch: -76.72°  Yaw: 1.42°[0m
+[0;32mI (346261) i2c-tools: Roll: 52.22°  Pitch: -76.89°  Yaw: 1.44°[0m
+[0;32mI (346271) i2c-tools: Roll: 52.37°  Pitch: -77.06°  Yaw: 1.46°[0m
+[0;32mI (346281) i2c-tools: Roll: 52.52°  Pitch: -77.21°  Yaw: 1.49°[0m
+[0;32mI (346291) i2c-tools: Roll: 52.55°  Pitch: -77.40°  Yaw: 1.51°[0m
+[0;32mI (346302) i2c-tools: Roll: 52.43°  Pitch: -77.63°  Yaw: 1.53°[0m
+[0;32mI (346312) i2c-tools: Roll: 52.57°  Pitch: -77.76°  Yaw: 1.56°[0m
+[0;32mI (346322) i2c-tools: Roll: 52.71°  Pitch: -77.88°  Yaw: 1.58°[0m
+[0;32mI (346332) i2c-tools: Roll: 52.84°  Pitch: -77.99°  Yaw: 1.60°[0m
+[0;32mI (346342) i2c-tools: Roll: 52.96°  Pitch: -78.10°  Yaw: 1.63°[0m
+[0;32mI (346352) i2c-tools: Roll: 53.07°  Pitch: -78.20°  Yaw: 1.65°[0m
+[0;32mI (346362) i2c-tools: Roll: 53.19°  Pitch: -78.30°  Yaw: 1.67°[0m
+[0;32mI (346372) i2c-tools: Roll: 53.29°  Pitch: -78.40°  Yaw: 1.70°[0m
+[0;32mI (346382) i2c-tools: Roll: 53.39°  Pitch: -78.48°  Yaw: 1.72°[0m
+[0;32mI (346392) i2c-tools: Roll: 53.38°  Pitch: -78.61°  Yaw: 1.74°[0m
+[0;32mI (346403) i2c-tools: Roll: 53.22°  Pitch: -78.77°  Yaw: 1.77°[0m
+[0;32mI (346413) i2c-tools: Roll: 53.33°  Pitch: -78.84°  Yaw: 1.79°[0m
+[0;32mI (346423) i2c-tools: Roll: 53.43°  Pitch: -78.91°  Yaw: 1.82°[0m
+[0;32mI (346433) i2c-tools: Roll: 53.52°  Pitch: -78.97°  Yaw: 1.84°[0m
+[0;32mI (346443) i2c-tools: Roll: 53.61°  Pitch: -79.03°  Yaw: 1.86°[0m
+[0;32mI (346453) i2c-tools: Roll: 53.69°  Pitch: -79.09°  Yaw: 1.89°[0m
+[0;32mI (346463) i2c-tools: Roll: 53.77°  Pitch: -79.14°  Yaw: 1.91°[0m
+[0;32mI (346473) i2c-tools: Roll: 53.84°  Pitch: -79.20°  Yaw: 1.93°[0m
+[0;32mI (346483) i2c-tools: Roll: 53.92°  Pitch: -79.24°  Yaw: 1.96°[0m
+[0;32mI (346493) i2c-tools: Roll: 53.88°  Pitch: -79.33°  Yaw: 1.98°[0m
+[0;32mI (346504) i2c-tools: Roll: 53.70°  Pitch: -79.46°  Yaw: 2.01°[0m
+[0;32mI (346514) i2c-tools: Roll: 53.78°  Pitch: -79.50°  Yaw: 2.03°[0m
+[0;32mI (346524) i2c-tools: Roll: 53.86°  Pitch: -79.53°  Yaw: 2.05°[0m
+[0;32mI (346534) i2c-tools: Roll: 53.92°  Pitch: -79.56°  Yaw: 2.07°[0m
+[0;32mI (346544) i2c-tools: Roll: 53.99°  Pitch: -79.59°  Yaw: 2.10°[0m
+[0;32mI (346554) i2c-tools: Roll: 54.05°  Pitch: -79.62°  Yaw: 2.12°[0m
+[0;32mI (346564) i2c-tools: Roll: 54.12°  Pitch: -79.65°  Yaw: 2.14°[0m
+[0;32mI (346574) i2c-tools: Roll: 54.18°  Pitch: -79.68°  Yaw: 2.17°[0m
+[0;32mI (346584) i2c-tools: Roll: 54.23°  Pitch: -79.70°  Yaw: 2.19°[0m
+[0;32mI (346594) i2c-tools: Roll: 54.18°  Pitch: -79.76°  Yaw: 2.22°[0m
+[0;32mI (346605) i2c-tools: Roll: 53.98°  Pitch: -79.87°  Yaw: 2.24°[0m
+[0;32mI (346615) i2c-tools: Roll: 54.05°  Pitch: -79.89°  Yaw: 2.26°[0m
+[0;32mI (346625) i2c-tools: Roll: 54.11°  Pitch: -79.90°  Yaw: 2.29°[0m
+[0;32mI (346635) i2c-tools: Roll: 54.17°  Pitch: -79.91°  Yaw: 2.31°[0m
+[0;32mI (346645) i2c-tools: Roll: 54.23°  Pitch: -79.93°  Yaw: 2.33°[0m
+[0;32mI (346655) i2c-tools: Roll: 54.27°  Pitch: -79.94°  Yaw: 2.36°[0m
+[0;32mI (346665) i2c-tools: Roll: 54.33°  Pitch: -79.95°  Yaw: 2.38°[0m
+[0;32mI (346675) i2c-tools: Roll: 54.37°  Pitch: -79.96°  Yaw: 2.40°[0m
+[0;32mI (346685) i2c-tools: Roll: 54.42°  Pitch: -79.97°  Yaw: 2.43°[0m
+[0;32mI (346695) i2c-tools: Roll: 54.36°  Pitch: -80.02°  Yaw: 2.45°[0m
+[0;32mI (346706) i2c-tools: Roll: 54.15°  Pitch: -80.12°  Yaw: 2.48°[0m
+[0;32mI (346716) i2c-tools: Roll: 54.21°  Pitch: -80.12°  Yaw: 2.50°[0m
+[0;32mI (346726) i2c-tools: Roll: 54.26°  Pitch: -80.12°  Yaw: 2.52°[0m
+[0;32mI (346736) i2c-tools: Roll: 54.31°  Pitch: -80.13°  Yaw: 2.55°[0m
+[0;32mI (346746) i2c-tools: Roll: 54.36°  Pitch: -80.13°  Yaw: 2.57°[0m
+[0;32mI (346756) i2c-tools: Roll: 54.40°  Pitch: -80.13°  Yaw: 2.59°[0m
+[0;32mI (346766) i2c-tools: Roll: 54.45°  Pitch: -80.13°  Yaw: 2.62°[0m
+[0;32mI (346776) i2c-tools: Roll: 54.49°  Pitch: -80.13°  Yaw: 2.64°[0m
+[0;32mI (346786) i2c-tools: Roll: 54.53°  Pitch: -80.13°  Yaw: 2.66°[0m
+[0;32mI (346796) i2c-tools: Roll: 54.46°  Pitch: -80.18°  Yaw: 2.69°[0m
+[0;32mI (346807) i2c-tools: Roll: 54.25°  Pitch: -80.27°  Yaw: 2.71°[0m
+[0;32mI (346817) i2c-tools: Roll: 54.31°  Pitch: -80.26°  Yaw: 2.73°[0m
+[0;32mI (346827) i2c-tools: Roll: 54.36°  Pitch: -80.26°  Yaw: 2.76°[0m
+[0;32mI (346837) i2c-tools: Roll: 54.40°  Pitch: -80.25°  Yaw: 2.78°[0m
+[0;32mI (346847) i2c-tools: Roll: 54.45°  Pitch: -80.25°  Yaw: 2.80°[0m
+[0;32mI (346857) i2c-tools: Roll: 54.48°  Pitch: -80.25°  Yaw: 2.83°[0m
+[0;32mI (346867) i2c-tools: Roll: 54.53°  Pitch: -80.24°  Yaw: 2.85°[0m
+[0;32mI (346877) i2c-tools: Roll: 54.56°  Pitch: -80.24°  Yaw: 2.87°[0m
+[0;32mI (346887) i2c-tools: Roll: 54.60°  Pitch: -80.23°  Yaw: 2.90°[0m
+[0;32mI (346897) i2c-tools: Roll: 54.53°  Pitch: -80.27°  Yaw: 2.92°[0m
+[0;32mI (346908) i2c-tools: Roll: 54.31°  Pitch: -80.35°  Yaw: 2.95°[0m
+[0;32mI (346918) i2c-tools: Roll: 54.36°  Pitch: -80.34°  Yaw: 2.97°[0m
+[0;32mI (346928) i2c-tools: Roll: 54.41°  Pitch: -80.33°  Yaw: 2.99°[0m
+[0;32mI (346938) i2c-tools: Roll: 54.45°  Pitch: -80.33°  Yaw: 3.02°[0m
+[0;32mI (346948) i2c-tools: Roll: 54.50°  Pitch: -80.32°  Yaw: 3.04°[0m
+[0;32mI (346958) i2c-tools: Roll: 54.53°  Pitch: -80.31°  Yaw: 3.06°[0m
+[0;32mI (346968) i2c-tools: Roll: 54.57°  Pitch: -80.30°  Yaw: 3.09°[0m
+[0;32mI (346978) i2c-tools: Roll: 54.61°  Pitch: -80.30°  Yaw: 3.11°[0m
+[0;32mI (346988) i2c-tools: Roll: 54.64°  Pitch: -80.29°  Yaw: 3.13°[0m
+[0;32mI (346998) i2c-tools: Roll: 54.57°  Pitch: -80.32°  Yaw: 3.16°[0m
+[0;32mI (347009) i2c-tools: Roll: 54.35°  Pitch: -80.41°  Yaw: 3.18°[0m
+[0;32mI (347019) i2c-tools: Roll: 54.40°  Pitch: -80.39°  Yaw: 3.20°[0m
+[0;32mI (347029) i2c-tools: Roll: 54.44°  Pitch: -80.38°  Yaw: 3.23°[0m
+[0;32mI (347039) i2c-tools: Roll: 54.48°  Pitch: -80.37°  Yaw: 3.25°[0m
+[0;32mI (347049) i2c-tools: Roll: 54.53°  Pitch: -80.36°  Yaw: 3.27°[0m
+[0;32mI (347059) i2c-tools: Roll: 54.56°  Pitch: -80.35°  Yaw: 3.30°[0m
+[0;32mI (347069) i2c-tools: Roll: 54.60°  Pitch: -80.34°  Yaw: 3.32°[0m
+[0;32mI (347079) i2c-tools: Roll: 54.63°  Pitch: -80.34°  Yaw: 3.34°[0m
+[0;32mI (347089) i2c-tools: Roll: 54.67°  Pitch: -80.33°  Yaw: 3.37°[0m
+[0;32mI (347099) i2c-tools: Roll: 54.59°  Pitch: -80.36°  Yaw: 3.39°[0m
+[0;32mI (347110) i2c-tools: Roll: 54.37°  Pitch: -80.44°  Yaw: 3.42°[0m
+[0;32mI (347120) i2c-tools: Roll: 54.42°  Pitch: -80.42°  Yaw: 3.44°[0m
+[0;32mI (347130) i2c-tools: Roll: 54.46°  Pitch: -80.41°  Yaw: 3.46°[0m
+[0;32mI (347140) i2c-tools: Roll: 54.47°  Pitch: -80.41°  Yaw: 3.49°[0m
+[0;32mI (347150) i2c-tools: Roll: 54.54°  Pitch: -80.39°  Yaw: 3.51°[0m
+[0;32mI (347160) i2c-tools: Roll: 54.58°  Pitch: -80.38°  Yaw: 3.53°[0m
+[0;32mI (347170) i2c-tools: Roll: 54.62°  Pitch: -80.37°  Yaw: 3.56°[0m
+[0;32mI (347180) i2c-tools: Roll: 54.65°  Pitch: -80.36°  Yaw: 3.58°[0m
+[0;32mI (347190) i2c-tools: Roll: 54.68°  Pitch: -80.35°  Yaw: 3.60°[0m
+[0;32mI (347200) i2c-tools: Roll: 54.60°  Pitch: -80.38°  Yaw: 3.63°[0m
+[0;32mI (347211) i2c-tools: Roll: 54.39°  Pitch: -80.46°  Yaw: 3.65°[0m
+[0;32mI (347221) i2c-tools: Roll: 54.43°  Pitch: -80.44°  Yaw: 3.67°[0m
+[0;32mI (347231) i2c-tools: Roll: 54.48°  Pitch: -80.43°  Yaw: 3.70°[0m
+[0;32mI (347241) i2c-tools: Roll: 54.51°  Pitch: -80.42°  Yaw: 3.72°[0m
+[0;32mI (347251) i2c-tools: Roll: 54.55°  Pitch: -80.40°  Yaw: 3.74°[0m
+[0;32mI (347261) i2c-tools: Roll: 54.59°  Pitch: -80.39°  Yaw: 3.77°[0m
+[0;32mI (347271) i2c-tools: Roll: 54.63°  Pitch: -80.38°  Yaw: 3.79°[0m
+[0;32mI (347281) i2c-tools: Roll: 54.66°  Pitch: -80.37°  Yaw: 3.81°[0m
+[0;32mI (347291) i2c-tools: Roll: 54.69°  Pitch: -80.36°  Yaw: 3.84°[0m
+[0;32mI (347301) i2c-tools: Roll: 54.61°  Pitch: -80.39°  Yaw: 3.86°[0m
+[0;32mI (347312) i2c-tools: Roll: 54.39°  Pitch: -80.47°  Yaw: 3.89°[0m
+[0;32mI (347322) i2c-tools: Roll: 54.44°  Pitch: -80.45°  Yaw: 3.91°[0m
+[0;32mI (347332) i2c-tools: Roll: 54.48°  Pitch: -80.44°  Yaw: 3.93°[0m
+[0;32mI (347342) i2c-tools: Roll: 54.52°  Pitch: -80.43°  Yaw: 3.96°[0m
+[0;32mI (347352) i2c-tools: Roll: 54.56°  Pitch: -80.41°  Yaw: 3.98°[0m
+[0;32mI (347362) i2c-tools: Roll: 54.59°  Pitch: -80.40°  Yaw: 4.00°[0m
+[0;32mI (347372) i2c-tools: Roll: 54.63°  Pitch: -80.39°  Yaw: 4.03°[0m
+[0;32mI (347382) i2c-tools: Roll: 54.66°  Pitch: -80.38°  Yaw: 4.05°[0m
+[0;32mI (347392) i2c-tools: Roll: 54.70°  Pitch: -80.37°  Yaw: 4.07°[0m
+[0;32mI (347402) i2c-tools: Roll: 54.62°  Pitch: -80.40°  Yaw: 4.10°[0m
+[0;32mI (347413) i2c-tools: Roll: 54.40°  Pitch: -80.48°  Yaw: 4.12°[0m
+[0;32mI (347423) i2c-tools: Roll: 54.44°  Pitch: -80.46°  Yaw: 4.15°[0m
+[0;32mI (347433) i2c-tools: Roll: 54.49°  Pitch: -80.44°  Yaw: 4.17°[0m
+[0;32mI (347443) i2c-tools: Roll: 54.52°  Pitch: -80.43°  Yaw: 4.19°[0m
+[0;32mI (347453) i2c-tools: Roll: 54.56°  Pitch: -80.42°  Yaw: 4.22°[0m
+[0;32mI (347463) i2c-tools: Roll: 54.60°  Pitch: -80.41°  Yaw: 4.24°[0m
+[0;32mI (347473) i2c-tools: Roll: 54.64°  Pitch: -80.39°  Yaw: 4.26°[0m
+[0;32mI (347483) i2c-tools: Roll: 54.66°  Pitch: -80.38°  Yaw: 4.28°[0m
+[0;32mI (347493) i2c-tools: Roll: 54.70°  Pitch: -80.37°  Yaw: 4.31°[0m
+[0;32mI (347503) i2c-tools: Roll: 54.62°  Pitch: -80.40°  Yaw: 4.33°[0m
+[0;32mI (347514) i2c-tools: Roll: 54.40°  Pitch: -80.48°  Yaw: 4.36°[0m
+[0;32mI (347524) i2c-tools: Roll: 54.45°  Pitch: -80.46°  Yaw: 4.38°[0m
+[0;32mI (347534) i2c-tools: Roll: 54.49°  Pitch: -80.45°  Yaw: 4.40°[0m
+[0;32mI (347544) i2c-tools: Roll: 54.53°  Pitch: -80.44°  Yaw: 4.43°[0m
+[0;32mI (347554) i2c-tools: Roll: 54.56°  Pitch: -80.42°  Yaw: 4.45°[0m
+[0;32mI (347564) i2c-tools: Roll: 54.60°  Pitch: -80.41°  Yaw: 4.47°[0m
+[0;32mI (347574) i2c-tools: Roll: 54.64°  Pitch: -80.40°  Yaw: 4.50°[0m
+[0;32mI (347584) i2c-tools: Roll: 54.67°  Pitch: -80.39°  Yaw: 4.52°[0m
+[0;32mI (347594) i2c-tools: Roll: 54.70°  Pitch: -80.37°  Yaw: 4.54°[0m
+[0;32mI (347604) i2c-tools: Roll: 54.62°  Pitch: -80.40°  Yaw: 4.57°[0m
+[0;32mI (347615) i2c-tools: Roll: 54.40°  Pitch: -80.48°  Yaw: 4.59°[0m
+[0;32mI (347625) i2c-tools: Roll: 54.45°  Pitch: -80.47°  Yaw: 4.62°[0m
+[0;32mI (347635) i2c-tools: Roll: 54.49°  Pitch: -80.45°  Yaw: 4.64°[0m
+[0;32mI (347645) i2c-tools: Roll: 54.53°  Pitch: -80.44°  Yaw: 4.66°[0m
+[0;32mI (347655) i2c-tools: Roll: 54.57°  Pitch: -80.42°  Yaw: 4.69°[0m
+[0;32mI (347665) i2c-tools: Roll: 54.60°  Pitch: -80.41°  Yaw: 4.71°[0m
+[0;32mI (347675) i2c-tools: Roll: 54.64°  Pitch: -80.40°  Yaw: 4.73°[0m
+[0;32mI (347685) i2c-tools: Roll: 54.67°  Pitch: -80.39°  Yaw: 4.76°[0m
+[0;32mI (347695) i2c-tools: Roll: 54.70°  Pitch: -80.38°  Yaw: 4.78°[0m
+[0;32mI (347705) i2c-tools: Roll: 54.62°  Pitch: -80.40°  Yaw: 4.80°[0m
+[0;32mI (347716) i2c-tools: Roll: 54.40°  Pitch: -80.48°  Yaw: 4.83°[0m
+[0;32mI (347726) i2c-tools: Roll: 54.45°  Pitch: -80.47°  Yaw: 4.85°[0m
+[0;32mI (347736) i2c-tools: Roll: 54.49°  Pitch: -80.45°  Yaw: 4.87°[0m
+[0;32mI (347746) i2c-tools: Roll: 54.53°  Pitch: -80.44°  Yaw: 4.90°[0m
+[0;32mI (347756) i2c-tools: Roll: 54.57°  Pitch: -80.43°  Yaw: 4.92°[0m
+[0;32mI (347766) i2c-tools: Roll: 54.60°  Pitch: -80.41°  Yaw: 4.94°[0m
+[0;32mI (347776) i2c-tools: Roll: 54.64°  Pitch: -80.40°  Yaw: 4.97°[0m
+[0;32mI (347786) i2c-tools: Roll: 54.67°  Pitch: -80.39°  Yaw: 4.99°[0m
+[0;32mI (347796) i2c-tools: Roll: 54.70°  Pitch: -80.38°  Yaw: 5.01°[0m
+[0;32mI (347806) i2c-tools: Roll: 54.62°  Pitch: -80.41°  Yaw: 5.04°[0m
+[0;32mI (347817) i2c-tools: Roll: 54.40°  Pitch: -80.48°  Yaw: 5.06°[0m
+[0;32mI (347827) i2c-tools: Roll: 54.45°  Pitch: -80.47°  Yaw: 5.09°[0m
+[0;32mI (347837) i2c-tools: Roll: 54.49°  Pitch: -80.45°  Yaw: 5.11°[0m
+[0;33mW (347840) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (347840) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (347847) i2c-tools: Roll: 54.53°  Pitch: -80.44°  Yaw: 5.13°[0m
+[0;32mI (347858) i2c-tools: Roll: 54.21°  Pitch: -80.55°  Yaw: 5.16°[0m
+[0;32mI (347868) i2c-tools: Roll: 54.26°  Pitch: -80.53°  Yaw: 5.18°[0m
+[0;32mI (347878) i2c-tools: Roll: 54.32°  Pitch: -80.52°  Yaw: 5.20°[0m
+[0;32mI (347888) i2c-tools: Roll: 54.36°  Pitch: -80.50°  Yaw: 5.23°[0m
+[0;32mI (347898) i2c-tools: Roll: 54.41°  Pitch: -80.48°  Yaw: 5.25°[0m
+[0;32mI (347908) i2c-tools: Roll: 54.35°  Pitch: -80.51°  Yaw: 5.28°[0m
+[0;32mI (347919) i2c-tools: Roll: 54.14°  Pitch: -80.58°  Yaw: 5.30°[0m
+[0;32mI (347929) i2c-tools: Roll: 54.20°  Pitch: -80.56°  Yaw: 5.32°[0m
+[0;32mI (347939) i2c-tools: Roll: 54.26°  Pitch: -80.54°  Yaw: 5.35°[0m
+[0;32mI (347949) i2c-tools: Roll: 54.30°  Pitch: -80.52°  Yaw: 5.37°[0m
+[0;32mI (347959) i2c-tools: Roll: 54.36°  Pitch: -80.50°  Yaw: 5.39°[0m
+[0;32mI (347969) i2c-tools: Roll: 54.40°  Pitch: -80.49°  Yaw: 5.42°[0m
+[0;32mI (347979) i2c-tools: Roll: 54.45°  Pitch: -80.47°  Yaw: 5.44°[0m
+[0;32mI (347989) i2c-tools: Roll: 54.49°  Pitch: -80.46°  Yaw: 5.46°[0m
+[0;32mI (347999) i2c-tools: Roll: 54.53°  Pitch: -80.44°  Yaw: 5.49°[0m
+[0;32mI (348009) i2c-tools: Roll: 54.46°  Pitch: -80.47°  Yaw: 5.51°[0m
+[0;32mI (348020) i2c-tools: Roll: 54.25°  Pitch: -80.54°  Yaw: 5.54°[0m
+[0;32mI (348030) i2c-tools: Roll: 54.30°  Pitch: -80.52°  Yaw: 5.56°[0m
+[0;32mI (348040) i2c-tools: Roll: 54.35°  Pitch: -80.50°  Yaw: 5.58°[0m
+[0;32mI (348050) i2c-tools: Roll: 54.39°  Pitch: -80.49°  Yaw: 5.61°[0m
+[0;32mI (348060) i2c-tools: Roll: 54.44°  Pitch: -80.47°  Yaw: 5.63°[0m

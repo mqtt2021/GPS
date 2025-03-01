@@ -1,0 +1,226 @@
+: Multicore bootloader[0m
+[0;32mI (3�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 28 2025 21:14:42[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e9ech ( 59884) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0001ea14 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001ea24 vaddr=3ffb0000 size=015f4h (  5620) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=293d8h (168920) map[0m
+[0;32mI (204) esp_image: segment 4: paddr=00049400 vaddr=3ffb15f4 size=00c2ch (  3116) load[0m
+[0;32mI (205) esp_image: segment 5: paddr=0004a034 vaddr=40080000 size=0eccch ( 60620) load[0m
+[0;32mI (235) esp_image: segment 6: paddr=00058d08 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (235) esp_image: segment 7: paddr=00058d74 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (248) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (248) boot: Disabling RNG early entropy source...[0m
+[0;32mI (263) cpu_start: Multicore app[0m
+[0;32mI (264) cpu_start: Pro cpu up.[0m
+[0;32mI (264) cpu_start: Starting app cpu, entry point is 0x400813e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (281) cpu_start: Pro cpu start user code[0m
+[0;32mI (281) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (281) cpu_start: Application information:[0m
+[0;32mI (286) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (291) cpu_start: App version:      1[0m
+[0;32mI (296) cpu_start: Compile time:     Feb 28 2025 21:14:32[0m
+[0;32mI (302) cpu_start: ELF file SHA256:  b622e1b5a32e054e...[0m
+[0;32mI (308) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (313) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (318) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (323) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (328) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (335) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (341) heap_init: At 3FFB2E50 len 0002D1B0 (180 KiB): DRAM[0m
+[0;32mI (347) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (353) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (360) heap_init: At 4008ECCC len 00011334 (68 KiB): IRAM[0m
+[0;32mI (368) spi_flash: detected chip: generic[0m
+[0;32mI (371) spi_flash: flash io: dio[0m
+[0;33mW (375) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (388) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (396) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) app_start: Starting scheduler on CPU1[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (420) main_task: Calling app_main()[0m
+[0;32mI (423) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (433) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (442) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (451) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (461) example: I2C initialized successfully[0m
+[0;32mI (465) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (476) uart: queue free spaces: 10[0m
+[0;32mI (479) SIM_A7680C: Other UART event: 1[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (487) SIM_A7680C: === CALL START ===[0m
+[0;32mI (491) SIM_A7680C: Bật chân sim lần 0
+[0m
+[0;32mI (496) SIM_A7680C: Gửi lệnh sẵn sàng lần 0
+[0m
+[0;32mI (1503) SIM_A7680C: Gửi lệnh sẵn sàng lần 1
+[0m
+[0;32mI (2503) SIM_A7680C: Gửi lệnh sẵn sàng lần 2
+[0m
+[0;32mI (3503) SIM_A7680C: Gửi lệnh sẵn sàng lần 3
+[0m
+[0;32mI (4503) SIM_A7680C: Gửi lệnh sẵn sàng lần 4
+[0m
+[0;33mW (4560) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (4560) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (4561) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (4564) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (5503) SIM_A7680C: Gửi lệnh sẵn sàng lần 5
+[0m
+[0;33mW (6276) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (6503) SIM_A7680C: Gửi lệnh sẵn sàng lần 6
+[0m
+[0;32mI (7503) SIM_A7680C: Gửi lệnh sẵn sàng lần 7
+[0m
+[0;32mI (8503) SIM_A7680C: Gửi lệnh sẵn sàng lần 8
+[0m
+[0;33mW (8650) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (8650) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (8650) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (8654) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (9503) SIM_A7680C: Gửi lệnh sẵn sàng lần 9
+[0m
+[0;32mI (10503) SIM_A7680C: sim bị treo, cần reset 
+[0m
+[0;33mW (11624) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (12921) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (12922) SIM_A7680C: 📩 Received Data:
+�[0m
+[0;32mI (12922) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (15503) SIM_A7680C: Bật chân sim lần 1
+[0m
+[0;32mI (15503) SIM_A7680C: sim bị treo, cần reset 
+[0m
+[0;33mW (17017) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (17017) SIM_A7680C: 📩 Received Data:
+�2'[0m
+[0;32mI (17017) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (20488) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (20503) SIM_A7680C: Bật chân sim lần 2
+[0m
+[0;32mI (20503) SIM_A7680C: sim bị treo, cần reset 
+[0m
+[0;33mW (21287) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (21287) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (21287) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (24222) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (24882) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (25301) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (25301) SIM_A7680C: 📩 Received Data:
+b3�v��&"3?.[0m
+[0;32mI (25503) SIM_A7680C: Bật chân sim lần 3
+[0m
+[0;32mI (25503) SIM_A7680C: sim bị treo, cần reset 
+[0m
+[0;33mW (26160) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (26979) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (28057) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (29436) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (29436) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (29436) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (29440) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (29445) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (29449) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (30503) SIM_A7680C: Bật chân sim lần 4
+[0m
+[0;32mI (30503) SIM_A7680C: sim bị treo, cần reset 
+[0m
+[0;33mW (30614) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (31473) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (33528) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (33528) SIM_A7680C: 📩 Received Data:
+xp�
+[0;32mI (33528) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (33530) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (35503) SIM_A7680C: Call end
+[0m
+[0;33mW (37547) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (37547) SIM_A7680C: 📩 Received Data:
+
+*ATREADY: 1
+
+*ISIMAID: "A0000000871004FFFFF00189000001FF"
+
++CPIN: READY
+[0m
+[0;32mI (37552) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (38503) SIM_A7680C: Call end
+[0m
+[0;32mI (41503) SIM_A7680C: Call end
+[0m
+[0;33mW (41650) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (41650) SIM_A7680C: 📩 Received Data:
+
+SMS DONE
+
++SMS FULL
+
++CGEV: NW PDN ACT 1
+
++CGEV: ME PDN ACT 8,4
+[0m
+[0;32mI (41654) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (41659) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (41664) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (41668) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (41673) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (44503) SIM_A7680C: Call end
+[0m
+[0;33mW (45778) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (45778) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (47503) SIM_A7680C: Call end
+[0m
+[0;33mW (49878) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (49878) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (50503) SIM_A7680C: Call end
+[0m
+[0;32mI (53503) SIM_A7680C: Call end
+[0m
+[0;33mW (53978) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (53978) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (56503) SIM_A7680C: Call end
+[0m
+[0;33mW (58078) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (58078) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (59503) SIM_A7680C: Call end
+[0m
+[0;33mW (62178) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (62178) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (62503) SIM_A7680C: Call end
+[0m

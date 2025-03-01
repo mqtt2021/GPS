@@ -1,0 +1,958 @@
+�� Multicore bootloader�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar  1 2025 23:36:05[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c5b4h ( 50612) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0001c5dc vaddr=3ffb0000 size=02210h (  8720) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001e7f4 vaddr=40080000 size=01824h (  6180) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1daech (121580) map[0m
+[0;32mI (183) esp_image: segment 4: paddr=0003db14 vaddr=40081824 size=0c078h ( 49272) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (222) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x40081250[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (245) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (251) cpu_start: App version:      1[0m
+[0;32mI (255) cpu_start: Compile time:     Mar  1 2025 23:35:55[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  7f78160869d4b6bf...[0m
+[0;32mI (267) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (272) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (277) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (282) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 3FFB2DD0 len 0002D230 (180 KiB): DRAM[0m
+[0;32mI (306) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (313) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (319) heap_init: At 4008D89C len 00012764 (73 KiB): IRAM[0m
+[0;32mI (327) spi_flash: detected chip: generic[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (347) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (355) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (364) app_start: Starting scheduler on CPU0[0m
+[0;32mI (369) app_start: Starting scheduler on CPU1[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (379) main_task: Calling app_main()[0m
+[0;32mI (382) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (392) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (410) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (420) example: I2C initialized successfully[0m
+[0;32mI (424) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (435) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (441) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (1446) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (1446) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (1554) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (1554) SIM_A7680C: 📩 Received Data:
+AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+[0m
+[0;32mI (2446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2446) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (2551) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTREL=0
+ERROR
+[0m
+[0;32mI (3446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3446) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;33mW (3551) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (3551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTOP
+ERROR
+[0m
+[0;32mI (4446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4446) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4551) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (4551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTART
+OK
+[0m
+[0;32mI (5446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5446) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5553) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (5553) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+AT+CMQTTACCQ=0,"ESP32",0
+OK
+[0m
+[0;32mI (6446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (6778) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (6778) SIM_A7680C: 📩 Received Data:
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+[0m
+[0;32mI (7446) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (7446) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;33mW (10883) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (10883) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (12446) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (12446) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (12446) example: Creating uart2_task...[0m
+[0;32mI (12450) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (14983) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (14983) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (62456) example: Stopping UART tasks...[0m
+[0;32mI (62456) example: Waiting for UART tasks to stop...[0m
+[0;32mI (62956) example: uart2_task exiting...[0m
+[0;32mI (62956) example: UART tasks stopped.[0m
+[0;32mI (62956) example: READ_GPS_TASK finish[0m
+[0;32mI (62958) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (64073) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (64073) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (66097) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (66097) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (67075) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (67075) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (67969) example: Creating uart2_task...[0m
+[0;32mI (67969) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (71124) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (71124) SIM_A7680C: 📩 Received Data:
+
+*ATREADY: 1
+
+*ISIMAID: "A0000000871004FFFFF00189000001FF"
+
++CPIN: READY
+[0m
+[0;33mW (75138) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (75138) SIM_A7680C: 📩 Received Data:
+
+SMS DONE
+
++SMS FULL
+
++CGEV: NW PDN ACT 1
+
++CCIOTOPTI: 1
+
++CGEV: ME PDN ACT 8,4
+[0m
+[0;33mW (79244) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (79244) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (83344) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (83344) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (87444) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (87444) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (91544) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (91544) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (95644) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (95644) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (99744) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (99744) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (103844) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (103844) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (117969) example: Stopping UART tasks...[0m
+[0;32mI (117969) example: Waiting for UART tasks to stop...[0m
+[0;32mI (118469) example: uart2_task exiting...[0m
+[0;32mI (118469) example: UART tasks stopped.[0m
+[0;32mI (118469) example: READ_GPS_TASK finish[0m
+[0;32mI (118471) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (118588) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (118588) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+ERROR
+[0m
+[0;33mW (119587) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (119587) SIM_A7680C: 📩 Received Data:
+GPS/Status/G002
+ERROR
+[0m
+[0;33mW (120588) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (120588) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+ERROR
+[0m
+[0;33mW (121612) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (121612) SIM_A7680C: 📩 Received Data:
+[{"name":"Latitude","value":9091,"timestamp":""},{"name":"Longitude","value":0.00000,"timestamp":""},{"name":"Battery","value":"0%","timestamp":""},{"name":"Stolen","value":false,"timestamp":""},{"name":"Bluetooth","value":false,"timestamp":""},{"name":"Move","value":false,"timestamp":""}]
+ERROR
+[0m
+
+assert failed: xEventGroupSetBits event_groups.c:559 (xEventGroup)
+
+
+Backtrace: 0x40081892:0x3ffb9cf0 0x40086d79:0x3ffb9d10 0x4008c4e5:0x3ffb9d30 0x40088129:0x3ffb9e50 0x400d61d9:0x3ffb9e70 0x40087899:0x3ffb9f20
+
+
+
+
+ELF file SHA256: 7f78160869d4b6bf
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar  1 2025 23:36:05[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c5b4h ( 50612) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0001c5dc vaddr=3ffb0000 size=02210h (  8720) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001e7f4 vaddr=40080000 size=01824h (  6180) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1daech (121580) map[0m
+[0;32mI (183) esp_image: segment 4: paddr=0003db14 vaddr=40081824 size=0c078h ( 49272) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (222) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x40081250[0m
+[0;32mI (209) cpu_start: App cpu up.[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (245) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (251) cpu_start: App version:      1[0m
+[0;32mI (255) cpu_start: Compile time:     Mar  1 2025 23:35:55[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  7f78160869d4b6bf...[0m
+[0;32mI (267) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (273) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (277) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (282) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 3FFB2DD0 len 0002D230 (180 KiB): DRAM[0m
+[0;32mI (306) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (313) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (319) heap_init: At 4008D89C len 00012764 (73 KiB): IRAM[0m
+[0;32mI (327) spi_flash: detected chip: generic[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (347) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (356) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (364) app_start: Starting scheduler on CPU0[0m
+[0;32mI (369) app_start: Starting scheduler on CPU1[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (379) main_task: Calling app_main()[0m
+[0;32mI (382) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (392) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (410) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (420) example: I2C initialized successfully[0m
+[0;32mI (424) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (435) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (441) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (1446) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (1446) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (1554) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (1554) SIM_A7680C: 📩 Received Data:
+AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+[0m
+[0;32mI (2446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2446) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (2551) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTREL=0
+ERROR
+[0m
+[0;32mI (3446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3446) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;33mW (3551) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (3551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTOP
+ERROR
+[0m
+[0;32mI (4446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4446) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4551) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (4551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTART
+OK
+[0m
+[0;32mI (5446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5446) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5553) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (5553) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+AT+CMQTTACCQ=0,"ESP32",0
+OK
+[0m
+[0;32mI (6446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (6780) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (6780) SIM_A7680C: 📩 Received Data:
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+[0m
+[0;32mI (7446) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (7446) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;33mW (10885) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (10885) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (12446) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (12446) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (12446) example: Creating uart2_task...[0m
+[0;32mI (12450) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (14985) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (14985) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (62456) example: Stopping UART tasks...[0m
+[0;32mI (62456) example: Waiting for UART tasks to stop...[0m
+[0;32mI (62956) example: uart2_task exiting...[0m
+[0;32mI (62956) example: UART tasks stopped.[0m
+[0;32mI (62956) example: READ_GPS_TASK finish[0m
+[0;32mI (62958) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (64073) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (64073) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (66097) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (66097) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (67075) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (67075) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (67969) example: Creating uart2_task...[0m
+[0;32mI (67969) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (71112) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (71112) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (75212) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (75212) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (79312) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (79312) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (117969) example: Stopping UART tasks...[0m
+[0;32mI (117969) example: Waiting for UART tasks to stop...[0m
+[0;32mI (118469) example: uart2_task exiting...[0m
+[0;32mI (118469) example: UART tasks stopped.[0m
+[0;32mI (118469) example: READ_GPS_TASK finish[0m
+[0;32mI (118471) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (119586) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (119586) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (121610) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (121610) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (122588) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (122588) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (123482) example: Creating uart2_task...[0m
+[0;32mI (123482) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (126619) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (126619) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (130719) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (130719) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (134819) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (134819) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (173482) example: Stopping UART tasks...[0m
+[0;32mI (173482) example: Waiting for UART tasks to stop...[0m
+[0;32mI (173982) example: uart2_task exiting...[0m
+[0;32mI (173982) example: UART tasks stopped.[0m
+[0;32mI (173982) example: READ_GPS_TASK finish[0m
+[0;32mI (173984) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (175099) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (175099) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (177123) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (177123) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (178101) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (178101) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (178995) example: Creating uart2_task...[0m
+[0;32mI (178995) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (182131) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (182131) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (186231) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (186231) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (190331) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (190331) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (215834) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (215836) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (215836) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (217827) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (219876) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (219876) SIM_A7680C: 📩 Received Data:
+�[0m
+[0;32mI (219876) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (219879) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (222601) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (223934) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (223934) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (223934) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (223937) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (223942) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (223946) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (223951) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (226898) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (228250) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (228250) SIM_A7680C: 📩 Received Data:
+#[0m
+[0;32mI (228251) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (228253) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (228258) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (228995) example: Stopping UART tasks...[0m
+[0;32mI (228995) example: Waiting for UART tasks to stop...[0m
+[0;32mI (229495) example: uart2_task exiting...[0m
+[0;32mI (229495) example: UART tasks stopped.[0m
+[0;32mI (229495) example: READ_GPS_TASK finish[0m
+[0;32mI (229497) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (231333) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (232745) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (232745) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (232745) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (234508) example: Creating uart2_task...[0m
+[0;32mI (234508) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (235350) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (237298) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (237299) SIM_A7680C: 📩 Received Data:
+�
+[0;32mI (237299) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (239923) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (242069) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (242070) SIM_A7680C: 📩 Received Data:
+��[0m
+[0;32mI (242070) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (245270) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (246085) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (246085) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (246085) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (249286) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (250836) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (250837) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (250837) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250839) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250844) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250849) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250853) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250858) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250863) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250868) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250873) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250877) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250882) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250887) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (250892) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (254057) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (255708) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (255708) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (255708) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (255711) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (255715) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (259049) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (259884) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (259884) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (259884) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (259887) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (263145) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (263961) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (263961) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (263961) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (263964) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (263968) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (263973) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (263978) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (268495) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (268495) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (268495) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (268499) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (268504) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (268509) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (268514) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (268518) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (268523) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (268528) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (271776) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (272631) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (272631) SIM_A7680C: 📩 Received Data:
+�
+[0;32mI (272631) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (272634) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (272638) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (272643) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (275971) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (276786) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (276786) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (276787) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (276789) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (276794) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (279768) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (281279) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (281280) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (281280) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (281282) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (281287) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (281292) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (284381) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (284508) example: Stopping UART tasks...[0m
+[0;32mI (284508) example: Waiting for UART tasks to stop...[0m
+[0;32mI (285008) example: uart2_task exiting...[0m
+[0;32mI (285008) example: UART tasks stopped.[0m
+[0;32mI (285008) example: READ_GPS_TASK finish[0m
+[0;32mI (285010) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (285972) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (285972) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (285972) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (285975) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (285979) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (289114) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (290021) example: Creating uart2_task...[0m
+[0;32mI (290021) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (290526) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (290526) SIM_A7680C: 📩 Received Data:
+�
+[0;32mI (290526) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (290528) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (290533) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (295179) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (295179) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (295180) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (295182) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (295187) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (295192) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (295196) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (299395) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (299395) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (299395) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (302776) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (303651) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (303651) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (303651) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (303654) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (303658) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (303663) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (303668) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (307695) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (307695) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (307695) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (307697) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (307702) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (307707) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (307712) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (307716) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (311774) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (311774) SIM_A7680C: 📩 Received Data:
+
+*ATREADY: 1
+
+*ISIMAID: "A0000000871004FFFFF00189000001FF"
+
++CPIN: READY
+
+SMS DONE
+
++SMS FULL
+
++CGEV: NW PDN ACT 1
+
++CCIOTOPTI: 1
+
++CGEV: ME PDN ACT 8,4
+[0m
+[0;32mI (311788) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (315892) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (315892) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (315892) SIM_A7680C: Other UART event: 1[0m
+[0;33mW (319994) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (319994) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (324094) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (324094) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (328194) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (328194) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (332294) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (332294) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (336394) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (336394) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (340021) example: Stopping UART tasks...[0m
+[0;32mI (340021) example: Waiting for UART tasks to stop...[0m
+[0;33mW (340494) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (340494) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (340521) example: uart2_task exiting...[0m
+[0;32mI (340521) example: UART tasks stopped.[0m
+[0;32mI (340521) example: READ_GPS_TASK finish[0m
+[0;32mI (340523) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (340640) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (340640) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+ERROR
+[0m
+[0;33mW (341639) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (341639) SIM_A7680C: 📩 Received Data:
+GPS/Status/G002
+ERROR
+[0m
+[0;33mW (342640) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (342640) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+ERROR
+[0m
+[0;33mW (343664) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (343664) SIM_A7680C: 📩 Received Data:
+[{"name":"Latitude","value":9095,"timestamp":""},{"name":"Longitude","value":0.00000,"timestamp":""},{"name":"Battery","value":"0%","timestamp":""},{"name":"Stolen","value":false,"timestamp":""},{"name":"Bluetooth","value":false,"timestamp":""},{"name":"Move","value":false,"timestamp":""}]
+ERROR
+[0m
+
+assert failed: xEventGroupSetBits event_groups.c:559 (xEventGroup)
+
+
+Backtrace: 0x40081892:0x3ffb9cf0 0x40086d79:0x3ffb9d10 0x4008c4e5:0x3ffb9d30 0x40088129:0x3ffb9e50 0x400d61d9:0x3ffb9e70 0x40087899:0x3ffb9f20
+
+
+
+
+ELF file SHA256: 7f78160869d4b6bf
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar  1 2025 23:36:05[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c5b4h ( 50612) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0001c5dc vaddr=3ffb0000 size=02210h (  8720) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0001e7f4 vaddr=40080000 size=01824h (  6180) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1daech (121580) map[0m
+[0;32mI (183) esp_image: segment 4: paddr=0003db14 vaddr=40081824 size=0c078h ( 49272) load[0m
+[0;32mI (211) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (211) boot: Disabling RNG early entropy source...[0m
+[0;32mI (222) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x40081250[0m
+[0;32mI (209) cpu_start: App cpu up.[0m
+[0;32mI (241) cpu_start: Pro cpu start user code[0m
+[0;32mI (241) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (241) cpu_start: Application information:[0m
+[0;32mI (245) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (251) cpu_start: App version:      1[0m
+[0;32mI (255) cpu_start: Compile time:     Mar  1 2025 23:35:55[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  7f78160869d4b6bf...[0m
+[0;32mI (267) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (273) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (277) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (282) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 3FFB2DD0 len 0002D230 (180 KiB): DRAM[0m
+[0;32mI (306) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (313) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (319) heap_init: At 4008D89C len 00012764 (73 KiB): IRAM[0m
+[0;32mI (327) spi_flash: detected chip: generic[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (347) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (356) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (364) app_start: Starting scheduler on CPU0[0m
+[0;32mI (369) app_start: Starting scheduler on CPU1[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (379) main_task: Calling app_main()[0m
+[0;32mI (382) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (392) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (410) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (420) example: I2C initialized successfully[0m
+[0;32mI (424) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (435) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (441) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (1446) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (1446) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (1554) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (1554) SIM_A7680C: 📩 Received Data:
+AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+[0m
+[0;32mI (2446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2446) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (2551) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTREL=0
+ERROR
+[0m
+[0;32mI (3446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3446) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;33mW (3551) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (3551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTOP
+ERROR
+[0m
+[0;32mI (4446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4446) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4551) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (4551) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTART
+OK
+[0m
+[0;32mI (5446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5446) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5553) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (5553) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+AT+CMQTTACCQ=0,"ESP32",0
+OK
+[0m
+[0;32mI (6446) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (6772) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (6772) SIM_A7680C: 📩 Received Data:
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+[0m
+[0;32mI (7446) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (7446) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;33mW (10877) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (10877) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (12446) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (12446) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (12446) example: Creating uart2_task...[0m
+[0;32mI (12450) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (14977) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (14977) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (62456) example: Stopping UART tasks...[0m
+[0;32mI (62456) example: Waiting for UART tasks to stop...[0m
+[0;32mI (62956) example: uart2_task exiting...[0m
+[0;32mI (62956) example: UART tasks stopped.[0m
+[0;32mI (62956) example: READ_GPS_TASK finish[0m
+[0;32mI (62958) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (64073) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (64073) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (66097) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (66097) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (67075) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (67075) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (67969) example: Creating uart2_task...[0m
+[0;32mI (67969) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (71107) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (71107) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (75207) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (75207) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (79307) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (79307) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (117969) example: Stopping UART tasks...[0m
+[0;32mI (117969) example: Waiting for UART tasks to stop...[0m
+[0;32mI (118469) example: uart2_task exiting...[0m
+[0;32mI (118469) example: UART tasks stopped.[0m
+[0;32mI (118469) example: READ_GPS_TASK finish[0m
+[0;32mI (118471) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (119586) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (119586) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (121610) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (121610) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (122588) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (122588) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (123482) example: Creating uart2_task...[0m
+[0;32mI (123482) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (126609) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (126609) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (130709) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (130709) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (134809) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (134809) SIM_A7680C: 📩 Received Data:
+[0m

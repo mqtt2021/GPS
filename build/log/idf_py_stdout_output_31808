@@ -1,0 +1,1470 @@
+��� Multicore bootloader[0mets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 27 2025 17:00:40[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0d7cch ( 55244) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001d7f4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001d804 vaddr=3ffb0000 size=02220h (  8736) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0001fa2c vaddr=40080000 size=005ech (  1516) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=209b8h (133560) map[0m
+[0;32mI (198) esp_image: segment 5: paddr=000409e0 vaddr=400805ec size=0e348h ( 58184) load[0m
+[0;32mI (222) esp_image: segment 6: paddr=0004ed30 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (222) esp_image: segment 7: paddr=0004ed9c vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (235) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (235) boot: Disabling RNG early entropy source...[0m
+[0;32mI (251) cpu_start: Multicore app[0m
+[0;32mI (252) cpu_start: Pro cpu up.[0m
+[0;32mI (252) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (269) cpu_start: Pro cpu start user code[0m
+[0;32mI (269) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (269) cpu_start: Application information:[0m
+[0;32mI (274) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (279) cpu_start: App version:      1[0m
+[0;32mI (283) cpu_start: Compile time:     Feb 27 2025 17:00:30[0m
+[0;32mI (289) cpu_start: ELF file SHA256:  df7976265fc29ac6...[0m
+[0;32mI (295) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (301) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (306) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (310) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (315) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (322) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (328) heap_init: At 3FFB2E30 len 0002D1D0 (180 KiB): DRAM[0m
+[0;32mI (335) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (341) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (347) heap_init: At 4008E934 len 000116CC (69 KiB): IRAM[0m
+[0;32mI (355) spi_flash: detected chip: generic[0m
+[0;32mI (358) spi_flash: flash io: dio[0m
+[0;33mW (362) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (375) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (384) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (393) app_start: Starting scheduler on CPU0[0m
+[0;32mI (397) app_start: Starting scheduler on CPU1[0m
+[0;32mI (397) main_task: Started on CPU0[0m
+[0;32mI (407) main_task: Calling app_main()[0m
+[0;32mI (410) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (420) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (429) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (438) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (448) example: I2C initialized successfully[0m
+[0;32mI (452) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (463) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (469) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (474) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (479) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (898) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (898) SIM_A7680C: 📩 Received Data:
+AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+[0m
+[0;32mI (1486) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1486) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (1591) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (1591) SIM_A7680C: 📩 Received Data:
+
++CGEV: ME PDN ACT 8,4
+AT+CMQTTREL=0
+ERROR
+[0m
+[0;32mI (2486) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2486) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;33mW (2591) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2591) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTOP
+ERROR
+[0m
+[0;32mI (3486) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3486) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (3603) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (3603) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTART
+OK
+[0m
+[0;32mI (4486) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4486) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (4593) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (4593) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+AT+CMQTTACCQ=0,"ESP32",0
+OK
+[0m
+[0;32mI (5486) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5824) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (5824) SIM_A7680C: 📩 Received Data:
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+[0m
+[0;32mI (6486) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6486) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;32mI (7591) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (7591) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (9615) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (9615) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (10593) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (10593) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (11487) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (11487) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (11488) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (11492) example: Creating uart2_task...[0m
+[0;32mI (11496) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (14617) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (14617) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (18717) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (18717) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (22817) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (22817) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (26917) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (26917) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (31017) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (31017) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (35117) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (35117) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (39217) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (39217) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (61503) example: Stopping UART tasks...[0m
+[0;32mI (61503) example: Waiting for UART tasks to stop...[0m
+[0;32mI (62003) example: uart2_task exiting...[0m
+[0;32mI (62003) example: UART tasks stopped.[0m
+[0;32mI (62003) example: READ_GPS_TASK finish[0m
+[0;32mI (62005) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (63120) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (63120) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (65144) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (65144) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (66122) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (66122) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (67016) example: Creating uart2_task...[0m
+[0;32mI (67016) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (70155) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (70155) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (74255) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (74255) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (78355) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (78355) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (117016) example: Stopping UART tasks...[0m
+[0;32mI (117016) example: Waiting for UART tasks to stop...[0m
+[0;32mI (117516) example: uart2_task exiting...[0m
+[0;32mI (117516) example: UART tasks stopped.[0m
+[0;32mI (117516) example: READ_GPS_TASK finish[0m
+[0;32mI (117518) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (118633) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (118633) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (120657) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (120657) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (121635) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (121635) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (122529) example: Creating uart2_task...[0m
+[0;32mI (122529) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (125702) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (125702) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (129802) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (129802) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (133902) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (133902) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (172529) example: Stopping UART tasks...[0m
+[0;32mI (172529) example: Waiting for UART tasks to stop...[0m
+[0;32mI (173029) example: uart2_task exiting...[0m
+[0;32mI (173029) example: UART tasks stopped.[0m
+[0;32mI (173029) example: READ_GPS_TASK finish[0m
+[0;32mI (173031) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (174146) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (174146) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (176170) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (176170) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (177148) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (177148) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (178042) example: Creating uart2_task...[0m
+[0;32mI (178042) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (181212) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (181212) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (185312) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (185312) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (189412) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (189412) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (228042) example: Stopping UART tasks...[0m
+[0;32mI (228042) example: Waiting for UART tasks to stop...[0m
+[0;32mI (228542) example: uart2_task exiting...[0m
+[0;32mI (228542) example: UART tasks stopped.[0m
+[0;32mI (228542) example: READ_GPS_TASK finish[0m
+[0;32mI (228544) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (229659) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (229659) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (231683) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (231683) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (232661) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (232661) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (233555) example: Creating uart2_task...[0m
+[0;32mI (233555) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (236741) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (236741) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (240841) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (240841) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (244941) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (244941) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (283555) example: Stopping UART tasks...[0m
+[0;32mI (283555) example: Waiting for UART tasks to stop...[0m
+[0;32mI (284055) example: uart2_task exiting...[0m
+[0;32mI (284055) example: UART tasks stopped.[0m
+[0;32mI (284055) example: READ_GPS_TASK finish[0m
+[0;32mI (284057) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (285172) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (285172) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (287196) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (287196) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (288174) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (288174) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (289068) example: Creating uart2_task...[0m
+[0;32mI (289068) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (292217) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (292217) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (296317) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (296317) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (300417) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (300417) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (339068) example: Stopping UART tasks...[0m
+[0;32mI (339068) example: Waiting for UART tasks to stop...[0m
+[0;32mI (339568) example: uart2_task exiting...[0m
+[0;32mI (339568) example: UART tasks stopped.[0m
+[0;32mI (339568) example: READ_GPS_TASK finish[0m
+[0;32mI (339570) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (340685) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (340685) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (342709) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (342709) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (343687) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (343687) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (344581) example: Creating uart2_task...[0m
+[0;32mI (344581) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (347729) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (347729) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (351829) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (351829) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (355929) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (355929) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (394581) example: Stopping UART tasks...[0m
+[0;32mI (394581) example: Waiting for UART tasks to stop...[0m
+[0;32mI (395081) example: uart2_task exiting...[0m
+[0;32mI (395081) example: UART tasks stopped.[0m
+[0;32mI (395081) example: READ_GPS_TASK finish[0m
+[0;32mI (395083) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (396198) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (396198) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (398222) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (398222) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (399200) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (399200) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (400094) example: Creating uart2_task...[0m
+[0;32mI (400094) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (403255) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (403255) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (407355) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (407355) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (411455) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (411455) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (450094) example: Stopping UART tasks...[0m
+[0;32mI (450094) example: Waiting for UART tasks to stop...[0m
+[0;32mI (450594) example: uart2_task exiting...[0m
+[0;32mI (450594) example: UART tasks stopped.[0m
+[0;32mI (450594) example: READ_GPS_TASK finish[0m
+[0;32mI (450596) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (451711) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (451711) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (453735) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (453735) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (454713) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (454713) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (455607) example: Creating uart2_task...[0m
+[0;32mI (455607) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (458721) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (458721) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (462821) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (462821) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (466921) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (466921) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (505607) example: Stopping UART tasks...[0m
+[0;32mI (505607) example: Waiting for UART tasks to stop...[0m
+[0;32mI (506107) example: uart2_task exiting...[0m
+[0;32mI (506107) example: UART tasks stopped.[0m
+[0;32mI (506107) example: READ_GPS_TASK finish[0m
+[0;32mI (506109) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (507224) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (507224) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (509248) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (509248) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (510226) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (510226) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (511120) example: Creating uart2_task...[0m
+[0;32mI (511120) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (514251) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (514251) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (518351) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (518351) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (522451) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (522451) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (561120) example: Stopping UART tasks...[0m
+[0;32mI (561120) example: Waiting for UART tasks to stop...[0m
+[0;32mI (561620) example: uart2_task exiting...[0m
+[0;32mI (561620) example: UART tasks stopped.[0m
+[0;32mI (561620) example: READ_GPS_TASK finish[0m
+[0;32mI (561622) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (562737) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (562737) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (564761) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (564761) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (565739) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (565739) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (566633) example: Creating uart2_task...[0m
+[0;32mI (566633) example: Start uart2_task, monitoring UART2 data...[0m
+[0;33mW (569764) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (569764) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;33mW (573864) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (573864) SIM_A7680C: 📩 Received Data:
+[0m
+[0;33mW (577964) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (577964) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (616633) example: Stopping UART tasks...[0m
+[0;32mI (616633) example: Waiting for UART tasks to stop...[0m
+[0;32mI (617133) example: uart2_task exiting...[0m
+[0;32mI (617133) example: UART tasks stopped.[0m
+[0;32mI (617133) example: READ_GPS_TASK finish[0m
+[0;32mI (617135) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (618250) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (618250) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (620274) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (620274) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (621252) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (621252) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (622146) MY_TIMER_MODULE: ✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------[0m
+[0;32mI (622147) example: Checking dif_location condition...[0m
+[0;32mI (622153) example: Safe Location => Go to deep sleep.[0m
+[0;32mI (622159) i2c-tools: 🚀 Bắt đầu lại timer...[0m
+[0;32mI (623165) i2c-tools: Gyro Offset: X=-4023.00, Y=16447.00, Z=-16278.00[0m
+[0;32mI (623166) i2c-tools: Roll: 5.25°  Pitch: -0.79°  Yaw: 0.03°[0m
+[0;32mI (623178) i2c-tools: Roll: 9.96°  Pitch: -1.78°  Yaw: 0.06°[0m
+[0;32mI (623188) i2c-tools: Roll: 14.71°  Pitch: -2.48°  Yaw: 0.09°[0m
+[0;32mI (623198) i2c-tools: Roll: 19.19°  Pitch: -3.18°  Yaw: 0.12°[0m
+[0;32mI (623209) i2c-tools: Roll: 23.37°  Pitch: -3.91°  Yaw: 0.16°[0m
+[0;32mI (623219) i2c-tools: Roll: 27.46°  Pitch: -4.50°  Yaw: 0.19°[0m
+[0;32mI (623229) i2c-tools: Roll: 31.34°  Pitch: -5.06°  Yaw: 0.22°[0m
+[0;32mI (623239) i2c-tools: Roll: 35.02°  Pitch: -5.59°  Yaw: 0.24°[0m
+[0;32mI (623249) i2c-tools: Roll: 38.52°  Pitch: -6.10°  Yaw: 0.27°[0m
+[0;32mI (623259) i2c-tools: Roll: 41.85°  Pitch: -6.58°  Yaw: 0.30°[0m
+[0;32mI (623269) i2c-tools: Roll: 45.01°  Pitch: -7.04°  Yaw: 0.33°[0m
+[0;32mI (623279) i2c-tools: Roll: 48.01°  Pitch: -7.48°  Yaw: 0.36°[0m
+[0;32mI (623289) i2c-tools: Roll: 50.86°  Pitch: -7.89°  Yaw: 0.39°[0m
+[0;32mI (623299) i2c-tools: Roll: 53.54°  Pitch: -8.31°  Yaw: 0.42°[0m
+[0;32mI (623310) i2c-tools: Roll: 56.00°  Pitch: -8.79°  Yaw: 0.45°[0m
+[0;32mI (623320) i2c-tools: Roll: 58.45°  Pitch: -9.13°  Yaw: 0.48°[0m
+[0;32mI (623330) i2c-tools: Roll: 60.78°  Pitch: -9.47°  Yaw: 0.51°[0m
+[0;32mI (623340) i2c-tools: Roll: 63.00°  Pitch: -9.78°  Yaw: 0.54°[0m
+[0;32mI (623350) i2c-tools: Roll: 65.10°  Pitch: -10.08°  Yaw: 0.57°[0m
+[0;32mI (623360) i2c-tools: Roll: 67.10°  Pitch: -10.36°  Yaw: 0.60°[0m
+[0;32mI (623370) i2c-tools: Roll: 68.99°  Pitch: -10.63°  Yaw: 0.63°[0m
+[0;32mI (623380) i2c-tools: Roll: 70.80°  Pitch: -10.89°  Yaw: 0.66°[0m
+[0;32mI (623390) i2c-tools: Roll: 72.51°  Pitch: -11.13°  Yaw: 0.69°[0m
+[0;32mI (623400) i2c-tools: Roll: 74.10°  Pitch: -11.39°  Yaw: 0.72°[0m
+[0;32mI (623411) i2c-tools: Roll: 75.53°  Pitch: -11.71°  Yaw: 0.75°[0m
+[0;32mI (623421) i2c-tools: Roll: 77.01°  Pitch: -11.91°  Yaw: 0.78°[0m
+[0;32mI (623431) i2c-tools: Roll: 78.41°  Pitch: -12.10°  Yaw: 0.81°[0m
+[0;32mI (623441) i2c-tools: Roll: 79.74°  Pitch: -12.29°  Yaw: 0.84°[0m
+[0;32mI (623451) i2c-tools: Roll: 81.01°  Pitch: -12.46°  Yaw: 0.87°[0m
+[0;32mI (623461) i2c-tools: Roll: 82.21°  Pitch: -12.63°  Yaw: 0.90°[0m
+[0;32mI (623471) i2c-tools: Roll: 83.35°  Pitch: -12.78°  Yaw: 0.93°[0m
+[0;32mI (623481) i2c-tools: Roll: 84.44°  Pitch: -12.93°  Yaw: 0.96°[0m
+[0;32mI (623491) i2c-tools: Roll: 85.47°  Pitch: -13.07°  Yaw: 0.99°[0m
+[0;32mI (623501) i2c-tools: Roll: 86.42°  Pitch: -13.23°  Yaw: 1.02°[0m
+[0;32mI (623512) i2c-tools: Roll: 87.23°  Pitch: -13.46°  Yaw: 1.05°[0m
+[0;32mI (623522) i2c-tools: Roll: 88.12°  Pitch: -13.58°  Yaw: 1.08°[0m
+[0;32mI (623532) i2c-tools: Roll: 88.97°  Pitch: -13.68°  Yaw: 1.11°[0m
+[0;32mI (623542) i2c-tools: Roll: 89.77°  Pitch: -13.79°  Yaw: 1.14°[0m
+[0;32mI (623552) i2c-tools: Roll: 90.54°  Pitch: -13.89°  Yaw: 1.17°[0m
+[0;32mI (623562) i2c-tools: Roll: 91.26°  Pitch: -13.98°  Yaw: 1.20°[0m
+[0;32mI (623572) i2c-tools: Roll: 91.95°  Pitch: -14.07°  Yaw: 1.23°[0m
+[0;32mI (623582) i2c-tools: Roll: 92.61°  Pitch: -14.15°  Yaw: 1.26°[0m
+[0;32mI (623592) i2c-tools: Roll: 93.23°  Pitch: -14.23°  Yaw: 1.29°[0m
+[0;32mI (623602) i2c-tools: Roll: 93.79°  Pitch: -14.34°  Yaw: 1.32°[0m
+[0;32mI (623613) i2c-tools: Roll: 94.23°  Pitch: -14.51°  Yaw: 1.35°[0m
+[0;32mI (623623) i2c-tools: Roll: 94.77°  Pitch: -14.57°  Yaw: 1.38°[0m
+[0;32mI (623633) i2c-tools: Roll: 95.29°  Pitch: -14.63°  Yaw: 1.41°[0m
+[0;32mI (623643) i2c-tools: Roll: 95.78°  Pitch: -14.69°  Yaw: 1.44°[0m
+[0;32mI (623653) i2c-tools: Roll: 96.24°  Pitch: -14.74°  Yaw: 1.47°[0m
+[0;32mI (623663) i2c-tools: Roll: 96.68°  Pitch: -14.79°  Yaw: 1.50°[0m
+[0;32mI (623673) i2c-tools: Roll: 97.10°  Pitch: -14.84°  Yaw: 1.53°[0m
+[0;32mI (623683) i2c-tools: Roll: 97.50°  Pitch: -14.89°  Yaw: 1.56°[0m
+[0;32mI (623693) i2c-tools: Roll: 97.87°  Pitch: -14.93°  Yaw: 1.59°[0m
+[0;32mI (623703) i2c-tools: Roll: 98.20°  Pitch: -15.00°  Yaw: 1.62°[0m
+[0;32mI (623714) i2c-tools: Roll: 98.42°  Pitch: -15.14°  Yaw: 1.65°[0m
+[0;32mI (623724) i2c-tools: Roll: 98.76°  Pitch: -15.17°  Yaw: 1.68°[0m
+[0;32mI (623734) i2c-tools: Roll: 99.07°  Pitch: -15.20°  Yaw: 1.71°[0m
+[0;32mI (623744) i2c-tools: Roll: 99.37°  Pitch: -15.22°  Yaw: 1.74°[0m
+[0;32mI (623754) i2c-tools: Roll: 99.66°  Pitch: -15.25°  Yaw: 1.77°[0m
+[0;32mI (623764) i2c-tools: Roll: 99.92°  Pitch: -15.28°  Yaw: 1.80°[0m
+[0;32mI (623774) i2c-tools: Roll: 100.18°  Pitch: -15.30°  Yaw: 1.83°[0m
+[0;32mI (623784) i2c-tools: Roll: 100.42°  Pitch: -15.32°  Yaw: 1.86°[0m
+[0;32mI (623794) i2c-tools: Roll: 100.66°  Pitch: -15.34°  Yaw: 1.88°[0m
+[0;32mI (623804) i2c-tools: Roll: 100.84°  Pitch: -15.39°  Yaw: 1.91°[0m
+[0;32mI (623815) i2c-tools: Roll: 100.93°  Pitch: -15.52°  Yaw: 1.95°[0m
+[0;32mI (623825) i2c-tools: Roll: 101.14°  Pitch: -15.52°  Yaw: 1.98°[0m
+[0;32mI (623835) i2c-tools: Roll: 101.34°  Pitch: -15.54°  Yaw: 2.01°[0m
+[0;32mI (623845) i2c-tools: Roll: 101.52°  Pitch: -15.55°  Yaw: 2.04°[0m
+[0;32mI (623855) i2c-tools: Roll: 101.70°  Pitch: -15.56°  Yaw: 2.06°[0m
+[0;32mI (623865) i2c-tools: Roll: 101.87°  Pitch: -15.57°  Yaw: 2.09°[0m
+[0;32mI (623875) i2c-tools: Roll: 102.03°  Pitch: -15.58°  Yaw: 2.12°[0m
+[0;32mI (623885) i2c-tools: Roll: 102.18°  Pitch: -15.59°  Yaw: 2.15°[0m
+[0;32mI (623895) i2c-tools: Roll: 102.32°  Pitch: -15.59°  Yaw: 2.18°[0m
+[0;32mI (623905) i2c-tools: Roll: 102.43°  Pitch: -15.63°  Yaw: 2.21°[0m
+[0;32mI (623916) i2c-tools: Roll: 102.44°  Pitch: -15.74°  Yaw: 2.25°[0m
+[0;32mI (623926) i2c-tools: Roll: 102.57°  Pitch: -15.74°  Yaw: 2.27°[0m
+[0;32mI (623936) i2c-tools: Roll: 102.69°  Pitch: -15.74°  Yaw: 2.30°[0m
+[0;32mI (623946) i2c-tools: Roll: 102.81°  Pitch: -15.74°  Yaw: 2.33°[0m
+[0;32mI (623956) i2c-tools: Roll: 102.92°  Pitch: -15.74°  Yaw: 2.36°[0m
+[0;32mI (623966) i2c-tools: Roll: 103.03°  Pitch: -15.74°  Yaw: 2.39°[0m
+[0;32mI (623976) i2c-tools: Roll: 103.13°  Pitch: -15.74°  Yaw: 2.42°[0m
+[0;32mI (623986) i2c-tools: Roll: 103.23°  Pitch: -15.74°  Yaw: 2.45°[0m
+[0;32mI (623996) i2c-tools: Roll: 103.32°  Pitch: -15.74°  Yaw: 2.48°[0m
+[0;32mI (624006) i2c-tools: Roll: 103.37°  Pitch: -15.77°  Yaw: 2.51°[0m
+[0;32mI (624017) i2c-tools: Roll: 103.34°  Pitch: -15.87°  Yaw: 2.54°[0m
+[0;32mI (624027) i2c-tools: Roll: 103.42°  Pitch: -15.87°  Yaw: 2.57°[0m
+[0;32mI (624037) i2c-tools: Roll: 103.51°  Pitch: -15.86°  Yaw: 2.60°[0m
+[0;32mI (624047) i2c-tools: Roll: 103.58°  Pitch: -15.86°  Yaw: 2.63°[0m
+[0;32mI (624057) i2c-tools: Roll: 103.66°  Pitch: -15.85°  Yaw: 2.66°[0m
+[0;32mI (624067) i2c-tools: Roll: 103.73°  Pitch: -15.85°  Yaw: 2.69°[0m
+[0;32mI (624077) i2c-tools: Roll: 103.79°  Pitch: -15.84°  Yaw: 2.72°[0m
+[0;32mI (624087) i2c-tools: Roll: 103.86°  Pitch: -15.84°  Yaw: 2.75°[0m
+[0;32mI (624097) i2c-tools: Roll: 103.92°  Pitch: -15.83°  Yaw: 2.78°[0m
+[0;32mI (624107) i2c-tools: Roll: 103.94°  Pitch: -15.86°  Yaw: 2.81°[0m
+[0;32mI (624118) i2c-tools: Roll: 103.86°  Pitch: -15.97°  Yaw: 2.84°[0m
+[0;32mI (624128) i2c-tools: Roll: 103.94°  Pitch: -15.94°  Yaw: 2.87°[0m
+[0;32mI (624138) i2c-tools: Roll: 103.99°  Pitch: -15.93°  Yaw: 2.90°[0m
+[0;32mI (624148) i2c-tools: Roll: 104.05°  Pitch: -15.92°  Yaw: 2.93°[0m
+[0;32mI (624158) i2c-tools: Roll: 104.10°  Pitch: -15.92°  Yaw: 2.96°[0m
+[0;32mI (624168) i2c-tools: Roll: 104.14°  Pitch: -15.91°  Yaw: 2.99°[0m
+[0;32mI (624178) i2c-tools: Roll: 104.19°  Pitch: -15.90°  Yaw: 3.02°[0m
+[0;32mI (624188) i2c-tools: Roll: 104.23°  Pitch: -15.89°  Yaw: 3.05°[0m
+[0;32mI (624198) i2c-tools: Roll: 104.27°  Pitch: -15.89°  Yaw: 3.08°[0m
+[0;32mI (624208) i2c-tools: Roll: 104.28°  Pitch: -15.91°  Yaw: 3.11°[0m
+[0;32mI (624219) i2c-tools: Roll: 104.20°  Pitch: -16.00°  Yaw: 3.14°[0m
+[0;32mI (624229) i2c-tools: Roll: 104.24°  Pitch: -15.99°  Yaw: 3.17°[0m
+[0;32mI (624239) i2c-tools: Roll: 104.28°  Pitch: -15.98°  Yaw: 3.20°[0m
+[0;32mI (624249) i2c-tools: Roll: 104.32°  Pitch: -15.97°  Yaw: 3.23°[0m
+[0;32mI (624259) i2c-tools: Roll: 104.36°  Pitch: -15.95°  Yaw: 3.26°[0m
+[0;32mI (624269) i2c-tools: Roll: 104.39°  Pitch: -15.95°  Yaw: 3.29°[0m
+[0;32mI (624279) i2c-tools: Roll: 104.43°  Pitch: -15.94°  Yaw: 3.32°[0m
+[0;32mI (624289) i2c-tools: Roll: 104.46°  Pitch: -15.93°  Yaw: 3.35°[0m
+[0;32mI (624299) i2c-tools: Roll: 104.49°  Pitch: -15.92°  Yaw: 3.38°[0m
+[0;32mI (624309) i2c-tools: Roll: 104.48°  Pitch: -15.94°  Yaw: 3.41°[0m
+[0;32mI (624320) i2c-tools: Roll: 104.39°  Pitch: -16.03°  Yaw: 3.44°[0m
+[0;32mI (624330) i2c-tools: Roll: 104.43°  Pitch: -16.02°  Yaw: 3.47°[0m
+[0;32mI (624340) i2c-tools: Roll: 104.46°  Pitch: -16.00°  Yaw: 3.50°[0m
+[0;32mI (624350) i2c-tools: Roll: 104.49°  Pitch: -15.99°  Yaw: 3.53°[0m
+[0;32mI (624360) i2c-tools: Roll: 104.52°  Pitch: -15.98°  Yaw: 3.56°[0m
+[0;32mI (624370) i2c-tools: Roll: 104.54°  Pitch: -15.97°  Yaw: 3.59°[0m
+[0;32mI (624380) i2c-tools: Roll: 104.57°  Pitch: -15.96°  Yaw: 3.62°[0m
+[0;32mI (624390) i2c-tools: Roll: 104.59°  Pitch: -15.95°  Yaw: 3.65°[0m
+[0;32mI (624400) i2c-tools: Roll: 104.62°  Pitch: -15.94°  Yaw: 3.67°[0m
+[0;32mI (624410) i2c-tools: Roll: 104.61°  Pitch: -15.96°  Yaw: 3.70°[0m
+[0;32mI (624421) i2c-tools: Roll: 104.51°  Pitch: -16.05°  Yaw: 3.74°[0m
+[0;32mI (624431) i2c-tools: Roll: 104.54°  Pitch: -16.03°  Yaw: 3.77°[0m
+[0;32mI (624441) i2c-tools: Roll: 104.56°  Pitch: -16.02°  Yaw: 3.80°[0m
+[0;32mI (624451) i2c-tools: Roll: 104.59°  Pitch: -16.01°  Yaw: 3.83°[0m
+[0;32mI (624461) i2c-tools: Roll: 104.61°  Pitch: -15.99°  Yaw: 3.85°[0m
+[0;32mI (624471) i2c-tools: Roll: 104.63°  Pitch: -15.98°  Yaw: 3.88°[0m
+[0;32mI (624481) i2c-tools: Roll: 104.65°  Pitch: -15.97°  Yaw: 3.91°[0m
+[0;32mI (624491) i2c-tools: Roll: 104.67°  Pitch: -15.96°  Yaw: 3.94°[0m
+[0;32mI (624501) i2c-tools: Roll: 104.69°  Pitch: -15.95°  Yaw: 3.97°[0m
+[0;32mI (624511) i2c-tools: Roll: 104.68°  Pitch: -15.97°  Yaw: 4.00°[0m
+[0;32mI (624522) i2c-tools: Roll: 104.58°  Pitch: -16.06°  Yaw: 4.04°[0m
+[0;32mI (624532) i2c-tools: Roll: 104.60°  Pitch: -16.04°  Yaw: 4.06°[0m
+[0;32mI (624542) i2c-tools: Roll: 104.63°  Pitch: -16.03°  Yaw: 4.09°[0m
+[0;32mI (624552) i2c-tools: Roll: 104.65°  Pitch: -16.01°  Yaw: 4.12°[0m
+[0;32mI (624562) i2c-tools: Roll: 104.67°  Pitch: -16.00°  Yaw: 4.15°[0m
+[0;32mI (624572) i2c-tools: Roll: 104.69°  Pitch: -15.99°  Yaw: 4.18°[0m
+[0;32mI (624582) i2c-tools: Roll: 104.70°  Pitch: -15.98°  Yaw: 4.21°[0m
+[0;32mI (624592) i2c-tools: Roll: 104.72°  Pitch: -15.97°  Yaw: 4.24°[0m
+[0;32mI (624602) i2c-tools: Roll: 104.74°  Pitch: -15.96°  Yaw: 4.27°[0m
+[0;32mI (624612) i2c-tools: Roll: 104.72°  Pitch: -15.97°  Yaw: 4.30°[0m
+[0;32mI (624623) i2c-tools: Roll: 104.62°  Pitch: -16.07°  Yaw: 4.33°[0m
+[0;32mI (624633) i2c-tools: Roll: 104.64°  Pitch: -16.05°  Yaw: 4.36°[0m
+[0;32mI (624643) i2c-tools: Roll: 104.66°  Pitch: -16.03°  Yaw: 4.39°[0m
+[0;32mI (624653) i2c-tools: Roll: 104.68°  Pitch: -16.02°  Yaw: 4.42°[0m
+[0;32mI (624663) i2c-tools: Roll: 104.70°  Pitch: -16.01°  Yaw: 4.45°[0m
+[0;32mI (624673) i2c-tools: Roll: 104.72°  Pitch: -15.99°  Yaw: 4.48°[0m
+[0;32mI (624683) i2c-tools: Roll: 104.73°  Pitch: -15.98°  Yaw: 4.51°[0m
+[0;32mI (624693) i2c-tools: Roll: 104.75°  Pitch: -15.97°  Yaw: 4.54°[0m
+[0;32mI (624703) i2c-tools: Roll: 104.77°  Pitch: -15.96°  Yaw: 4.57°[0m
+[0;32mI (624713) i2c-tools: Roll: 104.75°  Pitch: -15.98°  Yaw: 4.60°[0m
+[0;32mI (624724) i2c-tools: Roll: 104.64°  Pitch: -16.07°  Yaw: 4.63°[0m
+[0;32mI (624734) i2c-tools: Roll: 104.67°  Pitch: -16.05°  Yaw: 4.66°[0m
+[0;32mI (624744) i2c-tools: Roll: 104.69°  Pitch: -16.04°  Yaw: 4.69°[0m
+[0;32mI (624754) i2c-tools: Roll: 104.70°  Pitch: -16.02°  Yaw: 4.72°[0m
+[0;32mI (624764) i2c-tools: Roll: 104.72°  Pitch: -16.01°  Yaw: 4.75°[0m
+[0;32mI (624774) i2c-tools: Roll: 104.74°  Pitch: -16.00°  Yaw: 4.78°[0m
+[0;32mI (624784) i2c-tools: Roll: 104.75°  Pitch: -15.98°  Yaw: 4.81°[0m
+[0;32mI (624794) i2c-tools: Roll: 104.77°  Pitch: -15.97°  Yaw: 4.84°[0m
+[0;32mI (624804) i2c-tools: Roll: 104.78°  Pitch: -15.96°  Yaw: 4.87°[0m
+[0;32mI (624814) i2c-tools: Roll: 104.76°  Pitch: -15.98°  Yaw: 4.90°[0m
+[0;32mI (624825) i2c-tools: Roll: 104.66°  Pitch: -16.07°  Yaw: 4.93°[0m
+[0;32mI (624835) i2c-tools: Roll: 104.68°  Pitch: -16.05°  Yaw: 4.96°[0m
+[0;32mI (624845) i2c-tools: Roll: 104.70°  Pitch: -16.04°  Yaw: 4.99°[0m
+[0;32mI (624855) i2c-tools: Roll: 104.72°  Pitch: -16.02°  Yaw: 5.02°[0m
+[0;32mI (624865) i2c-tools: Roll: 104.73°  Pitch: -16.01°  Yaw: 5.05°[0m
+[0;32mI (624875) i2c-tools: Roll: 104.75°  Pitch: -16.00°  Yaw: 5.08°[0m
+[0;32mI (624885) i2c-tools: Roll: 104.76°  Pitch: -15.99°  Yaw: 5.11°[0m
+[0;32mI (624895) i2c-tools: Roll: 104.78°  Pitch: -15.98°  Yaw: 5.14°[0m
+[0;32mI (624905) i2c-tools: Roll: 104.79°  Pitch: -15.96°  Yaw: 5.17°[0m
+[0;32mI (624915) i2c-tools: Roll: 104.77°  Pitch: -15.98°  Yaw: 5.20°[0m
+[0;32mI (624926) i2c-tools: Roll: 104.67°  Pitch: -16.07°  Yaw: 5.23°[0m
+[0;32mI (624936) i2c-tools: Roll: 104.69°  Pitch: -16.06°  Yaw: 5.26°[0m
+[0;32mI (624946) i2c-tools: Roll: 104.71°  Pitch: -16.04°  Yaw: 5.29°[0m
+[0;32mI (624956) i2c-tools: Roll: 104.72°  Pitch: -16.03°  Yaw: 5.32°[0m
+[0;32mI (624966) i2c-tools: Roll: 104.74°  Pitch: -16.01°  Yaw: 5.35°[0m
+[0;32mI (624976) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 5.38°[0m
+[0;32mI (624986) i2c-tools: Roll: 104.77°  Pitch: -15.99°  Yaw: 5.41°[0m
+[0;32mI (624996) i2c-tools: Roll: 104.78°  Pitch: -15.98°  Yaw: 5.44°[0m
+[0;32mI (625006) i2c-tools: Roll: 104.80°  Pitch: -15.96°  Yaw: 5.47°[0m
+[0;32mI (625016) i2c-tools: Roll: 104.78°  Pitch: -15.98°  Yaw: 5.50°[0m
+[0;32mI (625027) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 5.53°[0m
+[0;32mI (625037) i2c-tools: Roll: 104.69°  Pitch: -16.06°  Yaw: 5.56°[0m
+[0;32mI (625047) i2c-tools: Roll: 104.71°  Pitch: -16.04°  Yaw: 5.59°[0m
+[0;32mI (625057) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 5.62°[0m
+[0;32mI (625067) i2c-tools: Roll: 104.74°  Pitch: -16.01°  Yaw: 5.65°[0m
+[0;32mI (625077) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 5.67°[0m
+[0;32mI (625087) i2c-tools: Roll: 104.77°  Pitch: -15.99°  Yaw: 5.70°[0m
+[0;32mI (625097) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 5.73°[0m
+[0;32mI (625107) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 5.76°[0m
+[0;32mI (625117) i2c-tools: Roll: 104.78°  Pitch: -15.98°  Yaw: 5.79°[0m
+[0;32mI (625128) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 5.83°[0m
+[0;32mI (625138) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 5.85°[0m
+[0;32mI (625148) i2c-tools: Roll: 104.71°  Pitch: -16.04°  Yaw: 5.88°[0m
+[0;32mI (625158) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 5.91°[0m
+[0;32mI (625168) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 5.94°[0m
+[0;32mI (625178) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 5.97°[0m
+[0;32mI (625188) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 6.00°[0m
+[0;32mI (625198) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 6.03°[0m
+[0;32mI (625208) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 6.06°[0m
+[0;32mI (625218) i2c-tools: Roll: 104.77°  Pitch: -15.99°  Yaw: 6.09°[0m
+[0;32mI (625229) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 6.12°[0m
+[0;32mI (625239) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 6.15°[0m
+[0;32mI (625249) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 6.18°[0m
+[0;32mI (625259) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 6.21°[0m
+[0;32mI (625269) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 6.24°[0m
+[0;32mI (625279) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 6.27°[0m
+[0;32mI (625289) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 6.30°[0m
+[0;32mI (625299) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 6.33°[0m
+[0;32mI (625309) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 6.36°[0m
+[0;33mW (625318) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (625318) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+[0m
+[0;32mI (625319) i2c-tools: Roll: 104.78°  Pitch: -15.98°  Yaw: 6.39°[0m
+[0;32mI (625335) i2c-tools: Roll: 103.94°  Pitch: -16.72°  Yaw: 6.44°[0m
+[0;32mI (625345) i2c-tools: Roll: 104.00°  Pitch: -16.66°  Yaw: 6.47°[0m
+[0;32mI (625355) i2c-tools: Roll: 104.05°  Pitch: -16.62°  Yaw: 6.50°[0m
+[0;32mI (625365) i2c-tools: Roll: 104.10°  Pitch: -16.58°  Yaw: 6.53°[0m
+[0;32mI (625375) i2c-tools: Roll: 104.15°  Pitch: -16.53°  Yaw: 6.56°[0m
+[0;32mI (625385) i2c-tools: Roll: 104.19°  Pitch: -16.50°  Yaw: 6.58°[0m
+[0;32mI (625395) i2c-tools: Roll: 104.23°  Pitch: -16.46°  Yaw: 6.61°[0m
+[0;32mI (625405) i2c-tools: Roll: 104.27°  Pitch: -16.42°  Yaw: 6.64°[0m
+[0;32mI (625415) i2c-tools: Roll: 104.31°  Pitch: -16.39°  Yaw: 6.67°[0m
+[0;32mI (625425) i2c-tools: Roll: 104.32°  Pitch: -16.39°  Yaw: 6.70°[0m
+[0;32mI (625436) i2c-tools: Roll: 104.23°  Pitch: -16.46°  Yaw: 6.74°[0m
+[0;32mI (625446) i2c-tools: Roll: 104.28°  Pitch: -16.42°  Yaw: 6.76°[0m
+[0;32mI (625456) i2c-tools: Roll: 104.32°  Pitch: -16.39°  Yaw: 6.79°[0m
+[0;32mI (625466) i2c-tools: Roll: 104.35°  Pitch: -16.36°  Yaw: 6.82°[0m
+[0;32mI (625476) i2c-tools: Roll: 104.39°  Pitch: -16.33°  Yaw: 6.85°[0m
+[0;32mI (625486) i2c-tools: Roll: 104.42°  Pitch: -16.30°  Yaw: 6.88°[0m
+[0;32mI (625496) i2c-tools: Roll: 104.45°  Pitch: -16.27°  Yaw: 6.91°[0m
+[0;32mI (625506) i2c-tools: Roll: 104.48°  Pitch: -16.25°  Yaw: 6.94°[0m
+[0;32mI (625516) i2c-tools: Roll: 104.51°  Pitch: -16.22°  Yaw: 6.97°[0m
+[0;32mI (625526) i2c-tools: Roll: 104.51°  Pitch: -16.22°  Yaw: 7.00°[0m
+[0;32mI (625537) i2c-tools: Roll: 104.41°  Pitch: -16.31°  Yaw: 7.03°[0m
+[0;32mI (625547) i2c-tools: Roll: 104.45°  Pitch: -16.27°  Yaw: 7.06°[0m
+[0;32mI (625557) i2c-tools: Roll: 104.48°  Pitch: -16.25°  Yaw: 7.09°[0m
+[0;32mI (625567) i2c-tools: Roll: 104.51°  Pitch: -16.22°  Yaw: 7.12°[0m
+[0;32mI (625577) i2c-tools: Roll: 104.53°  Pitch: -16.20°  Yaw: 7.15°[0m
+[0;32mI (625587) i2c-tools: Roll: 104.56°  Pitch: -16.18°  Yaw: 7.18°[0m
+[0;32mI (625597) i2c-tools: Roll: 104.58°  Pitch: -16.16°  Yaw: 7.21°[0m
+[0;32mI (625607) i2c-tools: Roll: 104.61°  Pitch: -16.14°  Yaw: 7.24°[0m
+[0;32mI (625617) i2c-tools: Roll: 104.63°  Pitch: -16.12°  Yaw: 7.27°[0m
+[0;32mI (625627) i2c-tools: Roll: 104.62°  Pitch: -16.13°  Yaw: 7.30°[0m
+[0;32mI (625638) i2c-tools: Roll: 104.52°  Pitch: -16.21°  Yaw: 7.33°[0m
+[0;32mI (625648) i2c-tools: Roll: 104.55°  Pitch: -16.19°  Yaw: 7.36°[0m
+[0;32mI (625658) i2c-tools: Roll: 104.58°  Pitch: -16.17°  Yaw: 7.39°[0m
+[0;32mI (625668) i2c-tools: Roll: 104.60°  Pitch: -16.15°  Yaw: 7.42°[0m
+[0;32mI (625678) i2c-tools: Roll: 104.62°  Pitch: -16.13°  Yaw: 7.45°[0m
+[0;32mI (625688) i2c-tools: Roll: 104.64°  Pitch: -16.11°  Yaw: 7.48°[0m
+[0;32mI (625698) i2c-tools: Roll: 104.66°  Pitch: -16.09°  Yaw: 7.51°[0m
+[0;32mI (625708) i2c-tools: Roll: 104.68°  Pitch: -16.07°  Yaw: 7.54°[0m
+[0;32mI (625718) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 7.57°[0m
+[0;32mI (625728) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 7.60°[0m
+[0;32mI (625739) i2c-tools: Roll: 104.58°  Pitch: -16.16°  Yaw: 7.63°[0m
+[0;32mI (625749) i2c-tools: Roll: 104.61°  Pitch: -16.13°  Yaw: 7.66°[0m
+[0;32mI (625759) i2c-tools: Roll: 104.63°  Pitch: -16.12°  Yaw: 7.69°[0m
+[0;32mI (625769) i2c-tools: Roll: 104.65°  Pitch: -16.10°  Yaw: 7.72°[0m
+[0;32mI (625779) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 7.75°[0m
+[0;32mI (625789) i2c-tools: Roll: 104.69°  Pitch: -16.06°  Yaw: 7.78°[0m
+[0;32mI (625799) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 7.81°[0m
+[0;32mI (625809) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 7.84°[0m
+[0;32mI (625819) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 7.87°[0m
+[0;32mI (625829) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 7.90°[0m
+[0;32mI (625840) i2c-tools: Roll: 104.62°  Pitch: -16.12°  Yaw: 7.93°[0m
+[0;32mI (625850) i2c-tools: Roll: 104.65°  Pitch: -16.10°  Yaw: 7.96°[0m
+[0;32mI (625860) i2c-tools: Roll: 104.67°  Pitch: -16.09°  Yaw: 7.99°[0m
+[0;32mI (625870) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 8.02°[0m
+[0;32mI (625880) i2c-tools: Roll: 104.70°  Pitch: -16.05°  Yaw: 8.05°[0m
+[0;32mI (625890) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 8.08°[0m
+[0;32mI (625900) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 8.11°[0m
+[0;32mI (625910) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 8.14°[0m
+[0;32mI (625920) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 8.17°[0m
+[0;32mI (625930) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 8.20°[0m
+[0;32mI (625941) i2c-tools: Roll: 104.65°  Pitch: -16.11°  Yaw: 8.23°[0m
+[0;32mI (625951) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 8.26°[0m
+[0;32mI (625961) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 8.29°[0m
+[0;32mI (625971) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 8.32°[0m
+[0;32mI (625981) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 8.35°[0m
+[0;32mI (625991) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 8.37°[0m
+[0;32mI (626001) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 8.40°[0m
+[0;32mI (626011) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 8.43°[0m
+[0;32mI (626021) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 8.46°[0m
+[0;32mI (626031) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 8.49°[0m
+[0;32mI (626042) i2c-tools: Roll: 104.66°  Pitch: -16.09°  Yaw: 8.53°[0m
+[0;32mI (626052) i2c-tools: Roll: 104.68°  Pitch: -16.07°  Yaw: 8.56°[0m
+[0;32mI (626062) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 8.58°[0m
+[0;32mI (626072) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 8.61°[0m
+[0;32mI (626082) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 8.64°[0m
+[0;32mI (626092) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 8.67°[0m
+[0;32mI (626102) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 8.70°[0m
+[0;32mI (626112) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 8.73°[0m
+[0;32mI (626122) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 8.76°[0m
+[0;32mI (626132) i2c-tools: Roll: 104.77°  Pitch: -15.99°  Yaw: 8.79°[0m
+[0;32mI (626143) i2c-tools: Roll: 104.67°  Pitch: -16.09°  Yaw: 8.82°[0m
+[0;32mI (626153) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 8.85°[0m
+[0;32mI (626163) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 8.88°[0m
+[0;32mI (626173) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 8.91°[0m
+[0;32mI (626183) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 8.94°[0m
+[0;32mI (626193) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 8.97°[0m
+[0;32mI (626203) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 9.00°[0m
+[0;32mI (626213) i2c-tools: Roll: 104.78°  Pitch: -15.98°  Yaw: 9.03°[0m
+[0;32mI (626223) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 9.06°[0m
+[0;32mI (626233) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 9.09°[0m
+[0;32mI (626244) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 9.12°[0m
+[0;32mI (626254) i2c-tools: Roll: 104.69°  Pitch: -16.06°  Yaw: 9.15°[0m
+[0;32mI (626264) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 9.18°[0m
+[0;32mI (626274) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 9.21°[0m
+[0;32mI (626284) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 9.24°[0m
+[0;32mI (626294) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 9.27°[0m
+[0;32mI (626304) i2c-tools: Roll: 104.77°  Pitch: -15.99°  Yaw: 9.30°[0m
+[0;32mI (626314) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 9.33°[0m
+[0;32mI (626324) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 9.36°[0m
+[0;32mI (626334) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 9.39°[0m
+[0;32mI (626345) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 9.42°[0m
+[0;32mI (626355) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 9.45°[0m
+[0;32mI (626365) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 9.48°[0m
+[0;32mI (626375) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 9.51°[0m
+[0;32mI (626385) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 9.54°[0m
+[0;32mI (626395) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 9.57°[0m
+[0;32mI (626405) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 9.60°[0m
+[0;32mI (626415) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 9.63°[0m
+[0;32mI (626425) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 9.66°[0m
+[0;32mI (626435) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 9.69°[0m
+[0;32mI (626446) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 9.72°[0m
+[0;32mI (626456) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 9.75°[0m
+[0;32mI (626466) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 9.78°[0m
+[0;32mI (626476) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 9.81°[0m
+[0;32mI (626486) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 9.84°[0m
+[0;32mI (626496) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 9.87°[0m
+[0;32mI (626506) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 9.90°[0m
+[0;32mI (626516) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 9.93°[0m
+[0;32mI (626526) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 9.96°[0m
+[0;32mI (626536) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 9.99°[0m
+[0;32mI (626547) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 10.02°[0m
+[0;32mI (626557) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 10.05°[0m
+[0;32mI (626567) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 10.08°[0m
+[0;32mI (626577) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 10.11°[0m
+[0;32mI (626587) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 10.14°[0m
+[0;32mI (626597) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 10.17°[0m
+[0;32mI (626607) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 10.19°[0m
+[0;32mI (626617) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 10.22°[0m
+[0;32mI (626627) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 10.25°[0m
+[0;32mI (626637) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 10.28°[0m
+[0;32mI (626648) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 10.32°[0m
+[0;32mI (626658) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 10.35°[0m
+[0;32mI (626668) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 10.37°[0m
+[0;32mI (626678) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 10.40°[0m
+[0;32mI (626688) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 10.43°[0m
+[0;32mI (626698) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 10.46°[0m
+[0;32mI (626708) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 10.49°[0m
+[0;32mI (626718) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 10.52°[0m
+[0;32mI (626728) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 10.55°[0m
+[0;32mI (626738) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 10.58°[0m
+[0;32mI (626749) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 10.61°[0m
+[0;32mI (626759) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 10.64°[0m
+[0;32mI (626769) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 10.67°[0m
+[0;32mI (626779) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 10.70°[0m
+[0;32mI (626789) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 10.73°[0m
+[0;32mI (626799) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 10.76°[0m
+[0;32mI (626809) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 10.79°[0m
+[0;32mI (626819) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 10.82°[0m
+[0;32mI (626829) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 10.85°[0m
+[0;32mI (626839) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 10.88°[0m
+[0;32mI (626850) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 10.91°[0m
+[0;32mI (626860) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 10.94°[0m
+[0;32mI (626870) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 10.97°[0m
+[0;32mI (626880) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 11.00°[0m
+[0;32mI (626890) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 11.03°[0m
+[0;32mI (626900) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 11.06°[0m
+[0;32mI (626910) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 11.09°[0m
+[0;32mI (626920) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 11.12°[0m
+[0;32mI (626930) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 11.15°[0m
+[0;32mI (626940) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 11.18°[0m
+[0;32mI (626951) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 11.21°[0m
+[0;32mI (626961) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 11.24°[0m
+[0;32mI (626971) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 11.27°[0m
+[0;32mI (626981) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 11.30°[0m
+[0;32mI (626991) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 11.33°[0m
+[0;32mI (627001) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 11.36°[0m
+[0;32mI (627011) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 11.39°[0m
+[0;32mI (627021) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 11.42°[0m
+[0;32mI (627031) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 11.45°[0m
+[0;32mI (627041) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 11.48°[0m
+[0;32mI (627052) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 11.51°[0m
+[0;32mI (627062) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 11.54°[0m
+[0;32mI (627072) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 11.57°[0m
+[0;32mI (627082) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 11.60°[0m
+[0;32mI (627092) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 11.63°[0m
+[0;32mI (627102) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 11.66°[0m
+[0;32mI (627112) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 11.69°[0m
+[0;32mI (627122) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 11.72°[0m
+[0;32mI (627132) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 11.75°[0m
+[0;32mI (627142) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 11.78°[0m
+[0;32mI (627153) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 11.81°[0m
+[0;32mI (627163) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 11.84°[0m
+[0;32mI (627173) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 11.87°[0m
+[0;32mI (627183) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 11.90°[0m
+[0;32mI (627193) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 11.93°[0m
+[0;32mI (627203) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 11.96°[0m
+[0;32mI (627213) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 11.98°[0m
+[0;32mI (627223) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.01°[0m
+[0;32mI (627233) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 12.04°[0m
+[0;32mI (627243) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.07°[0m
+[0;32mI (627254) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 12.11°[0m
+[0;32mI (627264) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 12.14°[0m
+[0;32mI (627274) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 12.17°[0m
+[0;32mI (627284) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 12.19°[0m
+[0;32mI (627294) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 12.22°[0m
+[0;32mI (627304) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 12.25°[0m
+[0;32mI (627314) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 12.28°[0m
+[0;32mI (627324) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.31°[0m
+[0;32mI (627334) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 12.34°[0m
+[0;32mI (627344) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.37°[0m
+[0;32mI (627355) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 12.40°[0m
+[0;32mI (627365) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 12.43°[0m
+[0;32mI (627375) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 12.46°[0m
+[0;32mI (627385) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 12.49°[0m
+[0;32mI (627395) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 12.52°[0m
+[0;32mI (627405) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 12.55°[0m
+[0;32mI (627415) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 12.58°[0m
+[0;32mI (627425) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.61°[0m
+[0;32mI (627435) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 12.64°[0m
+[0;32mI (627445) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.67°[0m
+[0;32mI (627456) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 12.70°[0m
+[0;32mI (627466) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 12.73°[0m
+[0;32mI (627476) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 12.76°[0m
+[0;32mI (627486) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 12.79°[0m
+[0;32mI (627496) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 12.82°[0m
+[0;32mI (627506) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 12.85°[0m
+[0;32mI (627516) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 12.88°[0m
+[0;32mI (627526) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.91°[0m
+[0;32mI (627536) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 12.94°[0m
+[0;32mI (627546) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 12.97°[0m
+[0;32mI (627557) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 13.00°[0m
+[0;32mI (627567) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 13.03°[0m
+[0;32mI (627577) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 13.06°[0m
+[0;32mI (627587) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 13.09°[0m
+[0;32mI (627597) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 13.12°[0m
+[0;32mI (627607) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 13.15°[0m
+[0;32mI (627617) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 13.18°[0m
+[0;32mI (627627) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 13.21°[0m
+[0;32mI (627637) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 13.24°[0m
+[0;32mI (627647) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 13.27°[0m
+[0;32mI (627658) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 13.30°[0m
+[0;32mI (627668) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 13.33°[0m
+[0;32mI (627678) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 13.36°[0m
+[0;32mI (627688) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 13.39°[0m
+[0;32mI (627698) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 13.42°[0m
+[0;32mI (627708) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 13.45°[0m
+[0;32mI (627718) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 13.48°[0m
+[0;32mI (627728) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 13.51°[0m
+[0;32mI (627738) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 13.54°[0m
+[0;32mI (627748) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 13.57°[0m
+[0;32mI (627759) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 13.60°[0m
+[0;32mI (627769) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 13.63°[0m
+[0;32mI (627779) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 13.66°[0m
+[0;32mI (627789) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 13.69°[0m
+[0;32mI (627799) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 13.72°[0m
+[0;32mI (627809) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 13.75°[0m
+[0;32mI (627819) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 13.78°[0m
+[0;32mI (627829) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 13.80°[0m
+[0;32mI (627839) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 13.83°[0m
+[0;32mI (627849) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 13.86°[0m
+[0;32mI (627860) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 13.90°[0m
+[0;32mI (627870) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 13.93°[0m
+[0;32mI (627880) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 13.96°[0m
+[0;32mI (627890) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 13.98°[0m
+[0;32mI (627900) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 14.01°[0m
+[0;32mI (627910) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 14.04°[0m
+[0;32mI (627920) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 14.07°[0m
+[0;32mI (627930) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 14.10°[0m
+[0;32mI (627940) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 14.13°[0m
+[0;32mI (627950) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 14.16°[0m
+[0;32mI (627961) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 14.19°[0m
+[0;32mI (627971) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 14.22°[0m
+[0;32mI (627981) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 14.25°[0m
+[0;32mI (627991) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 14.28°[0m
+[0;32mI (628001) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 14.31°[0m
+[0;32mI (628011) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 14.34°[0m
+[0;32mI (628021) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 14.37°[0m
+[0;32mI (628031) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 14.40°[0m
+[0;32mI (628041) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 14.43°[0m
+[0;32mI (628051) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 14.46°[0m
+[0;32mI (628062) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 14.49°[0m
+[0;32mI (628072) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 14.52°[0m
+[0;32mI (628082) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 14.55°[0m
+[0;32mI (628092) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 14.58°[0m
+[0;32mI (628102) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 14.61°[0m
+[0;32mI (628112) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 14.64°[0m
+[0;32mI (628122) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 14.67°[0m
+[0;32mI (628132) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 14.70°[0m
+[0;32mI (628142) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 14.73°[0m
+[0;32mI (628152) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 14.76°[0m
+[0;32mI (628163) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 14.79°[0m
+[0;32mI (628173) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 14.82°[0m
+[0;32mI (628183) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 14.85°[0m
+[0;32mI (628193) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 14.88°[0m
+[0;32mI (628203) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 14.91°[0m
+[0;32mI (628213) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 14.94°[0m
+[0;32mI (628223) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 14.97°[0m
+[0;32mI (628233) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.00°[0m
+[0;32mI (628243) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 15.03°[0m
+[0;32mI (628253) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.06°[0m
+[0;32mI (628264) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 15.09°[0m
+[0;32mI (628274) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 15.12°[0m
+[0;32mI (628284) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 15.15°[0m
+[0;32mI (628294) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 15.18°[0m
+[0;32mI (628304) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 15.21°[0m
+[0;32mI (628314) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 15.24°[0m
+[0;32mI (628324) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 15.27°[0m
+[0;32mI (628334) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.30°[0m
+[0;32mI (628344) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 15.33°[0m
+[0;32mI (628354) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.36°[0m
+[0;32mI (628365) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 15.39°[0m
+[0;32mI (628375) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 15.42°[0m
+[0;32mI (628385) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 15.45°[0m
+[0;32mI (628395) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 15.48°[0m
+[0;32mI (628405) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 15.51°[0m
+[0;32mI (628415) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 15.54°[0m
+[0;32mI (628425) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 15.57°[0m
+[0;32mI (628435) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.59°[0m
+[0;32mI (628445) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 15.62°[0m
+[0;32mI (628455) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.65°[0m
+[0;32mI (628466) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 15.69°[0m
+[0;32mI (628476) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 15.72°[0m
+[0;32mI (628486) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 15.75°[0m
+[0;32mI (628496) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 15.78°[0m
+[0;32mI (628506) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 15.80°[0m
+[0;32mI (628516) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 15.83°[0m
+[0;32mI (628526) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 15.86°[0m
+[0;32mI (628536) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.89°[0m
+[0;32mI (628546) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 15.92°[0m
+[0;32mI (628556) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 15.95°[0m
+[0;32mI (628567) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 15.99°[0m
+[0;32mI (628577) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 16.01°[0m
+[0;32mI (628587) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 16.04°[0m
+[0;32mI (628597) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 16.07°[0m
+[0;32mI (628607) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 16.10°[0m
+[0;32mI (628617) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 16.13°[0m
+[0;32mI (628627) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 16.16°[0m
+[0;32mI (628637) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 16.19°[0m
+[0;32mI (628647) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 16.22°[0m
+[0;32mI (628657) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 16.25°[0m
+[0;32mI (628668) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 16.28°[0m
+[0;32mI (628678) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 16.31°[0m
+[0;32mI (628688) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 16.34°[0m
+[0;32mI (628698) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 16.37°[0m
+[0;32mI (628708) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 16.40°[0m
+[0;32mI (628718) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 16.43°[0m
+[0;32mI (628728) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 16.46°[0m
+[0;32mI (628738) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 16.49°[0m
+[0;32mI (628748) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 16.52°[0m
+[0;32mI (628758) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 16.55°[0m
+[0;32mI (628769) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 16.58°[0m
+[0;32mI (628779) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 16.61°[0m
+[0;32mI (628789) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 16.64°[0m
+[0;32mI (628799) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 16.67°[0m
+[0;32mI (628809) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 16.70°[0m
+[0;32mI (628819) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 16.73°[0m
+[0;32mI (628829) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 16.76°[0m
+[0;32mI (628839) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 16.79°[0m
+[0;32mI (628849) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 16.82°[0m
+[0;32mI (628859) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 16.85°[0m
+[0;32mI (628870) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 16.88°[0m
+[0;32mI (628880) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 16.91°[0m
+[0;32mI (628890) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 16.94°[0m
+[0;32mI (628900) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 16.97°[0m
+[0;32mI (628910) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 17.00°[0m
+[0;32mI (628920) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 17.03°[0m
+[0;32mI (628930) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 17.06°[0m
+[0;32mI (628940) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.09°[0m
+[0;32mI (628950) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 17.12°[0m
+[0;32mI (628960) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.15°[0m
+[0;32mI (628971) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 17.18°[0m
+[0;32mI (628981) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 17.21°[0m
+[0;32mI (628991) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 17.24°[0m
+[0;32mI (629001) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 17.27°[0m
+[0;32mI (629011) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 17.30°[0m
+[0;32mI (629021) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 17.33°[0m
+[0;32mI (629031) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 17.36°[0m
+[0;32mI (629041) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.39°[0m
+[0;32mI (629051) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 17.41°[0m
+[0;32mI (629061) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.44°[0m
+[0;32mI (629072) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 17.48°[0m
+[0;32mI (629082) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 17.51°[0m
+[0;32mI (629092) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 17.54°[0m
+[0;32mI (629102) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 17.57°[0m
+[0;32mI (629112) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 17.59°[0m
+[0;32mI (629122) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 17.62°[0m
+[0;32mI (629132) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 17.65°[0m
+[0;32mI (629142) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.68°[0m
+[0;32mI (629152) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 17.71°[0m
+[0;32mI (629162) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.74°[0m
+[0;32mI (629173) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 17.78°[0m
+[0;32mI (629183) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 17.80°[0m
+[0;32mI (629193) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 17.83°[0m
+[0;32mI (629203) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 17.86°[0m
+[0;32mI (629213) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 17.89°[0m
+[0;32mI (629223) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 17.92°[0m
+[0;32mI (629233) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 17.95°[0m
+[0;32mI (629243) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 17.98°[0m
+[0;32mI (629253) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 18.01°[0m
+[0;32mI (629263) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 18.04°[0m
+[0;32mI (629274) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 18.07°[0m
+[0;32mI (629284) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 18.10°[0m
+[0;32mI (629294) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 18.13°[0m
+[0;32mI (629304) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 18.16°[0m
+[0;32mI (629314) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 18.19°[0m
+[0;32mI (629324) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 18.22°[0m
+[0;32mI (629334) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 18.25°[0m
+[0;32mI (629344) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 18.28°[0m
+[0;32mI (629354) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 18.31°[0m
+[0;32mI (629364) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 18.34°[0m
+[0;32mI (629375) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 18.37°[0m
+[0;32mI (629385) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 18.40°[0m
+[0;32mI (629395) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 18.43°[0m
+[0;32mI (629405) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 18.46°[0m
+[0;32mI (629415) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 18.49°[0m
+[0;33mW (629418) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (629418) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (629425) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 18.52°[0m
+[0;32mI (629437) i2c-tools: Roll: 104.48°  Pitch: -16.25°  Yaw: 18.56°[0m
+[0;32mI (629447) i2c-tools: Roll: 104.51°  Pitch: -16.22°  Yaw: 18.58°[0m
+[0;32mI (629457) i2c-tools: Roll: 104.54°  Pitch: -16.20°  Yaw: 18.61°[0m
+[0;32mI (629467) i2c-tools: Roll: 104.53°  Pitch: -16.20°  Yaw: 18.64°[0m
+[0;32mI (629478) i2c-tools: Roll: 104.44°  Pitch: -16.28°  Yaw: 18.68°[0m
+[0;32mI (629488) i2c-tools: Roll: 104.47°  Pitch: -16.26°  Yaw: 18.71°[0m
+[0;32mI (629498) i2c-tools: Roll: 104.50°  Pitch: -16.23°  Yaw: 18.74°[0m
+[0;32mI (629508) i2c-tools: Roll: 104.53°  Pitch: -16.21°  Yaw: 18.76°[0m
+[0;32mI (629518) i2c-tools: Roll: 104.55°  Pitch: -16.18°  Yaw: 18.79°[0m
+[0;32mI (629528) i2c-tools: Roll: 104.58°  Pitch: -16.16°  Yaw: 18.82°[0m
+[0;32mI (629538) i2c-tools: Roll: 104.60°  Pitch: -16.14°  Yaw: 18.85°[0m
+[0;32mI (629548) i2c-tools: Roll: 104.62°  Pitch: -16.12°  Yaw: 18.88°[0m
+[0;32mI (629558) i2c-tools: Roll: 104.65°  Pitch: -16.10°  Yaw: 18.91°[0m
+[0;32mI (629568) i2c-tools: Roll: 104.63°  Pitch: -16.11°  Yaw: 18.94°[0m
+[0;32mI (629579) i2c-tools: Roll: 104.53°  Pitch: -16.20°  Yaw: 18.97°[0m
+[0;32mI (629589) i2c-tools: Roll: 104.56°  Pitch: -16.18°  Yaw: 19.00°[0m
+[0;32mI (629599) i2c-tools: Roll: 104.59°  Pitch: -16.15°  Yaw: 19.03°[0m
+[0;32mI (629609) i2c-tools: Roll: 104.61°  Pitch: -16.13°  Yaw: 19.06°[0m
+[0;32mI (629619) i2c-tools: Roll: 104.63°  Pitch: -16.12°  Yaw: 19.09°[0m
+[0;32mI (629629) i2c-tools: Roll: 104.65°  Pitch: -16.10°  Yaw: 19.12°[0m
+[0;32mI (629639) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 19.15°[0m
+[0;32mI (629649) i2c-tools: Roll: 104.69°  Pitch: -16.06°  Yaw: 19.18°[0m
+[0;32mI (629659) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 19.21°[0m
+[0;32mI (629669) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 19.24°[0m
+[0;32mI (629680) i2c-tools: Roll: 104.59°  Pitch: -16.15°  Yaw: 19.27°[0m
+[0;32mI (629690) i2c-tools: Roll: 104.62°  Pitch: -16.13°  Yaw: 19.30°[0m
+[0;32mI (629700) i2c-tools: Roll: 104.64°  Pitch: -16.11°  Yaw: 19.33°[0m
+[0;32mI (629710) i2c-tools: Roll: 104.66°  Pitch: -16.09°  Yaw: 19.36°[0m
+[0;32mI (629720) i2c-tools: Roll: 104.67°  Pitch: -16.09°  Yaw: 19.39°[0m
+[0;32mI (629730) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 19.42°[0m
+[0;32mI (629740) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 19.45°[0m
+[0;32mI (629750) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 19.48°[0m
+[0;32mI (629760) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 19.51°[0m
+[0;32mI (629770) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 19.54°[0m
+[0;32mI (629781) i2c-tools: Roll: 104.63°  Pitch: -16.12°  Yaw: 19.57°[0m
+[0;32mI (629791) i2c-tools: Roll: 104.65°  Pitch: -16.10°  Yaw: 19.60°[0m
+[0;32mI (629801) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 19.63°[0m
+[0;32mI (629811) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 19.66°[0m
+[0;32mI (629821) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 19.69°[0m
+[0;32mI (629831) i2c-tools: Roll: 104.73°  Pitch: -16.04°  Yaw: 19.72°[0m
+[0;32mI (629841) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 19.75°[0m
+[0;32mI (629851) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 19.78°[0m
+[0;32mI (629861) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 19.81°[0m
+[0;32mI (629871) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 19.84°[0m
+[0;32mI (629882) i2c-tools: Roll: 104.65°  Pitch: -16.10°  Yaw: 19.87°[0m
+[0;32mI (629892) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 19.90°[0m
+[0;32mI (629902) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 19.93°[0m
+[0;32mI (629912) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 19.96°[0m
+[0;32mI (629922) i2c-tools: Roll: 104.73°  Pitch: -16.04°  Yaw: 19.99°[0m
+[0;32mI (629932) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 20.02°[0m
+[0;32mI (629942) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 20.05°[0m
+[0;32mI (629952) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 20.08°[0m
+[0;32mI (629962) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 20.11°[0m
+[0;32mI (629972) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 20.14°[0m
+[0;32mI (629983) i2c-tools: Roll: 104.66°  Pitch: -16.09°  Yaw: 20.17°[0m
+[0;32mI (629993) i2c-tools: Roll: 104.68°  Pitch: -16.07°  Yaw: 20.20°[0m
+[0;32mI (630003) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 20.23°[0m
+[0;32mI (630013) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 20.26°[0m
+[0;32mI (630023) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 20.29°[0m
+[0;32mI (630033) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 20.32°[0m
+[0;32mI (630043) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 20.35°[0m
+[0;32mI (630053) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 20.37°[0m
+[0;32mI (630063) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 20.40°[0m
+[0;32mI (630073) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 20.43°[0m
+[0;32mI (630084) i2c-tools: Roll: 104.67°  Pitch: -16.09°  Yaw: 20.47°[0m
+[0;32mI (630094) i2c-tools: Roll: 104.69°  Pitch: -16.07°  Yaw: 20.50°[0m
+[0;32mI (630104) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 20.53°[0m
+[0;32mI (630114) i2c-tools: Roll: 104.73°  Pitch: -16.04°  Yaw: 20.56°[0m
+[0;32mI (630124) i2c-tools: Roll: 104.74°  Pitch: -16.02°  Yaw: 20.58°[0m
+[0;32mI (630134) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 20.61°[0m
+[0;32mI (630144) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 20.64°[0m
+[0;32mI (630154) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 20.67°[0m
+[0;32mI (630164) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 20.70°[0m
+[0;32mI (630174) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 20.73°[0m
+[0;32mI (630185) i2c-tools: Roll: 104.67°  Pitch: -16.08°  Yaw: 20.76°[0m
+[0;32mI (630195) i2c-tools: Roll: 104.69°  Pitch: -16.06°  Yaw: 20.79°[0m
+[0;32mI (630205) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 20.82°[0m
+[0;32mI (630215) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 20.85°[0m
+[0;32mI (630225) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 20.88°[0m
+[0;32mI (630235) i2c-tools: Roll: 104.76°  Pitch: -16.01°  Yaw: 20.91°[0m
+[0;32mI (630245) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 20.94°[0m
+[0;32mI (630255) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 20.97°[0m
+[0;32mI (630265) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 21.00°[0m
+[0;32mI (630275) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 21.03°[0m
+[0;32mI (630286) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 21.06°[0m
+[0;32mI (630296) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 21.09°[0m
+[0;32mI (630306) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 21.12°[0m
+[0;32mI (630316) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 21.15°[0m
+[0;32mI (630326) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 21.18°[0m
+[0;32mI (630336) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 21.21°[0m
+[0;32mI (630346) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 21.24°[0m
+[0;32mI (630356) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 21.27°[0m
+[0;32mI (630366) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 21.30°[0m
+[0;32mI (630376) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 21.33°[0m
+[0;32mI (630387) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 21.36°[0m
+[0;32mI (630397) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 21.39°[0m
+[0;32mI (630407) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 21.42°[0m
+[0;32mI (630417) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 21.45°[0m
+[0;32mI (630427) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 21.48°[0m
+[0;32mI (630437) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 21.51°[0m
+[0;32mI (630447) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 21.54°[0m
+[0;32mI (630457) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 21.57°[0m
+[0;32mI (630467) i2c-tools: Roll: 104.80°  Pitch: -15.97°  Yaw: 21.60°[0m
+[0;32mI (630477) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 21.63°[0m
+[0;32mI (630488) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 21.66°[0m
+[0;32mI (630498) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 21.69°[0m
+[0;32mI (630508) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 21.72°[0m
+[0;32mI (630518) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 21.75°[0m
+[0;32mI (630528) i2c-tools: Roll: 104.75°  Pitch: -16.02°  Yaw: 21.78°[0m
+[0;32mI (630538) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 21.81°[0m
+[0;32mI (630548) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 21.84°[0m
+[0;32mI (630558) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 21.87°[0m
+[0;32mI (630568) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 21.90°[0m
+[0;32mI (630578) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 21.93°[0m
+[0;32mI (630589) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 21.96°[0m
+[0;32mI (630599) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 21.99°[0m
+[0;32mI (630609) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 22.02°[0m
+[0;32mI (630619) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 22.05°[0m
+[0;32mI (630629) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 22.08°[0m
+[0;32mI (630639) i2c-tools: Roll: 104.76°  Pitch: -16.00°  Yaw: 22.11°[0m
+[0;32mI (630649) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 22.14°[0m
+[0;32mI (630659) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 22.17°[0m
+[0;32mI (630669) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 22.19°[0m
+[0;32mI (630679) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 22.22°[0m
+[0;32mI (630690) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 22.26°[0m
+[0;32mI (630700) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 22.29°[0m
+[0;32mI (630710) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 22.32°[0m
+[0;32mI (630720) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 22.35°[0m
+[0;32mI (630730) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 22.37°[0m
+[0;32mI (630740) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 22.40°[0m
+[0;32mI (630750) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 22.43°[0m
+[0;32mI (630760) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 22.46°[0m
+[0;32mI (630770) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 22.49°[0m
+[0;32mI (630780) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 22.52°[0m
+[0;32mI (630791) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 22.56°[0m
+[0;32mI (630801) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 22.58°[0m
+[0;32mI (630811) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 22.61°[0m
+[0;32mI (630821) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 22.64°[0m
+[0;32mI (630831) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 22.67°[0m
+[0;32mI (630841) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 22.70°[0m
+[0;32mI (630851) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 22.73°[0m
+[0;32mI (630861) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 22.76°[0m
+[0;32mI (630871) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 22.79°[0m
+[0;32mI (630881) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 22.82°[0m
+[0;32mI (630892) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 22.85°[0m
+[0;32mI (630902) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 22.88°[0m
+[0;32mI (630912) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 22.91°[0m
+[0;32mI (630922) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 22.94°[0m
+[0;32mI (630932) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 22.97°[0m
+[0;32mI (630942) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 23.00°[0m
+[0;32mI (630952) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 23.03°[0m
+[0;32mI (630962) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.06°[0m
+[0;32mI (630972) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 23.09°[0m
+[0;32mI (630982) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.12°[0m
+[0;32mI (630993) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 23.15°[0m
+[0;32mI (631003) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 23.18°[0m
+[0;32mI (631013) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 23.21°[0m
+[0;32mI (631023) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 23.24°[0m
+[0;32mI (631033) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 23.27°[0m
+[0;32mI (631043) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 23.30°[0m
+[0;32mI (631053) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 23.33°[0m
+[0;32mI (631063) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.36°[0m
+[0;32mI (631073) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 23.39°[0m
+[0;32mI (631083) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.42°[0m
+[0;32mI (631094) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 23.45°[0m
+[0;32mI (631104) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 23.48°[0m
+[0;32mI (631114) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 23.51°[0m
+[0;32mI (631124) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 23.54°[0m
+[0;32mI (631134) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 23.57°[0m
+[0;32mI (631144) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 23.60°[0m
+[0;32mI (631154) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 23.63°[0m
+[0;32mI (631164) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.66°[0m
+[0;32mI (631174) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 23.69°[0m
+[0;32mI (631184) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.72°[0m
+[0;32mI (631195) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 23.75°[0m
+[0;32mI (631205) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 23.78°[0m
+[0;32mI (631215) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 23.81°[0m
+[0;32mI (631225) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 23.84°[0m
+[0;32mI (631235) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 23.87°[0m
+[0;32mI (631245) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 23.90°[0m
+[0;32mI (631255) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 23.93°[0m
+[0;32mI (631265) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 23.96°[0m
+[0;32mI (631275) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 23.98°[0m
+[0;32mI (631285) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.02°[0m
+[0;32mI (631296) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 24.05°[0m
+[0;32mI (631306) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 24.08°[0m
+[0;32mI (631316) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 24.11°[0m
+[0;32mI (631326) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 24.14°[0m
+[0;32mI (631336) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 24.17°[0m
+[0;32mI (631346) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 24.19°[0m
+[0;32mI (631356) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 24.22°[0m
+[0;32mI (631366) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.25°[0m
+[0;32mI (631376) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 24.28°[0m
+[0;32mI (631386) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.31°[0m
+[0;32mI (631397) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 24.35°[0m
+[0;32mI (631407) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 24.37°[0m
+[0;32mI (631417) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 24.40°[0m
+[0;32mI (631427) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 24.43°[0m
+[0;32mI (631437) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 24.46°[0m
+[0;32mI (631447) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 24.49°[0m
+[0;32mI (631457) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 24.52°[0m
+[0;32mI (631467) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.55°[0m
+[0;32mI (631477) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 24.58°[0m
+[0;32mI (631487) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.61°[0m
+[0;32mI (631498) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 24.64°[0m
+[0;32mI (631508) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 24.67°[0m
+[0;32mI (631518) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 24.70°[0m
+[0;32mI (631528) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 24.73°[0m
+[0;32mI (631538) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 24.76°[0m
+[0;32mI (631548) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 24.79°[0m
+[0;32mI (631558) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 24.82°[0m
+[0;32mI (631568) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.85°[0m
+[0;32mI (631578) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 24.88°[0m
+[0;32mI (631588) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 24.91°[0m
+[0;32mI (631599) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 24.94°[0m
+[0;32mI (631609) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 24.97°[0m
+[0;32mI (631619) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 25.00°[0m
+[0;32mI (631629) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 25.03°[0m
+[0;32mI (631639) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 25.06°[0m
+[0;32mI (631649) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 25.09°[0m
+[0;32mI (631659) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 25.12°[0m
+[0;32mI (631669) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 25.15°[0m
+[0;32mI (631679) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 25.18°[0m
+[0;32mI (631689) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 25.21°[0m
+[0;32mI (631700) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 25.24°[0m
+[0;32mI (631710) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 25.27°[0m
+[0;32mI (631720) i2c-tools: Roll: 104.71°  Pitch: -16.05°  Yaw: 25.30°[0m
+[0;32mI (631730) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 25.33°[0m
+[0;32mI (631740) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 25.36°[0m
+[0;32mI (631750) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 25.39°[0m
+[0;32mI (631760) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 25.42°[0m
+[0;32mI (631770) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 25.45°[0m
+[0;32mI (631780) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 25.48°[0m
+[0;32mI (631790) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 25.51°[0m
+[0;32mI (631801) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 25.54°[0m
+[0;32mI (631811) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 25.57°[0m
+[0;32mI (631821) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 25.60°[0m
+[0;32mI (631831) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 25.63°[0m
+[0;32mI (631841) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 25.66°[0m
+[0;32mI (631851) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 25.69°[0m
+[0;32mI (631861) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 25.72°[0m
+[0;32mI (631871) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 25.75°[0m
+[0;32mI (631881) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 25.78°[0m
+[0;32mI (631891) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 25.81°[0m
+[0;32mI (631902) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 25.84°[0m
+[0;32mI (631912) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 25.87°[0m
+[0;32mI (631922) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 25.90°[0m
+[0;32mI (631932) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 25.93°[0m
+[0;32mI (631942) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 25.96°[0m
+[0;32mI (631952) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 25.98°[0m
+[0;32mI (631962) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 26.01°[0m
+[0;32mI (631972) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 26.04°[0m
+[0;32mI (631982) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 26.07°[0m
+[0;32mI (631992) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 26.10°[0m
+[0;32mI (632003) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 26.14°[0m
+[0;32mI (632013) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 26.17°[0m
+[0;32mI (632023) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 26.19°[0m
+[0;32mI (632033) i2c-tools: Roll: 104.74°  Pitch: -16.03°  Yaw: 26.22°[0m
+[0;32mI (632043) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 26.25°[0m
+[0;32mI (632053) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 26.28°[0m
+[0;32mI (632063) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 26.31°[0m
+[0;32mI (632073) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 26.34°[0m
+[0;32mI (632083) i2c-tools: Roll: 104.81°  Pitch: -15.97°  Yaw: 26.37°[0m
+[0;32mI (632093) i2c-tools: Roll: 104.79°  Pitch: -15.98°  Yaw: 26.40°[0m
+[0;32mI (632104) i2c-tools: Roll: 104.68°  Pitch: -16.08°  Yaw: 26.43°[0m
+[0;32mI (632114) i2c-tools: Roll: 104.70°  Pitch: -16.06°  Yaw: 26.46°[0m
+[0;32mI (632124) i2c-tools: Roll: 104.72°  Pitch: -16.04°  Yaw: 26.49°[0m
+[0;32mI (632134) i2c-tools: Roll: 104.73°  Pitch: -16.03°  Yaw: 26.52°[0m
+[0;32mI (632144) i2c-tools: Roll: 104.75°  Pitch: -16.01°  Yaw: 26.55°[0m
+[0;32mI (632154) i2c-tools: Roll: 104.77°  Pitch: -16.00°  Yaw: 26.58°[0m
+[0;32mI (632164) i2c-tools: Roll: 104.78°  Pitch: -15.99°  Yaw: 26.61°[0m
+[0;32mI (632174) i2c-tools: 🗑 Đang xóa hoàn toàn timer...[0m
+[0;32mI (632174) i2c-tools: ✅ Timer đã bị xóa hoàn toàn.[0m
+[0;32mI (632175) example: Saved initial angles to NVS: Roll=104.78, Pitch=-15.99, Yaw=26.61[0m
+Not a deep sleep reset
+Entering deep sleep

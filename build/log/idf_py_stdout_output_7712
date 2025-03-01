@@ -1,0 +1,75 @@
+[1/13] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/13] No install step for 'bootloader'
+[3/13] Building C object esp-idf/MPU/CMakeFiles/__idf_MPU.dir/i2ctools_example_main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:26,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_first':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:188:18: warning: unused variable 'last_time' [-Wunused-variable]
+  188 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:187:13: warning: unused variable 'msg' [-Wunused-variable]
+  187 |         int msg;
+      |             ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_alarm':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:271:18: warning: unused variable 'last_time' [-Wunused-variable]
+  271 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:270:13: warning: unused variable 'msg' [-Wunused-variable]
+  270 |         int msg;
+      |             ^~~
+[4/13] Completed 'bootloader'
+[5/13] Linking C static library esp-idf\MPU\libMPU.a
+[6/13] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:28,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:3:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:345:1: warning: ignoring attribute 'section (".rtc.data.3")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
+  345 | RTC_DATA_ATTR float stored_roll = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:66:28: note: previous declaration here
+   66 | extern RTC_DATA_ATTR float stored_roll;
+      |                            ^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:346:1: warning: ignoring attribute 'section (".rtc.data.4")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
+  346 | RTC_DATA_ATTR float stored_pitch = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:67:28: note: previous declaration here
+   67 | extern RTC_DATA_ATTR float stored_pitch;
+      |                            ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:347:1: warning: ignoring attribute 'section (".rtc.data.5")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
+  347 | RTC_DATA_ATTR float stored_yaw = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:68:28: note: previous declaration here
+   68 | extern RTC_DATA_ATTR float stored_yaw;
+      |                            ^~~~~~~~~~
+[7/13] Building C object esp-idf/SIM/CMakeFiles/__idf_SIM.dir/sim_a7680c.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:28,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.c: In function 'module_sim_call_sms':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.c:414:10: warning: unused variable 'connected' [-Wunused-variable]
+  414 |     bool connected = false;
+      |          ^~~~~~~~~
+[8/13] Linking C static library esp-idf\SIM\libSIM.a
+[9/13] Linking C static library esp-idf\main\libmain.a
+[10/13] Generating ld/sections.ld
+[11/13] Linking CXX executable GPS_Tracker.elf
+[12/13] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin
+[13/13] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0x499e0 bytes. Smallest app partition is 0x100000 bytes. 0xb6620 bytes (71%) free.

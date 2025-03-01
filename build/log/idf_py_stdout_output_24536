@@ -1,0 +1,370 @@
+���ѥ��ɕ�bootloader[0m
+[0;32mI �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 26 2025 23:29:01[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0da7ch ( 55932) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001daa4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001dab4 vaddr=3ffb0000 size=02230h (  8752) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0001fcec vaddr=40080000 size=0032ch (   812) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=22f34h (143156) map[0m
+[0;32mI (201) esp_image: segment 5: paddr=00042f5c vaddr=4008032c size=0e61ch ( 58908) load[0m
+[0;32mI (226) esp_image: segment 6: paddr=00051580 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (226) esp_image: segment 7: paddr=000515ec vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (239) boot: Disabling RNG early entropy source...[0m
+[0;32mI (255) cpu_start: Multicore app[0m
+[0;32mI (256) cpu_start: Pro cpu up.[0m
+[0;32mI (256) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (273) cpu_start: Pro cpu start user code[0m
+[0;32mI (273) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (273) cpu_start: Application information:[0m
+[0;32mI (278) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (283) cpu_start: App version:      1[0m
+[0;32mI (287) cpu_start: Compile time:     Feb 26 2025 23:28:57[0m
+[0;32mI (293) cpu_start: ELF file SHA256:  059f2fbb79fd2c76...[0m
+[0;32mI (299) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (305) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (310) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (314) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (319) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (326) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (332) heap_init: At 3FFB2CB8 len 0002D348 (180 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (345) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (351) heap_init: At 4008E948 len 000116B8 (69 KiB): IRAM[0m
+[0;32mI (359) spi_flash: detected chip: generic[0m
+[0;32mI (362) spi_flash: flash io: dio[0m
+[0;33mW (366) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (379) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (388) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (397) app_start: Starting scheduler on CPU0[0m
+[0;32mI (401) app_start: Starting scheduler on CPU1[0m
+[0;32mI (401) main_task: Started on CPU0[0m
+[0;32mI (411) main_task: Calling app_main()[0m
+[0;32mI (414) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (424) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (433) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (442) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (452) example: I2C initialized successfully[0m
+[0;32mI (456) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (469) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (474) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (479) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (1486) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1506) SIM_A7680C: Response: OK[0m
+[0;32mI (1506) SIM_A7680C: Total Response: AT+CMQTTDISC=0,60
+OK
+
++CMQTTDISC: 0,0
+
+[0m
+[0;32mI (1507) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (1513) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (2520) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2540) SIM_A7680C: Response: OK[0m
+[0;32mI (2540) SIM_A7680C: Total Response: AT+CMQTTREL=0
+OK
+
+[0m
+[0;32mI (2540) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (2545) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (3552) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3572) SIM_A7680C: Response: OK[0m
+[0;32mI (3572) SIM_A7680C: Total Response: AT+CMQTTSTOP
+OK
+
++CMQTTSTOP: 0
+
+[0m
+[0;32mI (3573) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (3579) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (4585) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4605) SIM_A7680C: Response: OK[0m
+[0;32mI (4605) SIM_A7680C: Total Response: AT+CMQTTSTART
+OK
+
++CMQTTSTART: 0
+
+[0m
+[0;32mI (4606) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (4612) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5618) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5638) SIM_A7680C: Response: OK[0m
+[0;32mI (5638) SIM_A7680C: Total Response: AT+CMQTTACCQ=0,"ESP32",0
+OK
+
+[0m
+[0;32mI (5638) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (5644) SIM_A7680C: Begin send AT command: tcp://52.140.102.169:1883
+[0m
+[0;32mI (6652) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6672) SIM_A7680C: Response: OK[0m
+[0;32mI (6672) SIM_A7680C: Total Response: AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+
+[0m
+[0;32mI (6676) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (6683) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;32mI (17718) SIM_A7680C: Total Response: AT+CMQTTTOPIC=0,15
+>
+[0m
+[0;32mI (17718) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (18740) SIM_A7680C: Response: OK[0m
+[0;32mI (18740) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (18740) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (29775) SIM_A7680C: Total Response: AT+CMQTTPAYLOAD=0,293
+>
+[0m
+[0;32mI (29775) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (30817) SIM_A7680C: Response: OK[0m
+[0;32mI (30817) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (30817) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (31841) SIM_A7680C: Response: OK[0m
+[0;32mI (31841) SIM_A7680C: Total Response: AT+CMQTTPUB=0,1,60,1
+OK
+
++CMQTTPUB: 0,0
+
+[0m
+[0;32mI (31843) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (31849) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (31854) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (31859) example: Starting Reading GPS Data[0m
+[0;32mI (31865) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (33870) example: Creating uart2_task...[0m
+[0;32mI (33870) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (33870) example: Creating uart0_task...[0m
+[0;32mI (33875) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (34882) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (44912) SIM_A7680C: Total Response: AT+CMQTTSUBTOPIC=0,16,1
+>
+[0m
+[0;32mI (44912) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (44914) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (45920) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (45940) SIM_A7680C: Response: OK[0m
+[0;32mI (45940) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (45940) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (45944) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (46951) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (46971) SIM_A7680C: Response: OK[0m
+[0;32mI (46971) SIM_A7680C: Total Response: AT+CMQTTSUB=0
+OK
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,149
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,149
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"off"}
++CMQTTRXEND: 0
+
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"off"}
+
+///////////////////////////////////////////////
+[0;32mI (47014) SIM_A7680C: -------------------------------------
+[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: off
+[0;32mI (57043) SIM_A7680C: No response or timeout[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: off
+[0;32mI (67591) SIM_A7680C: Total Response: 
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+
+[0m
+[0;32mI (67607) SIM_A7680C: -------------------------------------
+[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: off
+[0;32mI (78137) SIM_A7680C: No response or timeout[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: off
+[0;32mI (83882) example: Stopping UART tasks...[0m
+[0;32mI (83882) example: Waiting for UART tasks to stop...[0m
+[0;32mI (84370) example: uart2_task exiting...[0m
+[0;32mI (84382) example: Waiting for UART tasks to stop...[0m
+[0;32mI (84882) example: Waiting for UART tasks to stop...[0m
+[0;32mI (85382) example: Waiting for UART tasks to stop...[0m
+[0;32mI (85882) example: Waiting for UART tasks to stop...[0m
+[0;32mI (86382) example: Waiting for UART tasks to stop...[0m
+[0;32mI (86882) example: Waiting for UART tasks to stop...[0m
+[0;32mI (87382) example: Waiting for UART tasks to stop...[0m
+[0;32mI (87882) example: Waiting for UART tasks to stop...[0m
+[0;32mI (88382) example: Waiting for UART tasks to stop...[0m
+[0;32mI (88654) SIM_A7680C: No response or timeout[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: off
+[0;33mW (88882) example: Force deleting uart0_task![0m
+[0;32mI (88882) example: UART tasks stopped.[0m
+[0;32mI (88882) example: READ_GPS_TASK finish[0m
+[0;32mI (88885) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (99925) SIM_A7680C: Total Response: AT+CMQTTTOPIC=0,15
+>
+[0m
+[0;32mI (99925) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (100947) SIM_A7680C: Response: OK[0m
+[0;32mI (100947) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (100947) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (111982) SIM_A7680C: Total Response: AT+CMQTTPAYLOAD=0,287
+>
+[0m
+[0;32mI (111982) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (113025) SIM_A7680C: Response: OK[0m
+[0;32mI (113025) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (113025) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (114050) SIM_A7680C: Response: OK[0m
+[0;32mI (114050) SIM_A7680C: Total Response: AT+CMQTTPUB=0,1,60,1
+OK
+
++CMQTTPUB: 0,0
+
+[0m
+[0;32mI (114052) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (116058) example: Creating uart2_task...[0m
+[0;32mI (116058) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (116058) example: Creating uart0_task...[0m
+[0;32mI (116063) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (117070) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (127100) SIM_A7680C: Total Response: AT+CMQTTSUBTOPIC=0,16,1
+>
+[0m
+[0;32mI (127100) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (127102) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (128109) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (128129) SIM_A7680C: Response: OK[0m
+[0;32mI (128129) SIM_A7680C: Total Response: 
+OK
+
+[0m
+[0;32mI (128129) SIM_A7680C: -------------------------------------
+[0m
+[0;32mI (128134) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (129140) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (129160) SIM_A7680C: Response: OK[0m
+[0;32mI (129160) SIM_A7680C: Total Response: AT+CMQTTSUB=0
+OK
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-02-10T15:11:48.577Z","BlueTooth":"on"}
+
+///////////////////////////////////////////////
+[0;32mI (129203) SIM_A7680C: -------------------------------------
+[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: on
+[0;32mI (139232) SIM_A7680C: No response or timeout[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-02-10T15:11:48.577Z
+BlueTooth: on

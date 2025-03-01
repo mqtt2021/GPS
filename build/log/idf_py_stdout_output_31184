@@ -1,0 +1,203 @@
+'jձѥ��ɕ�bootloader[0m
+[0;32m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar  1 2025 23:36:05[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c3ech ( 50156) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0001c414 vaddr=3ffb0000 size=02210h (  8720) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=0001e62c vaddr=40080000 size=019ech (  6636) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1dc28h (121896) map[0m
+[0;32mI (183) esp_image: segment 4: paddr=0003dc50 vaddr=400819ec size=0beb0h ( 48816) load[0m
+[0;32mI (210) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (210) boot: Disabling RNG early entropy source...[0m
+[0;32mI (222) cpu_start: Multicore app[0m
+[0;32mI (223) cpu_start: Pro cpu up.[0m
+[0;32mI (223) cpu_start: Starting app cpu, entry point is 0x40081250[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (240) cpu_start: Pro cpu start user code[0m
+[0;32mI (240) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (240) cpu_start: Application information:[0m
+[0;32mI (245) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (250) cpu_start: App version:      1[0m
+[0;32mI (255) cpu_start: Compile time:     Mar  1 2025 23:35:55[0m
+[0;32mI (261) cpu_start: ELF file SHA256:  ed132735545d5051...[0m
+[0;32mI (267) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (272) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (277) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (282) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (294) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (300) heap_init: At 3FFB2DD0 len 0002D230 (180 KiB): DRAM[0m
+[0;32mI (306) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (312) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (319) heap_init: At 4008D89C len 00012764 (73 KiB): IRAM[0m
+[0;32mI (326) spi_flash: detected chip: generic[0m
+[0;32mI (330) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (347) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (355) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (364) app_start: Starting scheduler on CPU0[0m
+[0;32mI (369) app_start: Starting scheduler on CPU1[0m
+[0;32mI (369) main_task: Started on CPU0[0m
+[0;32mI (379) main_task: Calling app_main()[0m
+[0;32mI (382) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (392) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (401) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (410) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (420) example: I2C initialized successfully[0m
+[0;32mI (424) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (435) uart: queue free spaces: 10[0m
+[0;32mI (438) SIM_A7680C: Other UART event: 1[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (546) i2c-tools: 
+x=1.17	y=-0.15	z=9.75[0m
+[0;33mW (781) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (847) i2c-tools: 
+x=1.17	y=-0.15	z=9.77[0m
+[0;33mW (999) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (1147) i2c-tools: 
+x=1.14	y=-0.19	z=9.80[0m
+[0;33mW (1225) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (1446) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (1447) i2c-tools: 
+x=1.15	y=-0.21	z=9.72[0m
+[0;33mW (1668) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (1747) i2c-tools: 
+x=1.14	y=-0.20	z=9.69[0m
+[0;33mW (1890) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (2047) i2c-tools: 
+x=1.14	y=-0.20	z=9.89[0m
+[0;33mW (2112) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (2333) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (2347) i2c-tools: 
+x=1.15	y=-0.21	z=9.75[0m
+[0;33mW (2555) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (2647) i2c-tools: 
+x=1.16	y=-0.16	z=9.77[0m
+[0;33mW (2777) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (2947) i2c-tools: 
+x=1.12	y=-0.28	z=9.75[0m
+[0;33mW (2996) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (3209) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (3247) i2c-tools: 
+x=1.12	y=-0.19	z=9.72[0m
+[0;33mW (3431) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (3547) i2c-tools: 
+x=1.14	y=-0.19	z=9.70[0m
+[0;33mW (3653) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (3847) i2c-tools: 
+x=1.16	y=-0.19	z=9.71[0m
+[0;33mW (3885) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (4107) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (4147) i2c-tools: 
+x=1.12	y=-0.18	z=9.76[0m
+[0;33mW (4329) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (4447) i2c-tools: 
+x=1.12	y=-0.19	z=9.69[0m
+[0;33mW (4550) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (4550) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (4550) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (4747) i2c-tools: 
+x=1.18	y=-0.19	z=9.78[0m
+[0;33mW (4772) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (4993) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (5047) i2c-tools: 
+x=1.18	y=-0.21	z=9.77[0m
+[0;33mW (5211) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (5347) i2c-tools: 
+x=1.13	y=-0.20	z=9.77[0m
+[0;33mW (5427) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (5647) i2c-tools: 
+x=1.18	y=-0.21	z=9.72[0m
+[0;33mW (5655) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (5931) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (5947) i2c-tools: 
+x=1.19	y=-0.23	z=9.74[0m
+[0;32mI (6247) i2c-tools: 
+x=1.14	y=-0.20	z=9.79[0m
+[0;32mI (6547) i2c-tools: 
+x=1.16	y=-0.18	z=9.80[0m
+[0;32mI (6847) i2c-tools: 
+x=1.18	y=-0.23	z=9.72[0m
+[0;33mW (6952) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (7147) i2c-tools: 
+x=1.12	y=-0.20	z=9.80[0m
+[0;32mI (7447) i2c-tools: 
+x=1.15	y=-0.18	z=9.80[0m
+[0;32mI (7747) i2c-tools: 
+x=1.21	y=-0.21	z=9.79[0m
+[0;33mW (7961) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (8047) i2c-tools: 
+x=1.14	y=-0.13	z=9.78[0m
+[0;32mI (8347) i2c-tools: 
+x=1.11	y=-0.14	z=9.75[0m
+[0;33mW (8562) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (8562) SIM_A7680C: 📩 Received Data:
+3
+$GBGSV,1,1,00,1*76
+$GBGSV,1,1,00,3*74
+$GNRMC,235944.012,V,,,,,,,050180,,,N,V*2B
+$GNVTG,,T,,M,,N,,K,N*32
+[0m
+[0;32mI (8647) i2c-tools: 
+x=1.18	y=-0.11	z=9.70[0m
+[0;32mI (8947) i2c-tools: 
+x=1.17	y=-0.14	z=9.74[0m
+[0;32mI (9247) i2c-tools: 
+x=1.09	y=-0.18	z=9.77[0m
+[0;32mI (9547) i2c-tools: 
+x=1.14	y=-0.18	z=9.78[0m
+[0;32mI (9847) i2c-tools: 
+x=1.17	y=-0.22	z=9.80[0m
+[0;33mW (9951) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (10147) i2c-tools: 
+x=1.14	y=-0.19	z=9.78[0m
+[0;32mI (10447) i2c-tools: 
+x=1.12	y=-0.25	z=9.77[0m
+[0;32mI (10747) i2c-tools: 
+x=1.18	y=-0.19	z=9.73[0m
+[0;33mW (10962) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (11047) i2c-tools: 
+x=1.16	y=-0.20	z=9.74[0m
+[0;32mI (11347) i2c-tools: 
+x=1.12	y=-0.20	z=9.84[0m
+[0;32mI (11647) i2c-tools: 
+x=1.14	y=-0.27	z=9.82[0m
+[0;32mI (11947) i2c-tools: 
+x=1.11	y=-0.21	z=9.81[0m
+[0;33mW (12063) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;32mI (12247) i2c-tools: 
+x=1.15	y=-0.23	z=9.82[0m
+[0;32mI (12547) i2c-tools: 
+x=1.13	y=-0.21	z=9.73[0m
+[0;33mW (12663) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (12663) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (12847) i2c-tools: 
+x=1.13	y=-0.16	z=9.76[0m
+[0;32mI (13147) i2c-tools: 
+x=1.12	y=-0.16	z=9.76[0m

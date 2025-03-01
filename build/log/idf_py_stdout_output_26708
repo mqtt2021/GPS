@@ -1,0 +1,40 @@
+�jձѥ��ɕ�bootloader[0m
+[0;32m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 27 2025 16:09:19[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09d10h ( 40208) map[0m
+[0;32mI (121) esp_image: segment 1: paddr=00019d38 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (121) esp_image: segment 2: paddr=00019d48 vaddr=3ffb0000 size=01f7ch (  8060) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=0001bccc vaddr=40080000 size=0434ch ( 17228) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1f6dch (128732) map[0m
+[0;32mI (190) esp_image: segment 5: paddr=0003f704 vaddr=4008434c size=0a200h ( 41472) load[0m
+[0;32mI (208) esp_image: segment 6: paddr=0004990c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (208) esp_image: segment 7: paddr=00049978 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (221) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (221) boot: Disabling RNG early entropy source...[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+AT+CMQTTDISC=0,60

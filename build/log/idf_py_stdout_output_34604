@@ -1,0 +1,73 @@
+���� Multicore booets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 28 2025 03:05:57[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a6e8h ( 42728) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001a710 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001a720 vaddr=3ffb0000 size=01f6ch (  8044) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=0001c694 vaddr=40080000 size=03984h ( 14724) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=25d20h (154912) map[0m
+[0;32mI (201) esp_image: segment 5: paddr=00045d48 vaddr=40083984 size=0abf4h ( 44020) load[0m
+[0;32mI (219) esp_image: segment 6: paddr=00050944 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (220) esp_image: segment 7: paddr=000509b0 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (232) boot: Disabling RNG early entropy source...[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+AT+CMQTTDISC=0,60
+AT+CMQTTREL=0
+AT+CMQTTSTOP
+AT+CMQTTSTART
+AT+CMQTTACCQ=0,"ESP32",0
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+AT+CMQTTDISC=0,60
+AT+CMQTTREL=0
+AT+CMQTTSTOP
+AT+CMQTTSTART
+��ѥ��ɕ�bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a6e8h ( 42728) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001a710 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001a720 vaddr=3ffb0000 size=01f6ch (  8044) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=0001c694 vaddr=40080000 size=03984h ( 14724) load[0m
+[0;32mI (143) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=25cf0h (154864) map[0m
+[0;32mI (201) esp_image: segment 5: paddr=00045d18 vaddr=40083984 size=0abf4h ( 44020) load[0m
+[0;32mI (219) esp_image: segment 6: paddr=00050914 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (220) esp_image: segment 7: paddr=00050980 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (232) boot: Disabling RNG early entropy source...[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+AT+CMQTTDISC=0,60
+AT+CMQTTREL=0

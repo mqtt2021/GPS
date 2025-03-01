@@ -1,0 +1,843 @@
+: Multicore bootloader[0m
+[0;32m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 27 2025 17:00:40[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dcach ( 56492) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001dcd4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001dce4 vaddr=3ffb0000 size=02230h (  8752) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0001ff1c vaddr=40080000 size=000fch (   252) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=22f44h (143172) map[0m
+[0;32mI (202) esp_image: segment 5: paddr=00042f6c vaddr=400800fc size=0e84ch ( 59468) load[0m
+[0;32mI (226) esp_image: segment 6: paddr=000517c0 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (227) esp_image: segment 7: paddr=0005182c vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (240) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (255) cpu_start: Multicore app[0m
+[0;32mI (256) cpu_start: Pro cpu up.[0m
+[0;32mI (256) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (273) cpu_start: Pro cpu start user code[0m
+[0;32mI (273) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (273) cpu_start: Application information:[0m
+[0;32mI (278) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (283) cpu_start: App version:      1[0m
+[0;32mI (288) cpu_start: Compile time:     Feb 27 2025 17:00:30[0m
+[0;32mI (294) cpu_start: ELF file SHA256:  b78a306c8ebf9657...[0m
+[0;32mI (300) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (305) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (310) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (315) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (320) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (327) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (333) heap_init: At 3FFB2E48 len 0002D1B8 (180 KiB): DRAM[0m
+[0;32mI (339) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (345) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (352) heap_init: At 4008E948 len 000116B8 (69 KiB): IRAM[0m
+[0;32mI (360) spi_flash: detected chip: generic[0m
+[0;32mI (363) spi_flash: flash io: dio[0m
+[0;33mW (367) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (380) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (388) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (397) app_start: Starting scheduler on CPU0[0m
+[0;32mI (402) app_start: Starting scheduler on CPU1[0m
+[0;32mI (402) main_task: Started on CPU0[0m
+[0;32mI (412) main_task: Calling app_main()[0m
+[0;32mI (415) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (425) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (434) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (443) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (453) example: I2C initialized successfully[0m
+[0;32mI (457) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (468) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (474) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (479) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (484) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (599) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (599) SIM_A7680C: 📩 Received Data:
+AT+CMQTTDISC=0,60
++CMQTTDISC: 0,11
+
+ERROR
+[0m
+[0;32mI (1491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (1491) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (1596) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (1596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTREL=0
+ERROR
+[0m
+[0;32mI (2491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (2491) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;33mW (2596) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTOP
+ERROR
+[0m
+[0;32mI (3491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3491) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (3596) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (3596) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSTART
+OK
+[0m
+[0;32mI (4491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4491) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (5491) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5491) SIM_A7680C: Begin send AT command: tcp://52.140.102.169:1883
+[0m
+[0;32mI (6492) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (6492) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;33mW (7598) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (7598) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+
+*ATREADY: 1
+GPS/Status/G001
+ERROR
+[0m
+[0;33mW (8599) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (8599) SIM_A7680C: 📩 Received Data:
+
+*ISIMAID: "A0000000871004FFFFF00189000001FF"
+
++CPIN: READY
+
+SMS DONE
+
++SMS FULL
+AT+CMQTTPAYLOAD=0,290
+ERROR
+[0m
+[0;33mW (9623) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (9623) SIM_A7680C: 📩 Received Data:
+[{"name":"Latitude","value":9090,"timestamp":""},{"name":"longitude","value":0.00000,"timestamp":""},{"name":"Battery","value":"0%","timestamp":""},{"name":"Stolen","value":false,"timestamp":""},{"name":"Bluetooth","value":false,"timestamp":""},{"name":"Move","value":false,"timestamp":""}]
+ERROR
+[0m
+[0;33mW (10599) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (10599) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+ERROR
+[0m
+[0;32mI (11493) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (11493) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (11493) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (11498) example: Creating uart2_task...[0m
+[0;32mI (11502) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (11509) example: Creating uart0_task...[0m
+[0;32mI (11514) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;33mW (11627) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (11627) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUBTOPIC=0,16,1
+ERROR
+[0m
+[0;32mI (12521) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (12521) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (13521) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (13521) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;33mW (13626) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (13626) SIM_A7680C: 📩 Received Data:
+GPS/Setting/G001AT+CMQTTSUB=0
+ERROR
+[0m
+start NULL
+[0;32mI (14521) SIM_A7680C: Begin read_uart_response[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (17636) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (17636) SIM_A7680C: 📩 Received Data:
+
++CGEV: NW PDN ACT 1
+
++CCIOTOPTI: 1
+
++CGEV: ME PDN ACT 8,4
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (21741) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (21741) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (25841) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (25841) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (29941) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (29941) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (34041) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (34041) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (38141) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (38141) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (42241) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (42241) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (46341) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (46341) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (50441) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (50441) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (54541) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (54541) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (58641) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (58641) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+[0;32mI (60851) SIM_A7680C: Other UART event: 1[0m
+Giá trị BlueTooth không hợp lệ: ''
+[0;32mI (60856) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60865) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60869) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60874) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60879) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60883) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60888) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60893) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60897) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60902) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60907) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60911) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60916) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (60921) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (61521) example: Stopping UART tasks...[0m
+[0;32mI (61521) example: Waiting for UART tasks to stop...[0m
+[0;32mI (61861) example: uart0_task exiting...[0m
+[0;32mI (62009) example: uart2_task exiting...[0m
+[0;32mI (62021) example: UART tasks stopped.[0m
+[0;32mI (62021) example: READ_GPS_TASK finish[0m
+[0;32mI (62021) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;33mW (63837) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+[0;33mW (65233) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (65233) SIM_A7680C: 📩 Received Data:
+[0m
+[0;32mI (65234) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (65236) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (65240) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (67029) example: Creating uart2_task...[0m
+[0;32mI (67029) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (67029) example: Creating uart0_task...[0m
+[0;32mI (67034) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (68041) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (68041) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (69041) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (69041) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;33mW (69326) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (69326) SIM_A7680C: 📩 Received Data:
+#�7��#[0m
+start NULL
+[0;32mI (69326) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (70041) SIM_A7680C: Begin read_uart_response[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (72646) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (73348) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (73348) SIM_A7680C: 📩 Received Data:
+��������[0m
+start NULL
+[0;32mI (73348) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (73352) SIM_A7680C: Other UART event: 1[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (74983) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (77456) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (77456) SIM_A7680C: 📩 Received Data:
+0k��@A��[0m
+start NULL
+[0;32mI (77456) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (77460) SIM_A7680C: Other UART event: 1[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (79554) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''
+[0;33mW (82388) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (82388) SIM_A7680C: 📩 Received Data:
+� 7�����www�ww���vv������������������������������[0m
+start NULL
+[0;32mI (82391) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (82396) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (82400) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (82405) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (82410) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (82414) SIM_A7680C: Other UART event: 1[0m
+[0;32mI (82419) SIM_A7680C: Other UART event: 1[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277364
+CurrentTime: h�@0
+AlarmTime: 
+BlueTooth: 
+🔇 Tắt BUZZER - BlueTooth rỗng
+Giá trị BlueTooth không hợp lệ: ''

@@ -1,0 +1,1331 @@
+�ѥ��ɕ�bootloader[0m
+[0;32mI (ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 26 2025 23:29:01[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0d694h ( 54932) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=0001d6bc vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001d6cc vaddr=3ffb0000 size=02230h (  8752) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0001f904 vaddr=40080000 size=00714h (  1812) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=215bch (136636) map[0m
+[0;32mI (199) esp_image: segment 5: paddr=000415e4 vaddr=40080714 size=0e1dch ( 57820) load[0m
+[0;32mI (223) esp_image: segment 6: paddr=0004f7c8 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (231) boot: Disabling RNG early entropy source...[0m
+[0;32mI (243) cpu_start: Multicore app[0m
+[0;32mI (244) cpu_start: Pro cpu up.[0m
+[0;32mI (244) cpu_start: Starting app cpu, entry point is 0x400813a4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (261) cpu_start: Pro cpu start user code[0m
+[0;32mI (261) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (261) cpu_start: Application information:[0m
+[0;32mI (266) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (271) cpu_start: App version:      1[0m
+[0;32mI (276) cpu_start: Compile time:     Feb 26 2025 23:28:57[0m
+[0;32mI (282) cpu_start: ELF file SHA256:  00999520fd366461...[0m
+[0;32mI (288) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (293) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (298) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (303) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (308) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (315) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (321) heap_init: At 3FFB2E28 len 0002D1D8 (180 KiB): DRAM[0m
+[0;32mI (327) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (333) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (340) heap_init: At 4008E8F0 len 00011710 (69 KiB): IRAM[0m
+[0;32mI (347) spi_flash: detected chip: generic[0m
+[0;32mI (351) spi_flash: flash io: dio[0m
+[0;33mW (354) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (368) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (376) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (385) app_start: Starting scheduler on CPU0[0m
+[0;32mI (390) app_start: Starting scheduler on CPU1[0m
+[0;32mI (390) main_task: Started on CPU0[0m
+[0;32mI (400) main_task: Calling app_main()[0m
+[0;32mI (403) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (413) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (422) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (431) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (441) example: I2C initialized successfully[0m
+[0;32mI (445) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (456) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (7462) SIM_A7680C: === CALL START ===[0m
+[0;32mI (7568) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (7568) SIM_A7680C: 📩 Received Data:
+AT+CPIN?
++CPIN: READY
+
+OK
+[0m
+[0;32mI (8462) SIM_A7680C: Attempt 1 to Call[0m
+[0;32mI (9152) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (9462) SIM_A7680C: Call successfull and User reply
+[0m
+[0;32mI (9462) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (9462) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (9467) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (9578) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (9578) SIM_A7680C: 📩 Received Data:
+ATD0559687397;
++CGEV: NW ACT 8,10
+
+OK
+
++CLCC: 1,0,2,0,0,"0559687397",129,""
+AT+CMQTTDISC=0,60[0m
+[0;32mI (9738) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (9738) SIM_A7680C: 📩 Received Data:
+
+OK
+
++CMQTTDISC: 0,0
+[0m
+[0;32mI (10473) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (10473) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (10579) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (10579) SIM_A7680C: 📩 Received Data:
+AT+CMQTTREL=0
+OK
+[0m
+[0;32mI (11473) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (11473) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (11580) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (11580) SIM_A7680C: 📩 Received Data:
+
++CGEV: NW MODIFY 10,3
+
++CGEV: NW MODIFY 10,3
+AT+CMQTTSTOP
+OK
+
++CMQTTSTOP: 0
+[0m
+[0;32mI (12473) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (12473) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (12596) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (12596) SIM_A7680C: 📩 Received Data:
+
++CGEV: NW MODIFY 10,3
+AT+CMQTTSTART
+OK
+
++CLCC: 1,0,3,0,0,"0559687397",129,""
+[0m
+[0;32mI (13473) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (13473) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (13582) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (13582) SIM_A7680C: 📩 Received Data:
+
++CMQTTSTART: 0
+AT+CMQTTACCQ=0,"ESP32",0
+OK
+[0m
+[0;32mI (14473) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (14473) SIM_A7680C: Begin send AT command: tcp://52.140.102.169:1883
+[0m
+[0;32mI (14861) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (14861) SIM_A7680C: 📩 Received Data:
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+OK
+
++CMQTTCONNECT: 0,0
+[0m
+[0;32mI (15474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (15474) SIM_A7680C: CONNECTED SUCESSFULLY[0m
+[0;33mW (15623) SIM_A7680C: ❌ Response: VOICE CALL: END[0m
+[0;32mI (15623) SIM_A7680C: 📩 Received Data:
+
++CGEV: NW DEACT 8,10
+
++CLCC: 1,0,6,0,0,"0559687397",129,""
+
+VOICE CALL: END
+
+NO CARRIER
+AT+CMQTTTOPIC=0,15
+>[0m
+[0;32mI (16579) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (16579) SIM_A7680C: 📩 Received Data:
+
+OK
+[0m
+[0;32mI (18602) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (18602) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (19581) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (19581) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (20475) SIM_A7680C: Attempt 0 to connect MQTT[0m
+[0;32mI (20475) SIM_A7680C: === MQTT CONNECT END ===[0m
+[0;32mI (20475) example: Starting Reading GPS Data[0m
+[0;32mI (20479) MY_TIMER_MODULE: 🚀 Bắt đầu timer...[0m
+[0;32mI (20485) example: Creating uart2_task...[0m
+[0;32mI (20489) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (20496) example: Creating uart0_task...[0m
+[0;32mI (20500) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (21508) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (21508) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (21613) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (21613) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (22508) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (22508) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (22614) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (22614) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (23508) SIM_A7680C: Begin read_uart_response[0m
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277356
+CurrentTime: �@0
+AlarmTime: 
+BlueTooth: 
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277356
+CurrentTime: �@0
+AlarmTime: 
+BlueTooth: 
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277356
+CurrentTime: �@0
+AlarmTime: 
+BlueTooth: 
+Error parsing JSON
+Longitude: -0.000000
+Latitude: -0.000000
+SafeRadius: 1074277356
+CurrentTime: �@0
+AlarmTime: 
+BlueTooth: 
+[0;33mW (26693) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (26693) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (30834) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (30834) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (34934) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (34934) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (39034) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (39034) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (43134) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (43134) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (47234) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (47234) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (51334) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (51334) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (55434) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (55434) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (59534) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (59534) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (63634) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (63634) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (67734) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (67734) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;32mI (70508) example: Stopping UART tasks...[0m
+[0;32mI (70508) example: Waiting for UART tasks to stop...[0m
+[0;32mI (70599) example: uart0_task exiting...[0m
+[0;32mI (70996) example: uart2_task exiting...[0m
+[0;32mI (71008) example: UART tasks stopped.[0m
+[0;32mI (71008) example: READ_GPS_TASK finish[0m
+[0;32mI (71008) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (72121) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (72121) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (74145) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (74145) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (75123) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (75123) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (76017) example: Creating uart2_task...[0m
+[0;32mI (76017) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (76017) example: Creating uart0_task...[0m
+[0;32mI (76021) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (77028) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (77028) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (77133) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (77133) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (78028) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (78028) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (78133) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (78133) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (79028) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (82155) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (82155) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (86296) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (86296) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (90396) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (90396) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (94496) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (94496) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (98596) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (98596) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (102696) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (102696) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (106796) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (106796) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (110896) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (110896) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;32mI (126029) example: Stopping UART tasks...[0m
+[0;32mI (126029) example: Waiting for UART tasks to stop...[0m
+[0;32mI (126127) example: uart0_task exiting...[0m
+[0;32mI (126517) example: uart2_task exiting...[0m
+[0;32mI (126529) example: UART tasks stopped.[0m
+[0;32mI (126529) example: READ_GPS_TASK finish[0m
+[0;32mI (126529) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (127642) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (127642) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (129666) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (129666) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (130644) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (130644) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (131538) example: Creating uart2_task...[0m
+[0;32mI (131538) example: Start uart2_task, monitoring UART2 data...[0m
+[0;32mI (131538) example: Creating uart0_task...[0m
+[0;32mI (131543) SIM_A7680C: Begin send AT command: AT+CMQTTSUBTOPIC=0,16,1[0m
+[0;32mI (132550) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (132550) SIM_A7680C: Begin send AT command: GPS/Setting/G001[0m
+[0;32mI (132655) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (132655) SIM_A7680C: 📩 Received Data:
+
++CMQTTPUB: 0,0
+AT+CMQTTSUBTOPIC=0,16,1
+>
+OK
+[0m
+[0;32mI (133550) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (133550) SIM_A7680C: Begin send AT command: AT+CMQTTSUB=0[0m
+[0;32mI (133655) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (133655) SIM_A7680C: 📩 Received Data:
+AT+CMQTTSUB=0
+OK
+[0m
+start NULL
+[0;32mI (134550) SIM_A7680C: Begin read_uart_response[0m
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (137732) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (137732) SIM_A7680C: 📩 Received Data:
+
++CMQTTSUB: 0,0
+
++CMQTTRXSTART: 0,16,148
++CMQTTRXTOPIC: 0,16
+GPS/Setting/G001
++CMQTTRXPAYLOAD: 0,148
+{"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
++CMQTTRXEND: 0
+[0m
+payload_json: {"Longitude":10.0,"Latitude":100.0,"SafeRadius":10,"CurrentTime":"2025-02-10T15:11:48.577Z","AlarmTime":"2025-09-10T15:11:48.577Z","BlueTooth":"on"}
+
+///////////////////////////////////////////////
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (141873) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (141873) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (145973) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (145973) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (150073) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (150073) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (154173) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (154173) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (158273) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (158273) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (162373) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (162373) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;33mW (166473) SIM_A7680C: ⏳ Timeout[0m
+[0;32mI (166473) SIM_A7680C: 📩 Received Data:
+[0m
+start NULL
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+Longitude: 10.000000
+Latitude: 100.000000
+SafeRadius: 10
+CurrentTime: 2025-02-10T15:11:48.577Z
+AlarmTime: 2025-09-10T15:11:48.577Z
+BlueTooth: on
+[0;32mI (181550) example: Stopping UART tasks...[0m
+[0;32mI (181550) example: Waiting for UART tasks to stop...[0m
+[0;32mI (181649) example: uart0_task exiting...[0m
+[0;32mI (182038) example: uart2_task exiting...[0m
+[0;32mI (182050) example: UART tasks stopped.[0m
+[0;32mI (182050) example: READ_GPS_TASK finish[0m
+[0;32mI (182050) example: Updated global GPS data: Time=, Stolen=false, Lat=0.000000, Lon=0.000000, Batt=0%, Date=[0m
+[0;32mI (183163) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (183163) SIM_A7680C: 📩 Received Data:
+AT+CMQTTTOPIC=0,15
+>
+OK
+[0m
+[0;32mI (185187) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (185187) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPAYLOAD=0,290
+>
+OK
+[0m
+[0;32mI (186165) SIM_A7680C: ✅ Response: OK[0m
+[0;32mI (186165) SIM_A7680C: 📩 Received Data:
+AT+CMQTTPUB=0,1,60,1
+OK
+[0m
+[0;32mI (187059) MY_TIMER_MODULE: ✅ Timer đã bị xóa hoàn toàn.[0m
+Not a deep sleep reset
+Entering deep sleep

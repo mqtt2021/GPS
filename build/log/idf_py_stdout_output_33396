@@ -1,0 +1,368 @@
+�'jձѥ��ɕ�bootloets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Feb 28 2025 00:06:55[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0d7cch ( 55244) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0001d7f4 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001d804 vaddr=3ffb0000 size=02220h (  8736) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0001fa2c vaddr=40080000 size=005ech (  1516) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=209e4h (133604) map[0m
+[0;32mI (198) esp_image: segment 5: paddr=00040a0c vaddr=400805ec size=0e348h ( 58184) load[0m
+[0;32mI (222) esp_image: segment 6: paddr=0004ed5c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (222) esp_image: segment 7: paddr=0004edc8 vaddr=50000000 size=0000ch (    12) load[0m
+[0;32mI (235) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (235) boot: Disabling RNG early entropy source...[0m
+[0;32mI (251) cpu_start: Multicore app[0m
+[0;32mI (252) cpu_start: Pro cpu up.[0m
+[0;32mI (252) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (269) cpu_start: Pro cpu start user code[0m
+[0;32mI (269) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (269) cpu_start: Application information:[0m
+[0;32mI (274) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (279) cpu_start: App version:      1[0m
+[0;32mI (283) cpu_start: Compile time:     Feb 28 2025 00:06:45[0m
+[0;32mI (289) cpu_start: ELF file SHA256:  54b38d977a7c25fe...[0m
+[0;32mI (295) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (301) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (306) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (310) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (315) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (322) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (328) heap_init: At 3FFB2E30 len 0002D1D0 (180 KiB): DRAM[0m
+[0;32mI (335) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (341) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (347) heap_init: At 4008E934 len 000116CC (69 KiB): IRAM[0m
+[0;32mI (355) spi_flash: detected chip: generic[0m
+[0;32mI (358) spi_flash: flash io: dio[0m
+[0;33mW (362) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (375) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (384) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (393) app_start: Starting scheduler on CPU0[0m
+[0;32mI (397) app_start: Starting scheduler on CPU1[0m
+[0;32mI (397) main_task: Started on CPU0[0m
+[0;32mI (407) main_task: Calling app_main()[0m
+[0;32mI (410) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (420) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (429) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (438) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (448) example: I2C initialized successfully[0m
+[0;32mI (452) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
+[0;32mI (463) uart: queue free spaces: 10[0m
+Enabling EXT1 wakeup on pins GPIO2, GPIO4
+[0;32mI (469) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (2474) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (2474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;33mW (2583) SIM_A7680C: ❌ Response: ERROR[0m
+[0;32mI (2583) SIM_A7680C: === MQTT CONNECT START ===[0m
+[0;32mI (3474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (3474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (4474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (4474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (4583) SIM_A7680C: Attempt 1 to connect MQTT[0m
+[0;32mI (4583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (5474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (5583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (5583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (6474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (6474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (6583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (6583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (7474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (7583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (7583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (8474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (8474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (8583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (8583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (9583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (10583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (10583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (11474) SIM_A7680C: Attempt 2 to connect MQTT[0m
+[0;32mI (11474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (12474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (12474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (13474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (13474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (13583) SIM_A7680C: Attempt 2 to connect MQTT[0m
+[0;32mI (13583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (14474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (14474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (14583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (14583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (15474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (15474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (15583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (15583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (16474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (16583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (16583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (17474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (17474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (17583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (17583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (18583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (19583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (19583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (20474) SIM_A7680C: Attempt 3 to connect MQTT[0m
+[0;32mI (20474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (21474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (21474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (22474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (22474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (22583) SIM_A7680C: Attempt 3 to connect MQTT[0m
+[0;32mI (22583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (23474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (23474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (23583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (23583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (24474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (24474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (24583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (24583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (25474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (25583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (25583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (26474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (26474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (26583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (26583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (27583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (28583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (28583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (29474) SIM_A7680C: Attempt 4 to connect MQTT[0m
+[0;32mI (29474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (30474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (30474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (31474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (31474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (31583) SIM_A7680C: Attempt 4 to connect MQTT[0m
+[0;32mI (31583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (32474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (32474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (32583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (32583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (33474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (33474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (33583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (33583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (34474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (34583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (34583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (35474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (35474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (35583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (35583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (36583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (37583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (37583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (38474) SIM_A7680C: Attempt 5 to connect MQTT[0m
+[0;32mI (38474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (39474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (39474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (40474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (40474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (40583) SIM_A7680C: Attempt 5 to connect MQTT[0m
+[0;32mI (40583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (41474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (41474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (41583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (41583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (42474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (42474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (42583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (42583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (43474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (43583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (43583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (44474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (44474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (44583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (44583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (45583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (46583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (46583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (47474) SIM_A7680C: Attempt 6 to connect MQTT[0m
+[0;32mI (47474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (48474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (48474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (49474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (49474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (49583) SIM_A7680C: Attempt 6 to connect MQTT[0m
+[0;32mI (49583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (50474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (50474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (50583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (50583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (51474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (51474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (51583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (51583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (52474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (52583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (52583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (53474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (53474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (53583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (53583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (54583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (55583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (55583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (56474) SIM_A7680C: Attempt 7 to connect MQTT[0m
+[0;32mI (56474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (57474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (57474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (58474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (58474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (58583) SIM_A7680C: Attempt 7 to connect MQTT[0m
+[0;32mI (58583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (59474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (59474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (59583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (59583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (60474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (60474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (60583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (60583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (61474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (61583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (61583) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (62474) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (62474) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (62583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (62583) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (63583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (64583) SIM_A7680C: Begin read_uart_response
+[0m
+[0;32mI (64583) SIM_A7680C: CONNECTED UNSUCESSFULLY[0m
+[0;32mI (65474) SIM_A7680C: Attempt 8 to connect MQTT[0m
+[0;32mI (65474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (66474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (66474) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (67474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (67474) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m
+[0;32mI (67583) SIM_A7680C: Attempt 8 to connect MQTT[0m
+[0;32mI (67583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (68474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (68474) SIM_A7680C: Begin send AT command: AT+CMQTTSTART
+[0m
+[0;32mI (68583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (68583) SIM_A7680C: Begin send AT command: AT+CMQTTREL=0
+[0m
+[0;32mI (69474) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (69474) SIM_A7680C: Begin send AT command: AT+CMQTTACCQ=0
+[0m
+[0;32mI (69583) SIM_A7680C: Begin read_uart_response[0m
+[0;32mI (69583) SIM_A7680C: Begin send AT command: AT+CMQTTSTOP
+[0m

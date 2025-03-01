@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}
