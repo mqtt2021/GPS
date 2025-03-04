@@ -77,7 +77,7 @@ void my_timer_init_read_mpu(void)
     timer_set_counter_value(TIMER_GROUP_0, TIMER_0, 0);
 
     
-    timer_set_alarm_value(TIMER_GROUP_0, TIMER_0, 10000000ULL); // 10 giây
+    timer_set_alarm_value(TIMER_GROUP_0, TIMER_0, 20000000ULL); // 10 giây
 
     // Cho phép interrupt
     timer_enable_intr(TIMER_GROUP_0, TIMER_0);
@@ -90,7 +90,7 @@ void my_timer_init_read_mpu(void)
 void my_timer_start_read_mpu(void)
 {
     my_timer_init_read_mpu();
-    ESP_LOGI(TAG, "🚀 Bắt đầu lại timer...");
+    ESP_LOGI(TAG, "🚀 Bắt đầu timer read MPU...");
     timer_start(TIMER_GROUP_0, TIMER_0);
 }
 
@@ -161,7 +161,7 @@ void mpu6050_enable_motion_interrupt()
 {
     mpuWriteReg(0x6B, 0x00);  // Bật MPU6050
     mpuWriteReg(0x1C, 0x00);  // Chọn thang đo ±2g
-    mpuWriteReg(0x1F, 0x2);  // Ngưỡng rung động (tùy chỉnh)
+    mpuWriteReg(0x1F, 0x10);  // Ngưỡng rung động (tùy chỉnh)
     mpuWriteReg(0x20, 0x01);  // Thời gian rung động tối thiểu
     mpuWriteReg(0x38, 0x40);  // Bật ngắt Motion
     mpuWriteReg(0x69, 0x20);  // Cấu hình INT kéo xuống LOW khi có ngắt
@@ -201,26 +201,26 @@ void read_mpu6050_angles_first(float *roll_pointer, float *pitch_pointer, float 
 //     mpuWriteReg(0x1C, 0x00);  // ACC ±2g
 //     vTaskDelay(pdMS_TO_TICKS(100));
 
-    while (1) {
-            uint8_t data[10];
-            mpuReadfromReg(0x75, data, 1);
-            mpuWriteReg(0x6B, 0);
-            mpuWriteReg(0x19, 7); // sample rate 1KHz
-            mpuWriteReg(0x1C, 0);  // ACC FS Range ±2g
+    // while (1) {
+    //         uint8_t data[10];
+    //         mpuReadfromReg(0x75, data, 1);
+    //         mpuWriteReg(0x6B, 0);
+    //         mpuWriteReg(0x19, 7); // sample rate 1KHz
+    //         mpuWriteReg(0x1C, 0);  // ACC FS Range ±2g
 
-            mpuReadfromReg(0x3B, data, 6);
+    //         mpuReadfromReg(0x3B, data, 6);
 
-            int16_t RAWX = (data[0]<<8)|data[1];
-            int16_t RAWY = (data[2]<<8)|data[3];
-            int16_t RAWZ = (data[4]<<8)|data[5];
+    //         int16_t RAWX = (data[0]<<8)|data[1];
+    //         int16_t RAWY = (data[2]<<8)|data[3];
+    //         int16_t RAWZ = (data[4]<<8)|data[5];
 
-            float xg = (float)RAWX/16384;
-            float yg = (float)RAWY/16384;
-            float zg = (float)RAWZ/16384;
+    //         float xg = (float)RAWX/16384;
+    //         float yg = (float)RAWY/16384;
+    //         float zg = (float)RAWZ/16384;
 
-            ESP_LOGI(TAG, "\nx=%.2f\ty=%.2f\tz=%.2f", xg, yg, zg);
-            vTaskDelay(pdMS_TO_TICKS(300)); // Delay 2 giây
-    }
+    //         ESP_LOGI(TAG, "\nx=%.2f\ty=%.2f\tz=%.2f", xg, yg, zg);
+    //         vTaskDelay(pdMS_TO_TICKS(300)); // Delay 2 giây
+    // }
         // Loại bỏ nhiễu nhỏ (deadband filter)
     //     if (fabs(ax) < THRESHOLD) ax = 0;
     //     if (fabs(ay) < THRESHOLD) ay = 0;

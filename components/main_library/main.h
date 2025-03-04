@@ -66,6 +66,10 @@ extern int count;
 extern RTC_DATA_ATTR float stored_roll;
 extern RTC_DATA_ATTR float stored_pitch;
 extern RTC_DATA_ATTR float stored_yaw;
+extern RTC_DATA_ATTR double fix_lattitude;
+extern RTC_DATA_ATTR double fix_longtitude;
+extern RTC_DATA_ATTR int radius;
+extern RTC_DATA_ATTR int emergency;
 
 // void configure_led(void);
 // void blink_led(void);

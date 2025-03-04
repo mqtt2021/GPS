@@ -1,9 +1,104 @@
-[1/9] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Component directory D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/bluetooth does not contain a CMakeLists.txt file. No component will be added
+-- ccache will be used for faster recompilation
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+NOTICE: Skipping optional dependency: espressif/esp-sr
+NOTICE: Skipping optional dependency: espressif/esp-sr
+NOTICE: Skipping optional dependency: espressif/esp-sr
+NOTICE: Skipping optional dependency: espressif/esp-sr
+NOTICE: 
+Following dependencies have new versions available:
+Dependency "espressif/esp_insights": "1.2.3" -> "1.2.4"
+Dependency "joltwallet/littlefs": "1.16.4" -> "1.18.1"
+Consider running "idf.py update-dependencies" to update your lock file.
+NOTICE: Processing 26 dependencies:
+NOTICE: [1/26] chmorgan/esp-libhelix-mp3 (1.0.3)
+NOTICE: [2/26] espressif/cbor (0.6.0~1)
+NOTICE: [3/26] espressif/esp-dsp (1.5.2)
+NOTICE: [4/26] espressif/esp-modbus (1.0.17)
+NOTICE: [5/26] espressif/esp-serial-flasher (0.0.11)
+NOTICE: [6/26] espressif/esp-zboss-lib (1.6.0)
+NOTICE: [7/26] espressif/esp-zigbee-lib (1.6.0)
+NOTICE: [8/26] espressif/esp_diag_data_store (1.0.2)
+NOTICE: [9/26] espressif/esp_diagnostics (1.2.1)
+NOTICE: [10/26] espressif/esp_insights (1.2.3)
+NOTICE: [11/26] espressif/esp_modem (1.3.0)
+NOTICE: [12/26] espressif/esp_rainmaker (1.5.1)
+NOTICE: [13/26] espressif/esp_rcp_update (1.2.0)
+NOTICE: [14/26] espressif/esp_schedule (1.2.0)
+NOTICE: [15/26] espressif/esp_secure_cert_mgr (2.5.0)
+NOTICE: [16/26] espressif/jsmn (1.1.0)
+NOTICE: [17/26] espressif/json_generator (1.1.2)
+NOTICE: [18/26] espressif/json_parser (1.0.3)
+NOTICE: [19/26] espressif/led_strip (2.5.5)
+NOTICE: [20/26] espressif/libsodium (1.0.20~2)
+NOTICE: [21/26] espressif/mdns (1.7.0)
+NOTICE: [22/26] espressif/network_provisioning (1.0.3)
+NOTICE: [23/26] espressif/qrcode (0.1.0~2)
+NOTICE: [24/26] espressif/rmaker_common (1.4.6)
+NOTICE: [25/26] joltwallet/littlefs (1.16.4)
+NOTICE: [26/26] idf (5.1.5)
+-- DEBUG: Use esp-modbus component folder: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-modbus.
+NOTICE: Skipping optional dependency: espressif/esp-sr
+-- Project sdkconfig file D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/sdkconfig
+-- Could NOT find Threads (missing: Threads_FOUND) 
+-- App "GPS_Tracker" version: 1
+-- Adding linker script D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/soc/esp32/ld/esp32.peripherals.ld
+-- DEBUG: Use esp-modbus component folder: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-modbus.
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Components: MPU SIM adc_battery app_trace app_update arduino bootloader bootloader_support bt chmorgan__esp-libhelix-mp3 cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__cbor espressif__esp-dsp espressif__esp-modbus espressif__esp-serial-flasher espressif__esp-zboss-lib espressif__esp-zigbee-lib espressif__esp_diag_data_store espressif__esp_diagnostics espressif__esp_insights espressif__esp_modem espressif__esp_rainmaker espressif__esp_rcp_update espressif__esp_schedule espressif__esp_secure_cert_mgr espressif__jsmn espressif__json_generator espressif__json_parser espressif__led_strip espressif__libsodium espressif__mdns espressif__network_provisioning espressif__qrcode espressif__rmaker_common esptool_py fatfs freertos gps_library hal heap http_parser idf_test ieee802154 joltwallet__littlefs json log lwip main main_library mbedtls mqtt my_timer newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery C:/Espressif/frameworks/esp-idf-v5.1.5/components/app_trace C:/Espressif/frameworks/esp-idf-v5.1.5/components/app_update D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/arduino C:/Espressif/frameworks/esp-idf-v5.1.5/components/bootloader C:/Espressif/frameworks/esp-idf-v5.1.5/components/bootloader_support C:/Espressif/frameworks/esp-idf-v5.1.5/components/bt D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/chmorgan__esp-libhelix-mp3 C:/Espressif/frameworks/esp-idf-v5.1.5/components/cmock C:/Espressif/frameworks/esp-idf-v5.1.5/components/console C:/Espressif/frameworks/esp-idf-v5.1.5/components/cxx C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver C:/Espressif/frameworks/esp-idf-v5.1.5/components/efuse C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp-tls C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_adc C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_app_format C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_coex C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_common C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_eth C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_event C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_gdbstub C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hid C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_http_client C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_http_server C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_https_ota C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_https_server C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hw_support C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_lcd C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_local_ctrl C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_mm C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_netif C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_netif_stack C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_partition C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_phy C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_pm C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_psram C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_ringbuf C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_timer C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_wifi C:/Espressif/frameworks/esp-idf-v5.1.5/components/espcoredump D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__cbor D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-dsp D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-modbus D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-serial-flasher D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-zboss-lib D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-zigbee-lib D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_diag_data_store D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_diagnostics D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_insights D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_modem D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_rainmaker D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_rcp_update D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_schedule D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_secure_cert_mgr D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__jsmn D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__json_generator D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__json_parser D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__led_strip D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__libsodium D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__mdns D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__network_provisioning D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__qrcode D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__rmaker_common C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py C:/Espressif/frameworks/esp-idf-v5.1.5/components/fatfs C:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library C:/Espressif/frameworks/esp-idf-v5.1.5/components/hal C:/Espressif/frameworks/esp-idf-v5.1.5/components/heap C:/Espressif/frameworks/esp-idf-v5.1.5/components/http_parser C:/Espressif/frameworks/esp-idf-v5.1.5/components/idf_test C:/Espressif/frameworks/esp-idf-v5.1.5/components/ieee802154 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/joltwallet__littlefs C:/Espressif/frameworks/esp-idf-v5.1.5/components/json C:/Espressif/frameworks/esp-idf-v5.1.5/components/log C:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library C:/Espressif/frameworks/esp-idf-v5.1.5/components/mbedtls C:/Espressif/frameworks/esp-idf-v5.1.5/components/mqtt D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer C:/Espressif/frameworks/esp-idf-v5.1.5/components/newlib C:/Espressif/frameworks/esp-idf-v5.1.5/components/nvs_flash C:/Espressif/frameworks/esp-idf-v5.1.5/components/openthread C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table C:/Espressif/frameworks/esp-idf-v5.1.5/components/perfmon C:/Espressif/frameworks/esp-idf-v5.1.5/components/protobuf-c C:/Espressif/frameworks/esp-idf-v5.1.5/components/protocomm C:/Espressif/frameworks/esp-idf-v5.1.5/components/pthread C:/Espressif/frameworks/esp-idf-v5.1.5/components/sdmmc C:/Espressif/frameworks/esp-idf-v5.1.5/components/soc C:/Espressif/frameworks/esp-idf-v5.1.5/components/spi_flash C:/Espressif/frameworks/esp-idf-v5.1.5/components/spiffs C:/Espressif/frameworks/esp-idf-v5.1.5/components/tcp_transport C:/Espressif/frameworks/esp-idf-v5.1.5/components/ulp C:/Espressif/frameworks/esp-idf-v5.1.5/components/unity C:/Espressif/frameworks/esp-idf-v5.1.5/components/usb C:/Espressif/frameworks/esp-idf-v5.1.5/components/vfs C:/Espressif/frameworks/esp-idf-v5.1.5/components/wear_levelling C:/Espressif/frameworks/esp-idf-v5.1.5/components/wifi_provisioning C:/Espressif/frameworks/esp-idf-v5.1.5/components/wpa_supplicant C:/Espressif/frameworks/esp-idf-v5.1.5/components/xtensa
+-- Configuring done (14.1s)
+-- Generating done (1.2s)
+-- Build files have been written to: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build
+[1/16] Performing build step for 'bootloader'
 [1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
 Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
-[2/9] No install step for 'bootloader'
-[3/9] Completed 'bootloader'
-[4/9] Building C object esp-idf/SIM/CMakeFiles/__idf_SIM.dir/sim_a7680c.c.obj
+[2/16] No install step for 'bootloader'
+[3/16] Completed 'bootloader'
+[4/16] Building C object esp-idf/gps_library/CMakeFiles/__idf_gps_library.dir/gps.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:28,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.h:20,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.c:10:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   10 | static const char *TAG = "GPS_PROCESS";
+      |                    ^~~
+[5/16] Building C object esp-idf/MPU/CMakeFiles/__idf_MPU.dir/i2ctools_example_main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:26,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_first':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:245:18: warning: unused variable 'last_time' [-Wunused-variable]
+  245 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:244:13: warning: unused variable 'msg' [-Wunused-variable]
+  244 |         int msg;
+      |             ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_alarm':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:328:18: warning: unused variable 'last_time' [-Wunused-variable]
+  328 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:327:13: warning: unused variable 'msg' [-Wunused-variable]
+  327 |         int msg;
+      |             ^~~
+[6/16] Building C object esp-idf/SIM/CMakeFiles/__idf_SIM.dir/sim_a7680c.c.obj
 In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
                  from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:28,
                  from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:18,
@@ -11,18 +106,69 @@ In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_
 C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
    16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
       |  ^~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.c: In function 'module_sim_call_sms':
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.c:606:10: warning: unused variable 'connected' [-Wunused-variable]
-  606 |     bool connected = false;
-      |          ^~~~~~~~~
-[5/9] Linking C static library esp-idf\SIM\libSIM.a
-[6/9] Generating ld/sections.ld
-[7/9] Linking CXX executable GPS_Tracker.elf
-[8/9] Generating binary image from built executable
+[7/16] Linking C static library esp-idf\MPU\libMPU.a
+[8/16] Linking C static library esp-idf\SIM\libSIM.a
+[9/16] Linking C static library esp-idf\gps_library\libgps_library.a
+[10/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:28,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:3:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: In function 'deep_sleep_task':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:347:21: warning: unused variable 'pin' [-Wunused-variable]
+  347 |                 int pin = __builtin_ffsll(wakeup_pin_mask) - 1;
+      |                     ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:411:1: warning: ignoring attribute 'section (".rtc.data.6")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
+  411 | RTC_DATA_ATTR float stored_roll = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:66:28: note: previous declaration here
+   66 | extern RTC_DATA_ATTR float stored_roll;
+      |                            ^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:412:1: warning: ignoring attribute 'section (".rtc.data.7")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
+  412 | RTC_DATA_ATTR float stored_pitch = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:67:28: note: previous declaration here
+   67 | extern RTC_DATA_ATTR float stored_pitch;
+      |                            ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:413:1: warning: ignoring attribute 'section (".rtc.data.8")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
+  413 | RTC_DATA_ATTR float stored_yaw = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:68:28: note: previous declaration here
+   68 | extern RTC_DATA_ATTR float stored_yaw;
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:415:1: warning: ignoring attribute 'section (".rtc.data.10")' because it conflicts with previous 'section (".rtc.data.3")' [-Wattributes]
+  415 | RTC_DATA_ATTR double fix_lattitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:69:29: note: previous declaration here
+   69 | extern RTC_DATA_ATTR double fix_lattitude;
+      |                             ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:416:1: warning: ignoring attribute 'section (".rtc.data.11")' because it conflicts with previous 'section (".rtc.data.4")' [-Wattributes]
+  416 | RTC_DATA_ATTR double fix_longtitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:70:29: note: previous declaration here
+   70 | extern RTC_DATA_ATTR double fix_longtitude;
+      |                             ^~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:417:1: warning: ignoring attribute 'section (".rtc.data.12")' because it conflicts with previous 'section (".rtc.data.5")' [-Wattributes]
+  417 | RTC_DATA_ATTR int radius = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:71:26: note: previous declaration here
+   71 | extern RTC_DATA_ATTR int radius;
+      |                          ^~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: In function 'app_main':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:471:28: warning: unused variable 'start_time' [-Wunused-variable]
+  471 |                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                            ^~~~~~~~~~
+[11/16] Linking C static library esp-idf\main\libmain.a
+[12/16] Generating ld/sections.ld
+[13/16] Linking CXX executable GPS_Tracker.elf
+[14/16] Generating binary image from built executable
 esptool.py v4.7.0
 Creating esp32 image...
 Merged 2 ELF sections
 Successfully created esp32 image.
 Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin
-[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
-GPS_Tracker.bin binary size 0x409c0 bytes. Smallest app partition is 0x100000 bytes. 0xbf640 bytes (75%) free.
+[15/16] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0x41770 bytes. Smallest app partition is 0x100000 bytes. 0xbe890 bytes (74%) free.

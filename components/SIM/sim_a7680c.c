@@ -27,9 +27,22 @@ static EventGroupHandle_t mqtt_event_group;
 static const char *TAG = "SIM_A7680C";
 
 void extract_json_payload(const char *response) {
+
+
+    if (response == NULL) {
+        ////printf("Error: response is NULL\n");
+        return;
+    }
    
     char *start = strstr(response, "+CMQTTRXPAYLOAD: 0,");
+            // gpio_set_level(GPIO_NUM_18, 1);
+            // vTaskDelay(pdMS_TO_TICKS(3000));
+            // gpio_set_level(GPIO_NUM_18, 0); 
+            // vTaskDelay(pdMS_TO_TICKS(1000));
     if (start) {
+
+       
+
         start = strchr(start, '\n');  // Tìm ký tự xuống dòng sau `+CMQTTRXPAYLOAD:`
         if (start) {
             start++;  // Bỏ qua ký tự xuống dòng
@@ -42,15 +55,16 @@ void extract_json_payload(const char *response) {
                 strncpy(payload_json, start, length);
                 payload_json[length] = '\0';  // Đảm bảo chuỗi kết thúc
 
-                printf("payload_json: %s\n", payload_json);
-                printf("///////////////////////////////////////////////\n");
+                //printf("payload_json: %s\n", payload_json);
+                
+                ////printf("///////////////////////////////////////////////\n");
                 
                 //xEventGroupSetBits(event_group_sub_topic, EVENT_SUB_TOPIC); 
             }
         }
     }
     else{
-        printf("start NULL\n");
+        ////printf("start NULL\n");
     }
 }
 
@@ -84,11 +98,11 @@ QueueHandle_t uart_queue;  // Queue để nhận sự kiện UART
 //                     int len = uart_read_bytes(UART_SIM, data, event.size, pdMS_TO_TICKS(100));
 //                     if (len > 0) {
 //                         data[len] = '\0';  // Thêm ký tự kết thúc chuỗi
-//                         ESP_LOGI(TAG, "📩 Received Data: %s", (char *)data);
+//                         //ESP_LOGI(TAG, "📩 Received Data: %s", (char *)data);
 
 //                         // Kiểm tra phản hồi từ module SIM
 //                         if (strstr((char *)data, "OK")) {
-//                             ESP_LOGI(TAG, "✅ Response: OK");
+//                             //ESP_LOGI(TAG, "✅ Response: OK");
 //                             connect_mqtt_sever = true;
 //                             ready_sim = true;
 //                             // if(sub_topic){
@@ -113,7 +127,7 @@ QueueHandle_t uart_queue;  // Queue để nhận sự kiện UART
 //                     break;
 
 //                 default:
-//                     ESP_LOGI(TAG, "Other UART event: %d", event.type);
+//                     //ESP_LOGI(TAG, "Other UART event: %d", event.type);
 //                     break;
 //             }
 //         }
@@ -128,6 +142,7 @@ void uart_event_task(void *pvParameters) {
 
     while (1) {
         if (xQueueReceive(uart_queue, &event, portMAX_DELAY)) {
+                
             switch (event.type) {
                 case UART_DATA: {
                     TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
@@ -153,7 +168,7 @@ void uart_event_task(void *pvParameters) {
                                 if(send_connect_mqtt_sever){ // gửi lệnh connet cuối
                                     connect_mqtt_sever = true;
                                 }
-                                ESP_LOGI(TAG, "✅ Response: OK");
+                                //ESP_LOGI(TAG, "✅ Response: OK");
                                 
                                 if (start_call) {
                                     ready_sim = true;
@@ -176,12 +191,21 @@ void uart_event_task(void *pvParameters) {
                                     xEventGroupSetBits(mqtt_event_group, MQTT_RECONNECT_BIT); // reset connect
                                     
                                 }
+                                if(sub_topic){
+                                    
+
+                                    //ESP_LOGI(TAG, "Sub topic ERROR\n");
+
+                                    sub_topic = false;
+                                    xEventGroupSetBits(mqtt_event_group, MQTT_RECONNECT_BIT); // reset connect
+                                    
+                                }
                                 // if(start_call){
                                 //     send_command_pub = false;
                                 //     xEventGroupSetBits(mqtt_event_group, CALL_RECONNECT_BIT); // reset connect
                                     
                                 // }
-                                ESP_LOGW(TAG, "❌ Response: ERROR");
+                                //ESP_LOGW(TAG, "❌ Response: ERROR");
                                 //mqtt_connect();
                                 if(start_call){
                                     flag_call = false;
@@ -192,7 +216,7 @@ void uart_event_task(void *pvParameters) {
                             }
 
                             if (strstr(mqtt_rx_buffer, "VOICE CALL: END")) {
-                                ESP_LOGW(TAG, "❌ Response: VOICE CALL: END");
+                                //ESP_LOGW(TAG, "❌ Response: VOICE CALL: END");
                                 
                                 if(start_call){
                                     flag_call = true;                    
@@ -206,14 +230,14 @@ void uart_event_task(void *pvParameters) {
                         if(send_command_call){
                             if (xTaskGetTickCount() - start_time > pdMS_TO_TICKS(30000)) {
 
-                                ESP_LOGW(TAG, "⏳ Timeout Call");
+                                //ESP_LOGW(TAG, "⏳ Timeout Call");
                                 break;
                             }
                         }
                         else{
                              // Kiểm tra timeout 1 giây
                             if (xTaskGetTickCount() - start_time > pdMS_TO_TICKS(4000)) {
-                                ESP_LOGW(TAG, "⏳ Timeout");
+                                //ESP_LOGW(TAG, "⏳ Timeout");
                                 break;
                             }
                         }
@@ -222,14 +246,14 @@ void uart_event_task(void *pvParameters) {
                     }
 
                    // Đảm bảo chuỗi kết thúc đúng
-                   mqtt_rx_buffer[buffer_index] = '\0';
+                    mqtt_rx_buffer[buffer_index] = '\0';
 
                    // In toàn bộ dữ liệu nhận được
-                   ESP_LOGI(TAG, "📩 Received Data:\n%s", mqtt_rx_buffer);
+                    //ESP_LOGI(TAG, "📩 Received Data:\n%s", mqtt_rx_buffer);
                    
-                   if(sub_topic){
-                       extract_json_payload(mqtt_rx_buffer);
-                   }
+                    if(sub_topic){
+                        extract_json_payload(mqtt_rx_buffer);
+                    }
 
                     // Reset buffer sau khi xử lý xong
                     memset(mqtt_rx_buffer, 0, BUFFER_SIZE);
@@ -239,19 +263,19 @@ void uart_event_task(void *pvParameters) {
                 }
 
                 case UART_FIFO_OVF:
-                    ESP_LOGW(TAG, "⚠️ UART Buffer Overflow");
+                    //ESP_LOGW(TAG, "⚠️ UART Buffer Overflow");
                     uart_flush_input(UART_SIM);
                     xQueueReset(uart_queue);
                     break;
 
                 case UART_BUFFER_FULL:
-                    ESP_LOGW(TAG, "⚠️ UART Buffer Full");
+                    //ESP_LOGW(TAG, "⚠️ UART Buffer Full");
                     uart_flush_input(UART_SIM);
                     xQueueReset(uart_queue);
                     break;
 
                 default:
-                    ESP_LOGI(TAG, "Other UART event: %d", event.type);
+                    //ESP_LOGI(TAG, "Other UART event: %d", event.type);
                     break;
                 }
         }
@@ -293,7 +317,7 @@ void uartsim_delete(void) {
 void send_at_command(const char *command) {  
     char cmd_buffer[BUFFER_SIZE];
     snprintf(cmd_buffer, sizeof(cmd_buffer), "%s\r\n", command);      
-    //ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
+    ////ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
     uart_write_bytes(UART_SIM, cmd_buffer, strlen(cmd_buffer));
 }
 
@@ -314,14 +338,14 @@ void send_at_command(const char *command) {
 //             strncpy(length_json, start_pos_1, length);   
 //             length_json[length] = '\0';  // Kết thúc chuỗi bằng '\0'
 
-//             printf("length_json: %s\n", length_json);
+//             //printf("length_json: %s\n", length_json);
             
-//             printf("///////////////////////////////////////////////\n");
+//             //printf("///////////////////////////////////////////////\n");
 
 //             char str1[100] = "+CMQTTRXPAYLOAD: 0,";
 //             // Ghép str1 với str2
 //             strcat(str1, length_json);
-//             printf("ghep chuoi %s\n", str1);
+//             //printf("ghep chuoi %s\n", str1);
 
 //             const char *start_pos_2 = strstr(response, str1);
 //             if (start_pos_2 != NULL) {   
@@ -365,13 +389,13 @@ void read_uart_response(void)
             if (strstr(response, "\r\nOK\r\n") || strstr(response, "\r\nERROR\r\n")) {
                 if(strstr(response, "\r\nOK\r\n"))
                 {
-                    ESP_LOGI(TAG, "Response: OK");
+                    //ESP_LOGI(TAG, "Response: OK");
                     connect_mqtt_sever = true;
                     ready_sim = true;
                 }
                 if(strstr(response, "\r\nERROR\r\n"))
                 {
-                    ESP_LOGI(TAG, "Response: ERROR");
+                    //ESP_LOGI(TAG, "Response: ERROR");
                 }
                 break;    
             }
@@ -382,14 +406,14 @@ void read_uart_response(void)
 
     if (total_len > 0) {
         response[total_len] = '\0';
-        ESP_LOGI(TAG, "Total Response: %s\n", response);
+        //ESP_LOGI(TAG, "Total Response: %s\n", response);
         if(sub_topic){
             extract_json_payload(response);
         }
        
-        ESP_LOGI(TAG, "-------------------------------------\n");
+        //ESP_LOGI(TAG, "-------------------------------------\n");
     } else {
-        ESP_LOGI(TAG, "No response or timeout");
+        //ESP_LOGI(TAG, "No response or timeout");
     }
 }
 
@@ -419,7 +443,7 @@ void read_uart_response(void)
 //                 }
 //                 if(strstr(response, "\r\nERROR\r\n"))
 //                 {
-//                     ESP_LOGI(TAG, "Response: ERROR");
+//                     //ESP_LOGI(TAG, "Response: ERROR");
 //                 }
 //                 break;    
 //             }
@@ -430,10 +454,10 @@ void read_uart_response(void)
 
 //     if (total_len > 0) {
 //         response[total_len] = '\0';
-//         ESP_LOGI(TAG, "Total Response: %s\n", response);
-//         //ESP_LOGI(TAG, "-------------------------------------\n");
+//         //ESP_LOGI(TAG, "Total Response: %s\n", response);
+//         ////ESP_LOGI(TAG, "-------------------------------------\n");
 //     } else {
-//         //ESP_LOGI(TAG, "No response or timeout");
+//         ////ESP_LOGI(TAG, "No response or timeout");
 //     }
    
 // }
@@ -449,7 +473,7 @@ void read_uart_response(void)
 //     memset(response, 0, sizeof(response));
 
 //     start_call_time = esp_timer_get_time(); // Lưu thời gian bắt đầu cuộc gọi
-//     printf("Cuộc gọi bắt đầu %lld giây!\n", start_call_time);
+//     //printf("Cuộc gọi bắt đầu %lld giây!\n", start_call_time);
 //     int64_t start_time = esp_timer_get_time();
 //     while (true) {
 //         int64_t now = esp_timer_get_time();
@@ -470,7 +494,7 @@ void read_uart_response(void)
 //                 }
 //                 if(strstr(response, "\r\nERROR\r\n"))
 //                 {
-//                     //ESP_LOGI(TAG, "Response: ERROR");
+//                     ////ESP_LOGI(TAG, "Response: ERROR");
 //                     flag_call = false;
 //                     // gpio_set_level(GPIO_NUM_18, 1);
 //                     // vTaskDelay(pdMS_TO_TICKS(5000));
@@ -480,11 +504,11 @@ void read_uart_response(void)
 //                 if(strstr(response, "\r\nVOICE CALL: END\r\n"))
 //                 {
 //                     flag_call = true;
-//                     //ESP_LOGI(TAG, "Response: ERROR");
+//                     ////ESP_LOGI(TAG, "Response: ERROR");
 //                     out_time_call = false;
 
 //                     // elapsed_time = (esp_timer_get_time() - start_call_time) / 1000000; // Tính thời gian đã gọi (giây)
-//                     // printf("Cuộc gọi kết thúc sau %lld giây!\n", elapsed_time);
+//                     // //printf("Cuộc gọi kết thúc sau %lld giây!\n", elapsed_time);
 //                     break;    
 //                 }     
 //             }
@@ -501,36 +525,36 @@ void mqtt_publish(const char *topic, const char *message) {
     send_command_pub = false; 
 
     snprintf(cmd, sizeof(cmd), "AT+CMQTTTOPIC=0,%d", (int)strlen(topic));
-    //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTTOPIC=0,%d",(int)strlen(topic));
+    ////ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTTOPIC=0,%d",(int)strlen(topic));
     send_at_command(cmd); 
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    //ESP_LOGI(TAG, "Begin read_uart_response");
+    ////ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
-    //ESP_LOGI(TAG, "Begin send AT command: GPS/Status/G001");
+    ////ESP_LOGI(TAG, "Begin send AT command: GPS/Status/G001");
     send_at_command(topic);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    //ESP_LOGI(TAG, "Begin read_uart_response");
+    ////ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
     snprintf(cmd, sizeof(cmd), "AT+CMQTTPAYLOAD=0,%d", (int)strlen(message));
-    //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTPAYLOAD=0,%d",(int)strlen(message));
+    ////ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTPAYLOAD=0,%d",(int)strlen(message));
     send_at_command(cmd);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    //ESP_LOGI(TAG, "Begin read_uart_response");
+    ////ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
-    //ESP_LOGI(TAG, "Begin send AT command: message");
+    ////ESP_LOGI(TAG, "Begin send AT command: message");
     send_at_command(message);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    //ESP_LOGI(TAG, "Begin read_uart_response");
+    ////ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
     send_command_pub = true;
-    //ESP_LOGI(TAG, "Begin send AT command:AT+CMQTTPUB=0,1,60,1");
+    ////ESP_LOGI(TAG, "Begin send AT command:AT+CMQTTPUB=0,1,60,1");
     send_at_command("AT+CMQTTPUB=0,1,60,1");
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
     
-    //ESP_LOGI(TAG, "Begin read_uart_response");
+    ////ESP_LOGI(TAG, "Begin read_uart_response");
 
     //read_uart_response();
 
@@ -545,74 +569,74 @@ void mqtt_connect(void)
 {   
     int retry_count = 0;
    
-    ESP_LOGI(TAG, "=== MQTT CONNECT START ===");
+    //ESP_LOGI(TAG, "=== MQTT CONNECT START ===");
     int reset_sim = 0;
 
-    while(reset_sim < 9){
+    while(reset_sim < 15){
 
         while (retry_count < 5) {
 
-            gpio_set_level(GPIO_NUM_18, 1);
-            vTaskDelay(pdMS_TO_TICKS(1000));
-            gpio_set_level(GPIO_NUM_18, 0); 
+            // gpio_set_level(GPIO_NUM_18, 1);
+            // vTaskDelay(pdMS_TO_TICKS(1000));
+            // gpio_set_level(GPIO_NUM_18, 0); 
 
-            ESP_LOGI(TAG, "Attempt %d to connect MQTT", retry_count + 1);
-            //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTDISC=0,60");
+            ////ESP_LOGI(TAG, "Attempt %d to connect MQTT", retry_count + 1);
+            ////ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTDISC=0,60");
             send_connect_mqtt_sever = false;
-            ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTREL=0\n");
+           // //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTREL=0\n");
             send_at_command("AT+CMQTTDISC=0,60");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            ESP_LOGI(TAG, "Begin read_uart_response");
+            ////ESP_LOGI(TAG, "Begin read_uart_response");
             //read_uart_response();
 
-            ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTREL=0\n");
+            ////ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTREL=0\n");
             send_at_command("AT+CMQTTREL=0");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            ESP_LOGI(TAG, "Begin read_uart_response");
+            //ESP_LOGI(TAG, "Begin read_uart_response");
             //read_uart_response();
 
-            ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSTOP\n");
+            //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSTOP\n");
             send_at_command("AT+CMQTTSTOP");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            ESP_LOGI(TAG, "Begin read_uart_response");
+            //ESP_LOGI(TAG, "Begin read_uart_response");
             //read_uart_response();
             
-            ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSTART\n");
+            //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSTART\n");
             send_at_command("AT+CMQTTSTART");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            ESP_LOGI(TAG, "Begin read_uart_response");
+            //ESP_LOGI(TAG, "Begin read_uart_response");
             //read_uart_response();
 
-            ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTACCQ=0\n");
+            //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTACCQ=0\n");
             send_at_command("AT+CMQTTACCQ=0,\"ESP32\",0");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            ESP_LOGI(TAG, "Begin read_uart_response");
+            //ESP_LOGI(TAG, "Begin read_uart_response");
             //read_uart_response();
 
             const char *mqtt_connect_cmd = "AT+CMQTTCONNECT=0,\"tcp://20.41.104.186:1883\",60,1";
-            //ESP_LOGI(TAG, "Begin send AT command: tcp://52.140.102.169:1883\n");   
+            ////ESP_LOGI(TAG, "Begin send AT command: tcp://52.140.102.169:1883\n");   
             
             send_connect_mqtt_sever = true;
             send_at_command(mqtt_connect_cmd);
             //send_connect_mqtt_sever = true;
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            ESP_LOGI(TAG, "Begin read_uart_response\n");
+            //ESP_LOGI(TAG, "Begin read_uart_response\n");
             //read_uart_response();
             
             
             if (connect_mqtt_sever == true) {
-                ESP_LOGI(TAG, "CONNECTED SUCESSFULLY");   
+                //ESP_LOGI(TAG, "CONNECTED SUCESSFULLY");   
                 connect_mqtt_sever = false;
                 send_connect_mqtt_sever = false;
 
-                gpio_set_level(GPIO_NUM_18, 1);
-                vTaskDelay(pdMS_TO_TICKS(5000));
-                gpio_set_level(GPIO_NUM_18, 0); 
-            
+               
+                // gpio_set_level(GPIO_NUM_18, 1);
+                // vTaskDelay(pdMS_TO_TICKS(3000));
+                // gpio_set_level(GPIO_NUM_18, 0); 
                 
                 break;
             } else {
-                ESP_LOGI(TAG, "CONNECTED UNSUCESSFULLY");
+                //ESP_LOGI(TAG, "CONNECTED UNSUCESSFULLY");
                 retry_count++;
                 vTaskDelay(pdMS_TO_TICKS(1000));  // Đợi trước khi thử lại
                 send_connect_mqtt_sever = false;
@@ -648,7 +672,7 @@ void mqtt_connect(void)
         }
     }
 
-    ESP_LOGI(TAG, "=== MQTT CONNECT END ===");
+    //ESP_LOGI(TAG, "=== MQTT CONNECT END ===");
 }
 
 
@@ -661,7 +685,7 @@ void mqtt_reconnect_task(void *pvParameters) {
                                     // vTaskDelay(pdMS_TO_TICKS(3000));
                                     // gpio_set_level(GPIO_NUM_18, 0); 
 
-        ESP_LOGI(TAG, "🔄 Reconnecting to MQTT...");
+        //ESP_LOGI(TAG, "🔄 Reconnecting to MQTT...");
 
         // Gọi lại hàm kết nối
         mqtt_connect();
@@ -680,7 +704,7 @@ void mqtt_reconnect_task(void *pvParameters) {
 //                                     vTaskDelay(pdMS_TO_TICKS(3000));
 //                                     gpio_set_level(GPIO_NUM_18, 0); 
 
-//         ESP_LOGI(TAG, "🔄 Reconnecting to MQTT...");
+//         //ESP_LOGI(TAG, "🔄 Reconnecting to MQTT...");
 
 //         // Reset GPIO SIM
 //         gpio_set_level(GPIO_SIM_TRIGGER, 1);
@@ -697,12 +721,9 @@ void module_sim_call_sms(void)
 
     mqtt_event_group = xEventGroupCreate();
     xTaskCreate(mqtt_reconnect_task, "mqtt_reconnect_task", 4096, NULL, 5, NULL);
-    // xTaskCreate(sim_reset_gpio_task, "sim_reset_gpio_task", 4096, NULL, 5, NULL);
 
     //vTaskDelay(pdMS_TO_TICKS(10000)); //
-   
-    
-    ESP_LOGI(TAG, "=== CALL START ===");
+    //ESP_LOGI(TAG, "=== CALL START ===");
         
     int count_reset_sim  = 0; // số lần reset chân gpio_sim
     int count_AT_sim = 0;  // Số lần send command xác nhận sim hoạt động
@@ -710,26 +731,24 @@ void module_sim_call_sms(void)
 
 
     while(count_reset_sim < 10){
-        ESP_LOGI(TAG, "Bật chân sim lần %d\n", count_reset_sim );
-        
-
+        //ESP_LOGI(TAG, "Bật chân sim lần %d\n", count_reset_sim );
         while(count_AT_sim < 10 ){
             
-            ESP_LOGI(TAG, "Gửi lệnh sẵn sàng lần %d\n", count_AT_sim);
+            //ESP_LOGI(TAG, "Gửi lệnh sẵn sàng lần %d\n", count_AT_sim);
             start_call = true;
 
             send_at_command("AT+CPIN?");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
             //read_uart_response();
             if(ready_sim){
-                ESP_LOGI(TAG, "Sim sẵn sàng \n");
+                //ESP_LOGI(TAG, "Sim sẵn sàng \n");
                 break;
             }
             count_AT_sim++;
         }
 
         if( count_AT_sim == 10 || count_AT_sim > 10  ){    // sim bị treo, cần reset
-            ESP_LOGI(TAG, "sim bị treo, cần reset \n");
+            //ESP_LOGI(TAG, "sim bị treo, cần reset \n");
             gpio_set_level(GPIO_SIM_TRIGGER, 0);
             vTaskDelay(pdMS_TO_TICKS(5000));   
             gpio_set_level(GPIO_SIM_TRIGGER, 1); 
@@ -742,7 +761,7 @@ void module_sim_call_sms(void)
                
                 while (!end_call || retry_count < 5) {
                         send_command_call = true;
-                        ESP_LOGI(TAG, "Attempt %d to Call", retry_count + 1);
+                        //ESP_LOGI(TAG, "Attempt %d to Call", retry_count + 1);
                         send_at_command("ATD0559687397;");
                         vTaskDelay(pdMS_TO_TICKS(5000));
                         //read_uart_response_call_sms();
@@ -752,7 +771,7 @@ void module_sim_call_sms(void)
                     // if(!flag_call){
                     //     start_call = false;
                     //     retry_count++;
-                    //     ESP_LOGI(TAG, "Call faild\n");
+                    //     //ESP_LOGI(TAG, "Call faild\n");
                     // }
             
                     // if (flag_call && out_time_call) {
@@ -798,20 +817,20 @@ void module_sim_call_sms(void)
     
     
     // if(!flag_call){
-    //     ESP_LOGI(TAG, "Call faild\n");
+    //     //ESP_LOGI(TAG, "Call faild\n");
     // }
     // if(flag_call_not_reply){
-    //     ESP_LOGI(TAG, "Call successfull and User not reply\n");
+    //     //ESP_LOGI(TAG, "Call successfull and User not reply\n");
     // }
     // if(flag_call_reply){
-    //     ESP_LOGI(TAG, "Call successfull and User reply\n");
+    //     //ESP_LOGI(TAG, "Call successfull and User reply\n");
     // }
 
     int count_sms = 7;
     //// Gửi SMS
     while (count_sms < 1)
     {             
-        ESP_LOGI(TAG, "Begin send SMS");
+        //ESP_LOGI(TAG, "Begin send SMS");
         send_at_command("AT");
         vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
         //read_uart_response_SMS();
@@ -861,8 +880,8 @@ void module_sim_call_sms(void)
        // read_uart_response_SMS();
     
         // char cmd_buffer[BUFFER_SIZE] = ;
-        // snprintf(cmd_buffer, sizeof(cmd_buffer), "%s\r\n", command);      
-        // //ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
+        // sn//printf(cmd_buffer, sizeof(cmd_buffer), "%s\r\n", command);      
+        // ////ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
         // uart_write_bytes(UART_SIM, cmd_buffer, strlen(cmd_buffer));
     
         send_at_command("ALARM GPS 001"); // Gửi nội dung tin nhắn
@@ -871,7 +890,7 @@ void module_sim_call_sms(void)
         vTaskDelay(pdMS_TO_TICKS(1000)); // Chờ module SIM xử lý
         //read_uart_response_SMS();
 
-        ESP_LOGI(TAG, "End send SMS");
+        //ESP_LOGI(TAG, "End send SMS");
         count_sms++;            
     }
 }
@@ -879,23 +898,25 @@ void module_sim_call_sms(void)
 void mqtt_subcribe(const char *topic){
     char cmd[128];   
     snprintf(cmd, sizeof(cmd), "AT+CMQTTSUBTOPIC=0,%d,1",(int)strlen(topic));
-    ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSUBTOPIC=0,%d,1",(int)strlen(topic));
+    //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSUBTOPIC=0,%d,1",(int)strlen(topic));
     send_at_command(cmd);    
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
-    ESP_LOGI(TAG, "Begin send AT command: GPS/Setting/G001");
+    //ESP_LOGI(TAG, "Begin send AT command: GPS/Setting/G001");
     send_at_command(topic);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
+    
+
     sub_topic = true;  
-    ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSUB=0");
+    //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSUB=0");
     send_at_command("AT+CMQTTSUB=0");
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
 }
@@ -909,33 +930,63 @@ void handle_create_event(void){
 void send_gps_data_to_mqtt(void) {
 
     char mqtt_payload[BUFFER_SIZE];
-    snprintf(mqtt_payload, sizeof(mqtt_payload),
+
+
+    if(emergency == 1){ // trường hợp khẩn cấp, đã gửi lên tức là có trộm
+            snprintf(mqtt_payload, sizeof(mqtt_payload),
                 "["
-                "{\"name\":\"Latitude\",\"value\":%d,\"timestamp\":\"%s\"},"
+                "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                 "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                 "{\"name\":\"Battery\",\"value\":\"%d%%\",\"timestamp\":\"%s\"},"
-                "{\"name\":\"Stolen\",\"value\":%s,\"timestamp\":\"%s\"},"
+                "{\"name\":\"Stolen\",\"value\":\"true\",\"timestamp\":\"%s\"},"
                 "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
-                "{\"name\":\"Move\",\"value\":%s,\"timestamp\":\"%s\"}"
+                "{\"name\":\"Move\",\"value\":\"true\",\"timestamp\":\"%s\"}"
                 "]",
-                count,
+                global_gps_data.latitude,
                 global_gps_data.time,
                 global_gps_data.longitude,
                 global_gps_data.time,
                 global_gps_data.battery_capacity,
                 global_gps_data.time,
-                global_gps_data.Stolen ? "true" : "false",
+                // global_gps_data.Stolen ? "true" : "false",
                 global_gps_data.time, 
                 global_gps_data.bluetooth ? "true" : "false",
                 global_gps_data.time,  
-                global_gps_data.move ? "true" : "false",
+                // global_gps_data.move ? "true" : "false",
                 global_gps_data.time     
             );
-    mqtt_publish("GPS/Status/G002", mqtt_payload);
+    }
+
+    if(emergency == 2){ // trường hợp bình thường, ra ngoài khu vực an toàn mới là trộm
+        snprintf(mqtt_payload, sizeof(mqtt_payload),
+            "["
+            "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+            "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+            "{\"name\":\"Battery\",\"value\":\"%d%%\",\"timestamp\":\"%s\"},"
+            "{\"name\":\"Stolen\",\"value\":%s,\"timestamp\":\"%s\"},"
+            "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
+            "{\"name\":\"Move\",\"value\":\"true\",\"timestamp\":\"%s\"}"
+            "]",
+            global_gps_data.latitude,
+            global_gps_data.time,
+            global_gps_data.longitude,
+            global_gps_data.time,
+            global_gps_data.battery_capacity,
+            global_gps_data.time,
+            global_gps_data.Stolen ? "true" : "false",
+            global_gps_data.time, 
+            global_gps_data.bluetooth ? "true" : "false",
+            global_gps_data.time,  
+            global_gps_data.move ? "true" : "false",
+            global_gps_data.time     
+        );
+    }
+    
+    mqtt_publish("GPS/Status/G001", mqtt_payload);
 }
 
 void subcribe_topic_mqtt(void) {
-        mqtt_subcribe("GPS/Setting/G002");
-        //ESP_LOGI(TAG, "Sent MQTT message: %s", mqtt_length_json);
+        mqtt_subcribe("GPS/Setting/G001");
+        ////ESP_LOGI(TAG, "Sent MQTT message: %s", mqtt_length_json);
 }  
 

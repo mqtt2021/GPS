@@ -17,6 +17,10 @@ static double deg2rad(double deg) {
 bool diff_location = false;
 bool diff_location_flag = false; 
 
+// double fix_lattitude = 0;
+// double fix_longtitude = 0;
+// int radius = 0;
+
 //Biến cờ khác địa chỉ toàn cục
 int flag_dif_location = 0;
 // Định nghĩa biến toàn cục
@@ -101,34 +105,34 @@ void processGNRMC(char *gpsData) {
     }
 
     if (field_count < 12) {
-        ESP_LOGW(TAG, "Incomplete GNRMC data");
+        //ESP_LOGW(TAG, "Incomplete GNRMC data");
         return;
     }
 
     // Time (UTC) và chuyển đổi sang giờ Việt Nam
     if (strlen(fields[1]) >= 6) {
         utc_to_vn_time(fields[1], global_gps_data.time);
-        ESP_LOGI(TAG, "Time (Vietnam): %s", global_gps_data.time);
+        //ESP_LOGI(TAG, "Time (Vietnam): %s", global_gps_data.time);
     } else {
         strncpy(global_gps_data.time, "Invalid", sizeof(global_gps_data.time)); // sao chép chuỗi
-        ESP_LOGI(TAG, "Time (Vietnam): Invalid");
+        //ESP_LOGI(TAG, "Time (Vietnam): Invalid");
     }    
 
     // Status // strcmp: so sánh 2 chuỗi     
     strncpy(global_gps_data.status, (strcmp(fields[2], "A") == 0) ? "Successfully located" : "Unsuccessfully located", sizeof(global_gps_data.status));
-    ESP_LOGI(TAG, "Status: %s", global_gps_data.status);
+    //ESP_LOGI(TAG, "Status: %s", global_gps_data.status);
 
     // Latitude
     global_gps_data.latitude = nmea_to_decimal_degree(fields[3], fields[4][0], 2);
-    ESP_LOGI(TAG, "Latitude: %.6f°", global_gps_data.latitude);
+    //ESP_LOGI(TAG, "Latitude: %.6f°", global_gps_data.latitude);
 
     // Longitude
     global_gps_data.longitude = nmea_to_decimal_degree(fields[5], fields[6][0], 3);
-    ESP_LOGI(TAG, "Longitude: %.6f°", global_gps_data.longitude);
+    //ESP_LOGI(TAG, "Longitude: %.6f°", global_gps_data.longitude);
 
     // Distance
-    global_gps_data.distance = haversine(GPS_FIXED_LATITUDE, GPS_FIXED_LONGITUDE, global_gps_data.latitude, global_gps_data.longitude);
-    ESP_LOGI(TAG, "Distance to Fixed Point: %.3f km", global_gps_data.distance);
+    global_gps_data.distance = haversine(fix_lattitude, fix_longtitude, global_gps_data.latitude, global_gps_data.longitude);
+    //ESP_LOGI(TAG, "Distance to Fixed Point: %.3f km", global_gps_data.distance);
 
     //TEST
     // if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > 0.020) {
@@ -137,25 +141,31 @@ void processGNRMC(char *gpsData) {
     //         diff_location = true;
     //         global_gps_data.Stolen = true;
     //         flag_dif_location = 0;
-    //         ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
+    //         //ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
     //     }
     // }
 
     //Condition Check
-    if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > 0.020) {
-        diff_location = true;
-        global_gps_data.Stolen = true;
-        ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
+    if(emergency == 1){  // trường hợp khẩn cấp, không cần tính Status
+
     }
+    if(emergency == 2){  // Trường hợp bình thường, ra khỏi khu vực an toàn là báo trộm
+        if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > (double)radius / 1000) {
+            diff_location = true;
+            global_gps_data.Stolen = true;
+        //ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
+        }
+    }
+    
 
     // Date     
     if (strlen(fields[9]) >= 6) { //
         snprintf(global_gps_data.date, sizeof(global_gps_data.date), "%.*s/%.*s/20%.*s",
                  2, fields[9], 2, fields[9] + 2, 2, fields[9] + 4); //chỉ định số ký tự tối đa cần in ra bằng một tham số.
-        ESP_LOGI(TAG, "Date: %s", global_gps_data.date);
+        //ESP_LOGI(TAG, "Date: %s", global_gps_data.date);
     } else {
         strncpy(global_gps_data.date, "Invalid", sizeof(global_gps_data.date));
-        ESP_LOGI(TAG, "Date: Invalid");
+        //ESP_LOGI(TAG, "Date: Invalid");
     }
 
     // Battery Capacity
@@ -164,7 +174,7 @@ void processGNRMC(char *gpsData) {
     if(init_adc){
         float battery_voltage = read_battery_voltage();
         global_gps_data.battery_capacity = calculate_battery_capacity(battery_voltage);
-        ESP_LOGI(TAG, "Battery Capacity: %d%%", global_gps_data.battery_capacity);
+        //ESP_LOGI(TAG, "Battery Capacity: %d%%", global_gps_data.battery_capacity);
     }
 
    
@@ -205,7 +215,7 @@ void init_uart2()
     // Cài đặt driver UART
     ESP_ERROR_CHECK(uart_driver_install(GPS_UART2_PORT_NUM, GPS_UART2_BUFFER_SIZE * 2, 0, GPS_UART2_QUEUE_SIZE, NULL, 0));
 
-    ESP_LOGI(TAG, "UART2 initialized with baud rate %d", GPS_UART2_BAUD_RATE);
+    //ESP_LOGI(TAG, "UART2 initialized with baud rate %d", GPS_UART2_BAUD_RATE);
 }
 
 

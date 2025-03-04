@@ -17,6 +17,7 @@ extern "C" {
 #include "driver/uart.h"
 #include "esp_log.h"
 #include "driver/rtc_io.h"
+#include "main.h"
 //#include "adc.h"
 //#include "sim_a7680c.h"
 extern bool diff_location; // CHỈ khai báo extern trong header
@@ -55,6 +56,10 @@ typedef struct {
 //Khai báo biến toàn cục
 extern gps_data_t global_gps_data; // Biến toàn cục lưu dữ liệu GPS
 extern int flag_dif_location;
+
+// extern double fix_lattitude;
+// extern double fix_longtitude;
+extern int radius;
 
 // Hàm chuyển đổi từ NMEA dạng ddmm.mmmmm hoặc dddmm.mmmmm sang decimal degrees
 double nmea_to_decimal_degree(const char *nmea, char direction, int degree_len);

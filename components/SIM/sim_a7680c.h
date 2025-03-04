@@ -20,9 +20,9 @@
 #include "gps.h"
 #include "freertos/event_groups.h"
 //DEFINE
-#define UART_SIM        UART_NUM_2
-#define TXD_PIN         GPIO_NUM_17 // Default TXD pin for UART0
-#define RXD_PIN         GPIO_NUM_16 // Default RXD pin for UART0
+#define UART_SIM        UART_NUM_0
+#define TXD_PIN         GPIO_NUM_1 // Default TXD pin for UART0
+#define RXD_PIN         GPIO_NUM_3 // Default RXD pin for UART0
 #define RTS_PIN         UART_PIN_NO_CHANGE
 #define CTS_PIN         UART_PIN_NO_CHANGE
 #define UART_BUFFER     1024

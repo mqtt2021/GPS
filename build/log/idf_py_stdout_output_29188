@@ -1,186 +1,49 @@
-boot: Multicore boot�ets Jul 29 2019 12:21:46
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0x3e010 bytes. Smallest app partition is 0x100000 bytes. 0xc1ff0 bytes (76%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build" -P C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 GPS_Tracker.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 20:43:a8:65:40:8c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0004efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16733...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a1... (100 %)
+Wrote 26720 bytes (16733 compressed) at 0x00001000 in 0.6 seconds (effective 329.5 kbit/s)...
+Hash of data verified.
+Compressed 253968 bytes to 142622...
+Writing at 0x00010000... (11 %)
+Writing at 0x0001c527... (22 %)
+Writing at 0x00021e67... (33 %)
+Writing at 0x000278e8... (44 %)
+Writing at 0x0002d97f... (55 %)
+Writing at 0x0003348b... (66 %)
+Writing at 0x0003bfb5... (77 %)
+Writing at 0x00044340... (88 %)
+Writing at 0x00049b3c... (100 %)
+Wrote 253968 bytes (142622 compressed) at 0x00010000 in 3.6 seconds (effective 565.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 675.9 kbit/s)...
+Hash of data verified.
 
-rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7116
-ho 0 tail 12 room 4
-load:0x40078000,len:15624
-ho 0 tail 12 room 4
-load:0x40080400,len:4
-load:0x40080404,len:3876
-entry 0x4008064c
-[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
-[0;32mI (33) boot: compile time Feb 27 2025 23:12:18[0m
-[0;32mI (33) boot: Multicore bootloader[0m
-[0;32mI (38) boot: chip revision: v3.1[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (55) boot: Enabling RNG early entropy source...[0m
-[0;32mI (61) boot: Partition Table:[0m
-[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (94) boot: End of partition table[0m
-[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a7f8h ( 43000) map[0m
-[0;32mI (122) esp_image: segment 1: paddr=0001a820 vaddr=3ff80063 size=00008h (     8) load[0m
-[0;32mI (122) esp_image: segment 2: paddr=0001a830 vaddr=3ffb0000 size=01f6ch (  8044) load[0m
-[0;32mI (131) esp_image: segment 3: paddr=0001c7a4 vaddr=40080000 size=03874h ( 14452) load[0m
-[0;32mI (143) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=25c4ch (154700) map[0m
-[0;32mI (201) esp_image: segment 5: paddr=00045c74 vaddr=40083874 size=0acd8h ( 44248) load[0m
-[0;32mI (219) esp_image: segment 6: paddr=00050954 vaddr=400c0000 size=00064h (   100) load[0m
-[0;32mI (220) esp_image: segment 7: paddr=000509c0 vaddr=50000000 size=0000ch (    12) load[0m
-[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (233) boot: Disabling RNG early entropy source...[0m
-Enabling EXT1 wakeup on pins GPIO2, GPIO4
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-ets Jul 29 2019 12:21:46
-
-rst:0x3 (SW_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7116
-ho 0 tail 12 room 4
-load:0x40078000,len:15624
-ho 0 tail 12 room 4
-load:0x40080400,len:4
-load:0x40080404,len:3876
-entry 0x4008064c
-[0;32mI (64) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
-[0;32mI (64) boot: compile time Feb 27 2025 23:12:18[0m
-[0;32mI (64) boot: Multicore bootloader[0m
-[0;32mI (69) boot: chip revision: v3.1[0m
-[0;32mI (73) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (78) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (82) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (87) boot: Enabling RNG early entropy source...[0m
-[0;32mI (92) boot: Partition Table:[0m
-[0;32mI (96) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (103) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (111) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (118) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (126) boot: End of partition table[0m
-[0;32mI (130) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a7f8h ( 43000) map[0m
-[0;32mI (154) esp_image: segment 1: paddr=0001a820 vaddr=3ff80063 size=00008h (     8) load[0m
-[0;32mI (155) esp_image: segment 2: paddr=0001a830 vaddr=3ffb0000 size=01f6ch (  8044) load[0m
-[0;32mI (163) esp_image: segment 3: paddr=0001c7a4 vaddr=40080000 size=03874h ( 14452) load[0m
-[0;32mI (175) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=25c4ch (154700) map[0m
-[0;32mI (233) esp_image: segment 5: paddr=00045c74 vaddr=40083874 size=0acd8h ( 44248) load[0m
-[0;32mI (251) esp_image: segment 6: paddr=00050954 vaddr=400c0000 size=00064h (   100) load[0m
-[0;32mI (252) esp_image: segment 7: paddr=000509c0 vaddr=50000000 size=0000ch (    12) load[0m
-[0;32mI (265) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (265) boot: Disabling RNG early entropy source...[0m
-e33) boot: Multicore bootloader[0m
-[0;32mI (38) boot: chip revision: v3.1[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (55) boot: Enabling RNG early entropy source...[0m
-[0;32mI (61) boot: Partition Table:[0m
-[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (94) boot: End of partition table[0m
-[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a7f8h ( 43000) map[0m
-[0;32mI (122) esp_image: segment 1: paddr=0001a820 vaddr=3ff80063 size=00008h (     8) load[0m
-[0;32mI (122) esp_image: segment 2: paddr=0001a830 vaddr=3ffb0000 size=01f6ch (  8044) load[0m
-[0;32mI (131) esp_image: segment 3: paddr=0001c7a4 vaddr=40080000 size=03874h ( 14452) load[0m
-[0;32mI (143) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=25c4ch (154700) map[0m
-[0;32mI (201) esp_image: segment 5: paddr=00045c74 vaddr=40083874 size=0acd8h ( 44248) load[0m
-[0;32mI (219) esp_image: segment 6: paddr=00050954 vaddr=400c0000 size=00064h (   100) load[0m
-[0;32mI (220) esp_image: segment 7: paddr=000509c0 vaddr=50000000 size=0000ch (    12) load[0m
-[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (233) boot: Disabling RNG early entropy source...[0m
-K��bootloader[0m
-[0;32mI (38) boot: chip revision: v3.1[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (55) boot: Enabling RNG early entropy source...[0m
-[0;32mI (61) boot: Partition Table:[0m
-[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (94) boot: End of partition table[0m
-[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a7f8h ( 43000) map[0m
-[0;32mI (122) esp_image: segment 1: paddr=0001a820 vaddr=3ff80063 size=00008h (     8) load[0m
-[0;32mI (122) esp_image: segment 2: paddr=0001a830 vaddr=3ffb0000 size=01f6ch (  8044) load[0m
-[0;32mI (131) esp_image: segment 3: paddr=0001c7a4 vaddr=40080000 size=03874h ( 14452) load[0m
-[0;32mI (143) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=25c4ch (154700) map[0m
-[0;32mI (201) esp_image: segment 5: paddr=00045c74 vaddr=40083874 size=0acd8h ( 44248) load[0m
-[0;32mI (219) esp_image: segment 6: paddr=00050954 vaddr=400c0000 size=00064h (   100) load[0m
-[0;32mI (220) esp_image: segment 7: paddr=000509c0 vaddr=50000000 size=0000ch (    12) load[0m
-[0;32mI (232) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (233) boot: Disabling RNG early entropy source...[0m
-Enabling EXT1 wakeup on pins GPIO2, GPIO4
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
-AT+CMQTTDISC=0,60
-AT+CMQTTREL=0
-AT+CMQTTSTOP
-AT+CMQTTSTART
-AT+CMQTTACCQ=0,"ESP32",0
-AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+Leaving...
+Hard resetting via RTS pin...
