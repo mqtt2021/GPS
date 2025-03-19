@@ -1,271 +1,196 @@
-3) boot: Multicore bootloader[0m
-�ets Jul 29 2019 12:21:46
+[1/12] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Completed 'bootloader'
+[4/12] Building C object esp-idf/MPU/CMakeFiles/__idf_MPU.dir/i2ctools_example_main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:26,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:36:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'mpu6050_enable_interrupt_pin':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:189:38: warning: passing argument 2 of 'gpio_isr_handler_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  189 |     gpio_isr_handler_add(GPIO_NUM_2, mpu6050_isr_handler, NULL);
+      |                                      ^~~~~~~~~~~~~~~~~~~
+      |                                      |
+      |                                      void (*)(void)
+In file included from C:/Espressif/frameworks/esp-idf-v5.1.5/components/fatfs/vfs/esp_vfs_fat.h:10,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:16:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/gpio/include/driver/gpio.h:327:64: note: expected 'gpio_isr_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  327 | esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void *args);
+      |                                                     ~~~~~~~~~~~^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_first':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:249:18: warning: unused variable 'last_time' [-Wunused-variable]
+  249 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:248:13: warning: unused variable 'msg' [-Wunused-variable]
+  248 |         int msg;
+      |             ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_alarm':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:332:18: warning: unused variable 'last_time' [-Wunused-variable]
+  332 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:331:13: warning: unused variable 'msg' [-Wunused-variable]
+  331 |         int msg;
+      |             ^~~
+[5/12] Linking C static library esp-idf\MPU\libMPU.a
+[6/12] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:19,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:23,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: In function 'deep_sleep_task':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:398:21: warning: unused variable 'pin' [-Wunused-variable]
+  398 |                 int pin = __builtin_ffsll(wakeup_pin_mask) - 1;
+      |                     ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:477:1: warning: ignoring attribute 'section (".rtc.data.7")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
+  477 | RTC_DATA_ATTR float stored_roll = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:60:28: note: previous declaration here
+   60 | extern RTC_DATA_ATTR float stored_roll;
+      |                            ^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:478:1: warning: ignoring attribute 'section (".rtc.data.8")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
+  478 | RTC_DATA_ATTR float stored_pitch = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:61:28: note: previous declaration here
+   61 | extern RTC_DATA_ATTR float stored_pitch;
+      |                            ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:479:1: warning: ignoring attribute 'section (".rtc.data.9")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
+  479 | RTC_DATA_ATTR float stored_yaw = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:62:28: note: previous declaration here
+   62 | extern RTC_DATA_ATTR float stored_yaw;
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:480:1: warning: ignoring attribute 'section (".rtc.data.10")' because it conflicts with previous 'section (".rtc.data.6")' [-Wattributes]
+  480 | RTC_DATA_ATTR int emergency = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:66:26: note: previous declaration here
+   66 | extern RTC_DATA_ATTR int emergency;
+      |                          ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:481:1: warning: ignoring attribute 'section (".rtc.data.11")' because it conflicts with previous 'section (".rtc.data.3")' [-Wattributes]
+  481 | RTC_DATA_ATTR double fix_lattitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:63:29: note: previous declaration here
+   63 | extern RTC_DATA_ATTR double fix_lattitude;
+      |                             ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:482:1: warning: ignoring attribute 'section (".rtc.data.12")' because it conflicts with previous 'section (".rtc.data.4")' [-Wattributes]
+  482 | RTC_DATA_ATTR double fix_longtitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:64:29: note: previous declaration here
+   64 | extern RTC_DATA_ATTR double fix_longtitude;
+      |                             ^~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:483:1: warning: ignoring attribute 'section (".rtc.data.13")' because it conflicts with previous 'section (".rtc.data.5")' [-Wattributes]
+  483 | RTC_DATA_ATTR int radius = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:65:26: note: previous declaration here
+   65 | extern RTC_DATA_ATTR int radius;
+      |                          ^~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: In function 'app_main':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:589:28: warning: unused variable 'start_time' [-Wunused-variable]
+  589 |                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:658:32: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  658 |                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:830:24: warning: unused variable 'start_time' [-Wunused-variable]
+  830 |             TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:847:24: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  847 |             TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:383:13: warning: 'deep_sleep_task' defined but not used [-Wunused-function]
+  383 | static void deep_sleep_task(void *args)
+      |             ^~~~~~~~~~~~~~~
+[7/12] Linking C static library esp-idf\main\libmain.a
+[8/12] Generating ld/sections.ld
+[9/12] Linking CXX executable GPS_Tracker.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin
+[11/12] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0xc91f0 bytes. Smallest app partition is 0x100000 bytes. 0x36e10 bytes (21%) free.
+[11/12] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build" -P C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 GPS_Tracker.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:8a:1f:a0:c4:f4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16733...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a0... (100 %)
+Wrote 26720 bytes (16733 compressed) at 0x00001000 in 0.7 seconds (effective 322.1 kbit/s)...
+Hash of data verified.
+Compressed 823792 bytes to 485008...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d72c... (6 %)
+Writing at 0x0002b5c8... (10 %)
+Writing at 0x00038bee... (13 %)
+Writing at 0x0003e736... (16 %)
+Writing at 0x00044618... (20 %)
+Writing at 0x00049fcc... (23 %)
+Writing at 0x0004fe4f... (26 %)
+Writing at 0x00055617... (30 %)
+Writing at 0x0005ad09... (33 %)
+Writing at 0x000607a8... (36 %)
+Writing at 0x00065e07... (40 %)
+Writing at 0x0006c437... (43 %)
+Writing at 0x000723ef... (46 %)
+Writing at 0x000782b3... (50 %)
+Writing at 0x0007e044... (53 %)
+Writing at 0x00083a88... (56 %)
+Writing at 0x000899f6... (60 %)
+Writing at 0x0008fbca... (63 %)
+Writing at 0x00095954... (66 %)
+Writing at 0x0009b683... (70 %)
+Writing at 0x000a15cd... (73 %)
+Writing at 0x000a77af... (76 %)
+Writing at 0x000ad5fc... (80 %)
+Writing at 0x000b39b2... (83 %)
+Writing at 0x000bbaa4... (86 %)
+Writing at 0x000c4372... (90 %)
+Writing at 0x000ca092... (93 %)
+Writing at 0x000cfa57... (96 %)
+Writing at 0x000d5669... (100 %)
+Wrote 823792 bytes (485008 compressed) at 0x00010000 in 11.8 seconds (effective 557.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 632.6 kbit/s)...
+Hash of data verified.
 
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7116
-ho 0 tail 12 room 4
-load:0x40078000,len:15624
-ho 0 tail 12 room 4
-load:0x40080400,len:4
-load:0x40080404,len:3876
-entry 0x4008064c
-[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
-[0;32mI (33) boot: compile time Feb 28 2025 21:14:42[0m
-[0;32mI (33) boot: Multicore bootloader[0m
-[0;32mI (38) boot: chip revision: v3.1[0m
-[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (55) boot: Enabling RNG early entropy source...[0m
-[0;32mI (61) boot: Partition Table:[0m
-[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (94) boot: End of partition table[0m
-[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0e9ech ( 59884) map[0m
-[0;32mI (128) esp_image: segment 1: paddr=0001ea14 vaddr=3ff80063 size=00008h (     8) load[0m
-[0;32mI (129) esp_image: segment 2: paddr=0001ea24 vaddr=3ffb0000 size=015f4h (  5620) load[0m
-[0;32mI (136) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=293dch (168924) map[0m
-[0;32mI (204) esp_image: segment 4: paddr=00049404 vaddr=3ffb15f4 size=00c2ch (  3116) load[0m
-[0;32mI (205) esp_image: segment 5: paddr=0004a038 vaddr=40080000 size=0eccch ( 60620) load[0m
-[0;32mI (235) esp_image: segment 6: paddr=00058d0c vaddr=400c0000 size=00064h (   100) load[0m
-[0;32mI (235) esp_image: segment 7: paddr=00058d78 vaddr=50000000 size=0000ch (    12) load[0m
-[0;32mI (248) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (248) boot: Disabling RNG early entropy source...[0m
-[0;32mI (263) cpu_start: Multicore app[0m
-[0;32mI (264) cpu_start: Pro cpu up.[0m
-[0;32mI (264) cpu_start: Starting app cpu, entry point is 0x400813e8[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (281) cpu_start: Pro cpu start user code[0m
-[0;32mI (281) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (281) cpu_start: Application information:[0m
-[0;32mI (286) cpu_start: Project name:     GPS_Tracker[0m
-[0;32mI (291) cpu_start: App version:      1[0m
-[0;32mI (296) cpu_start: Compile time:     Feb 28 2025 21:14:32[0m
-[0;32mI (302) cpu_start: ELF file SHA256:  495751bc8171e974...[0m
-[0;32mI (308) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
-[0;32mI (313) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (318) cpu_start: Max chip rev:     v3.99 [0m
-[0;32mI (323) cpu_start: Chip rev:         v3.1[0m
-[0;32mI (328) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (335) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (341) heap_init: At 3FFB2E50 len 0002D1B0 (180 KiB): DRAM[0m
-[0;32mI (347) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (353) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (360) heap_init: At 4008ECCC len 00011334 (68 KiB): IRAM[0m
-[0;32mI (368) spi_flash: detected chip: generic[0m
-[0;32mI (371) spi_flash: flash io: dio[0m
-[0;33mW (375) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;33mW (388) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
-[0;33mW (396) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
-[0;32mI (405) app_start: Starting scheduler on CPU0[0m
-[0;32mI (410) app_start: Starting scheduler on CPU1[0m
-[0;32mI (410) main_task: Started on CPU0[0m
-[0;32mI (420) main_task: Calling app_main()[0m
-[0;32mI (423) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (433) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (442) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (451) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-[0;32mI (461) example: I2C initialized successfully[0m
-[0;32mI (465) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:2 [0m
-[0;32mI (476) uart: queue free spaces: 10[0m
-[0;32mI (479) SIM_A7680C: Other UART event: 1[0m
-Enabling EXT1 wakeup on pins GPIO2, GPIO4
-[0;32mI (487) SIM_A7680C: === CALL START ===[0m
-[0;32mI (491) SIM_A7680C: Bật chân sim lần 0
-[0m
-[0;32mI (496) SIM_A7680C: Gửi lệnh sẵn sàng lần 0
-[0m
-[0;32mI (1503) SIM_A7680C: Gửi lệnh sẵn sàng lần 1
-[0m
-[0;32mI (2503) SIM_A7680C: Gửi lệnh sẵn sàng lần 2
-[0m
-[0;32mI (3503) SIM_A7680C: Gửi lệnh sẵn sàng lần 3
-[0m
-[0;32mI (4503) SIM_A7680C: Gửi lệnh sẵn sàng lần 4
-[0m
-[0;33mW (5280) SIM_A7680C: ⏳ Timeout[0m
-[0;32mI (5280) SIM_A7680C: 📩 Received Data:
-�'�#�[0m
-[0;32mI (5281) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (5503) SIM_A7680C: Gửi lệnh sẵn sàng lần 5
-[0m
-[0;32mI (6503) SIM_A7680C: Gửi lệnh sẵn sàng lần 6
-[0m
-[0;32mI (7503) SIM_A7680C: Gửi lệnh sẵn sàng lần 7
-[0m
-[0;33mW (7686) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
-[0;32mI (8503) SIM_A7680C: Gửi lệnh sẵn sàng lần 8
-[0m
-[0;32mI (9503) SIM_A7680C: Gửi lệnh sẵn sàng lần 9
-[0m
-[0;33mW (9590) SIM_A7680C: ⏳ Timeout[0m
-[0;32mI (9590) SIM_A7680C: 📩 Received Data:
-����[0m
-[0;32mI (9590) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (9593) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (9598) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (10503) SIM_A7680C: sim bị treo, cần reset 
-[0m
-[0;33mW (12895) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
-[0;33mW (14036) SIM_A7680C: ⏳ Timeout[0m
-[0;32mI (14037) SIM_A7680C: 📩 Received Data:
-[0m
-[0;32mI (14037) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (15503) SIM_A7680C: Bật chân sim lần 1
-[0m
-[0;32mI (15503) SIM_A7680C: Gửi lệnh sẵn sàng lần 0
-[0m
-[0;32mI (16503) SIM_A7680C: Gửi lệnh sẵn sàng lần 1
-[0m
-[0;32mI (17503) SIM_A7680C: Gửi lệnh sẵn sàng lần 2
-[0m
-[0;33mW (17900) SIM_A7680C: ⚠️ Buffer overflow, clearing buffer![0m
-[0;33mW (18119) SIM_A7680C: ⏳ Timeout[0m
-[0;32mI (18119) SIM_A7680C: 📩 Received Data:
-[0m
-[0;32mI (18119) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (18503) SIM_A7680C: Gửi lệnh sẵn sàng lần 3
-[0m
-[0;32mI (19503) SIM_A7680C: Gửi lệnh sẵn sàng lần 4
-[0m
-[0;32mI (20503) SIM_A7680C: Gửi lệnh sẵn sàng lần 5
-[0m
-[0;32mI (21503) SIM_A7680C: Gửi lệnh sẵn sàng lần 6
-[0m
-[0;32mI (21608) SIM_A7680C: ✅ Response: OK[0m
-[0;32mI (22300) SIM_A7680C: ✅ Response: OK[0m
-[0;33mW (22300) SIM_A7680C: ⏳ Timeout[0m
-[0;32mI (22300) SIM_A7680C: 📩 Received Data:
-$DD$�Dd��fgw�7
-*ATREADY: 1
-
-*ISIMAID: "A0000000871004FFFFF00189000001FF"
-
-+CPIN: READY
-AT+CPIN?
-+CPIN: READY
-
-OK
-
-SMS DONE
-[0m
-[0;32mI (22315) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (22319) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (22324) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (22503) SIM_A7680C: Sim sẵn sàng 
-[0m
-[0;32mI (22503) SIM_A7680C: Attempt 1 to Call[0m
-[0;33mW (22610) SIM_A7680C: ❌ Response: ERROR[0m
-[0;32mI (22610) SIM_A7680C: 📩 Received Data:
-
-+SMS FULL
-ATD0559687397;
-+CME ERROR: unknown error
-[0m
-[0;32mI (22613) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (27503) SIM_A7680C: Bật chân sim lần 1
-[0m
-[0;32mI (27503) SIM_A7680C: Gửi lệnh sẵn sàng lần 6
-[0m
-[0;32mI (27608) SIM_A7680C: ✅ Response: OK[0m
-[0;32mI (28503) SIM_A7680C: Sim sẵn sàng 
-[0m
-[0;32mI (28503) SIM_A7680C: Call end
-[0m
-[0;32mI (31503) SIM_A7680C: Call end
-[0m
-[0;32mI (34503) SIM_A7680C: Call end
-[0m
-[0;32mI (37503) SIM_A7680C: Call end
-[0m
-[0;32mI (40503) SIM_A7680C: Call end
-[0m
-[0;32mI (43503) SIM_A7680C: Call end
-[0m
-[0;32mI (46503) SIM_A7680C: Call end
-[0m
-[0;32mI (49503) SIM_A7680C: Call end
-[0m
-[0;32mI (52503) SIM_A7680C: Call end
-[0m
-[0;33mW (52708) SIM_A7680C: ⏳ Timeout Call[0m
-[0;32mI (52708) SIM_A7680C: 📩 Received Data:
-
-+CGEV: NW PDN ACT 1
-
-+CGEV: ME PDN ACT 8,4
-AT+CPIN?
-+CPIN: READY
-
-OK
-[0m
-[0;32mI (52713) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (55503) SIM_A7680C: Call end
-[0m
-[0;32mI (58503) SIM_A7680C: Call end
-[0m
-[0;32mI (61503) SIM_A7680C: Call end
-[0m
-[0;32mI (64503) SIM_A7680C: Call end
-[0m
-[0;32mI (67503) SIM_A7680C: Call end
-[0m
-[0;32mI (70503) SIM_A7680C: Call end
-[0m
-[0;32mI (73503) SIM_A7680C: Call end
-[0m
-[0;32mI (76503) SIM_A7680C: Call end
-[0m
-[0;32mI (79503) SIM_A7680C: Call end
-[0m
-[0;32mI (82503) SIM_A7680C: Call end
-[0m
-[0;33mW (82818) SIM_A7680C: ⏳ Timeout Call[0m
-[0;32mI (82818) SIM_A7680C: 📩 Received Data:
-[0m
-[0;32mI (82818) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (82820) SIM_A7680C: Other UART event: 1[0m
-[0;32mI (85503) SIM_A7680C: Call end
-[0m
-[0;32mI (88503) SIM_A7680C: Call end
-[0m
-[0;32mI (91503) SIM_A7680C: Call end
-[0m
-[0;32mI (94503) SIM_A7680C: Call end
-[0m
-[0;32mI (97503) SIM_A7680C: Call end
-[0m
-[0;32mI (100503) SIM_A7680C: Call end
-[0m
-[0;32mI (103503) SIM_A7680C: Call end
-[0m
-[0;32mI (106503) SIM_A7680C: Call end
-[0m
-[0;32mI (109503) SIM_A7680C: Call end
-[0m
-[0;32mI (112503) SIM_A7680C: Call end
-[0m
-[0;33mW (112925) SIM_A7680C: ⏳ Timeout Call[0m
-[0;32mI (112925) SIM_A7680C: 📩 Received Data:
-[0m
-[0;32mI (115503) SIM_A7680C: Call end
-[0m
-[0;32mI (118503) SIM_A7680C: Call end
-[0m
-[0;32mI (121503) SIM_A7680C: Call end
-[0m
-[0;32mI (124503) SIM_A7680C: Call end
-[0m
-[0;32mI (127503) SIM_A7680C: Call end
-[0m
-[0;32mI (130503) SIM_A7680C: Call end
-[0m
-[0;32mI (133503) SIM_A7680C: Call end
-[0m
-[0;32mI (136503) SIM_A7680C: Call end
-[0m
+Leaving...
+Hard resetting via RTS pin...

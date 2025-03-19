@@ -48,9 +48,9 @@
 #define CONFIG_EXAMPLE_EXT1_WAKEUP_MODE 1
 
 
-extern volatile bool g_timer_read_mpu_done;
+extern volatile bool g_timer_read_mpu_done;   
 extern volatile bool g_timer_noiseMPU_done;
-extern volatile bool alarm_mpu;
+extern volatile bool alarm_mpu;    
 
 
 // Hàm I2C

@@ -19,8 +19,9 @@
 #include "adc.h"  
 #include "gps.h"
 #include "freertos/event_groups.h"
+// #include "cJSON.h"      
 //DEFINE
-#define UART_SIM        UART_NUM_0
+#define UART_SIM        UART_NUM_0    
 #define TXD_PIN         GPIO_NUM_1 // Default TXD pin for UART0
 #define RXD_PIN         GPIO_NUM_3 // Default RXD pin for UART0
 #define RTS_PIN         UART_PIN_NO_CHANGE
@@ -42,12 +43,12 @@ void read_uart_response(void);
 void mqtt_connect(void);
 void mqtt_publish(const char *topic, const char *message);
 void send_gps_data_to_mqtt(void);
-void extract_payload(const char *response);
+void extract_json_payload(const char *response);
 void mqtt_subcribe(const char *topic);
 void subcribe_topic_mqtt(void);
 void module_sim_call_sms(void);
-void uartsim_delete(void);
 void handle_create_event(void);
+void get_time_from_module_sim(void);
 // #ifdef __cplusplus
 // }
 // #endif

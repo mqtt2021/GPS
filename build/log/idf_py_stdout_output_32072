@@ -1,0 +1,56 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 11 2025 22:48:13[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ebc8h (125896) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0002ebf0 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0002ec00 vaddr=3ffbdb60 size=01418h (  5144) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=8344ch (537676) map[0m
+[0;32mI (360) esp_image: segment 4: paddr=000b3474 vaddr=3ffbef78 size=0336ch ( 13164) load[0m
+[0;32mI (366) esp_image: segment 5: paddr=000b67e8 vaddr=40080000 size=18e54h (101972) load[0m
+[0;32mI (409) esp_image: segment 6: paddr=000cf644 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (409) esp_image: segment 7: paddr=000cf6b0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (427) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (427) boot: Disabling RNG early entropy source...[0m
+��� Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=08a4ch ( 35404) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00018a74 vaddr=3ffbdb60 size=03174h ( 12660) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001bbf0 vaddr=40080000 size=04428h ( 17448) load[0m
+[0;32mI (133) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1795ch ( 96604) map[0m
+[0;32mI (169) esp_image: segment 4: paddr=00037984 vaddr=40084428 size=07cc0h ( 31936) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (189) boot: Disabling RNG early entropy source...[0m

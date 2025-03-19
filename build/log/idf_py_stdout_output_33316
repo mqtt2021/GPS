@@ -1,0 +1,956 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 14 2025 02:26:13[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23f44h (147268) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00033f6c vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=00033f7c vaddr=3ffbdb60 size=04b10h ( 19216) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00038a94 vaddr=40080000 size=07584h ( 30084) load[0m
+[0;32mI (187) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=875d4h (554452) map[0m
+[0;32mI (387) esp_image: segment 5: paddr=000c75fc vaddr=40087584 size=11b60h ( 72544) load[0m
+[0;32mI (417) esp_image: segment 6: paddr=000d9164 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (418) esp_image: segment 7: paddr=000d91d0 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: Pro cpu up.[0m
+[0;32mI (449) cpu_start: Starting app cpu, entry point is 0x40081690[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (466) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (467) cpu_start: Application information:[0m
+[0;32mI (471) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (477) cpu_start: App version:      1[0m
+[0;32mI (481) cpu_start: Compile time:     Mar 14 2025 02:26:01[0m
+[0;32mI (487) cpu_start: ELF file SHA256:  669d8cc2ca3a0ad6...[0m
+[0;32mI (493) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (498) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (503) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (508) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFC7348 len 00018CB8 (99 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (551) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (557) heap_init: At 400990E4 len 00006F1C (27 KiB): IRAM[0m
+[0;32mI (565) spi_flash: detected chip: generic[0m
+[0;32mI (568) spi_flash: flash io: dio[0m
+[0;33mW (572) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (585) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;32mI (594) coexist: coex firmware version: 27d8387[0m
+[0;32mI (600) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (604) app_start: Starting scheduler on CPU1[0m
+[0;32mI (604) main_task: Started on CPU0[0m[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (617) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (645) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5654) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (6659) i2c-tools: Roll: 0.11°  Pitch: 1.67°  Yaw: 0.00°[0m
+[0;32mI (6671) i2c-tools: Roll: 0.18°  Pitch: 3.22°  Yaw: -0.00°[0m
+[0;32mI (6682) i2c-tools: Roll: 0.23°  Pitch: 4.71°  Yaw: -0.00°[0m
+[0;32mI (6693) i2c-tools: Roll: 0.28°  Pitch: 6.11°  Yaw: -0.00°[0m
+[0;32mI (6704) i2c-tools: Roll: 0.34°  Pitch: 7.44°  Yaw: -0.00°[0m
+[0;32mI (6715) i2c-tools: Roll: 0.43°  Pitch: 8.70°  Yaw: -0.00°[0m
+[0;32mI (6726) i2c-tools: Roll: 0.50°  Pitch: 9.90°  Yaw: -0.00°[0m
+[0;32mI (6737) i2c-tools: Roll: 0.57°  Pitch: 11.04°  Yaw: -0.00°[0m
+[0;32mI (6748) i2c-tools: Roll: 0.61°  Pitch: 12.11°  Yaw: -0.00°[0m
+[0;32mI (6759) i2c-tools: Roll: 0.65°  Pitch: 13.15°  Yaw: -0.00°[0m
+[0;32mI (6770) i2c-tools: Roll: 0.67°  Pitch: 14.15°  Yaw: -0.00°[0m
+[0;32mI (6781) i2c-tools: Roll: 0.73°  Pitch: 15.06°  Yaw: -0.00°[0m
+[0;32mI (6792) i2c-tools: Roll: 0.77°  Pitch: 15.95°  Yaw: -0.00°[0m
+[0;32mI (6803) i2c-tools: Roll: 0.83°  Pitch: 16.80°  Yaw: -0.00°[0m
+[0;32mI (6814) i2c-tools: Roll: 0.84°  Pitch: 17.60°  Yaw: -0.00°[0m
+[0;32mI (6825) i2c-tools: Roll: 0.85°  Pitch: 18.38°  Yaw: -0.00°[0m
+[0;32mI (6836) i2c-tools: Roll: 0.87°  Pitch: 19.12°  Yaw: -0.00°[0m
+[0;32mI (6847) i2c-tools: Roll: 0.93°  Pitch: 19.81°  Yaw: -0.00°[0m
+[0;32mI (6858) i2c-tools: Roll: 0.98°  Pitch: 20.46°  Yaw: -0.00°[0m
+[0;32mI (6869) i2c-tools: Roll: 0.98°  Pitch: 21.06°  Yaw: -0.00°[0m
+[0;32mI (6880) i2c-tools: Roll: 1.02°  Pitch: 21.65°  Yaw: -0.00°[0m
+[0;32mI (6891) i2c-tools: Roll: 1.03°  Pitch: 22.21°  Yaw: -0.00°[0m
+[0;32mI (6902) i2c-tools: Roll: 1.09°  Pitch: 22.75°  Yaw: -0.00°[0m
+[0;32mI (6913) i2c-tools: Roll: 1.12°  Pitch: 23.26°  Yaw: -0.00°[0m
+[0;32mI (6924) i2c-tools: Roll: 1.14°  Pitch: 23.73°  Yaw: -0.00°[0m
+[0;32mI (6935) i2c-tools: Roll: 1.13°  Pitch: 24.17°  Yaw: -0.00°[0m
+[0;32mI (6946) i2c-tools: Roll: 1.15°  Pitch: 24.59°  Yaw: -0.00°[0m
+[0;32mI (6957) i2c-tools: Roll: 1.17°  Pitch: 25.00°  Yaw: -0.00°[0m
+[0;32mI (6968) i2c-tools: Roll: 1.19°  Pitch: 25.39°  Yaw: -0.00°[0m
+[0;32mI (6979) i2c-tools: Roll: 1.20°  Pitch: 25.76°  Yaw: -0.00°[0m
+[0;32mI (6990) i2c-tools: Roll: 1.21°  Pitch: 26.12°  Yaw: -0.00°[0m
+[0;32mI (7001) i2c-tools: Roll: 1.18°  Pitch: 26.46°  Yaw: -0.00°[0m
+[0;32mI (7012) i2c-tools: Roll: 1.19°  Pitch: 26.78°  Yaw: -0.00°[0m
+[0;32mI (7023) i2c-tools: Roll: 1.22°  Pitch: 27.09°  Yaw: -0.00°[0m
+[0;32mI (7034) i2c-tools: Roll: 1.25°  Pitch: 27.40°  Yaw: -0.00°[0m
+[0;32mI (7045) i2c-tools: Roll: 1.28°  Pitch: 27.67°  Yaw: -0.00°[0m
+[0;32mI (7056) i2c-tools: Roll: 1.31°  Pitch: 27.91°  Yaw: -0.00°[0m
+[0;32mI (7067) i2c-tools: Roll: 1.30°  Pitch: 28.16°  Yaw: -0.00°[0m
+[0;32mI (7078) i2c-tools: Roll: 1.30°  Pitch: 28.39°  Yaw: -0.00°[0m
+[0;32mI (7089) i2c-tools: Roll: 1.32°  Pitch: 28.60°  Yaw: -0.00°[0m
+[0;32mI (7100) i2c-tools: Roll: 1.34°  Pitch: 28.82°  Yaw: -0.00°[0m
+[0;32mI (7111) i2c-tools: Roll: 1.35°  Pitch: 29.00°  Yaw: -0.00°[0m
+[0;32mI (7122) i2c-tools: Roll: 1.34°  Pitch: 29.19°  Yaw: -0.00°[0m
+[0;32mI (7133) i2c-tools: Roll: 1.34°  Pitch: 29.38°  Yaw: -0.00°[0m
+[0;32mI (7144) i2c-tools: Roll: 1.35°  Pitch: 29.55°  Yaw: -0.00°[0m
+[0;32mI (7155) i2c-tools: Roll: 1.36°  Pitch: 29.72°  Yaw: -0.00°[0m
+[0;32mI (7166) i2c-tools: Roll: 1.36°  Pitch: 29.87°  Yaw: -0.00°[0m
+[0;32mI (7177) i2c-tools: Roll: 1.38°  Pitch: 30.01°  Yaw: -0.00°[0m
+[0;32mI (7188) i2c-tools: Roll: 1.38°  Pitch: 30.15°  Yaw: -0.00°[0m
+[0;32mI (7199) i2c-tools: Roll: 1.39°  Pitch: 30.29°  Yaw: -0.00°[0m
+[0;32mI (7210) i2c-tools: Roll: 1.43°  Pitch: 30.42°  Yaw: -0.00°[0m
+[0;32mI (7221) i2c-tools: Roll: 1.44°  Pitch: 30.54°  Yaw: -0.00°[0m
+[0;32mI (7232) i2c-tools: Roll: 1.44°  Pitch: 30.65°  Yaw: -0.00°[0m
+[0;32mI (7243) i2c-tools: Roll: 1.45°  Pitch: 30.75°  Yaw: -0.00°[0m
+[0;32mI (7254) i2c-tools: Roll: 1.44°  Pitch: 30.86°  Yaw: -0.00°[0m
+[0;32mI (7265) i2c-tools: Roll: 1.45°  Pitch: 30.98°  Yaw: -0.00°[0m
+[0;32mI (7276) i2c-tools: Roll: 1.46°  Pitch: 31.09°  Yaw: -0.00°[0m
+[0;32mI (7287) i2c-tools: Roll: 1.49°  Pitch: 31.17°  Yaw: -0.00°[0m
+[0;32mI (7298) i2c-tools: Roll: 1.49°  Pitch: 31.26°  Yaw: -0.00°[0m
+[0;32mI (7309) i2c-tools: Roll: 1.50°  Pitch: 31.36°  Yaw: -0.00°[0m
+[0;32mI (7320) i2c-tools: Roll: 1.49°  Pitch: 31.43°  Yaw: -0.00°[0m
+[0;32mI (7331) i2c-tools: Roll: 1.46°  Pitch: 31.52°  Yaw: -0.00°[0m
+[0;32mI (7342) i2c-tools: Roll: 1.45°  Pitch: 31.58°  Yaw: -0.00°[0m
+[0;32mI (7353) i2c-tools: Roll: 1.45°  Pitch: 31.63°  Yaw: -0.00°[0m
+[0;32mI (7364) i2c-tools: Roll: 1.47°  Pitch: 31.69°  Yaw: -0.00°[0m
+[0;32mI (7375) i2c-tools: Roll: 1.50°  Pitch: 31.73°  Yaw: -0.00°[0m
+[0;32mI (7386) i2c-tools: Roll: 1.51°  Pitch: 31.79°  Yaw: -0.00°[0m
+[0;32mI (7397) i2c-tools: Roll: 1.52°  Pitch: 31.84°  Yaw: -0.00°[0m
+[0;32mI (7408) i2c-tools: Roll: 1.53°  Pitch: 31.89°  Yaw: -0.00°[0m
+[0;32mI (7419) i2c-tools: Roll: 1.51°  Pitch: 31.93°  Yaw: -0.00°[0m
+[0;32mI (7430) i2c-tools: Roll: 1.53°  Pitch: 31.98°  Yaw: -0.00°[0m
+[0;32mI (7441) i2c-tools: Roll: 1.51°  Pitch: 32.03°  Yaw: -0.00°[0m
+[0;32mI (7452) i2c-tools: Roll: 1.51°  Pitch: 32.06°  Yaw: -0.00°[0m
+[0;32mI (7463) i2c-tools: Roll: 1.52°  Pitch: 32.12°  Yaw: -0.00°[0m
+[0;32mI (7474) i2c-tools: Roll: 1.52°  Pitch: 32.16°  Yaw: -0.00°[0m
+[0;32mI (7485) i2c-tools: Roll: 1.52°  Pitch: 32.20°  Yaw: -0.00°[0m
+[0;32mI (7496) i2c-tools: Roll: 1.52°  Pitch: 32.23°  Yaw: -0.00°[0m
+[0;32mI (7507) i2c-tools: Roll: 1.52°  Pitch: 32.26°  Yaw: -0.00°[0m
+[0;32mI (7518) i2c-tools: Roll: 1.54°  Pitch: 32.29°  Yaw: -0.00°[0m
+[0;32mI (7529) i2c-tools: Roll: 1.53°  Pitch: 32.33°  Yaw: -0.00°[0m
+[0;32mI (7540) i2c-tools: Roll: 1.54°  Pitch: 32.34°  Yaw: -0.00°[0m
+[0;32mI (7551) i2c-tools: Roll: 1.54°  Pitch: 32.38°  Yaw: -0.00°[0m
+[0;32mI (7562) i2c-tools: Roll: 1.54°  Pitch: 32.43°  Yaw: -0.00°[0m
+[0;32mI (7573) i2c-tools: Roll: 1.52°  Pitch: 32.46°  Yaw: -0.00°[0m
+[0;32mI (7584) i2c-tools: Roll: 1.52°  Pitch: 32.49°  Yaw: -0.00°[0m
+[0;32mI (7595) i2c-tools: Roll: 1.51°  Pitch: 32.53°  Yaw: -0.00°[0m
+[0;32mI (7606) i2c-tools: Roll: 1.51°  Pitch: 32.53°  Yaw: -0.00°[0m
+[0;32mI (7617) i2c-tools: Roll: 1.52°  Pitch: 32.52°  Yaw: -0.00°[0m
+[0;32mI (7628) i2c-tools: Roll: 1.54°  Pitch: 32.52°  Yaw: -0.00°[0m
+[0;32mI (7639) i2c-tools: Roll: 1.53°  Pitch: 32.54°  Yaw: -0.00°[0m
+[0;32mI (7650) i2c-tools: Roll: 1.54°  Pitch: 32.52°  Yaw: -0.00°[0m
+[0;32mI (7661) i2c-tools: Roll: 1.54°  Pitch: 32.54°  Yaw: -0.00°[0m
+[0;32mI (7672) i2c-tools: Roll: 1.55°  Pitch: 32.54°  Yaw: -0.00°[0m
+[0;32mI (7683) i2c-tools: Roll: 1.56°  Pitch: 32.56°  Yaw: -0.00°[0m
+[0;32mI (7694) i2c-tools: Roll: 1.54°  Pitch: 32.58°  Yaw: -0.00°[0m
+[0;32mI (7705) i2c-tools: Roll: 1.52°  Pitch: 32.58°  Yaw: -0.00°[0m
+[0;32mI (7716) i2c-tools: Roll: 1.51°  Pitch: 32.60°  Yaw: -0.00°[0m
+[0;32mI (7727) i2c-tools: Roll: 1.49°  Pitch: 32.61°  Yaw: -0.00°[0m
+[0;32mI (7738) i2c-tools: Roll: 1.49°  Pitch: 32.60°  Yaw: -0.00°[0m
+[0;32mI (7749) i2c-tools: Roll: 1.51°  Pitch: 32.64°  Yaw: -0.00°[0m
+[0;32mI (7760) i2c-tools: Roll: 1.52°  Pitch: 32.66°  Yaw: -0.00°[0m
+[0;32mI (7771) i2c-tools: Roll: 1.52°  Pitch: 32.69°  Yaw: -0.00°[0m
+[0;32mI (7782) i2c-tools: Roll: 1.54°  Pitch: 32.69°  Yaw: -0.00°[0m
+[0;32mI (7793) i2c-tools: Roll: 1.55°  Pitch: 32.69°  Yaw: -0.00°[0m
+[0;32mI (7804) i2c-tools: Roll: 1.55°  Pitch: 32.70°  Yaw: -0.00°[0m
+[0;32mI (7815) i2c-tools: Roll: 1.55°  Pitch: 32.68°  Yaw: -0.00°[0m
+[0;32mI (7826) i2c-tools: Roll: 1.56°  Pitch: 32.68°  Yaw: -0.00°[0m
+[0;32mI (7837) i2c-tools: Roll: 1.55°  Pitch: 32.69°  Yaw: -0.00°[0m
+[0;32mI (7848) i2c-tools: Roll: 1.56°  Pitch: 32.70°  Yaw: -0.00°[0m
+[0;32mI (7859) i2c-tools: Roll: 1.57°  Pitch: 32.69°  Yaw: -0.00°[0m
+[0;32mI (7870) i2c-tools: Roll: 1.57°  Pitch: 32.74°  Yaw: -0.00°[0m
+[0;32mI (7881) i2c-tools: Roll: 1.57°  Pitch: 32.75°  Yaw: -0.00°[0m
+[0;32mI (7892) i2c-tools: Roll: 1.55°  Pitch: 32.74°  Yaw: -0.00°[0m
+[0;32mI (7903) i2c-tools: Roll: 1.56°  Pitch: 32.77°  Yaw: -0.00°[0m
+[0;32mI (7914) i2c-tools: Roll: 1.56°  Pitch: 32.77°  Yaw: -0.00°[0m
+[0;32mI (7925) i2c-tools: Roll: 1.57°  Pitch: 32.77°  Yaw: -0.00°[0m
+[0;32mI (7936) i2c-tools: Roll: 1.55°  Pitch: 32.76°  Yaw: -0.00°[0m
+[0;32mI (7947) i2c-tools: Roll: 1.53°  Pitch: 32.77°  Yaw: -0.00°[0m
+[0;32mI (7958) i2c-tools: Roll: 1.54°  Pitch: 32.77°  Yaw: -0.00°[0m
+[0;32mI (7969) i2c-tools: Roll: 1.53°  Pitch: 32.78°  Yaw: -0.00°[0m
+[0;32mI (7980) i2c-tools: Roll: 1.52°  Pitch: 32.77°  Yaw: -0.00°[0m
+[0;32mI (7991) i2c-tools: Roll: 1.50°  Pitch: 32.79°  Yaw: -0.00°[0m
+[0;32mI (8002) i2c-tools: Roll: 1.52°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (8013) i2c-tools: Roll: 1.51°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (8024) i2c-tools: Roll: 1.51°  Pitch: 32.80°  Yaw: -0.00°[0m
+[0;32mI (8035) i2c-tools: Roll: 1.51°  Pitch: 32.80°  Yaw: -0.00°[0m
+[0;32mI (8046) i2c-tools: Roll: 1.50°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (8057) i2c-tools: Roll: 1.49°  Pitch: 32.80°  Yaw: -0.00°[0m
+[0;32mI (8068) i2c-tools: Roll: 1.48°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (8079) i2c-tools: Roll: 1.50°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (8090) i2c-tools: Roll: 1.50°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (8101) i2c-tools: Roll: 1.50°  Pitch: 32.79°  Yaw: -0.00°[0m
+[0;32mI (8112) i2c-tools: Roll: 1.51°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (8123) i2c-tools: Roll: 1.52°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (8134) i2c-tools: Roll: 1.51°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (8145) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8156) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8167) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8178) i2c-tools: Roll: 1.46°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8189) i2c-tools: Roll: 1.46°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8200) i2c-tools: Roll: 1.47°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (8211) i2c-tools: Roll: 1.47°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (8222) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8233) i2c-tools: Roll: 1.50°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8244) i2c-tools: Roll: 1.51°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8255) i2c-tools: Roll: 1.51°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8266) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8277) i2c-tools: Roll: 1.51°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8288) i2c-tools: Roll: 1.50°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (8299) i2c-tools: Roll: 1.48°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8310) i2c-tools: Roll: 1.49°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (8321) i2c-tools: Roll: 1.52°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (8332) i2c-tools: Roll: 1.53°  Pitch: 32.96°  Yaw: -0.00°[0m
+[0;32mI (8343) i2c-tools: Roll: 1.53°  Pitch: 32.96°  Yaw: -0.00°[0m
+[0;32mI (8354) i2c-tools: Roll: 1.55°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (8365) i2c-tools: Roll: 1.56°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (8376) i2c-tools: Roll: 1.55°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (8387) i2c-tools: Roll: 1.55°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (8398) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8409) i2c-tools: Roll: 1.56°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (8420) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8431) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8442) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8453) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8464) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (8475) i2c-tools: Roll: 1.54°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8486) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (8497) i2c-tools: Roll: 1.54°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (8508) i2c-tools: Roll: 1.52°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (8519) i2c-tools: Roll: 1.52°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (8530) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (8541) i2c-tools: Roll: 1.51°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (8552) i2c-tools: Roll: 1.51°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (8563) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (8574) i2c-tools: Roll: 1.49°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (8585) i2c-tools: Roll: 1.51°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (8596) i2c-tools: Roll: 1.52°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (8607) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (8618) i2c-tools: Roll: 1.50°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8629) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8640) i2c-tools: Roll: 1.59°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8651) i2c-tools: Roll: 1.54°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8662) i2c-tools: Roll: 1.45°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (8673) i2c-tools: Roll: 1.42°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (8684) i2c-tools: Roll: 1.44°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8695) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8706) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (8717) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (8728) i2c-tools: Roll: 1.44°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8739) i2c-tools: Roll: 1.43°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8750) i2c-tools: Roll: 1.48°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8761) i2c-tools: Roll: 1.52°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8772) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8783) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (8794) i2c-tools: Roll: 1.50°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8805) i2c-tools: Roll: 1.48°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8816) i2c-tools: Roll: 1.50°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8827) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8838) i2c-tools: Roll: 1.48°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8849) i2c-tools: Roll: 1.47°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8860) i2c-tools: Roll: 1.46°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8871) i2c-tools: Roll: 1.49°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8882) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8893) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (8904) i2c-tools: Roll: 1.48°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8915) i2c-tools: Roll: 1.47°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8926) i2c-tools: Roll: 1.47°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (8937) i2c-tools: Roll: 1.48°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (8948) i2c-tools: Roll: 1.51°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (8959) i2c-tools: Roll: 1.51°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (8970) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (8981) i2c-tools: Roll: 1.46°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (8992) i2c-tools: Roll: 1.48°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (9003) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9014) i2c-tools: Roll: 1.50°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (9025) i2c-tools: Roll: 1.49°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9036) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9047) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9058) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9069) i2c-tools: Roll: 1.54°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9080) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9091) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (9102) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9113) i2c-tools: Roll: 1.51°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9124) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9135) i2c-tools: Roll: 1.51°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9146) i2c-tools: Roll: 1.51°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9157) i2c-tools: Roll: 1.50°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (9168) i2c-tools: Roll: 1.49°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (9179) i2c-tools: Roll: 1.48°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (9190) i2c-tools: Roll: 1.48°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (9201) i2c-tools: Roll: 1.50°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (9212) i2c-tools: Roll: 1.50°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (9223) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9234) i2c-tools: Roll: 1.48°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9245) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9256) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9267) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9278) i2c-tools: Roll: 1.50°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (9289) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9300) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9311) i2c-tools: Roll: 1.50°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (9322) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9333) i2c-tools: Roll: 1.49°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (9344) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9355) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9366) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9377) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9388) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9399) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9410) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (9421) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (9432) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9443) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9454) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9465) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9476) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9487) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9498) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9509) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9520) i2c-tools: Roll: 1.53°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9531) i2c-tools: Roll: 1.53°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9542) i2c-tools: Roll: 1.54°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9553) i2c-tools: Roll: 1.54°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9564) i2c-tools: Roll: 1.55°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (9575) i2c-tools: Roll: 1.54°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (9586) i2c-tools: Roll: 1.53°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (9597) i2c-tools: Roll: 1.51°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (9608) i2c-tools: Roll: 1.52°  Pitch: 32.80°  Yaw: -0.00°[0m
+[0;32mI (9619) i2c-tools: Roll: 1.51°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (9630) i2c-tools: Roll: 1.52°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (9641) i2c-tools: Roll: 1.51°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (9652) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9663) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (9674) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9685) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9696) i2c-tools: Roll: 1.50°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9707) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9718) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9729) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9740) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9751) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9762) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9773) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9784) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (9795) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (9806) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9817) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9828) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9839) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9850) i2c-tools: Roll: 1.53°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9861) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (9872) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9883) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9894) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9905) i2c-tools: Roll: 1.46°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9916) i2c-tools: Roll: 1.46°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9927) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9938) i2c-tools: Roll: 1.46°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9949) i2c-tools: Roll: 1.47°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9960) i2c-tools: Roll: 1.46°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (9971) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (9982) i2c-tools: Roll: 1.46°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (9993) i2c-tools: Roll: 1.45°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10004) i2c-tools: Roll: 1.47°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10015) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10026) i2c-tools: Roll: 1.50°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10037) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10048) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10059) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10070) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10081) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10092) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10103) i2c-tools: Roll: 1.49°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (10114) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10125) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (10136) i2c-tools: Roll: 1.50°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10147) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (10158) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (10169) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10180) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10191) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10202) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10213) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10224) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (10235) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10246) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10257) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10268) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (10279) i2c-tools: Roll: 1.51°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10290) i2c-tools: Roll: 1.52°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10301) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10312) i2c-tools: Roll: 1.49°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (10323) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10334) i2c-tools: Roll: 1.47°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10345) i2c-tools: Roll: 1.46°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (10356) i2c-tools: Roll: 1.45°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10367) i2c-tools: Roll: 1.44°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10378) i2c-tools: Roll: 1.44°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10389) i2c-tools: Roll: 1.44°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10400) i2c-tools: Roll: 1.46°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10411) i2c-tools: Roll: 1.46°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (10422) i2c-tools: Roll: 1.43°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (10433) i2c-tools: Roll: 1.43°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10444) i2c-tools: Roll: 1.42°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10455) i2c-tools: Roll: 1.43°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (10466) i2c-tools: Roll: 1.43°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10477) i2c-tools: Roll: 1.44°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (10488) i2c-tools: Roll: 1.44°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (10499) i2c-tools: Roll: 1.44°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10510) i2c-tools: Roll: 1.44°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10521) i2c-tools: Roll: 1.43°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10532) i2c-tools: Roll: 1.40°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (10543) i2c-tools: Roll: 1.41°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (10554) i2c-tools: Roll: 1.41°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10565) i2c-tools: Roll: 1.43°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (10576) i2c-tools: Roll: 1.44°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10587) i2c-tools: Roll: 1.45°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10598) i2c-tools: Roll: 1.45°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (10609) i2c-tools: Roll: 1.46°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (10620) i2c-tools: Roll: 1.45°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10631) i2c-tools: Roll: 1.45°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10642) i2c-tools: Roll: 1.44°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10653) i2c-tools: Roll: 1.46°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10664) i2c-tools: Roll: 1.46°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (10675) i2c-tools: Roll: 1.45°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10686) i2c-tools: Roll: 1.45°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10697) i2c-tools: Roll: 1.46°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (10708) i2c-tools: Roll: 1.46°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (10719) i2c-tools: Roll: 1.46°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (10730) i2c-tools: Roll: 1.46°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (10741) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10752) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (10763) i2c-tools: Roll: 1.47°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (10774) i2c-tools: Roll: 1.45°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10785) i2c-tools: Roll: 1.43°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (10796) i2c-tools: Roll: 1.46°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (10807) i2c-tools: Roll: 1.47°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (10818) i2c-tools: Roll: 1.47°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (10829) i2c-tools: Roll: 1.48°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (10840) i2c-tools: Roll: 1.51°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10851) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10862) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10873) i2c-tools: Roll: 1.47°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10884) i2c-tools: Roll: 1.47°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10895) i2c-tools: Roll: 1.47°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (10906) i2c-tools: Roll: 1.46°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (10917) i2c-tools: Roll: 1.46°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (10928) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10939) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10950) i2c-tools: Roll: 1.49°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (10961) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (10972) i2c-tools: Roll: 1.48°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (10983) i2c-tools: Roll: 1.48°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (10994) i2c-tools: Roll: 1.49°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (11005) i2c-tools: Roll: 1.51°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (11016) i2c-tools: Roll: 1.51°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11027) i2c-tools: Roll: 1.51°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11038) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11049) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11060) i2c-tools: Roll: 1.55°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (11071) i2c-tools: Roll: 1.55°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11082) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11093) i2c-tools: Roll: 1.55°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11104) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11115) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11126) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11137) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11148) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11159) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11170) i2c-tools: Roll: 1.54°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11181) i2c-tools: Roll: 1.55°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11192) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11203) i2c-tools: Roll: 1.57°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11214) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11225) i2c-tools: Roll: 1.57°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11236) i2c-tools: Roll: 1.56°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11247) i2c-tools: Roll: 1.56°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11258) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11269) i2c-tools: Roll: 1.54°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11280) i2c-tools: Roll: 1.55°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11291) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11302) i2c-tools: Roll: 1.55°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11313) i2c-tools: Roll: 1.54°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11324) i2c-tools: Roll: 1.54°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11335) i2c-tools: Roll: 1.52°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11346) i2c-tools: Roll: 1.53°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11357) i2c-tools: Roll: 1.52°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11368) i2c-tools: Roll: 1.52°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (11379) i2c-tools: Roll: 1.53°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11390) i2c-tools: Roll: 1.54°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11401) i2c-tools: Roll: 1.54°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11412) i2c-tools: Roll: 1.54°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11423) i2c-tools: Roll: 1.53°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11434) i2c-tools: Roll: 1.53°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11445) i2c-tools: Roll: 1.53°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11456) i2c-tools: Roll: 1.55°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (11467) i2c-tools: Roll: 1.55°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (11478) i2c-tools: Roll: 1.55°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (11489) i2c-tools: Roll: 1.55°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11500) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11511) i2c-tools: Roll: 1.53°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11522) i2c-tools: Roll: 1.53°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11533) i2c-tools: Roll: 1.54°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11544) i2c-tools: Roll: 1.55°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11555) i2c-tools: Roll: 1.56°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11566) i2c-tools: Roll: 1.59°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (11577) i2c-tools: Roll: 1.58°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11588) i2c-tools: Roll: 1.57°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11599) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11610) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11621) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11632) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (11643) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11654) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11665) i2c-tools: Roll: 1.54°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11676) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11687) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11698) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11709) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11720) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11731) i2c-tools: Roll: 1.54°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11742) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11753) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11764) i2c-tools: Roll: 1.54°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (11775) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11786) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11797) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11808) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (11819) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11830) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11841) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (11852) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11863) i2c-tools: Roll: 1.52°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11874) i2c-tools: Roll: 1.51°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (11885) i2c-tools: Roll: 1.52°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (11896) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (11907) i2c-tools: Roll: 1.51°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (11918) i2c-tools: Roll: 1.52°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (11929) i2c-tools: Roll: 1.52°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (11940) i2c-tools: Roll: 1.53°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (11951) i2c-tools: Roll: 1.54°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (11962) i2c-tools: Roll: 1.55°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (11973) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (11984) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (11995) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (12006) i2c-tools: Roll: 1.54°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12017) i2c-tools: Roll: 1.54°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12028) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (12039) i2c-tools: Roll: 1.55°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12050) i2c-tools: Roll: 1.55°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12061) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (12072) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (12083) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (12094) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (12105) i2c-tools: Roll: 1.56°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12116) i2c-tools: Roll: 1.56°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12127) i2c-tools: Roll: 1.57°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12138) i2c-tools: Roll: 1.59°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12149) i2c-tools: Roll: 1.58°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (12160) i2c-tools: Roll: 1.57°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (12171) i2c-tools: Roll: 1.58°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (12182) i2c-tools: Roll: 1.57°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12193) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12204) i2c-tools: Roll: 1.55°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12215) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12226) i2c-tools: Roll: 1.56°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12237) i2c-tools: Roll: 1.54°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12248) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12259) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12270) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12281) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12292) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12303) i2c-tools: Roll: 1.56°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12314) i2c-tools: Roll: 1.56°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12325) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12336) i2c-tools: Roll: 1.57°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12347) i2c-tools: Roll: 1.56°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12358) i2c-tools: Roll: 1.60°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12369) i2c-tools: Roll: 1.59°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12380) i2c-tools: Roll: 1.58°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (12391) i2c-tools: Roll: 1.57°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12402) i2c-tools: Roll: 1.58°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12413) i2c-tools: Roll: 1.56°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12424) i2c-tools: Roll: 1.57°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12435) i2c-tools: Roll: 1.58°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12446) i2c-tools: Roll: 1.57°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12457) i2c-tools: Roll: 1.58°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12468) i2c-tools: Roll: 1.57°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12479) i2c-tools: Roll: 1.58°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12490) i2c-tools: Roll: 1.57°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12501) i2c-tools: Roll: 1.56°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12512) i2c-tools: Roll: 1.57°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12523) i2c-tools: Roll: 1.55°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (12534) i2c-tools: Roll: 1.55°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (12545) i2c-tools: Roll: 1.56°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12556) i2c-tools: Roll: 1.56°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12567) i2c-tools: Roll: 1.54°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12578) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12589) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12600) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12611) i2c-tools: Roll: 1.52°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12622) i2c-tools: Roll: 1.52°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12633) i2c-tools: Roll: 1.51°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (12644) i2c-tools: Roll: 1.50°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (12655) i2c-tools: Roll: 1.51°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (12666) i2c-tools: Roll: 1.51°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12677) i2c-tools: Roll: 1.49°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12688) i2c-tools: Roll: 1.48°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12699) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12710) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12721) i2c-tools: Roll: 1.51°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12732) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12743) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12754) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12765) i2c-tools: Roll: 1.49°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12776) i2c-tools: Roll: 1.50°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12787) i2c-tools: Roll: 1.48°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12798) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12809) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (12820) i2c-tools: Roll: 1.50°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12831) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12842) i2c-tools: Roll: 1.50°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12853) i2c-tools: Roll: 1.50°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12864) i2c-tools: Roll: 1.49°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12875) i2c-tools: Roll: 1.48°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12886) i2c-tools: Roll: 1.47°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12897) i2c-tools: Roll: 1.47°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (12908) i2c-tools: Roll: 1.47°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (12919) i2c-tools: Roll: 1.46°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12930) i2c-tools: Roll: 1.45°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12941) i2c-tools: Roll: 1.46°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12952) i2c-tools: Roll: 1.47°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (12963) i2c-tools: Roll: 1.47°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12974) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12985) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (12996) i2c-tools: Roll: 1.47°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (13007) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13018) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13029) i2c-tools: Roll: 1.49°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (13040) i2c-tools: Roll: 1.51°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (13051) i2c-tools: Roll: 1.51°  Pitch: 32.81°  Yaw: -0.00°[0m
+[0;32mI (13062) i2c-tools: Roll: 1.51°  Pitch: 32.80°  Yaw: -0.00°[0m
+[0;32mI (13073) i2c-tools: Roll: 1.50°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (13084) i2c-tools: Roll: 1.51°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13095) i2c-tools: Roll: 1.50°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13106) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13117) i2c-tools: Roll: 1.48°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13128) i2c-tools: Roll: 1.47°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13139) i2c-tools: Roll: 1.45°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13150) i2c-tools: Roll: 1.46°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13161) i2c-tools: Roll: 1.46°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13172) i2c-tools: Roll: 1.47°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13183) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13194) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13205) i2c-tools: Roll: 1.47°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13216) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13227) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13238) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13249) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13260) i2c-tools: Roll: 1.48°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13271) i2c-tools: Roll: 1.47°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13282) i2c-tools: Roll: 1.47°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13293) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13304) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13315) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13326) i2c-tools: Roll: 1.45°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13337) i2c-tools: Roll: 1.46°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13348) i2c-tools: Roll: 1.46°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13359) i2c-tools: Roll: 1.47°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13370) i2c-tools: Roll: 1.47°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13381) i2c-tools: Roll: 1.46°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13392) i2c-tools: Roll: 1.44°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13403) i2c-tools: Roll: 1.46°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13414) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13425) i2c-tools: Roll: 1.47°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13436) i2c-tools: Roll: 1.46°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13447) i2c-tools: Roll: 1.48°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13458) i2c-tools: Roll: 1.47°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13469) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13480) i2c-tools: Roll: 1.49°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13491) i2c-tools: Roll: 1.48°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13502) i2c-tools: Roll: 1.48°  Pitch: 32.82°  Yaw: -0.00°[0m
+[0;32mI (13513) i2c-tools: Roll: 1.46°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13524) i2c-tools: Roll: 1.44°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13535) i2c-tools: Roll: 1.44°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13546) i2c-tools: Roll: 1.45°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13557) i2c-tools: Roll: 1.47°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13568) i2c-tools: Roll: 1.49°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (13579) i2c-tools: Roll: 1.49°  Pitch: 32.83°  Yaw: -0.00°[0m
+[0;32mI (13590) i2c-tools: Roll: 1.49°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13601) i2c-tools: Roll: 1.48°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (13612) i2c-tools: Roll: 1.50°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13623) i2c-tools: Roll: 1.50°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13634) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13645) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13656) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13667) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13678) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13689) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13700) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13711) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13722) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13733) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13744) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13755) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13766) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13777) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13788) i2c-tools: Roll: 1.53°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (13799) i2c-tools: Roll: 1.53°  Pitch: 32.94°  Yaw: -0.00°[0m
+[0;32mI (13810) i2c-tools: Roll: 1.52°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (13821) i2c-tools: Roll: 1.53°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (13832) i2c-tools: Roll: 1.52°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (13843) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13854) i2c-tools: Roll: 1.55°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13865) i2c-tools: Roll: 1.55°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13876) i2c-tools: Roll: 1.53°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13887) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13898) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (13909) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13920) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (13931) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13942) i2c-tools: Roll: 1.49°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (13953) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13964) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13975) i2c-tools: Roll: 1.50°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (13986) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (13997) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14008) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14019) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14030) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14041) i2c-tools: Roll: 1.53°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14052) i2c-tools: Roll: 1.51°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14063) i2c-tools: Roll: 1.54°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14074) i2c-tools: Roll: 1.55°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14085) i2c-tools: Roll: 1.56°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14096) i2c-tools: Roll: 1.58°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (14107) i2c-tools: Roll: 1.57°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (14118) i2c-tools: Roll: 1.56°  Pitch: 32.96°  Yaw: -0.00°[0m
+[0;32mI (14129) i2c-tools: Roll: 1.56°  Pitch: 32.95°  Yaw: -0.00°[0m
+[0;32mI (14140) i2c-tools: Roll: 1.55°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14151) i2c-tools: Roll: 1.54°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14162) i2c-tools: Roll: 1.54°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14173) i2c-tools: Roll: 1.54°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14184) i2c-tools: Roll: 1.54°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14195) i2c-tools: Roll: 1.56°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14206) i2c-tools: Roll: 1.55°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14217) i2c-tools: Roll: 1.56°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14228) i2c-tools: Roll: 1.55°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14239) i2c-tools: Roll: 1.56°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14250) i2c-tools: Roll: 1.56°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14261) i2c-tools: Roll: 1.56°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14272) i2c-tools: Roll: 1.58°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14283) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14294) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14305) i2c-tools: Roll: 1.56°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14316) i2c-tools: Roll: 1.55°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14327) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14338) i2c-tools: Roll: 1.53°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14349) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14360) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14371) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14382) i2c-tools: Roll: 1.55°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14393) i2c-tools: Roll: 1.54°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14404) i2c-tools: Roll: 1.53°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14415) i2c-tools: Roll: 1.53°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (14426) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14437) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14448) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14459) i2c-tools: Roll: 1.53°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14470) i2c-tools: Roll: 1.54°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14481) i2c-tools: Roll: 1.53°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14492) i2c-tools: Roll: 1.54°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14503) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14514) i2c-tools: Roll: 1.54°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14525) i2c-tools: Roll: 1.54°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14536) i2c-tools: Roll: 1.55°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14547) i2c-tools: Roll: 1.55°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14558) i2c-tools: Roll: 1.54°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14569) i2c-tools: Roll: 1.53°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14580) i2c-tools: Roll: 1.50°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14591) i2c-tools: Roll: 1.48°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14602) i2c-tools: Roll: 1.48°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14613) i2c-tools: Roll: 1.49°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14624) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14635) i2c-tools: Roll: 1.53°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14646) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14657) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14668) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14679) i2c-tools: Roll: 1.52°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14690) i2c-tools: Roll: 1.51°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14701) i2c-tools: Roll: 1.50°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14712) i2c-tools: Roll: 1.56°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14723) i2c-tools: Roll: 1.56°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14734) i2c-tools: Roll: 1.48°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14745) i2c-tools: Roll: 1.41°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14756) i2c-tools: Roll: 1.43°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14767) i2c-tools: Roll: 1.48°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14778) i2c-tools: Roll: 1.53°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14789) i2c-tools: Roll: 1.52°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14800) i2c-tools: Roll: 1.46°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (14811) i2c-tools: Roll: 1.42°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (14822) i2c-tools: Roll: 1.43°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14833) i2c-tools: Roll: 1.47°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14844) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14855) i2c-tools: Roll: 1.52°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14866) i2c-tools: Roll: 1.50°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (14877) i2c-tools: Roll: 1.47°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (14888) i2c-tools: Roll: 1.47°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14899) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14910) i2c-tools: Roll: 1.53°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14921) i2c-tools: Roll: 1.52°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14932) i2c-tools: Roll: 1.49°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (14943) i2c-tools: Roll: 1.47°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (14954) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14965) i2c-tools: Roll: 1.50°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14976) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (14987) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (14998) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15009) i2c-tools: Roll: 1.50°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15020) i2c-tools: Roll: 1.52°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (15031) i2c-tools: Roll: 1.53°  Pitch: 32.84°  Yaw: -0.00°[0m
+[0;32mI (15042) i2c-tools: Roll: 1.54°  Pitch: 32.85°  Yaw: -0.00°[0m
+[0;32mI (15053) i2c-tools: Roll: 1.52°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15064) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15075) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15086) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15097) i2c-tools: Roll: 1.49°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15108) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15119) i2c-tools: Roll: 1.48°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15130) i2c-tools: Roll: 1.49°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15141) i2c-tools: Roll: 1.48°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15152) i2c-tools: Roll: 1.51°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15163) i2c-tools: Roll: 1.51°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15174) i2c-tools: Roll: 1.49°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15185) i2c-tools: Roll: 1.49°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15196) i2c-tools: Roll: 1.49°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15207) i2c-tools: Roll: 1.51°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15218) i2c-tools: Roll: 1.53°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15229) i2c-tools: Roll: 1.55°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (15240) i2c-tools: Roll: 1.54°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15251) i2c-tools: Roll: 1.52°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15262) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15273) i2c-tools: Roll: 1.50°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (15284) i2c-tools: Roll: 1.48°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (15295) i2c-tools: Roll: 1.49°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15306) i2c-tools: Roll: 1.48°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (15317) i2c-tools: Roll: 1.47°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (15328) i2c-tools: Roll: 1.47°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15339) i2c-tools: Roll: 1.47°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15350) i2c-tools: Roll: 1.49°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15361) i2c-tools: Roll: 1.48°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15372) i2c-tools: Roll: 1.51°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15383) i2c-tools: Roll: 1.52°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15394) i2c-tools: Roll: 1.52°  Pitch: 32.91°  Yaw: -0.00°[0m
+[0;32mI (15405) i2c-tools: Roll: 1.55°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (15416) i2c-tools: Roll: 1.57°  Pitch: 32.92°  Yaw: -0.00°[0m
+[0;32mI (15427) i2c-tools: Roll: 1.58°  Pitch: 32.93°  Yaw: -0.00°[0m
+[0;32mI (15438) i2c-tools: Roll: 1.58°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15449) i2c-tools: Roll: 1.60°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15460) i2c-tools: Roll: 1.58°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (15471) i2c-tools: Roll: 1.59°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (15482) i2c-tools: Roll: 1.59°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15493) i2c-tools: Roll: 1.59°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15504) i2c-tools: Roll: 1.58°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15515) i2c-tools: Roll: 1.57°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15526) i2c-tools: Roll: 1.58°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15537) i2c-tools: Roll: 1.59°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15548) i2c-tools: Roll: 1.59°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15559) i2c-tools: Roll: 1.59°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15570) i2c-tools: Roll: 1.57°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15581) i2c-tools: Roll: 1.58°  Pitch: 32.90°  Yaw: -0.00°[0m
+[0;32mI (15592) i2c-tools: Roll: 1.59°  Pitch: 32.89°  Yaw: -0.00°[0m
+[0;32mI (15603) i2c-tools: Roll: 1.58°  Pitch: 32.88°  Yaw: -0.00°[0m
+[0;32mI (15614) i2c-tools: Roll: 1.56°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15625) i2c-tools: Roll: 1.55°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15636) i2c-tools: Roll: 1.54°  Pitch: 32.87°  Yaw: -0.00°[0m
+[0;32mI (15647) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (15658) i2c-tools: Roll: 1.54°  Pitch: 32.86°  Yaw: -0.00°[0m
+[0;32mI (15669) example: Creating uart2_task...[0m
+[0;32mI (15670) example: Data successfully processed.[0m
+[0;32mI (16170) example: Data successfully processed.[0m
+[0;32mI (16690) example: Data successfully processed.[0m
+[0;32mI (17730) example: Data successfully processed.[0m
+[0;32mI (18323) example: Data successfully processed.[0m
+[0;32mI (19363) example: Data successfully processed.[0m
+[0;32mI (20403) example: Data successfully processed.[0m
+[0;32mI (21443) example: Data successfully processed.[0m
+[0;32mI (22483) example: Data successfully processed.[0m
+[0;32mI (23523) example: Data successfully processed.[0m
+[0;32mI (24563) example: Data successfully processed.[0m
+[0;32mI (25603) example: Data successfully processed.[0m
+[0;32mI (26643) example: Data successfully processed.[0m
+[0;32mI (27683) example: Data successfully processed.[0m
+[0;32mI (28723) example: Data successfully processed.[0m
+[0;32mI (29763) example: Data successfully processed.[0m
+[0;32mI (30323) example: Data successfully processed.[0m
+[0;32mI (31363) example: Data successfully processed.[0m
+[0;32mI (32403) example: Data successfully processed.[0m
+[0;32mI (33443) example: Data successfully processed.[0m
+[0;32mI (34483) example: Data successfully processed.[0m
+[0;32mI (36043) example: Data successfully processed.[0m
+[0;32mI (37083) example: Data successfully processed.[0m
+[0;32mI (38123) example: Data successfully processed.[0m
+[0;32mI (39163) example: Data successfully processed.[0m
+[0;32mI (40203) example: Data successfully processed.[0m
+[0;32mI (41243) example: Data successfully processed.[0m
+[0;32mI (42283) example: Data successfully processed.[0m
+[0;32mI (42836) example: Data successfully processed.[0m
+[0;32mI (43876) example: Data successfully processed.[0m
+[0;32mI (44916) example: Data successfully processed.[0m
+[0;32mI (45956) example: Data successfully processed.[0m
+[0;32mI (46996) example: Data successfully processed.[0m
+[0;32mI (48036) example: Data successfully processed.[0m
+[0;32mI (49076) example: Data successfully processed.[0m
+[0;32mI (50116) example: Data successfully processed.[0m
+[0;32mI (51156) example: Data successfully processed.[0m
+[0;32mI (52196) example: Data successfully processed.[0m
+[0;32mI (53236) example: Data successfully processed.[0m
+[0;32mI (54276) example: Data successfully processed.[0m
+[0;32mI (54842) example: Data successfully processed.[0m
+[0;32mI (55882) example: Data successfully processed.[0m
+[0;32mI (56922) example: Data successfully processed.[0m
+[0;32mI (57962) example: Data successfully processed.[0m
+[0;32mI (59002) example: Data successfully processed.[0m
+[0;32mI (60042) example: Data successfully processed.[0m
+[0;32mI (61082) example: Data successfully processed.[0m
+[0;32mI (62122) example: Data successfully processed.[0m
+[0;32mI (63162) example: Data successfully processed.[0m
+[0;32mI (64202) example: Data successfully processed.[0m
+[0;32mI (65242) example: Data successfully processed.[0m
+[0;32mI (65670) example: Stopping UART tasks...[0m
+[0;32mI (66670) example: Creating uart2_task...[0m
+[0;32mI (66690) example: Data successfully processed.[0m
+[0;32mI (67210) example: Data successfully processed.[0m
+[0;32mI (68250) example: Data successfully processed.[0m
+[0;32mI (68845) example: Data successfully processed.[0m
+[0;32mI (69885) example: Data successfully processed.[0m
+[0;32mI (70925) example: Data successfully processed.[0m
+[0;32mI (71965) example: Data successfully processed.[0m
+[0;32mI (73005) example: Data successfully processed.[0m
+[0;32mI (74045) example: Data successfully processed.[0m

@@ -101,7 +101,7 @@ void processGNRMC(char *gpsData) {
     char *token = strtok(gpsData, ","); //trả về một con trỏ kiểu char* trỏ đến token đầu tiên trong chuỗi.
     while (token != NULL && field_count < 20) {
         fields[field_count++] = token; // gán trước rồi mới tăng
-        token = strtok(NULL, ",");
+        token = strtok(NULL, ",");    
     }
 
     if (field_count < 12) {
@@ -124,6 +124,7 @@ void processGNRMC(char *gpsData) {
 
     // Latitude
     global_gps_data.latitude = nmea_to_decimal_degree(fields[3], fields[4][0], 2);
+    
     //ESP_LOGI(TAG, "Latitude: %.6f°", global_gps_data.latitude);
 
     // Longitude
@@ -134,29 +135,61 @@ void processGNRMC(char *gpsData) {
     global_gps_data.distance = haversine(fix_lattitude, fix_longtitude, global_gps_data.latitude, global_gps_data.longitude);
     //ESP_LOGI(TAG, "Distance to Fixed Point: %.3f km", global_gps_data.distance);
 
-    //TEST
-    // if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > 0.020) {
-    //     flag_dif_location++;
-    //     if (flag_dif_location >= 5) {
-    //         diff_location = true;
-    //         global_gps_data.Stolen = true;
-    //         flag_dif_location = 0;
-    //         //ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
-    //     }
-    // }
-
     //Condition Check
     if(emergency == 1){  // trường hợp khẩn cấp, không cần tính Status
+                
+        if(wakeup_by_timer){
+            if(global_gps_data.latitude > 0 && global_gps_data.longitude > 0 ){
+                if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > (double)radius / 1000) {
+                    diff_location = true;
+                    global_gps_data.Stolen = true;
+
+                    if(!call_case_normal){
+                        module_sim_call_sms();
+                        call_case_normal = true;
+                    } 
+
+                //ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
+                }
+                else{
+                    global_gps_data.Stolen = false;  
+                    diff_location = false;           
+                    call_case_normal = false;
+                }
+            }
+            else{
+                global_gps_data.Stolen = false;
+            }
+        } 
+
 
     }
     if(emergency == 2){  // Trường hợp bình thường, ra khỏi khu vực an toàn là báo trộm
-        if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > (double)radius / 1000) {
-            diff_location = true;
-            global_gps_data.Stolen = true;
-        //ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
+
+        if(global_gps_data.latitude > 0 && global_gps_data.longitude > 0 ){
+            if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > (double)radius / 1000) {
+            
+                diff_location = true;
+                global_gps_data.Stolen = true;
+
+                if(!call_case_normal){
+                    module_sim_call_sms();
+                    call_case_normal = true;
+                } 
+                
+            //ESP_LOGI(TAG, "Distance exceeded threshold. diff_location set to true.");
+            }
+            else{
+                global_gps_data.Stolen = false;
+                diff_location = false;       
+                call_case_normal = false;
+            }
+        }
+        else{
+            global_gps_data.Stolen = false;   
+            diff_location = false;      
         }
     }
-    
 
     // Date     
     if (strlen(fields[9]) >= 6) { //
@@ -167,18 +200,6 @@ void processGNRMC(char *gpsData) {
         strncpy(global_gps_data.date, "Invalid", sizeof(global_gps_data.date));
         //ESP_LOGI(TAG, "Date: Invalid");
     }
-
-    // Battery Capacity
-    bool init_adc = adc_init();
-
-    if(init_adc){
-        float battery_voltage = read_battery_voltage();
-        global_gps_data.battery_capacity = calculate_battery_capacity(battery_voltage);
-        //ESP_LOGI(TAG, "Battery Capacity: %d%%", global_gps_data.battery_capacity);
-    }
-
-   
-    
 }
     
 

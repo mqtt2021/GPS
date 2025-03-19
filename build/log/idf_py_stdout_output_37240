@@ -1,0 +1,73 @@
+[0;32mI (33) boot: Multic�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 14 2025 21:49:54[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23ef4h (147188) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00033f1c vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=00033f2c vaddr=3ffbdb60 size=04b10h ( 19216) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00038a44 vaddr=40080000 size=075d4h ( 30164) load[0m
+[0;32mI (187) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=87698h (554648) map[0m
+[0;32mI (387) esp_image: segment 5: paddr=000c76c0 vaddr=400875d4 size=11c5ch ( 72796) load[0m
+[0;32mI (417) esp_image: segment 6: paddr=000d9324 vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (418) esp_image: segment 7: paddr=000d9390 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: Pro cpu up.[0m
+[0;32mI (449) cpu_start: Starting app cpu, entry point is 0x400816a0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (467) cpu_start: Application information:[0m
+[0;32mI (471) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (477) cpu_start: App version:      1[0m
+[0;32mI (481) cpu_start: Compile time:     Mar 14 2025 21:49:43[0m
+[0;32mI (487) cpu_start: ELF file SHA256:  78ffa536d38035ff...[0m
+[0;32mI (493) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (499) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (503) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (508) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFC7518 len 00018AE8 (98 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (551) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (557) heap_init: At 40099230 len 00006DD0 (27 KiB): IRAM[0m
+[0;32mI (565) spi_flash: detected chip: generic[0m
+[0;32mI (568) spi_flash: flash io: dio[0m
+[0;33mW (572) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (585) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;32mI (594) coexist: coex firmware version: 27d8387[0m
+[0;32mI (600) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (604) app_start: Starting scheduler on CPU1[0m
+[0;32mI (604) main_task: Started on CPU0[0m[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (618) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (645) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m

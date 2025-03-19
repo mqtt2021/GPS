@@ -1,0 +1,268 @@
+[1/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/SPI/src/SPI.cpp.obj
+[2/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Ticker/src/Ticker.cpp.obj
+[3/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Update/src/Updater.cpp.obj
+[4/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Update/src/HttpsOTAUpdate.cpp.obj
+[5/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHID.cpp.obj
+[6/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBMIDI.cpp.obj
+[7/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHIDMouse.cpp.obj
+[8/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHIDKeyboard.cpp.obj
+[9/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_da_DK.cpp.obj
+[10/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_de_DE.cpp.obj
+[11/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_en_US.cpp.obj
+[12/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_es_ES.cpp.obj
+[13/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_fr_FR.cpp.obj
+[14/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_hu_HU.cpp.obj
+[15/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_it_IT.cpp.obj
+[16/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_pt_BR.cpp.obj
+[17/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_pt_PT.cpp.obj
+[18/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/keyboardLayout/KeyboardLayout_sv_SE.cpp.obj
+[19/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHIDGamepad.cpp.obj
+[20/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHIDConsumerControl.cpp.obj
+[21/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHIDSystemControl.cpp.obj
+[22/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBHIDVendor.cpp.obj
+[23/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/USB/src/USBVendor.cpp.obj
+[24/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WebServer/src/WebServer.cpp.obj
+[25/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WebServer/src/Parsing.cpp.obj
+[26/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WebServer/src/detail/mimetable.cpp.obj
+[27/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/NetworkClientSecure/src/NetworkClientSecure.cpp.obj
+[28/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/WiFiAP.cpp.obj
+[29/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/WiFi.cpp.obj
+[30/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/WiFiGeneric.cpp.obj
+[31/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/WiFiMulti.cpp.obj
+[32/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/WiFiScan.cpp.obj
+[33/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/WiFiSTA.cpp.obj
+[34/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/STA.cpp.obj
+[35/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFi/src/AP.cpp.obj
+[36/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/WiFiProv/src/WiFiProv.cpp.obj
+[37/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Wire/src/Wire.cpp.obj
+[38/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ZigbeeCore.cpp.obj
+[39/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ZigbeeEP.cpp.obj
+[40/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ZigbeeHandlers.cpp.obj
+[41/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ep/ZigbeeColorDimmableLight.cpp.obj
+[42/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ep/ZigbeeColorDimmerSwitch.cpp.obj
+[43/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/NetworkClientSecure/src/ssl_client.cpp.obj
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/arduino/libraries/NetworkClientSecure/src/ssl_client.cpp:23:2: warning: #warning "Please call `idf.py menuconfig` then go to Component config -> mbedTLS -> TLS Key Exchange Methods -> Enable pre-shared-key ciphersuites and then check `Enable PSK based ciphersuite modes`. Save and Quit." [-Wcpp]
+   23 | #warning \
+      |  ^~~~~~~
+[44/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ep/ZigbeeLight.cpp.obj
+[45/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ep/ZigbeeSwitch.cpp.obj
+[46/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ep/ZigbeeTempSensor.cpp.obj
+[47/64] Building CXX object esp-idf/arduino/CMakeFiles/__idf_arduino.dir/libraries/Zigbee/src/ep/ZigbeeThermostat.cpp.obj
+[48/64] Linking C static library esp-idf\app_trace\libapp_trace.a
+[49/64] Linking C static library esp-idf\cmock\libcmock.a
+[50/64] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[51/64] Linking C static library esp-idf\perfmon\libperfmon.a
+[52/64] Building C object esp-idf/gps_library/CMakeFiles/__idf_gps_library.dir/gps.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:25,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.h:20:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.c:10:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   10 | static const char *TAG = "GPS_PROCESS";
+      |                    ^~~
+[53/64] Linking C static library esp-idf\arduino\libarduino.a
+[54/64] Linking C static library esp-idf\gps_library\libgps_library.a
+[55/64] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:19,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:23,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: In function 'deep_sleep_task':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:431:21: warning: unused variable 'pin' [-Wunused-variable]
+  431 |                 int pin = __builtin_ffsll(wakeup_pin_mask) - 1;
+      |                     ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:531:1: warning: ignoring attribute 'section (".rtc.data.7")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
+  531 | RTC_DATA_ATTR float stored_roll = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:71:28: note: previous declaration here
+   71 | extern RTC_DATA_ATTR float stored_roll;
+      |                            ^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:532:1: warning: ignoring attribute 'section (".rtc.data.8")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
+  532 | RTC_DATA_ATTR float stored_pitch = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:72:28: note: previous declaration here
+   72 | extern RTC_DATA_ATTR float stored_pitch;
+      |                            ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:533:1: warning: ignoring attribute 'section (".rtc.data.9")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
+  533 | RTC_DATA_ATTR float stored_yaw = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:73:28: note: previous declaration here
+   73 | extern RTC_DATA_ATTR float stored_yaw;
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:534:1: warning: ignoring attribute 'section (".rtc.data.10")' because it conflicts with previous 'section (".rtc.data.6")' [-Wattributes]
+  534 | RTC_DATA_ATTR int emergency = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:77:26: note: previous declaration here
+   77 | extern RTC_DATA_ATTR int emergency;
+      |                          ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:535:1: warning: ignoring attribute 'section (".rtc.data.11")' because it conflicts with previous 'section (".rtc.data.3")' [-Wattributes]
+  535 | RTC_DATA_ATTR double fix_lattitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:74:29: note: previous declaration here
+   74 | extern RTC_DATA_ATTR double fix_lattitude;
+      |                             ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:536:1: warning: ignoring attribute 'section (".rtc.data.12")' because it conflicts with previous 'section (".rtc.data.4")' [-Wattributes]
+  536 | RTC_DATA_ATTR double fix_longtitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:75:29: note: previous declaration here
+   75 | extern RTC_DATA_ATTR double fix_longtitude;
+      |                             ^~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:537:1: warning: ignoring attribute 'section (".rtc.data.13")' because it conflicts with previous 'section (".rtc.data.5")' [-Wattributes]
+  537 | RTC_DATA_ATTR int radius = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:76:26: note: previous declaration here
+   76 | extern RTC_DATA_ATTR int radius;
+      |                          ^~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c: In function 'app_main':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:627:28: warning: unused variable 'start_time' [-Wunused-variable]
+  627 |                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:677:28: warning: unused variable 'start_time' [-Wunused-variable]
+  677 |                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:918:24: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  918 |             TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[56/64] Linking C static library esp-idf\main\libmain.a
+[57/64] Performing build step for 'bootloader'
+[1/105] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_crc.c.obj
+[2/105] Building ASM object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_longjmp.S.obj
+[3/105] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_sys.c.obj
+[4/105] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_efuse.c.obj
+[5/105] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
+[6/105] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_uart.c.obj
+[7/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/cpu_region_protect.c.obj
+[8/105] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+[9/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_memory_utils.c.obj
+[10/105] Building C object esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+[11/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/esp_cpu_intr.c.obj
+[12/105] Building C object esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+[13/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu.c.obj
+[14/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_init.c.obj
+[15/105] Building C object esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/esp_err.c.obj
+[16/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_fields.c.obj
+[17/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_table.c.obj
+[18/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/chip_info.c.obj
+[19/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk_init.c.obj
+[20/105] Building C object esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_spiflash.c.obj
+[21/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_sleep.c.obj
+[22/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_time.c.obj
+[23/105] Linking C static library esp-idf\log\liblog.a
+[24/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_fields.c.obj
+[25/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/efuse_controller/keys/without_key_purposes/three_key_blocks/esp_efuse_api_key.c.obj
+[26/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/esp32/esp_efuse_utility.c.obj
+[27/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+[28/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+[29/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_api.c.obj
+[30/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+[31/105] Building C object esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32/rtc_clk.c.obj
+[32/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32.c.obj
+[33/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+[34/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+[35/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse.c.obj
+[36/105] Building C object esp-idf/efuse/CMakeFiles/__idf_efuse.dir/src/esp_efuse_utility.c.obj
+[37/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+[38/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+[39/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
+[40/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
+[41/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
+[42/105] Linking C static library esp-idf\esp_rom\libesp_rom.a
+[43/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_soc.c.obj
+[44/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+[45/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
+[46/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_sha.c.obj
+[47/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj
+[48/105] Building C object esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj
+[49/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
+[50/105] Building C object esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_wrap.c.obj
+[51/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
+[52/105] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
+[53/105] Linking C static library esp-idf\esp_common\libesp_common.a
+[54/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32.c.obj
+[55/105] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/efuse_hal.c.obj
+[56/105] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32/efuse_hal.c.obj
+[57/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/dport_access_common.c.obj
+[58/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32/bootloader_esp32.c.obj
+[59/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+[60/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/interrupts.c.obj
+[61/105] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/esp32/cache_hal_esp32.c.obj
+[62/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dport_access.c.obj
+[63/105] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj
+[64/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/gpio_periph.c.obj
+[65/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/uart_periph.c.obj
+[66/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/adc_periph.c.obj
+[67/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/spi_periph.c.obj
+[68/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/ledc_periph.c.obj
+[69/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+[70/105] Linking C static library esp-idf\esp_hw_support\libesp_hw_support.a
+[71/105] Building C object esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+[72/105] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mmu_hal.c.obj
+[73/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdm_periph.c.obj
+[74/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/pcnt_periph.c.obj
+[75/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rmt_periph.c.obj
+[76/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/lcd_periph.c.obj
+[77/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2s_periph.c.obj
+[78/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/i2c_periph.c.obj
+[79/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/timer_periph.c.obj
+[80/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdmmc_periph.c.obj
+[81/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/twai_periph.c.obj
+[82/105] Generating project_elf_src_esp32.c
+[83/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/mcpwm_periph.c.obj
+[84/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/touch_sensor_periph.c.obj
+[85/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/dac_periph.c.obj
+[86/105] Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/eri.c.obj
+[87/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/rtc_io_periph.c.obj
+[88/105] Linking C static library esp-idf\esp_system\libesp_system.a
+[89/105] Building C object esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32/sdio_slave_periph.c.obj
+[90/105] Building C object CMakeFiles/bootloader.elf.dir/project_elf_src_esp32.c.obj
+[91/105] Building C object esp-idf/xtensa/CMakeFiles/__idf_xtensa.dir/xt_trax.c.obj
+[92/105] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bootloader_start.c.obj
+[93/105] Linking C static library esp-idf\efuse\libefuse.a
+[94/105] Linking C static library esp-idf\bootloader_support\libbootloader_support.a
+[95/105] Linking C static library esp-idf\esp_app_format\libesp_app_format.a
+[96/105] Linking C static library esp-idf\spi_flash\libspi_flash.a
+[97/105] Building C object esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
+[98/105] Linking C static library esp-idf\hal\libhal.a
+[99/105] Linking C static library esp-idf\micro-ecc\libmicro-ecc.a
+[100/105] Linking C static library esp-idf\soc\libsoc.a
+[101/105] Linking C static library esp-idf\xtensa\libxtensa.a
+[102/105] Linking C static library esp-idf\main\libmain.a
+[103/105] Linking C executable bootloader.elf
+[104/105] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin
+[105/105] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[58/64] No install step for 'bootloader'
+[59/64] Completed 'bootloader'
+[60/64] Generating ld/sections.ld
+[61/64] Building C object CMakeFiles/GPS_Tracker.elf.dir/project_elf_src_esp32.c.obj
+[62/64] Linking CXX executable GPS_Tracker.elf
+[63/64] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin
+[64/64] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0x33f90 bytes. Smallest app partition is 0x100000 bytes. 0xcc070 bytes (80%) free.

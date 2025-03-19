@@ -35,7 +35,7 @@ extern bool diff_location_flag; //Cờ địa chỉ
 // Định nghĩa UART2 cho GPS
 #define GPS_UART2_PORT_NUM      UART_NUM_2
 #define GPS_UART2_BAUD_RATE     115200
-#define GPS_UART2_TX_PIN        17
+#define GPS_UART2_TX_PIN        17  
 #define GPS_UART2_RX_PIN        16
 #define GPS_UART2_BUFFER_SIZE   1024
 #define GPS_UART2_QUEUE_SIZE    10
@@ -44,10 +44,10 @@ typedef struct {
     char time[9];          // Giờ Việt Nam (hh:mm:ss)
     char status[20];       // Trạng thái định vị
     double latitude;       // Vĩ độ
-    double longitude;      // Kinh độ
-    double distance;       // Khoảng cách từ vị trí cố định
+    double longitude;      // Kinh độ                       
+    double distance;       // Khoảng cách từ vị trí cố định                   
     int battery_capacity;  // Dung lượng pin (%)
-    char date[11];         // Ngày (dd/mm/yyyy)
+    char date[11];         // Ngày (dd/mm/yyyy)    
     bool Stolen;           // Status
     bool bluetooth;           // bluetooth
     bool move;           // move

@@ -390,6 +390,7 @@ D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_wifi/CMakeFiles/li
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_wifi/CMakeFiles/install.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_wifi/CMakeFiles/install/local.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_wifi/CMakeFiles/install/strip.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bt/CMakeFiles/__idf_bt.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bt/CMakeFiles/edit_cache.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bt/CMakeFiles/rebuild_cache.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bt/CMakeFiles/list_install_components.dir
@@ -655,6 +656,13 @@ D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/my_timer/CMakeFiles/li
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/my_timer/CMakeFiles/install.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/my_timer/CMakeFiles/install/local.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/my_timer/CMakeFiles/install/strip.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/__idf_bluetooth.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/edit_cache.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/rebuild_cache.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/list_install_components.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/install.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/install/local.dir
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/CMakeFiles/install/strip.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/main_library/CMakeFiles/edit_cache.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/main_library/CMakeFiles/rebuild_cache.dir
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/main_library/CMakeFiles/list_install_components.dir

@@ -1,0 +1,364 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 14 2025 02:26:13[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23ed4h (147156) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00033efc vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=00033f0c vaddr=3ffbdb60 size=04b10h ( 19216) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=00038a24 vaddr=40080000 size=075f4h ( 30196) load[0m
+[0;32mI (187) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=8751ch (554268) map[0m
+[0;32mI (387) esp_image: segment 5: paddr=000c7544 vaddr=400875f4 size=11af0h ( 72432) load[0m
+[0;32mI (417) esp_image: segment 6: paddr=000d903c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (418) esp_image: segment 7: paddr=000d90a8 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (449) cpu_start: Pro cpu up.[0m
+[0;32mI (449) cpu_start: Starting app cpu, entry point is 0x40081690[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (466) cpu_start: Pro cpu start user code[0m
+[0;32mI (466) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (466) cpu_start: Application information:[0m
+[0;32mI (471) cpu_start: Project name:     GPS_Tracker[0m
+[0;32mI (476) cpu_start: App version:      1[0m
+[0;32mI (481) cpu_start: Compile time:     Mar 14 2025 02:26:01[0m
+[0;32mI (487) cpu_start: ELF file SHA256:  b62fb2b2e8e0c7a6...[0m
+[0;32mI (493) cpu_start: ESP-IDF:          v5.1.5-dirty[0m
+[0;32mI (498) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (503) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (508) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (513) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (520) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (532) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (538) heap_init: At 3FFC7348 len 00018CB8 (99 KiB): DRAM[0m
+[0;32mI (544) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (551) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (557) heap_init: At 400990E4 len 00006F1C (27 KiB): IRAM[0m
+[0;32mI (565) spi_flash: detected chip: generic[0m
+[0;32mI (568) spi_flash: flash io: dio[0m
+[0;33mW (572) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (585) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;32mI (594) coexist: coex firmware version: 27d8387[0m
+[0;32mI (599) app_start: Starting scheduler on CPU0[0m
+[0;32m[0;32mI (604) app_start: Starting scheduler on CPU1[0m
+[0;32mI (604) main_task: Started on CPU0[0m[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (617) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (626) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (636) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (645) gpio: GPIO[18]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5654) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 [0m
+[0;32mI (15669) example: Creating uart2_task...[0m
+[0;32mI (15670) example: Data successfully processed.[0m
+[0;32mI (16170) example: Data successfully processed.[0m
+[0;32mI (16690) example: Data successfully processed.[0m
+[0;32mI (17730) example: Data successfully processed.[0m
+[0;32mI (18321) example: Data successfully processed.[0m
+[0;32mI (19361) example: Data successfully processed.[0m
+[0;32mI (20401) example: Data successfully processed.[0m
+[0;32mI (21441) example: Data successfully processed.[0m
+[0;32mI (22481) example: Data successfully processed.[0m
+[0;32mI (23521) example: Data successfully processed.[0m
+[0;32mI (24561) example: Data successfully processed.[0m
+[0;32mI (25601) example: Data successfully processed.[0m
+[0;32mI (26641) example: Data successfully processed.[0m
+[0;32mI (27681) example: Data successfully processed.[0m
+[0;32mI (28201) example: Data successfully processed.[0m
+[0;32mI (29241) example: Data successfully processed.[0m
+[0;32mI (29822) example: Data successfully processed.[0m
+[0;32mI (30862) example: Data successfully processed.[0m
+[0;32mI (31902) example: Data successfully processed.[0m
+[0;32mI (32942) example: Data successfully processed.[0m
+[0;32mI (33982) example: Data successfully processed.[0m
+[0;32mI (35022) example: Data successfully processed.[0m
+[0;32mI (36062) example: Data successfully processed.[0m
+[0;32mI (37102) example: Data successfully processed.[0m
+[0;32mI (38142) example: Data successfully processed.[0m
+[0;32mI (39182) example: Data successfully processed.[0m
+[0;32mI (40222) example: Data successfully processed.[0m
+[0;32mI (41262) example: Data successfully processed.[0m
+[0;32mI (41837) example: Data successfully processed.[0m
+[0;32mI (42877) example: Data successfully processed.[0m
+[0;32mI (43917) example: Data successfully processed.[0m
+[0;32mI (44957) example: Data successfully processed.[0m
+[0;32mI (45997) example: Data successfully processed.[0m
+[0;32mI (47037) example: Data successfully processed.[0m
+[0;32mI (48077) example: Data successfully processed.[0m
+[0;32mI (49117) example: Data successfully processed.[0m
+[0;32mI (50157) example: Data successfully processed.[0m
+[0;32mI (51197) example: Data successfully processed.[0m
+[0;32mI (52237) example: Data successfully processed.[0m
+[0;32mI (53277) example: Data successfully processed.[0m
+[0;32mI (54317) example: Data successfully processed.[0m
+[0;32mI (55357) example: Data successfully processed.[0m
+[0;32mI (56397) example: Data successfully processed.[0m
+[0;32mI (56980) example: Data successfully processed.[0m
+[0;32mI (58020) example: Data successfully processed.[0m
+[0;32mI (59060) example: Data successfully processed.[0m
+[0;32mI (60100) example: Data successfully processed.[0m
+[0;32mI (61140) example: Data successfully processed.[0m
+[0;32mI (62180) example: Data successfully processed.[0m
+[0;32mI (63220) example: Data successfully processed.[0m
+[0;32mI (64260) example: Data successfully processed.[0m
+[0;32mI (65300) example: Data successfully processed.[0m
+[0;32mI (65671) example: Stopping UART tasks...[0m
+[0;32mI (66671) example: Creating uart2_task...[0m
+[0;32mI (66691) example: Data successfully processed.[0m
+[0;32mI (67211) example: Data successfully processed.[0m
+[0;32mI (68251) example: Data successfully processed.[0m
+[0;32mI (69291) example: Data successfully processed.[0m
+[0;32mI (70331) example: Data successfully processed.[0m
+[0;32mI (71371) example: Data successfully processed.[0m
+[0;32mI (72411) example: Data successfully processed.[0m
+[0;32mI (72993) example: Data successfully processed.[0m
+[0;32mI (74033) example: Data successfully processed.[0m
+[0;32mI (75073) example: Data successfully processed.[0m
+[0;32mI (76113) example: Data successfully processed.[0m
+[0;32mI (77153) example: Data successfully processed.[0m
+[0;32mI (78193) example: Data successfully processed.[0m
+[0;32mI (79233) example: Data successfully processed.[0m
+[0;32mI (80273) example: Data successfully processed.[0m
+[0;32mI (81313) example: Data successfully processed.[0m
+[0;32mI (82353) example: Data successfully processed.[0m
+[0;32mI (83393) example: Data successfully processed.[0m
+[0;32mI (84433) example: Data successfully processed.[0m
+[0;32mI (84992) example: Data successfully processed.[0m
+[0;32mI (86032) example: Data successfully processed.[0m
+[0;32mI (87072) example: Data successfully processed.[0m
+[0;32mI (88112) example: Data successfully processed.[0m
+[0;32mI (89152) example: Data successfully processed.[0m
+[0;32mI (90192) example: Data successfully processed.[0m
+[0;32mI (91232) example: Data successfully processed.[0m
+[0;32mI (92272) example: Data successfully processed.[0m
+[0;32mI (93312) example: Data successfully processed.[0m
+[0;32mI (94352) example: Data successfully processed.[0m
+[0;32mI (95392) example: Data successfully processed.[0m
+[0;32mI (96432) example: Data successfully processed.[0m
+[0;32mI (97008) example: Data successfully processed.[0m
+[0;32mI (98048) example: Data successfully processed.[0m
+[0;32mI (99088) example: Data successfully processed.[0m
+[0;32mI (100128) example: Data successfully processed.[0m
+[0;32mI (101168) example: Data successfully processed.[0m
+[0;32mI (102208) example: Data successfully processed.[0m
+[0;32mI (103248) example: Data successfully processed.[0m
+[0;32mI (104288) example: Data successfully processed.[0m
+[0;32mI (105328) example: Data successfully processed.[0m
+[0;32mI (106368) example: Data successfully processed.[0m
+[0;32mI (107408) example: Data successfully processed.[0m
+[0;32mI (108448) example: Data successfully processed.[0m
+[0;32mI (109013) example: Data successfully processed.[0m
+[0;32mI (110053) example: Data successfully processed.[0m
+[0;32mI (111093) example: Data successfully processed.[0m
+[0;32mI (112133) example: Data successfully processed.[0m
+[0;32mI (113173) example: Data successfully processed.[0m
+[0;32mI (114213) example: Data successfully processed.[0m
+[0;32mI (115253) example: Data successfully processed.[0m
+[0;32mI (116293) example: Data successfully processed.[0m
+[0;32mI (116671) example: Stopping UART tasks...[0m
+[0;32mI (117671) example: Creating uart2_task...[0m
+[0;32mI (117691) example: Data successfully processed.[0m
+[0;32mI (118211) example: Data successfully processed.[0m
+[0;32mI (119251) example: Data successfully processed.[0m
+[0;32mI (120291) example: Data successfully processed.[0m
+[0;32mI (121331) example: Data successfully processed.[0m
+[0;32mI (122371) example: Data successfully processed.[0m
+[0;32mI (123411) example: Data successfully processed.[0m
+[0;32mI (124451) example: Data successfully processed.[0m
+[0;32mI (125014) example: Data successfully processed.[0m
+[0;32mI (126054) example: Data successfully processed.[0m
+[0;32mI (127094) example: Data successfully processed.[0m
+[0;32mI (128134) example: Data successfully processed.[0m
+[0;32mI (129174) example: Data successfully processed.[0m
+[0;32mI (130214) example: Data successfully processed.[0m
+[0;32mI (131254) example: Data successfully processed.[0m
+[0;32mI (132294) example: Data successfully processed.[0m
+[0;32mI (133334) example: Data successfully processed.[0m
+[0;32mI (134374) example: Data successfully processed.[0m
+[0;32mI (135414) example: Data successfully processed.[0m
+[0;32mI (136454) example: Data successfully processed.[0m
+[0;32mI (137010) example: Data successfully processed.[0m
+[0;32mI (138050) example: Data successfully processed.[0m
+[0;32mI (139090) example: Data successfully processed.[0m
+[0;32mI (140130) example: Data successfully processed.[0m
+[0;32mI (141170) example: Data successfully processed.[0m
+[0;32mI (142210) example: Data successfully processed.[0m
+[0;32mI (143250) example: Data successfully processed.[0m
+[0;32mI (144290) example: Data successfully processed.[0m
+[0;32mI (145330) example: Data successfully processed.[0m
+[0;32mI (146370) example: Data successfully processed.[0m
+[0;32mI (147410) example: Data successfully processed.[0m
+[0;32mI (148450) example: Data successfully processed.[0m
+[0;32mI (149015) example: Data successfully processed.[0m
+[0;32mI (150055) example: Data successfully processed.[0m
+[0;32mI (151095) example: Data successfully processed.[0m
+[0;32mI (152135) example: Data successfully processed.[0m
+[0;32mI (153175) example: Data successfully processed.[0m
+[0;32mI (154215) example: Data successfully processed.[0m
+[0;32mI (155255) example: Data successfully processed.[0m
+[0;32mI (156295) example: Data successfully processed.[0m
+[0;32mI (157335) example: Data successfully processed.[0m
+[0;32mI (158375) example: Data successfully processed.[0m
+[0;32mI (159415) example: Data successfully processed.[0m
+[0;32mI (160455) example: Data successfully processed.[0m
+[0;32mI (161009) example: Data successfully processed.[0m
+[0;32mI (162049) example: Data successfully processed.[0m
+[0;32mI (163089) example: Data successfully processed.[0m
+[0;32mI (164129) example: Data successfully processed.[0m
+[0;32mI (165169) example: Data successfully processed.[0m
+[0;32mI (166209) example: Data successfully processed.[0m
+[0;32mI (167249) example: Data successfully processed.[0m
+[0;32mI (167671) example: Stopping UART tasks...[0m
+[0;32mI (168671) example: Creating uart2_task...[0m
+[0;32mI (168691) example: Data successfully processed.[0m
+[0;32mI (169211) example: Data successfully processed.[0m
+[0;32mI (170251) example: Data successfully processed.[0m
+[0;32mI (171291) example: Data successfully processed.[0m
+[0;32mI (172331) example: Data successfully processed.[0m
+[0;32mI (173371) example: Data successfully processed.[0m
+[0;32mI (174411) example: Data successfully processed.[0m
+[0;32mI (175451) example: Data successfully processed.[0m
+[0;32mI (176013) example: Data successfully processed.[0m
+[0;32mI (177053) example: Data successfully processed.[0m
+[0;32mI (178093) example: Data successfully processed.[0m
+[0;32mI (179133) example: Data successfully processed.[0m
+[0;32mI (180173) example: Data successfully processed.[0m
+[0;32mI (181213) example: Data successfully processed.[0m
+[0;32mI (182253) example: Data successfully processed.[0m
+[0;32mI (183293) example: Data successfully processed.[0m
+[0;32mI (184333) example: Data successfully processed.[0m
+[0;32mI (185373) example: Data successfully processed.[0m
+[0;32mI (186413) example: Data successfully processed.[0m
+[0;32mI (187453) example: Data successfully processed.[0m
+[0;32mI (188032) example: Data successfully processed.[0m
+[0;32mI (189072) example: Data successfully processed.[0m
+[0;32mI (190112) example: Data successfully processed.[0m
+[0;32mI (191152) example: Data successfully processed.[0m
+[0;32mI (192192) example: Data successfully processed.[0m
+[0;32mI (193232) example: Data successfully processed.[0m
+[0;32mI (194272) example: Data successfully processed.[0m
+[0;32mI (195312) example: Data successfully processed.[0m
+[0;32mI (196352) example: Data successfully processed.[0m
+[0;32mI (197392) example: Data successfully processed.[0m
+[0;32mI (198432) example: Data successfully processed.[0m
+[0;32mI (199472) example: Data successfully processed.[0m
+[0;32mI (200017) example: Data successfully processed.[0m
+[0;32mI (201057) example: Data successfully processed.[0m
+[0;32mI (202097) example: Data successfully processed.[0m
+[0;32mI (203137) example: Data successfully processed.[0m
+[0;32mI (204177) example: Data successfully processed.[0m
+[0;32mI (205217) example: Data successfully processed.[0m
+[0;32mI (206257) example: Data successfully processed.[0m
+[0;32mI (207297) example: Data successfully processed.[0m
+[0;32mI (208337) example: Data successfully processed.[0m
+[0;32mI (209377) example: Data successfully processed.[0m
+[0;32mI (210417) example: Data successfully processed.[0m
+[0;32mI (211457) example: Data successfully processed.[0m
+[0;32mI (212017) example: Data successfully processed.[0m
+[0;32mI (213057) example: Data successfully processed.[0m
+[0;32mI (214097) example: Data successfully processed.[0m
+[0;32mI (215137) example: Data successfully processed.[0m
+[0;32mI (216177) example: Data successfully processed.[0m
+[0;32mI (217217) example: Data successfully processed.[0m
+[0;32mI (218257) example: Data successfully processed.[0m
+[0;32mI (218671) example: Stopping UART tasks...[0m
+[0;32mI (219671) example: Creating uart2_task...[0m
+[0;32mI (219691) example: Data successfully processed.[0m
+[0;32mI (220211) example: Data successfully processed.[0m
+[0;32mI (221251) example: Data successfully processed.[0m
+[0;32mI (222291) example: Data successfully processed.[0m
+[0;32mI (223331) example: Data successfully processed.[0m
+[0;32mI (224371) example: Data successfully processed.[0m
+[0;32mI (225411) example: Data successfully processed.[0m
+[0;32mI (226451) example: Data successfully processed.[0m
+[0;32mI (227011) example: Data successfully processed.[0m
+[0;32mI (228051) example: Data successfully processed.[0m
+[0;32mI (229091) example: Data successfully processed.[0m
+[0;32mI (230131) example: Data successfully processed.[0m
+[0;32mI (231171) example: Data successfully processed.[0m
+[0;32mI (232211) example: Data successfully processed.[0m
+[0;32mI (233251) example: Data successfully processed.[0m
+[0;32mI (234291) example: Data successfully processed.[0m
+[0;32mI (235331) example: Data successfully processed.[0m
+[0;32mI (236371) example: Data successfully processed.[0m
+[0;32mI (237411) example: Data successfully processed.[0m
+[0;32mI (238451) example: Data successfully processed.[0m
+[0;32mI (239016) example: Data successfully processed.[0m
+[0;32mI (240056) example: Data successfully processed.[0m
+[0;32mI (241096) example: Data successfully processed.[0m
+[0;32mI (242136) example: Data successfully processed.[0m
+[0;32mI (243176) example: Data successfully processed.[0m
+[0;32mI (244216) example: Data successfully processed.[0m
+[0;32mI (245256) example: Data successfully processed.[0m
+[0;32mI (246296) example: Data successfully processed.[0m
+[0;32mI (247336) example: Data successfully processed.[0m
+[0;32mI (248376) example: Data successfully processed.[0m
+[0;32mI (249416) example: Data successfully processed.[0m
+[0;32mI (250456) example: Data successfully processed.[0m
+[0;32mI (251009) example: Data successfully processed.[0m
+[0;32mI (252049) example: Data successfully processed.[0m
+[0;32mI (253089) example: Data successfully processed.[0m
+[0;32mI (254129) example: Data successfully processed.[0m
+[0;32mI (255169) example: Data successfully processed.[0m
+[0;32mI (256209) example: Data successfully processed.[0m
+[0;32mI (257249) example: Data successfully processed.[0m
+[0;32mI (258289) example: Data successfully processed.[0m
+[0;32mI (259329) example: Data successfully processed.[0m
+[0;32mI (260369) example: Data successfully processed.[0m
+[0;32mI (261409) example: Data successfully processed.[0m
+[0;32mI (262449) example: Data successfully processed.[0m
+[0;32mI (263011) example: Data successfully processed.[0m
+[0;32mI (264051) example: Data successfully processed.[0m
+[0;32mI (265091) example: Data successfully processed.[0m
+[0;32mI (266131) example: Data successfully processed.[0m
+[0;32mI (267171) example: Data successfully processed.[0m
+[0;32mI (268211) example: Data successfully processed.[0m
+[0;32mI (269251) example: Data successfully processed.[0m
+[0;32mI (269671) example: Stopping UART tasks...[0m
+[0;32mI (270671) example: Creating uart2_task...[0m
+[0;32mI (270691) example: Data successfully processed.[0m
+[0;32mI (271211) example: Data successfully processed.[0m
+[0;32mI (272251) example: Data successfully processed.[0m
+[0;32mI (273291) example: Data successfully processed.[0m
+[0;32mI (274331) example: Data successfully processed.[0m
+[0;32mI (275371) example: Data successfully processed.[0m
+[0;32mI (276411) example: Data successfully processed.[0m
+[0;32mI (277451) example: Data successfully processed.[0m
+[0;32mI (278016) example: Data successfully processed.[0m
+[0;32mI (279056) example: Data successfully processed.[0m
+[0;32mI (280096) example: Data successfully processed.[0m
+[0;32mI (281136) example: Data successfully processed.[0m
+[0;32mI (282176) example: Data successfully processed.[0m
+[0;32mI (283216) example: Data successfully processed.[0m
+[0;32mI (284256) example: Data successfully processed.[0m
+[0;32mI (285296) example: Data successfully processed.[0m
+[0;32mI (286336) example: Data successfully processed.[0m
+[0;32mI (287376) example: Data successfully processed.[0m
+[0;32mI (288416) example: Data successfully processed.[0m
+[0;32mI (289009) example: Data successfully processed.[0m
+[0;32mI (290049) example: Data successfully processed.[0m
+[0;32mI (291089) example: Data successfully processed.[0m
+[0;32mI (292129) example: Data successfully processed.[0m

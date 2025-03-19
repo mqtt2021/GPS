@@ -1,0 +1,69 @@
+[1/5] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0xbf700 bytes. Smallest app partition is 0x100000 bytes. 0x40900 bytes (25%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build" -P C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 GPS_Tracker.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM4
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:8a:1f:a0:c4:f4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000cffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16732...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a1... (100 %)
+Wrote 26720 bytes (16732 compressed) at 0x00001000 in 0.7 seconds (effective 326.4 kbit/s)...
+Hash of data verified.
+Compressed 784128 bytes to 467262...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d819... (6 %)
+Writing at 0x0002a7e8... (10 %)
+Writing at 0x000333d6... (13 %)
+Writing at 0x00038c68... (17 %)
+Writing at 0x0003e93d... (20 %)
+Writing at 0x00044108... (24 %)
+Writing at 0x00049829... (27 %)
+Writing at 0x0004f21f... (31 %)
+Writing at 0x0005491a... (34 %)
+Writing at 0x0005b03c... (37 %)
+Writing at 0x00061106... (41 %)
+Writing at 0x000670a3... (44 %)
+Writing at 0x0006ce63... (48 %)
+Writing at 0x000728dd... (51 %)
+Writing at 0x00078c71... (55 %)
+Writing at 0x0007ee31... (58 %)
+Writing at 0x00084aa1... (62 %)
+Writing at 0x0008a29a... (65 %)
+Writing at 0x00090425... (68 %)
+Writing at 0x000967c0... (72 %)
+Writing at 0x0009c1e0... (75 %)
+Writing at 0x000a5222... (79 %)
+Writing at 0x000ab843... (82 %)
+Writing at 0x000b3b84... (86 %)
+Writing at 0x000bb32e... (89 %)
+Writing at 0x000c0b4c... (93 %)
+Writing at 0x000c6847... (96 %)
+Writing at 0x000cc50c... (100 %)
+Wrote 784128 bytes (467262 compressed) at 0x00010000 in 11.2 seconds (effective 561.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 641.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

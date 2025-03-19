@@ -1,0 +1,128 @@
+[1/635] Generating ../../https_server.crt.S
+[2/635] Generating ../../rmaker_mqtt_server.crt.S
+[3/635] Generating ../../rmaker_claim_service_server.crt.S
+[4/635] Generating ../../rmaker_ota_server.crt.S
+[5/635] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/unity_port_esp32.c.obj
+[6/635] Building C object esp-idf/unity/CMakeFiles/__idf_unity.dir/port/esp/unity_utils_memory_esp.c.obj
+[7/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidd.c.obj
+[8/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+[9/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hid_common.c.obj
+[10/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/ble_hidd.c.obj
+[11/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/ble_hidh.c.obj
+[12/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/bt_hidh.c.obj
+[13/635] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/bt_hidd.c.obj
+[14/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[15/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[16/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[17/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[18/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[19/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[20/635] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[21/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/mp3dec.c.obj
+[22/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/mp3tabs.c.obj
+[23/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/bitstream.c.obj
+[24/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/buffers.c.obj
+[25/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/dct32.c.obj
+[26/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/dequant.c.obj
+[27/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/dqchan.c.obj
+[28/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/huffman.c.obj
+[29/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/hufftabs.c.obj
+[30/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/imdct.c.obj
+[31/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/polyphase.c.obj
+[32/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/scalfact.c.obj
+[33/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/stproc.c.obj
+[34/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/subband.c.obj
+[35/635] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/trigtabs.c.obj
+[36/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_master.c.obj
+[37/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_slave.c.obj
+[38/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/mb.c.obj
+[39/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/mb_m.c.obj
+[40/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/ascii/mbascii.c.obj
+[41/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/ascii/mbascii_m.c.obj
+[42/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/rtu/mbrtu_m.c.obj
+[43/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/rtu/mbrtu.c.obj
+[44/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/rtu/mbcrc.c.obj
+[45/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/tcp/mbtcp.c.obj
+[46/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/tcp/mbtcp_m.c.obj
+[47/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/port.c.obj
+[48/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portevent.c.obj
+[49/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portevent_m.c.obj
+[50/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portother.c.obj
+[51/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portother_m.c.obj
+[52/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portserial.c.obj
+[53/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/portserial_m.c.obj
+[54/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/porttimer.c.obj
+[55/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/port/porttimer_m.c.obj
+[56/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfunccoils.c.obj
+[57/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfunccoils_m.c.obj
+[58/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncdiag.c.obj
+[59/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncdisc.c.obj
+[60/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncdisc_m.c.obj
+[61/635] Building C object esp-idf/adc_battery/CMakeFiles/__idf_adc_battery.dir/adc.c.obj
+FAILED: esp-idf/adc_battery/CMakeFiles/__idf_adc_battery.dir/adc.c.obj 
+ccache C:\Espressif\tools\xtensa-esp32-elf\esp-12.2.0_20230208\xtensa-esp32-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.1.5-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I"D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/config" -I"D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery" -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/newlib/platform_include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos/FreeRTOS-Kernel/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos/esp_additions/include/freertos -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos/esp_additions/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos/esp_additions/arch/xtensa/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hw_support/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hw_support/include/soc -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hw_support/include/soc/esp32 -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hw_support/port/esp32/. -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/heap/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/log/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/soc/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/soc/esp32 -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/soc/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/platform_port/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/include/esp32 -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32 -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_common/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system/port/soc -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system/port/include/private -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/xtensa/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/xtensa/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/include/apps -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/include/apps/sntp -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/lwip/src/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/port/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/port/freertos/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/port/esp32xx/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip/port/esp32xx/include/arch -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/analog_comparator/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/dac/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/gpio/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/gptimer/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/i2c/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/i2s/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/ledc/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/mcpwm/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/parlio/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/pcnt/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/rmt/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/sdio_slave/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/sdmmc/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/sigma_delta/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/spi/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/temperature_sensor/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/touch_sensor/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/twai/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/uart/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/usb_serial_jtag/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/touch_sensor/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_pm/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_ringbuf/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_adc/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_adc/interface -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_adc/esp32/include -IC:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_adc/deprecated/include -mlongcalls -Wno-frame-address  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og "-fmacro-prefix-map=D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker=." -fmacro-prefix-map=C:/Espressif/frameworks/esp-idf-v5.1.5=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/adc_battery/CMakeFiles/__idf_adc_battery.dir/adc.c.obj -MF esp-idf\adc_battery\CMakeFiles\__idf_adc_battery.dir\adc.c.obj.d -o esp-idf/adc_battery/CMakeFiles/__idf_adc_battery.dir/adc.c.obj -c "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c"
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:27:8: error: unknown type name 'esp_adc_cal_characteristics_t'
+   27 | static esp_adc_cal_characteristics_t *adc_chars = NULL;
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c: In function 'adc_init':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:35:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   35 |     adc1_config_channel_atten(ADC_CHANNEL, ADC_ATTEN);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:15:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/include/hal/adc_types.h:47:5: note: declared here
+   47 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:38:34: error: 'esp_adc_cal_characteristics_t' undeclared (first use in this function)
+   38 |     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:38:34: note: each undeclared identifier is reported only once for each function it appears in
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:45:5: error: implicit declaration of function 'esp_adc_cal_characterize' [-Werror=implicit-function-declaration]
+   45 |     esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN, ADC_WIDTH, DEFAULT_VREF, adc_chars);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:45:5: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/include/hal/adc_types.h:47:5: note: declared here
+   47 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c: In function 'read_battery_voltage':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.c:60:27: error: implicit declaration of function 'esp_adc_cal_raw_to_voltage' [-Werror=implicit-function-declaration]
+   60 |     uint32_t voltage_mv = esp_adc_cal_raw_to_voltage(adc_reading, adc_chars);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: some warnings being treated as errors
+[62/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncholding.c.obj
+[63/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncholding_m.c.obj
+[64/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncinput.c.obj
+[65/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncinput_m.c.obj
+[66/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbfuncother.c.obj
+[67/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/modbus/functions/mbutils.c.obj
+[68/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/serial_slave/modbus_controller/mbc_serial_slave.c.obj
+[69/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/serial_master/modbus_controller/mbc_serial_master.c.obj
+[70/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/tcp_slave/port/port_tcp_slave.c.obj
+[71/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/tcp_slave/modbus_controller/mbc_tcp_slave.c.obj
+[72/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/tcp_master/modbus_controller/mbc_tcp_master.c.obj
+[73/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_master_tcp.c.obj
+[74/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/tcp_master/port/port_tcp_master.c.obj
+[75/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_slave_tcp.c.obj
+[76/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_master_serial.c.obj
+[77/635] Building C object esp-idf/espressif__esp-modbus/CMakeFiles/__idf_espressif__esp-modbus.dir/freemodbus/common/esp_modbus_slave_serial.c.obj
+[78/635] Building C object esp-idf/bluetooth/CMakeFiles/__idf_bluetooth.dir/blue.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/bluetooth/blue.h:22,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/bluetooth/blue.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+ninja: build stopped: subcommand failed.

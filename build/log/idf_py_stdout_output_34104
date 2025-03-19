@@ -1,41 +1,54 @@
-[1/9] Performing build step for 'bootloader'
-[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
-Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
-[2/9] No install step for 'bootloader'
-[3/9] Completed 'bootloader'
-[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
-In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/my_timer/my_timer.h:6,
-                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:28,
-                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:3:
-C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
-   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
-      |  ^~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:384:1: warning: ignoring attribute 'section (".rtc.data.3")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
-  384 | RTC_DATA_ATTR float stored_roll = -9999.0;
-      | ^~~~~~~~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:66:28: note: previous declaration here
-   66 | extern RTC_DATA_ATTR float stored_roll;
-      |                            ^~~~~~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:385:1: warning: ignoring attribute 'section (".rtc.data.4")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
-  385 | RTC_DATA_ATTR float stored_pitch = -9999.0;
-      | ^~~~~~~~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:67:28: note: previous declaration here
-   67 | extern RTC_DATA_ATTR float stored_pitch;
-      |                            ^~~~~~~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/main/main.c:386:1: warning: ignoring attribute 'section (".rtc.data.5")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
-  386 | RTC_DATA_ATTR float stored_yaw = -9999.0;
-      | ^~~~~~~~~~~~~
-D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:68:28: note: previous declaration here
-   68 | extern RTC_DATA_ATTR float stored_yaw;
-      |                            ^~~~~~~~~~
-[5/9] Linking C static library esp-idf\main\libmain.a
-[6/9] Generating ld/sections.ld
-[7/9] Linking CXX executable GPS_Tracker.elf
-[8/9] Generating binary image from built executable
-esptool.py v4.7.0
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin
-[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
-GPS_Tracker.bin binary size 0x399b0 bytes. Smallest app partition is 0x100000 bytes. 0xc6650 bytes (77%) free.
+%�(33) boot: Multicor�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.5-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 14 2025 07:54:21[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1eb80h (125824) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0002eba8 vaddr=3ff80063 size=00008h (     8) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0002ebb8 vaddr=3ffbdb60 size=01460h (  5216) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=8355ch (537948) map[0m
+[0;32mI (361) esp_image: segment 4: paddr=000b3584 vaddr=3ffbefc0 size=03324h ( 13092) load[0m
+[0;32mI (366) esp_image: segment 5: paddr=000b68b0 vaddr=40080000 size=18e84h (102020) load[0m
+[0;32mI (409) esp_image: segment 6: paddr=000cf73c vaddr=400c0000 size=00064h (   100) load[0m
+[0;32mI (409) esp_image: segment 7: paddr=000cf7a8 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (427) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (427) boot: Disabling RNG early entropy source...[0m
+AT+CMQTTDISC=0,60
+AT+CMQTTREL=0
+AT+CMQTTSTOP
+AT+CMQTTSTART
+AT+CMQTTACCQ=0,"ESP32",0
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+AT+CMQTTDISC=0,60
+AT+CMQTTREL=0
+AT+CMQTTSTOP
+AT+CMQTTSTART
+AT+CMQTTACCQ=0,"ESP32",0
+AT+CMQTTCONNECT=0,"tcp://20.41.104.186:1883",60,1
+AT+CMQTTDISC=0,60
+AT+CMQTTREL=0
+AT+CMQTTSTOP
+AT+CMQTTSTART
+AT+CMQTTACCQ=0,"ESP32",0

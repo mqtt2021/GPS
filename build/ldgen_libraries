@@ -33,6 +33,7 @@ D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_netif/libesp_netif
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_coex/libesp_coex.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/esp_wifi/libesp_wifi.a
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bt/libbt.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/unity/libunity.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/cmock/libcmock.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/console/libconsole.a
@@ -64,6 +65,7 @@ D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/main/libmain.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/adc_battery/libadc_battery.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/gps_library/libgps_library.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/my_timer/libmy_timer.a
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/bluetooth/libbluetooth.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/SIM/libSIM.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/MPU/libMPU.a
 D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/espressif__network_provisioning/libespressif__network_provisioning.a

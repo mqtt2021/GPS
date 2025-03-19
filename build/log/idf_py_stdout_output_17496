@@ -1,0 +1,118 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/MPU/CMakeFiles/__idf_MPU.dir/i2ctools_example_main.c.obj
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:26,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:36:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'mpu6050_enable_interrupt_pin':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:185:38: warning: passing argument 2 of 'gpio_isr_handler_add' from incompatible pointer type [-Wincompatible-pointer-types]
+  185 |     gpio_isr_handler_add(GPIO_NUM_2, mpu6050_isr_handler, NULL);
+      |                                      ^~~~~~~~~~~~~~~~~~~
+      |                                      |
+      |                                      void (*)(void)
+In file included from C:/Espressif/frameworks/esp-idf-v5.1.5/components/fatfs/vfs/esp_vfs_fat.h:10,
+                 from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/mpu6050.h:16:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/gpio/include/driver/gpio.h:327:64: note: expected 'gpio_isr_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  327 | esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void *args);
+      |                                                     ~~~~~~~~~~~^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_first':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:245:18: warning: unused variable 'last_time' [-Wunused-variable]
+  245 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:244:13: warning: unused variable 'msg' [-Wunused-variable]
+  244 |         int msg;
+      |             ^~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_alarm':
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:328:18: warning: unused variable 'last_time' [-Wunused-variable]
+  328 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU/i2ctools_example_main.c:327:13: warning: unused variable 'msg' [-Wunused-variable]
+  327 |         int msg;
+      |             ^~~
+[5/10] Linking C static library esp-idf\MPU\libMPU.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable GPS_Tracker.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\ESP_luanvan\GPS_Tracker\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0xc9220 bytes. Smallest app partition is 0x100000 bytes. 0x36de0 bytes (21%) free.
+[9/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1.5\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1.5 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build" -P C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 GPS_Tracker.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM4
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:8a:1f:a0:c4:f4
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16733...
+Writing at 0x00001000... (50 %)
+Writing at 0x000076a0... (100 %)
+Wrote 26720 bytes (16733 compressed) at 0x00001000 in 0.7 seconds (effective 324.6 kbit/s)...
+Hash of data verified.
+Compressed 823840 bytes to 485019...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d747... (6 %)
+Writing at 0x0002b5c8... (10 %)
+Writing at 0x00038bf6... (13 %)
+Writing at 0x0003e742... (16 %)
+Writing at 0x00044624... (20 %)
+Writing at 0x00049fcb... (23 %)
+Writing at 0x0004fe54... (26 %)
+Writing at 0x0005561d... (30 %)
+Writing at 0x0005ad1c... (33 %)
+Writing at 0x000607bd... (36 %)
+Writing at 0x00065e14... (40 %)
+Writing at 0x0006c44e... (43 %)
+Writing at 0x000723e9... (46 %)
+Writing at 0x000782b9... (50 %)
+Writing at 0x0007e064... (53 %)
+Writing at 0x00083a9d... (56 %)
+Writing at 0x00089a0c... (60 %)
+Writing at 0x0008fbee... (63 %)
+Writing at 0x00095964... (66 %)
+Writing at 0x0009b694... (70 %)
+Writing at 0x000a15d3... (73 %)
+Writing at 0x000a77b8... (76 %)
+Writing at 0x000ad622... (80 %)
+Writing at 0x000b39de... (83 %)
+Writing at 0x000bbad0... (86 %)
+Writing at 0x000c439a... (90 %)
+Writing at 0x000ca0c2... (93 %)
+Writing at 0x000cfa8c... (96 %)
+Writing at 0x000d5697... (100 %)
+Wrote 823840 bytes (485019 compressed) at 0x00010000 in 11.8 seconds (effective 557.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 695.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
