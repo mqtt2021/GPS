@@ -48,6 +48,8 @@
 #define GPIO_PEN           GPIO_NUM_32
 #define GPIO_GPS_PPS     GPIO_NUM_4
 #define BUZZER     GPIO_NUM_18
+#define PHONE_NUMBER_SIZE 20  // Kích thước đủ lớn
+
 
 extern int count;
 extern bool wakeup_by_timer;
@@ -64,6 +66,7 @@ extern RTC_DATA_ATTR double fix_lattitude;
 extern RTC_DATA_ATTR double fix_longtitude;
 extern RTC_DATA_ATTR int radius;
 extern RTC_DATA_ATTR int emergency;
+extern RTC_DATA_ATTR char phone_number[PHONE_NUMBER_SIZE];  
       
 bool is_valid_time_format(const char *time_str);   
 void set_esp_sleep_time(const char* current_time, const char* wakeup_time); 

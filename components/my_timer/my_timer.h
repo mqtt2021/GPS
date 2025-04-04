@@ -24,8 +24,6 @@ void my_timer_connect_mqtt_init(void);
 void my_timer_connect_mqtt_start(void);
 void my_timer_connect_mqtt_delete(void);
 
-
-
 // #ifdef __cplusplus
 // }
 // #endif

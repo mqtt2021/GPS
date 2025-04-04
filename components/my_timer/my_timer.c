@@ -5,7 +5,7 @@
  * nếu dùng LOG trong ISR nhớ dùng ESP_EARLY_LOGx 
  */
 static const char *TAG = "MY_TIMER_MODULE";
-volatile bool g_timer_done = false;
+volatile bool g_timer_done = false;                                                                  
 volatile bool g_timer_connect_mqtt_done = false;
 
 /* 
@@ -55,7 +55,7 @@ void my_timer_init(void)
 void my_timer_start(void)
 {
     my_timer_init();
-    ESP_LOGI(TAG, "🚀 Bắt đầu timer...");
+    //ESP_LOGI(TAG, "🚀 Bắt đầu timer...");
 
     timer_start(TIMER_GROUP_0, TIMER_1);
 }
@@ -74,7 +74,7 @@ void my_timer_delete(void)
     // 3️⃣ Giải phóng interrupt (nếu đã đăng ký)
     timer_disable_intr(TIMER_GROUP_0, TIMER_1);
     
-    ESP_LOGI(TAG, "✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------");
+    //ESP_LOGI(TAG, "✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------");
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,7 +120,7 @@ void my_timer_connect_mqtt_init(void)
 void my_timer_connect_mqtt_start(void)
 {
     my_timer_connect_mqtt_init();
-    ESP_LOGI(TAG, "🚀 Bắt đầu timer...");
+    //ESP_LOGI(TAG, "🚀 Bắt đầu timer...");
 
     timer_start(TIMER_GROUP_1, TIMER_0);
 }
@@ -139,5 +139,5 @@ void my_timer_connect_mqtt_delete(void)
     // 3️⃣ Giải phóng interrupt (nếu đã đăng ký)
     timer_disable_intr(TIMER_GROUP_1, TIMER_0);
     
-    ESP_LOGI(TAG, "✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------");
+    //ESP_LOGI(TAG, "✅ Timer đã bị xóa hoàn toàn.----------------------------------------------------------------");
 }

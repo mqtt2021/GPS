@@ -28933,7 +28933,7 @@
                         "children": [
                             {
                                 "children": [],
-                                "depends_on": "ESP_WIFI_ENABLED && <choice NETWORK_PROV_NETWORK_TYPE>",
+                                "depends_on": "(ESP_WIFI_ENABLED || ESP_WIFI_REMOTE_ENABLED) && <choice NETWORK_PROV_NETWORK_TYPE>",
                                 "help": null,
                                 "id": "NETWORK_PROV_NETWORK_TYPE_WIFI",
                                 "name": "NETWORK_PROV_NETWORK_TYPE_WIFI",
@@ -29665,7 +29665,7 @@
                             },
                             {
                                 "children": [],
-                                "depends_on": "SPIRAM_USE_MALLOC && ESP32_SPIRAM_SUPPORT && <choice LITTLEFS_MALLOC_STRATEGY>",
+                                "depends_on": "(SPIRAM_USE_MALLOC || SPIRAM_USE_CAPS_ALLOC) && <choice LITTLEFS_MALLOC_STRATEGY>",
                                 "help": "Uses ESP-IDF heap_caps_malloc to allocate from SPIRAM heap.",
                                 "id": "LITTLEFS_MALLOC_STRATEGY_SPIRAM",
                                 "name": "LITTLEFS_MALLOC_STRATEGY_SPIRAM",
@@ -29689,6 +29689,16 @@
                         "name": "LITTLEFS_ASSERTS",
                         "range": null,
                         "title": "Enable asserts",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Use esp_partition_mmap to map the partitions to memory, which can provide a significant\nperformance boost in some cases. Make sure the chip you're using has enough available address\nspace to map the partition (for the ESP32 there is 4MB available).",
+                        "id": "LITTLEFS_MMAP_PARTITION",
+                        "name": "LITTLEFS_MMAP_PARTITION",
+                        "range": null,
+                        "title": "Memory map LITTLEFS partitions",
                         "type": "bool"
                     }
                 ],

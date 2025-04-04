@@ -50,7 +50,8 @@ typedef struct {
     char date[11];         // Ngày (dd/mm/yyyy)    
     bool Stolen;           // Status
     bool bluetooth;           // bluetooth
-    bool move;           // move
+    bool buzzer;           // buzzer  
+    bool move;           // move   
 } gps_data_t;
 
 //Khai báo biến toàn cục

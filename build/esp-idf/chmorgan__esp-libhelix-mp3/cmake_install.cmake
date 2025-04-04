@@ -1,4 +1,4 @@
-# Install script for directory: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/chmorgan__esp-libhelix-mp3
+# Install script for directory: D:/VIAM LAB/Luanvan/GPS/managed_components/chmorgan__esp-libhelix-mp3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

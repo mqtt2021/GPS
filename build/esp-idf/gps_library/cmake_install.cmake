@@ -1,4 +1,4 @@
-# Install script for directory: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/gps_library
+# Install script for directory: D:/VIAM LAB/Luanvan/GPS/components/gps_library
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

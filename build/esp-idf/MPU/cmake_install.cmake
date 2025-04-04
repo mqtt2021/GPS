@@ -1,4 +1,4 @@
-# Install script for directory: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/components/MPU
+# Install script for directory: D:/VIAM LAB/Luanvan/GPS/components/MPU
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

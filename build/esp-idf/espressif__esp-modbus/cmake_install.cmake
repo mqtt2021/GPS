@@ -1,4 +1,4 @@
-# Install script for directory: D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp-modbus
+# Install script for directory: D:/VIAM LAB/Luanvan/GPS/managed_components/espressif__esp-modbus
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

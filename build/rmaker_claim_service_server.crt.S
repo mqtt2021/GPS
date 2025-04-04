@@ -1,4 +1,4 @@
-/* * Data converted from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/managed_components/espressif__esp_rainmaker/server_certs/rmaker_claim_service_server.crt
+/* * Data converted from D:/VIAM LAB/Luanvan/GPS/managed_components/espressif__esp_rainmaker/server_certs/rmaker_claim_service_server.crt
  * (null byte appended)
  */
 .data

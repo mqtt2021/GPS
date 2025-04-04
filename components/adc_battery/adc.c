@@ -20,7 +20,7 @@ battery_lookup_t battery_table[] = {
 
 
 // battery_lookup_t battery_table[] = {
-//     {3.300, 100}, {3.259, 98}, {3.219, 96}, {3.181, 94}, {3.141, 92}, {3.104, 90},
+//     {3.300, 100},{3.259, 98}, {3.219, 96}, {3.181, 94}, {3.141, 92}, {3.104, 90},
 //     {3.064, 88}, {3.024, 86}, {2.986, 84}, {2.945, 82}, {2.907, 80}, {2.867, 78},
 //     {2.827, 76}, {2.791, 74}, {2.751, 72}, {2.713, 70}, {2.673, 68}, {2.635, 66},
 //     {2.594, 64}, {2.555, 62}, {2.516, 60}, {2.476, 58}, {2.438, 56}, {2.398, 54},
@@ -46,7 +46,9 @@ bool adc_init(void) {
 
     adc_oneshot_chan_cfg_t config = {
         .bitwidth = ADC_BITWIDTH_DEFAULT,
-        .atten = ADC_ATTEN_DB_11, // Sửa thành giá trị hợp lệ
+        //.atten = ADC_ATTEN_DB_11, // Sửa thành giá trị hợp lệ
+        .atten = ADC_ATTEN_DB_6,
+
     };
     if (adc_oneshot_config_channel(adc_handle, BATTERY_ADC_CHANNEL, &config) != ESP_OK) {
         //ESP_LOGE(TAG, "ADC channel config failed");
@@ -91,16 +93,23 @@ float read_battery_voltage(void) {
 
     raw_value = total_raw / 50;  // Tính trung bình
 
-    if (do_calibration) {
-        adc_cali_raw_to_voltage(adc_cali_handle, raw_value, &voltage_mv);
-    } else {
+    //ESP_LOGE(TAG, "Raw Value: %d\n",raw_value);
+    //ESP_LOGI(TAG, "Raw Value: %d", raw_value);
+
+
+    // if (do_calibration) {
+    //     adc_cali_raw_to_voltage(adc_cali_handle, raw_value, &voltage_mv);
+    // } else {
         // Nếu không có calibration, tính toán thủ công
         float max_adc_value = 4095.0;
         float reference_voltage = 3.3; // Điện áp tham chiếu khi phân áp
         voltage_mv = (raw_value * reference_voltage) / max_adc_value * 1000;
-    }
+    // }
+
+
 
     float battery_voltage = voltage_mv / 1000.0; // Chuyển đổi mV -> V
+
     //ESP_LOGI(TAG, "Battery Voltage: %.3fV", battery_voltage);
     return battery_voltage;
 }

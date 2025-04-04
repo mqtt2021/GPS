@@ -120,7 +120,7 @@ void my_timer_noiseMPU_init(void)
     timer_set_counter_value(TIMER_GROUP_1, TIMER_1, 0);
 
     // 5 phút = 300 giây = 300 * 1.000.000 tick = 300.000.000
-    timer_set_alarm_value(TIMER_GROUP_1, TIMER_1, 700000ULL);
+    timer_set_alarm_value(TIMER_GROUP_1, TIMER_1, 600000ULL);
 
     // Cho phép interrupt
     timer_enable_intr(TIMER_GROUP_1, TIMER_1);
@@ -153,12 +153,12 @@ void my_timer_noiseMPU_delete(void)
     //ESP_LOGI(TAG, "✅ Timer đã bị xóa hoàn toàn.");
 }
 
-
-void mpu6050_enable_motion_interrupt()   
+   
+void mpu6050_enable_motion_interrupt()        
 {
     mpuWriteReg(0x6B, 0x00);  // Bật MPU6050
     mpuWriteReg(0x1C, 0x00);  // Chọn thang đo ±2g   
-    mpuWriteReg(0x1F, 0x10);  // Ngưỡng rung động (tùy chỉnh)   
+    mpuWriteReg(0x1F, 0x03);  // Ngưỡng rung động (tùy chỉnh)   
     mpuWriteReg(0x20, 0x01);  // Thời gian rung động tối thiểu
     mpuWriteReg(0x38, 0x40);  // Bật ngắt Motion
     //mpuWriteReg(0x69, 0x20);  // Cấu hình INT kéo xuống LOW khi có ngắt
@@ -401,7 +401,7 @@ void read_mpu6050_angles_alarm(float *stored_roll, float *stored_pitch, float *s
                     float delta_pitch = fabs(pitch - *stored_pitch);
                     float delta_yaw = fabs(yaw - *stored_yaw);
 
-                    if (delta_roll > 18.0 || delta_pitch > 18.0 || delta_yaw > 18.0) {    
+                    if (delta_roll > 10.0 || delta_pitch > 10.0 || delta_yaw > 10.0) {    
                         // ESP_LOGW(TAG, "Significant angle change detected!");
                         // ESP_LOGW(TAG, "Previous: Roll=%.2f, Pitch=%.2f, Yaw=%.2f", *stored_roll, *stored_pitch, *stored_yaw);
                         // ESP_LOGW(TAG, "Current:  Roll=%.2f, Pitch=%.2f, Yaw=%.2f", roll, pitch, yaw);

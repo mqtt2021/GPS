@@ -1,4 +1,4 @@
-/* * Data converted from D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from D:/VIAM LAB/Luanvan/GPS/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

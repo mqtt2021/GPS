@@ -78,11 +78,11 @@ void init_BLE(void){
 
 void start_advertising_BLE(void){
     esp_ble_gap_start_advertising(&adv_params);
-    printf("Đang quảng bá BLE\n");
+    //printf("Đang quảng bá BLE\n");
 }
 void stop_adertising_BLE(void){
     esp_ble_gap_stop_advertising();
-    printf("Dừng quảng bá BLE\n");
+    //printf("Dừng quảng bá BLE\n");
 }
 
 

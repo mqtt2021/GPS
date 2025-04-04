@@ -17,6 +17,7 @@ typedef struct {
     char CurrentTime[50];
     char AlarmTime[50];
     char BlueTooth[10];
+    char Buzzer[10];
     int Emergency;
     char PhoneNumber[50];
 } GpsData;
@@ -54,15 +55,17 @@ void parse_json(const char *json_str, GpsData *data) {
     cJSON *currentTime = cJSON_GetObjectItem(root, "CurrentTime");
     cJSON *alarmTime = cJSON_GetObjectItem(root, "AlarmTime");
     cJSON *blueTooth = cJSON_GetObjectItem(root, "BlueTooth");
+    cJSON *buzzer = cJSON_GetObjectItem(root, "Buzzer");
     cJSON *emergency = cJSON_GetObjectItem(root, "Emergency");
     cJSON *phoneNumber = cJSON_GetObjectItem(root, "PhoneNumber");
-
+   
     if (longitude) data->Longitude = longitude->valuedouble;
     if (latitude) data->Latitude = latitude->valuedouble;
     if (safeRadius) data->SafeRadius = safeRadius->valueint;
     if (currentTime) strncpy(data->CurrentTime, currentTime->valuestring, sizeof(data->CurrentTime) - 1);
     if (alarmTime) strncpy(data->AlarmTime, alarmTime->valuestring, sizeof(data->AlarmTime) - 1);
     if (blueTooth) strncpy(data->BlueTooth, blueTooth->valuestring, sizeof(data->BlueTooth) - 1);
+    if (buzzer) strncpy(data->Buzzer, buzzer->valuestring, sizeof(data->Buzzer) - 1);
     if (emergency) data->Emergency = emergency->valueint;   
     if (phoneNumber) strncpy(data->PhoneNumber, phoneNumber->valuestring, sizeof(data->PhoneNumber) - 1);    
     
@@ -126,7 +129,7 @@ bool read_uart2_data(char *buffer, int buffer_size) {
         buffer_pos += len;
         buffer[buffer_pos] = '\0'; // Null-terminate chuỗi
 
-        //ESP_LOGI(TAG, "response GPS: %s\n",buffer);   
+        ////ESP_LOGI(TAG, "response GPS: %s\n",buffer);   
                          
         // Tìm ký tự xuống dòng
         char *newline_ptr;
@@ -141,7 +144,7 @@ bool read_uart2_data(char *buffer, int buffer_size) {
 
             // Xử lý dữ liệu bắt đầu bằng "$GNRMC"
             if (strncmp(buffer, "$GNRMC", 6) == 0) { //hàm so sánh hai chuỗi với nhau, chỉ so sánh tối đa 6 ký tự đầu tiên, trả về giá trị 0 nếu hai chuỗi giống nhau 
-                ////ESP_LOGI(TAG, "Received GNRMC Data: %s\n", buffer);
+                //ESP_LOGI(TAG, "Received GNRMC Data: %s\n", buffer);
                 processGNRMC(buffer);
                 buffer_pos = 0; // Reset buffer sau khi xử lý
                 return true;
@@ -179,7 +182,7 @@ void uart2_task(void *pvParameters) {
         vTaskDelete(NULL);
         return;
     }
-    //ESP_LOGI(TAG, "Start uart2_task, monitoring UART2 data...");
+    ////ESP_LOGI(TAG, "Start uart2_task, monitoring UART2 data...");
 
     while (!flag_stop_uart_task) { 
         
@@ -191,7 +194,7 @@ void uart2_task(void *pvParameters) {
            
         //     if(alarm_mpu){
 
-        //         ESP_LOGI(TAG, "ALARMMMMMMM");
+        //         //ESP_LOGI(TAG, "ALARMMMMMMM");
         //         //module_sim_call_sms();   
         //     }
         // }
@@ -213,7 +216,9 @@ void uart2_task(void *pvParameters) {
 void uart0_task(void *pvParameters) {
     sub_topic = true;
     while (!flag_stop_uart_task) {
+
         parse_json(payload_json, &data);
+
         ////printf("Longitude: %f\n", data.Longitude);
         ////printf("Latitude: %f\n", data.Latitude);
         ////printf("SafeRadius: %d\n", data.SafeRadius);
@@ -221,35 +226,207 @@ void uart0_task(void *pvParameters) {
         ////printf("AlarmTime: %s\n", data.AlarmTime);
         ////printf("BlueTooth: %s\n", data.BlueTooth);
 
-        
-        fix_lattitude = data.Latitude;
-        fix_longtitude = data.Longitude;
-        radius = data.SafeRadius;
-        
+      
 
+            fix_lattitude = data.Latitude;
+            fix_longtitude = data.Longitude;
+            radius = data.SafeRadius;
         
-
             if (strcmp(data.BlueTooth, "ON") == 0) {
+
                 if(!ini_para_bluetooth){
                     if(!is_init_BLE){
                         init_BLE();
                     }
                     
                     start_advertising_BLE();
+                    global_gps_data.bluetooth = true;
                     ini_para_bluetooth = true;
+
+                        float voltage = read_battery_voltage();    
+                        int percentage = voltage_to_percentage(voltage);
+                        global_gps_data.battery_capacity = percentage;  
+            
+                        get_time_from_module_sim();  // Lấy dữ liệu thời gian hiện tại về
+                        TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+                        while( true ){   
+                            if (is_valid_time_format(time_buffer_module_sim)) {
+                                // //printf("Thời gian báo thức: %s\n", time_buffer_alarm);
+                                // //printf("Thời gian hiện tại: %s\n", time_buffer_module_sim);
+                                break;  
+                            }
+                            vTaskDelay(pdMS_TO_TICKS(500));
+                            if (xTaskGetTickCount() - start_time_get_current_time > pdMS_TO_TICKS(30000)) {
+                                //ESP_LOGW(TAG, "⏳ Timeout");
+                                get_time_from_module_sim();
+                                TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+                            }    
+                        }
+
+                        
+
+                        char mqtt_payload[BUFFER_SIZE];  
+                        snprintf(mqtt_payload, sizeof(mqtt_payload),
+                        "["    
+                            "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
+                            "{\"name\":\"Stolen\",\"value\":true,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"  
+                        "]",
+                        global_gps_data.latitude,  
+                        time_buffer_module_sim,
+                        global_gps_data.longitude,     
+                        time_buffer_module_sim     ,
+                        global_gps_data.battery_capacity,
+                        time_buffer_module_sim     ,
+                        // global_gps_data.Stolen ? "true" : "false",
+                        time_buffer_module_sim     , 
+                        global_gps_data.bluetooth ? "ON" : "OFF",
+                        time_buffer_module_sim     ,
+                        global_gps_data.buzzer ? "ON" : "OFF",
+                        time_buffer_module_sim   ,  
+                        // global_gps_data.move ? "true" : "false",
+                        time_buffer_module_sim            
+                        );
+    
+                        mqtt_publish("GPS/Status/G001", mqtt_payload);
+
+
                 }
-                gpio_set_level(GPIO_NUM_18, 1);
+                //gpio_set_level(GPIO_NUM_18, 1);
                 ////printf("Bật BUZZER\n");
             } else if (strcmp(data.BlueTooth, "OFF") == 0) {
                 if(ini_para_bluetooth){
                     stop_adertising_BLE();
                     ini_para_bluetooth = false;
+
+                    global_gps_data.bluetooth = false;
+
+                    float voltage = read_battery_voltage();    
+                    int percentage = voltage_to_percentage(voltage);
+                    global_gps_data.battery_capacity = percentage;  
+        
+                    get_time_from_module_sim();  // Lấy dữ liệu thời gian hiện tại về
+                    TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+                    while( true ){   
+                        if (is_valid_time_format(time_buffer_module_sim)) {
+                            // //printf("Thời gian báo thức: %s\n", time_buffer_alarm);
+                            // //printf("Thời gian hiện tại: %s\n", time_buffer_module_sim);
+                            break;  
+                        }
+                        vTaskDelay(pdMS_TO_TICKS(500));
+                        if (xTaskGetTickCount() - start_time_get_current_time > pdMS_TO_TICKS(30000)) {
+                            ////ESP_LOGW(TAG, "⏳ Timeout");
+                            get_time_from_module_sim();
+                            TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+                        }    
+                    }
+
+                    char mqtt_payload[BUFFER_SIZE];  
+                    snprintf(mqtt_payload, sizeof(mqtt_payload),
+                    "["    
+                        "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
+                        "{\"name\":\"Stolen\",\"value\":true,\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"  
+                    "]",
+                    global_gps_data.latitude,  
+                    time_buffer_module_sim,
+                    global_gps_data.longitude,     
+                    time_buffer_module_sim     ,
+                    global_gps_data.battery_capacity,
+                    time_buffer_module_sim     ,
+                    // global_gps_data.Stolen ? "true" : "false",
+                    time_buffer_module_sim     , 
+                    global_gps_data.bluetooth ? "ON" : "OFF",
+                    time_buffer_module_sim     ,
+                    global_gps_data.buzzer ? "ON" : "OFF",
+                    time_buffer_module_sim   ,  
+                    // global_gps_data.move ? "true" : "false",
+                    time_buffer_module_sim            
+                    );
+
+                    mqtt_publish("GPS/Status/G001", mqtt_payload);
                 }
-                gpio_set_level(GPIO_NUM_18, 0);
+                //gpio_set_level(GPIO_NUM_18, 0);
                 ////printf("Tắt BUZZER\n");
             } else {
                 ////printf("Giá trị BlueTooth không hợp lệ: '%s'\n", data.BlueTooth);
-            }   
+            }
+
+            if (strcmp(data.Buzzer, "ON") == 0) {
+                gpio_set_level(GPIO_NUM_18, 1);
+                global_gps_data.buzzer = true;
+
+                char mqtt_payload[BUFFER_SIZE];  
+                snprintf(mqtt_payload, sizeof(mqtt_payload),
+                "["    
+                    "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
+                    "{\"name\":\"Stolen\",\"value\":true,\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"  
+                "]",
+                global_gps_data.latitude,  
+                time_buffer_module_sim,
+                global_gps_data.longitude,     
+                time_buffer_module_sim     ,
+                global_gps_data.battery_capacity,
+                time_buffer_module_sim     ,
+                // global_gps_data.Stolen ? "true" : "false",
+                time_buffer_module_sim     , 
+                global_gps_data.bluetooth ? "ON" : "OFF",
+                time_buffer_module_sim     ,
+                global_gps_data.buzzer ? "ON" : "OFF",
+                time_buffer_module_sim   ,  
+                // global_gps_data.move ? "true" : "false",
+                time_buffer_module_sim            
+                );
+
+                mqtt_publish("GPS/Status/G001", mqtt_payload);
+            }
+            if (strcmp(data.Buzzer, "OFF") == 0) {
+                gpio_set_level(GPIO_NUM_18, 0);
+                global_gps_data.buzzer = false;
+
+                        char mqtt_payload[BUFFER_SIZE];  
+                        snprintf(mqtt_payload, sizeof(mqtt_payload),
+                        "["    
+                            "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
+                            "{\"name\":\"Stolen\",\"value\":true,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"  
+                        "]",
+                        global_gps_data.latitude,  
+                        time_buffer_module_sim,
+                        global_gps_data.longitude,     
+                        time_buffer_module_sim     ,
+                        global_gps_data.battery_capacity,
+                        time_buffer_module_sim     ,
+                        // global_gps_data.Stolen ? "true" : "false",
+                        time_buffer_module_sim     , 
+                        global_gps_data.bluetooth ? "ON" : "OFF",
+                        time_buffer_module_sim     ,
+                        global_gps_data.buzzer ? "ON" : "OFF",
+                        time_buffer_module_sim   ,  
+                        // global_gps_data.move ? "true" : "false",
+                        time_buffer_module_sim            
+                        );
+    
+                        mqtt_publish("GPS/Status/G001", mqtt_payload);
+            }
+            
             vTaskDelay(pdMS_TO_TICKS(1000));  // Chờ 500ms để giảm tải CPU
     }
     uart0TaskHandle = NULL;
@@ -262,17 +439,17 @@ void start_uart_task(void) {
         flag_stop_uart_task = false;  
         //ESP_LOGI(TAG, "Creating uart2_task...");
         if (xTaskCreate(uart2_task, "uart2_task", 8192, NULL, 5, &uart2TaskHandle) != pdPASS) {
-            ////ESP_LOGE(TAG, "Failed to create uart2_task");
+            //ESP_LOGE(TAG, "Failed to create uart2_task");
             return;
         }
     } else {
         //ESP_LOGW(TAG, "uart2_task is already running.");
     }
 
-    if (uart0TaskHandle == NULL) {
+    if (uart0TaskHandle == NULL) {  
         //ESP_LOGI(TAG, "Creating uart0_task...");
         if (xTaskCreate(uart0_task, "uart0_task", 8192, NULL, 5, &uart0TaskHandle) != pdPASS) {
-            ////ESP_LOGE(TAG, "Failed to create uart0_task");
+            //ESP_LOGE(TAG, "Failed to create uart0_task");
             return;
         }
     } else {
@@ -282,14 +459,14 @@ void start_uart_task(void) {
 
 void stop_uart_task(void) {
     if (uart2TaskHandle != NULL || uart0TaskHandle != NULL) {
-        ESP_LOGI(TAG, "Stopping UART tasks...");
+        //ESP_LOGI(TAG, "Stopping UART tasks...");
         sub_topic = false;
         flag_stop_uart_task = true;  
 
        // Chờ task tự thoát
        int timeout = 10; // Giới hạn 10 lần kiểm tra
        while ((uart2TaskHandle != NULL || uart0TaskHandle != NULL) && timeout-- > 0) {
-           ////ESP_LOGI(TAG, "Waiting for UART tasks to stop...");
+           //////ESP_LOGI(TAG, "Waiting for UART tasks to stop...");
            vTaskDelay(pdMS_TO_TICKS(500)); 
        }
 
@@ -305,7 +482,7 @@ void stop_uart_task(void) {
             uart0TaskHandle = NULL;
         }
 
-        ////ESP_LOGI(TAG, "UART tasks stopped.");
+        //////ESP_LOGI(TAG, "UART tasks stopped.");
     } else {
         //ESP_LOGW(TAG, "No UART task is running.");
     }
@@ -315,7 +492,7 @@ void gps_pps_monitor() {
     TickType_t startTick = xTaskGetTickCount(); // Lấy thời gian bắt đầu
     const TickType_t runDuration = pdMS_TO_TICKS(15 * 60 * 1000); // 15 phút
 
-    ////ESP_LOGI(TAG, "Starting GPS PPS monitoring for 3 minutes...");
+    //////ESP_LOGI(TAG, "Starting GPS PPS monitoring for 3 minutes...");
 
     // Cấu hình GPIO
     gpio_reset_pin(GPIO_GPS_PPS);
@@ -326,7 +503,7 @@ void gps_pps_monitor() {
     while ((xTaskGetTickCount() - startTick) < runDuration) {
         if (gpio_get_level(GPIO_GPS_PPS) == 1) {
             gps_flag++;
-            ////ESP_LOGI(TAG, "GPS PPS detected! gps_flag = %d", gps_flag);
+            //////ESP_LOGI(TAG, "GPS PPS detected! gps_flag = %d", gps_flag);
             vTaskDelay(pdMS_TO_TICKS(100)); // Chống rung (debounce)
         }
         vTaskDelay(pdMS_TO_TICKS(10)); // Kiểm tra mỗi 10ms
@@ -339,7 +516,7 @@ void gps_pps_monitor() {
             break;
         }
     }
-    ////ESP_LOGI(TAG, "2 minutes elapsed. Final gps_flag count: %d", gps_flag);
+    //////ESP_LOGI(TAG, "2 minutes elapsed. Final gps_flag count: %d", gps_flag);
     // Đặt cờ báo hiệu task đã hoàn thành
     gps_task_done = true;
 }
@@ -352,10 +529,10 @@ void configure_led(void)
 
     gpio_reset_pin(GPIO_SIM_TRIGGER);
     gpio_set_direction(GPIO_SIM_TRIGGER, GPIO_MODE_OUTPUT);
-    gpio_set_level(GPIO_SIM_TRIGGER, 1);  
+    gpio_set_level(GPIO_SIM_TRIGGER, 1);    
 
     gpio_reset_pin(GPIO_PEN); // PEN_SIM
-    gpio_set_direction(GPIO_PEN, GPIO_MODE_OUTPUT);
+    gpio_set_direction(GPIO_PEN, GPIO_MODE_OUTPUT);                 
     gpio_set_level(GPIO_PEN, 1);
 
     gpio_reset_pin(BUZZER); // BUZZER
@@ -370,29 +547,29 @@ void print_wakeup_reason(void) {
 
     switch (wakeup_reason) {
         case ESP_SLEEP_WAKEUP_EXT0:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do GPIO (EXT0)");
+            //////ESP_LOGI("WAKEUP", "Thức dậy do GPIO (EXT0)");
             break;
         case ESP_SLEEP_WAKEUP_EXT1:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do nhiều GPIO (EXT1)");
+            //////ESP_LOGI("WAKEUP", "Thức dậy do nhiều GPIO (EXT1)");
             break;
         case ESP_SLEEP_WAKEUP_TIMER:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do Timer");    
+            //////ESP_LOGI("WAKEUP", "Thức dậy do Timer");    
             wakeup_by_timer = true;      
             break;
         case ESP_SLEEP_WAKEUP_TOUCHPAD:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do Cảm ứng");
+            //////ESP_LOGI("WAKEUP", "Thức dậy do Cảm ứng");
             break;
         case ESP_SLEEP_WAKEUP_ULP:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do ULP (Ultra Low Power)");
+            //////ESP_LOGI("WAKEUP", "Thức dậy do ULP (Ultra Low Power)");
             break;
         case ESP_SLEEP_WAKEUP_UART:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do UART (ESP32-S3)");
+            //////ESP_LOGI("WAKEUP", "Thức dậy do UART (ESP32-S3)");
             break;
         case ESP_SLEEP_WAKEUP_WIFI:
-            ////ESP_LOGI("WAKEUP", "Thức dậy do WiFi (ESP32-S3)");
+            //////ESP_LOGI("WAKEUP", "Thức dậy do WiFi (ESP32-S3)");
             break;
         default:
-            ////ESP_LOGI("WAKEUP", "Thức dậy không xác định (Power-on hoặc Reset)");
+            //////ESP_LOGI("WAKEUP", "Thức dậy không xác định (Power-on hoặc Reset)");
             break;
     }
 }
@@ -465,14 +642,14 @@ void set_esp_sleep_time(const char* current_time, const char* wakeup_time) {
     // Chuyển sleep_time sang uint64_t để tránh tràn số khi nhân với 1000000
     uint64_t sleep_time_us = (uint64_t)sleep_time * 1000000ULL;
 
-    ESP_LOGI("MAIN", "ESP sẽ ngủ trong %d giây", sleep_time);
+    //ESP_LOGI("MAIN", "ESP sẽ ngủ trong %d giây", sleep_time);
  
     // Đặt ESP vào deep sleep trong sleep_time giây
     esp_sleep_enable_timer_wakeup(sleep_time_us);
 
-                gpio_set_level(GPIO_NUM_18, 1);
-                vTaskDelay(pdMS_TO_TICKS(2000));
-                gpio_set_level(GPIO_NUM_18, 0);
+                // gpio_set_level(GPIO_NUM_18, 1);
+                // vTaskDelay(pdMS_TO_TICKS(2000));
+                // gpio_set_level(GPIO_NUM_18, 0);
 
     //printf("ESP sẽ ngủ trong %d giây\n", sleep_time);
 }
@@ -497,10 +674,13 @@ RTC_DATA_ATTR float stored_yaw = -9999.0;
 RTC_DATA_ATTR int emergency = 0;
 RTC_DATA_ATTR double fix_lattitude = 0;
 RTC_DATA_ATTR double fix_longtitude = 0;
-RTC_DATA_ATTR int radius = 0;
+RTC_DATA_ATTR int radius = 0;  
+  
+RTC_DATA_ATTR char phone_number[PHONE_NUMBER_SIZE] = "+84901234567";  // 15 ký tự đủ lưu số quốc tế
 
 void app_main(void)
 {
+
     print_wakeup_reason();   
    
     // Tắt giữ trạng thái GPIO sau khi thức dậy
@@ -512,9 +692,9 @@ void app_main(void)
     gpio_deep_sleep_hold_dis();
     configure_led();  
 
-    gpio_set_level(GPIO_NUM_18, 1);
-    vTaskDelay(pdMS_TO_TICKS(5000));
-    gpio_set_level(GPIO_NUM_18, 0); 
+    // gpio_set_level(GPIO_NUM_18, 1);
+    // vTaskDelay(pdMS_TO_TICKS(10000));
+    // gpio_set_level(GPIO_NUM_18, 0); 
 
     ESP_ERROR_CHECK(i2c_master_init());
     mpu6050_enable_interrupt_pin();
@@ -526,7 +706,7 @@ void app_main(void)
 
     // ESP mới khởi động, lấy dữ liệu Setting về
     if(emergency == 0){
-       ////ESP_LOGI(TAG, "CHECK EMERGENCY");
+       //ESP_LOGI(TAG, "CHECK EMERGENCY");
         
         mqtt_connect();     // Kết nối MQTT   
         //get_time_from_module_sim();  // Lấy dữ liệu thời gian về
@@ -537,35 +717,46 @@ void app_main(void)
 
             if (strcmp(data.BlueTooth, "ON") == 0 || strcmp(data.BlueTooth, "OFF") == 0)
             {
-                ////printf("data.Emergency %d\n", data.Emergency);
+                printf("data.Emergency %d\n", data.Emergency);
                 if(data.Emergency){ 
                     emergency = 1; // Chế độ khẩn cấp
-                    gpio_set_level(GPIO_NUM_18, 1);
-                    vTaskDelay(pdMS_TO_TICKS(1000));
-                    gpio_set_level(GPIO_NUM_18, 0);
+
+                    // gpio_set_level(GPIO_NUM_18, 1);   
+                    // vTaskDelay(pdMS_TO_TICKS(1000));   
+                    // gpio_set_level(GPIO_NUM_18, 0);    
+
                     fix_lattitude = data.Latitude;
-                    fix_longtitude = data.Longitude;
-                    radius = data.SafeRadius;
-                    ////ESP_LOGI(TAG, "EMERGENCY");
+                    fix_longtitude = data.Longitude;    
+                    radius = data.SafeRadius; 
+
+                    strncpy(phone_number, data.PhoneNumber, PHONE_NUMBER_SIZE - 1);
+                    phone_number[PHONE_NUMBER_SIZE - 1] = '\0';  // Đảm bảo kết thúc chuỗi
+                    
+                    // ESP_LOGI(TAG, "phone: %s", phone_number);
                 }
                 else{
                     emergency = 2; // Chế độ hàng rào
-                    fix_lattitude = data.Latitude;
-                    fix_longtitude = data.Longitude;
-                    radius = data.SafeRadius;
-                    gpio_set_level(GPIO_NUM_18, 1);
-                    vTaskDelay(pdMS_TO_TICKS(2000));
-                    gpio_set_level(GPIO_NUM_18, 0); 
-                    ////ESP_LOGI(TAG, "NORMAL");  
-                    ////ESP_LOGI(TAG, "Lat: %.5f , Lng : %.5f ", fix_lattitude , fix_longtitude);
-                    ////ESP_LOGI(TAG, "Radius: %d", radius);
+                    fix_lattitude = data.Latitude;  
+                    fix_longtitude = data.Longitude;   
+                    radius = data.SafeRadius;    
+
+                    strncpy(phone_number, data.PhoneNumber, PHONE_NUMBER_SIZE - 1);
+                    phone_number[PHONE_NUMBER_SIZE - 1] = '\0';  // Đảm bảo kết thúc chuỗi
+
+                    // gpio_set_level(GPIO_NUM_18, 1);
+                    // vTaskDelay(pdMS_TO_TICKS(2000));
+                    // gpio_set_level(GPIO_NUM_18, 0); 
+
+                    //ESP_LOGI(TAG, "NORMAL");  
+                    //ESP_LOGI(TAG, "Lat: %.5f , Lng : %.5f ", fix_lattitude , fix_longtitude);
+                    //ESP_LOGI(TAG, "Radius: %d", radius);
                 }
                 break;
             }
             vTaskDelay(pdMS_TO_TICKS(500));
 
             if (xTaskGetTickCount() - start_time > pdMS_TO_TICKS(30000)) {
-                ////ESP_LOGW(TAG, "⏳ Timeout");
+                //ESP_LOGW(TAG, "⏳ Timeout");
                 mqtt_connect(); 
                 subcribe_topic_mqtt(); 
                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
@@ -573,16 +764,18 @@ void app_main(void)
         }
     }  
 
-    if(wakeup_by_timer){      
+    if(wakeup_by_timer){                    
+        
         handle_create_event();
-        mqtt_connect();     // Kết nối MQTT   
+        mqtt_connect();     // Kết nối MQTT               
         my_timer_start();
-
+        //ESP_LOGI(TAG, "WAKEUP BY TIMER");                     
+        
         while (!g_timer_done)
         {
                 subcribe_topic_mqtt(); 
                 // Khởi tạo Task UART2
-                start_uart_task();
+                start_uart_task();           
                 // Chờ Task UART2 chạy 30 giây
                 vTaskDelay(pdMS_TO_TICKS(50 * 1000)); // 60 giây
                 // Dừng Task UART2
@@ -633,32 +826,32 @@ void app_main(void)
                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
                 }    
             }
-
+                     
                         char mqtt_payload[BUFFER_SIZE];  
                         snprintf(mqtt_payload, sizeof(mqtt_payload),
                         "["    
-                        "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
-                        "{\"name\":\"Stolen\",\"value\":false,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Move\",\"value\":false,\"timestamp\":\"%s\"}"
+                            "{\"name\":\"Latitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
+                            "{\"name\":\"Stolen\",\"value\":false,\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                            "{\"name\":\"Move\",\"value\":false,\"timestamp\":\"%s\"}"  
                         "]",
                         global_gps_data.latitude,  
                         time_buffer_module_sim,
-                        global_gps_data.longitude,  
+                        global_gps_data.longitude,     
                         time_buffer_module_sim,
                         global_gps_data.battery_capacity,
                         time_buffer_module_sim,
                         // global_gps_data.Stolen ? "true" : "false",
                         time_buffer_module_sim, 
-                        global_gps_data.bluetooth ? "true" : "false",
+                        global_gps_data.bluetooth ? "ON" : "OFF",
                         time_buffer_module_sim,  
                         // global_gps_data.move ? "true" : "false",
-                        time_buffer_module_sim       
+                        time_buffer_module_sim          
                         );
     
-                        mqtt_publish("GPS/Status/G002", mqtt_payload);
+                        mqtt_publish("GPS/Status/G001", mqtt_payload);
         }
     }
     else{
@@ -673,10 +866,11 @@ void app_main(void)
                 stored_roll = current_roll;
                 stored_pitch = current_pitch;
                 stored_yaw = current_yaw;
-                ////ESP_LOGI(TAG, "Saved initial angles to RTC IO : Roll=%.2f, Pitch=%.2f, Yaw=%.2f", current_roll, current_pitch, current_yaw);
+                //////ESP_LOGI(TAG, "Saved initial angles to RTC IO : Roll=%.2f, Pitch=%.2f, Yaw=%.2f", current_roll, current_pitch, current_yaw);
             } else {
                 read_mpu6050_angles_alarm(&stored_roll, &stored_pitch, &stored_yaw);
-                if(alarm_mpu){     
+                if(alarm_mpu){ 
+
                         handle_create_event();  
                         module_sim_call_sms();    
                         mqtt_connect(); 
@@ -708,8 +902,9 @@ void app_main(void)
                         "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                         "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
                         "{\"name\":\"Stolen\",\"value\":true,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"    
+                        "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"       
                         "]",
                         global_gps_data.latitude,  
                         time_buffer_module_sim,
@@ -719,16 +914,19 @@ void app_main(void)
                         time_buffer_module_sim,
                         // global_gps_data.Stolen ? "true" : "false",
                         time_buffer_module_sim, 
-                        global_gps_data.bluetooth ? "true" : "false",
-                        time_buffer_module_sim,  
+                        global_gps_data.bluetooth ? "ON" : "OFF",
+                        time_buffer_module_sim,
+                        global_gps_data.buzzer ? "ON" : "OFF",
+                        time_buffer_module_sim,   
                         // global_gps_data.move ? "true" : "false",
                         time_buffer_module_sim       
                         );
     
-                        mqtt_publish("GPS/Status/G002", mqtt_payload);
+                        mqtt_publish("GPS/Status/G001", mqtt_payload);
 
                         while (true)
                         {
+                                wakeup_by_timer = false;
                                 subcribe_topic_mqtt();  // Lấy dữ liệu cài đặt về
                                 // Khởi tạo Task UART2
                                 start_uart_task();
@@ -757,7 +955,7 @@ void app_main(void)
                 stored_pitch = current_pitch;
                 stored_yaw = current_yaw;
                 
-                ////ESP_LOGI(TAG, "Saved initial angles to RTC IO : Roll=%.2f, Pitch=%.2f, Yaw=%.2f",current_roll, current_pitch, current_yaw);
+                //ESP_LOGI(TAG, "Saved initial angles to RTC IO : Roll=%.2f, Pitch=%.2f, Yaw=%.2f",current_roll, current_pitch, current_yaw);
                         
             } else {
                 read_mpu6050_angles_alarm(&stored_roll, &stored_pitch, &stored_yaw);
@@ -773,8 +971,8 @@ void app_main(void)
                         TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
                         while( true ){   
                             if (is_valid_time_format(time_buffer_module_sim)) {
-                                // //printf("Thời gian báo thức: %s\n", time_buffer_alarm);
-                                // //printf("Thời gian hiện tại: %s\n", time_buffer_module_sim);
+                                printf("Thời gian báo thức: %s\n", time_buffer_alarm);
+                                printf("Thời gian hiện tại: %s\n", time_buffer_module_sim);
                                 break;  
                             }
                             vTaskDelay(pdMS_TO_TICKS(500));
@@ -793,7 +991,7 @@ void app_main(void)
                         "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                         "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
                         "{\"name\":\"Stolen\",\"value\":false,\"timestamp\":\"%s\"},"
-                        "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
+                        "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
                         "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"
                         "]",
                         global_gps_data.latitude,  
@@ -804,13 +1002,13 @@ void app_main(void)
                         time_buffer_module_sim,
                         // global_gps_data.Stolen ? "true" : "false",
                         time_buffer_module_sim, 
-                        global_gps_data.bluetooth ? "true" : "false",
+                        global_gps_data.bluetooth ? "ON" : "OFF",
                         time_buffer_module_sim,  
                         // global_gps_data.move ? "true" : "false",
-                        time_buffer_module_sim       
-                        );
+                        time_buffer_module_sim          
+                        );                     
     
-                        mqtt_publish("GPS/Status/G002", mqtt_payload);
+                        mqtt_publish("GPS/Status/G001", mqtt_payload);  
 
                         while (true)
                         {
@@ -869,26 +1067,38 @@ void app_main(void)
 
             if(data.Emergency){ 
                 emergency = 1; // Chế độ khẩn cấp
-                gpio_set_level(GPIO_NUM_18, 1);
-                vTaskDelay(pdMS_TO_TICKS(1000));
-                gpio_set_level(GPIO_NUM_18, 0);
-                ////ESP_LOGI(TAG, "EMERGENCY");
 
+                // gpio_set_level(GPIO_NUM_18, 1);
+                // vTaskDelay(pdMS_TO_TICKS(1000));
+                // gpio_set_level(GPIO_NUM_18, 0);
+                
+                //ESP_LOGI(TAG, "EMERGENCY");
+  
                 fix_lattitude = data.Latitude;
                 fix_longtitude = data.Longitude;
                 radius = data.SafeRadius;
+
+                strncpy(phone_number, data.PhoneNumber, PHONE_NUMBER_SIZE - 1);
+                phone_number[PHONE_NUMBER_SIZE - 1] = '\0';  // Đảm bảo kết thúc chuỗi
+                
+                   
             }
             else{
-                emergency = 2; // Chế độ hàng rào
+                emergency = 2; // Chế độ hàng rào  
                 fix_lattitude = data.Latitude;
                 fix_longtitude = data.Longitude;
-                radius = data.SafeRadius;
-                gpio_set_level(GPIO_NUM_18, 1);
-                vTaskDelay(pdMS_TO_TICKS(2000));
-                gpio_set_level(GPIO_NUM_18, 0); 
-                ////ESP_LOGI(TAG, "NORMAL");  
-                ////ESP_LOGI(TAG, "Lat: %.5f , Lng : %.5f ", fix_lattitude , fix_longtitude);
-                ////ESP_LOGI(TAG, "Radius: %d", radius);
+                radius = data.SafeRadius;   
+
+                strncpy(phone_number, data.PhoneNumber, PHONE_NUMBER_SIZE - 1);
+                phone_number[PHONE_NUMBER_SIZE - 1] = '\0';  // Đảm bảo kết thúc chuỗi
+
+                // gpio_set_level(GPIO_NUM_18, 1);
+                // vTaskDelay(pdMS_TO_TICKS(2000));
+                // gpio_set_level(GPIO_NUM_18, 0); 
+
+                //ESP_LOGI(TAG, "NORMAL");  
+                //ESP_LOGI(TAG, "Lat: %.5f , Lng : %.5f ", fix_lattitude , fix_longtitude);
+                //ESP_LOGI(TAG, "Radius: %d", radius);
             }
             
             extract_time_alarm(data.AlarmTime, time_buffer_alarm);
@@ -896,8 +1106,8 @@ void app_main(void)
             break;
         }
         vTaskDelay(pdMS_TO_TICKS(500));
-        if (xTaskGetTickCount() - start_time > pdMS_TO_TICKS(30000)) {
-            //ESP_LOGW(TAG, "⏳ Timeout");
+        if (xTaskGetTickCount() - start_time > pdMS_TO_TICKS(30000)) {        
+            ESP_LOGW(TAG, "⏳ Timeout");       
             mqtt_connect(); 
             subcribe_topic_mqtt(); 
             TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
@@ -908,14 +1118,14 @@ void app_main(void)
     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
     while( true ){
         if (is_valid_time_format(time_buffer_module_sim)) {
-            //printf("Thời gian báo thức: %s\n", time_buffer_alarm);
-            //printf("Thời gian hiện tại: %s\n", time_buffer_module_sim);
+            printf("Thời gian báo thức: %s\n", time_buffer_alarm);
+            printf("Thời gian hiện tại: %s\n", time_buffer_module_sim);
             set_esp_sleep_time(time_buffer_module_sim, time_buffer_alarm);
             break;  
         }
         vTaskDelay(pdMS_TO_TICKS(500));
         if (xTaskGetTickCount() - start_time_get_current_time > pdMS_TO_TICKS(30000)) {
-            ////ESP_LOGW(TAG, "⏳ Timeout");
+            ESP_LOGW(TAG, "⏳ Timeout");  
             get_time_from_module_sim();
             TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
         }    
@@ -926,15 +1136,15 @@ void app_main(void)
     gpio_hold_en(GPIO_SIM_TRIGGER); // Giữ trạng thái khi ngủ
 
     gpio_set_direction(GPIO_PEN, GPIO_MODE_OUTPUT);
-    gpio_set_level(GPIO_PEN, 0);  // Đưa chân GPIO xuống mức thấp
+    gpio_set_level(GPIO_PEN, 0);  // Đưa chân GPIO xuống mức thấp   
     gpio_hold_en(GPIO_PEN); // Giữ trạng thái khi ngủ
-
+   
     gpio_set_direction(GPIO_GPS_TRIGGER, GPIO_MODE_OUTPUT);
     gpio_set_level(GPIO_GPS_TRIGGER, 1);  // Đưa chân GPIO xuống mức thấp
     gpio_hold_en(GPIO_GPS_TRIGGER); // Giữ trạng thái khi ngủ   
 
-    gpio_deep_sleep_hold_en();
-    //printf("Sleepppppppppppppppppppp\n");
+    gpio_deep_sleep_hold_en();       
+           
     esp_deep_sleep_start();  
     //xTaskCreate(deep_sleep_task, "deep_sleep_task", 4096, NULL, 10, NULL);
 }

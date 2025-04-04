@@ -1,0 +1,306 @@
+[0/1] Re-running CMake...
+-- Component directory D:/VIAM LAB/Luanvan/GPS/components/arduino does not contain a CMakeLists.txt file. No component will be added
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/led_strip (2.5.5)
+NOTICE: [2/2] idf (5.1.5)
+-- Project sdkconfig file D:/VIAM LAB/Luanvan/GPS/sdkconfig
+-- Could NOT find Threads (missing: Threads_FOUND) 
+-- App "GPS_Tracker" version: 589dba8-dirty
+-- Adding linker script D:/VIAM LAB/Luanvan/GPS/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script C:/Espressif/frameworks/esp-idf-v5.1.5/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: MPU SIM adc_battery app_trace app_update bluetooth bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__led_strip esptool_py fatfs freertos gps_library hal heap http_parser idf_test ieee802154 json log lwip main main_library mbedtls mqtt my_timer newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: D:/VIAM LAB/Luanvan/GPS/components/MPU D:/VIAM LAB/Luanvan/GPS/components/SIM D:/VIAM LAB/Luanvan/GPS/components/adc_battery C:/Espressif/frameworks/esp-idf-v5.1.5/components/app_trace C:/Espressif/frameworks/esp-idf-v5.1.5/components/app_update D:/VIAM LAB/Luanvan/GPS/components/bluetooth C:/Espressif/frameworks/esp-idf-v5.1.5/components/bootloader C:/Espressif/frameworks/esp-idf-v5.1.5/components/bootloader_support C:/Espressif/frameworks/esp-idf-v5.1.5/components/bt C:/Espressif/frameworks/esp-idf-v5.1.5/components/cmock C:/Espressif/frameworks/esp-idf-v5.1.5/components/console C:/Espressif/frameworks/esp-idf-v5.1.5/components/cxx C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver C:/Espressif/frameworks/esp-idf-v5.1.5/components/efuse C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp-tls C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_adc C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_app_format C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_coex C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_common C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_eth C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_event C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_gdbstub C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hid C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_http_client C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_http_server C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_https_ota C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_https_server C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_hw_support C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_lcd C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_local_ctrl C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_mm C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_netif C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_netif_stack C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_partition C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_phy C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_pm C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_psram C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_ringbuf C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_rom C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_system C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_timer C:/Espressif/frameworks/esp-idf-v5.1.5/components/esp_wifi C:/Espressif/frameworks/esp-idf-v5.1.5/components/espcoredump D:/VIAM LAB/Luanvan/GPS/managed_components/espressif__led_strip C:/Espressif/frameworks/esp-idf-v5.1.5/components/esptool_py C:/Espressif/frameworks/esp-idf-v5.1.5/components/fatfs C:/Espressif/frameworks/esp-idf-v5.1.5/components/freertos D:/VIAM LAB/Luanvan/GPS/components/gps_library C:/Espressif/frameworks/esp-idf-v5.1.5/components/hal C:/Espressif/frameworks/esp-idf-v5.1.5/components/heap C:/Espressif/frameworks/esp-idf-v5.1.5/components/http_parser C:/Espressif/frameworks/esp-idf-v5.1.5/components/idf_test C:/Espressif/frameworks/esp-idf-v5.1.5/components/ieee802154 C:/Espressif/frameworks/esp-idf-v5.1.5/components/json C:/Espressif/frameworks/esp-idf-v5.1.5/components/log C:/Espressif/frameworks/esp-idf-v5.1.5/components/lwip D:/VIAM LAB/Luanvan/GPS/main D:/VIAM LAB/Luanvan/GPS/components/main_library C:/Espressif/frameworks/esp-idf-v5.1.5/components/mbedtls C:/Espressif/frameworks/esp-idf-v5.1.5/components/mqtt D:/VIAM LAB/Luanvan/GPS/components/my_timer C:/Espressif/frameworks/esp-idf-v5.1.5/components/newlib C:/Espressif/frameworks/esp-idf-v5.1.5/components/nvs_flash C:/Espressif/frameworks/esp-idf-v5.1.5/components/openthread C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table C:/Espressif/frameworks/esp-idf-v5.1.5/components/perfmon C:/Espressif/frameworks/esp-idf-v5.1.5/components/protobuf-c C:/Espressif/frameworks/esp-idf-v5.1.5/components/protocomm C:/Espressif/frameworks/esp-idf-v5.1.5/components/pthread C:/Espressif/frameworks/esp-idf-v5.1.5/components/sdmmc C:/Espressif/frameworks/esp-idf-v5.1.5/components/soc C:/Espressif/frameworks/esp-idf-v5.1.5/components/spi_flash C:/Espressif/frameworks/esp-idf-v5.1.5/components/spiffs C:/Espressif/frameworks/esp-idf-v5.1.5/components/tcp_transport C:/Espressif/frameworks/esp-idf-v5.1.5/components/ulp C:/Espressif/frameworks/esp-idf-v5.1.5/components/unity C:/Espressif/frameworks/esp-idf-v5.1.5/components/usb C:/Espressif/frameworks/esp-idf-v5.1.5/components/vfs C:/Espressif/frameworks/esp-idf-v5.1.5/components/wear_levelling C:/Espressif/frameworks/esp-idf-v5.1.5/components/wifi_provisioning C:/Espressif/frameworks/esp-idf-v5.1.5/components/wpa_supplicant C:/Espressif/frameworks/esp-idf-v5.1.5/components/xtensa
+-- Configuring done (7.5s)
+-- Generating done (0.8s)
+-- Build files have been written to: D:/VIAM LAB/Luanvan/GPS/build
+[1/76] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+[2/76] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[3/76] Building C object esp-idf/MPU/CMakeFiles/__idf_MPU.dir/cmd_i2ctools.c.obj
+[4/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_sha.c.obj
+[5/76] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[6/76] Linking C static library esp-idf\protocomm\libprotocomm.a
+[7/76] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[8/76] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[9/76] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.obj
+[10/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_common.c.obj
+[11/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_elf.c.obj
+[12/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_crc.c.obj
+[13/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_uart.c.obj
+[14/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_flash.c.obj
+[15/76] Building C object esp-idf/my_timer/CMakeFiles/__idf_my_timer.dir/my_timer.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.c:7:20: warning: 'TAG' defined but not used [-Wunused-variable]
+    7 | static const char *TAG = "MY_TIMER_MODULE";
+      |                    ^~~
+[16/76] Linking C static library esp-idf\json\libjson.a
+[17/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/core_dump_binary.c.obj
+[18/76] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[19/76] Building C object esp-idf/adc_battery/CMakeFiles/__idf_adc_battery.dir/adc.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.c: In function 'adc_init':
+D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.c:49:9: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   49 |         .atten = ADC_ATTEN_DB_11, // Sửa thành giá trị hợp lệ
+      |         ^
+In file included from C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:15:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/include/hal/adc_types.h:47:5: note: declared here
+   47 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.c:59:9: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+   59 |         .atten = ADC_ATTEN_DB_11,
+      |         ^
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/hal/include/hal/adc_types.h:47:5: note: declared here
+   47 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+[20/76] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[21/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[22/76] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+[23/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[24/76] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[25/76] Building C object esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/src/port/xtensa/core_dump_port.c.obj
+[26/76] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_ble.c.obj
+[27/76] Linking C static library esp-idf\my_timer\libmy_timer.a
+[28/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[29/76] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+[30/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[31/76] Linking C static library esp-idf\adc_battery\libadc_battery.a
+[32/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[33/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[34/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_ctrl.c.obj
+[35/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_config.c.obj
+[36/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_config.pb-c.c.obj
+[37/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_ctrl.pb-c.c.obj
+[38/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_constants.pb-c.c.obj
+[39/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/proto-c/wifi_scan.pb-c.c.obj
+[40/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_scan.c.obj
+[41/76] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[42/76] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+[43/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/handlers.c.obj
+[44/76] Linking C static library esp-idf\app_trace\libapp_trace.a
+[45/76] Linking C static library esp-idf\cmock\libcmock.a
+[46/76] Building C object esp-idf/MPU/CMakeFiles/__idf_MPU.dir/i2ctools_example_main.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/MPU/mpu6050.h:26,
+                 from D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/GPS/components/MPU/mpu6050.h:36:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_first':
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c:244:18: warning: unused variable 'last_time' [-Wunused-variable]
+  244 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c:243:13: warning: unused variable 'msg' [-Wunused-variable]
+  243 |         int msg;
+      |             ^~~
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c: In function 'read_mpu6050_angles_alarm':
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c:327:18: warning: unused variable 'last_time' [-Wunused-variable]
+  327 |         uint32_t last_time = esp_timer_get_time();  // Thời gian trước đó
+      |                  ^~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c:326:13: warning: unused variable 'msg' [-Wunused-variable]
+  326 |         int msg;
+      |             ^~~
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c: At top level:
+D:/VIAM LAB/Luanvan/GPS/components/MPU/i2ctools_example_main.c:10:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   10 | static const char *TAG = "i2c-tools";
+      |                    ^~~
+[47/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj
+[48/76] Building C object esp-idf/bluetooth/CMakeFiles/__idf_bluetooth.dir/blue.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/GPS/components/bluetooth/blue.h:22,
+                 from D:/VIAM LAB/Luanvan/GPS/components/bluetooth/blue.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+[49/76] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[50/76] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[51/76] Linking C static library esp-idf\esp_local_ctrl\libesp_local_ctrl.a
+[52/76] Linking C static library esp-idf\perfmon\libperfmon.a
+[53/76] Linking C static library esp-idf\espcoredump\libespcoredump.a
+[54/76] Building C object esp-idf/SIM/CMakeFiles/__idf_SIM.dir/sim_a7680c.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.c:22:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   22 | static const char *TAG = "SIM_A7680C";
+      |                    ^~~
+[55/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_softap.c.obj
+[56/76] Linking C static library esp-idf\spiffs\libspiffs.a
+[57/76] Linking C static library esp-idf\mqtt\libmqtt.a
+[58/76] Linking C static library esp-idf\MPU\libMPU.a
+[59/76] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\GPS\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/GPS/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[60/76] Linking C static library esp-idf\SIM\libSIM.a
+[61/76] No install step for 'bootloader'
+[62/76] Linking C static library esp-idf\bluetooth\libbluetooth.a
+[63/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_ble.c.obj
+[64/76] Completed 'bootloader'
+[65/76] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+[66/76] Linking C static library esp-idf\wifi_provisioning\libwifi_provisioning.a
+[67/76] Building C object esp-idf/gps_library/CMakeFiles/__idf_gps_library.dir/gps.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:25,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.h:20:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.c:10:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   10 | static const char *TAG = "GPS_PROCESS";
+      |                    ^~~
+[68/76] Linking C static library esp-idf\gps_library\libgps_library.a
+[69/76] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.h:19,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:23,
+                 from D:/VIAM LAB/Luanvan/GPS/main/main.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: In function 'uart0_task':
+D:/VIAM LAB/Luanvan/GPS/main/main.c:261:44: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  261 |                                 TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:320:40: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  320 |                             TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: In function 'deep_sleep_task':
+D:/VIAM LAB/Luanvan/GPS/main/main.c:527:21: warning: unused variable 'pin' [-Wunused-variable]
+  527 |                 int pin = __builtin_ffsll(wakeup_pin_mask) - 1;
+      |                     ^~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/GPS/main/main.c:606:1: warning: ignoring attribute 'section (".rtc.data.8")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
+  606 | RTC_DATA_ATTR float stored_roll = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:62:28: note: previous declaration here
+   62 | extern RTC_DATA_ATTR float stored_roll;
+      |                            ^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:607:1: warning: ignoring attribute 'section (".rtc.data.9")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
+  607 | RTC_DATA_ATTR float stored_pitch = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:63:28: note: previous declaration here
+   63 | extern RTC_DATA_ATTR float stored_pitch;
+      |                            ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:608:1: warning: ignoring attribute 'section (".rtc.data.10")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
+  608 | RTC_DATA_ATTR float stored_yaw = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:64:28: note: previous declaration here
+   64 | extern RTC_DATA_ATTR float stored_yaw;
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:609:1: warning: ignoring attribute 'section (".rtc.data.11")' because it conflicts with previous 'section (".rtc.data.6")' [-Wattributes]
+  609 | RTC_DATA_ATTR int emergency = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:68:26: note: previous declaration here
+   68 | extern RTC_DATA_ATTR int emergency;
+      |                          ^~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:610:1: warning: ignoring attribute 'section (".rtc.data.12")' because it conflicts with previous 'section (".rtc.data.3")' [-Wattributes]
+  610 | RTC_DATA_ATTR double fix_lattitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:65:29: note: previous declaration here
+   65 | extern RTC_DATA_ATTR double fix_lattitude;
+      |                             ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:611:1: warning: ignoring attribute 'section (".rtc.data.13")' because it conflicts with previous 'section (".rtc.data.4")' [-Wattributes]
+  611 | RTC_DATA_ATTR double fix_longtitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:66:29: note: previous declaration here
+   66 | extern RTC_DATA_ATTR double fix_longtitude;
+      |                             ^~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:612:1: warning: ignoring attribute 'section (".rtc.data.14")' because it conflicts with previous 'section (".rtc.data.5")' [-Wattributes]
+  612 | RTC_DATA_ATTR int radius = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:67:26: note: previous declaration here
+   67 | extern RTC_DATA_ATTR int radius;
+      |                          ^~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:614:1: warning: ignoring attribute 'section (".rtc.data.15")' because it conflicts with previous 'section (".rtc.data.7")' [-Wattributes]
+  614 | RTC_DATA_ATTR char phone_number[PHONE_NUMBER_SIZE] = "+84901234567";  // 15 ký tự đủ lưu số quốc tế
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:69:27: note: previous declaration here
+   69 | extern RTC_DATA_ATTR char phone_number[PHONE_NUMBER_SIZE];
+      |                           ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: In function 'app_main':
+D:/VIAM LAB/Luanvan/GPS/main/main.c:705:28: warning: unused variable 'start_time' [-Wunused-variable]
+  705 |                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:769:32: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  769 |                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:837:44: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  837 |                                 TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:922:44: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  922 |                                 TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:1053:24: warning: unused variable 'start_time' [-Wunused-variable]
+ 1053 |             TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:1070:24: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+ 1070 |             TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/GPS/main/main.c:512:13: warning: 'deep_sleep_task' defined but not used [-Wunused-function]
+  512 | static void deep_sleep_task(void *args)
+      |             ^~~~~~~~~~~~~~~
+[70/76] Linking C static library esp-idf\main\libmain.a
+[71/76] Generating ld/sections.ld
+[72/76] Building C object CMakeFiles/GPS_Tracker.elf.dir/project_elf_src_esp32.c.obj
+[73/76] Linking CXX executable GPS_Tracker.elf
+[74/76] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/GPS/build/GPS_Tracker.bin
+[75/76] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\GPS\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/GPS/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/GPS/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0x2e770 bytes. Smallest app partition is 0x100000 bytes. 0xd1890 bytes (82%) free.

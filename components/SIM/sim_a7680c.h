@@ -34,6 +34,7 @@
 #define READ_TIMEOUT_CALL 30000
 #define MQTT_RECONNECT_BIT BIT0
 #define CALL_RECONNECT_BIT BIT1
+
 extern char payload_json[256];  // Khai báo biến toàn cục
 extern bool sub_topic;  // Khai báo biến toàn cục
 // Function declarations

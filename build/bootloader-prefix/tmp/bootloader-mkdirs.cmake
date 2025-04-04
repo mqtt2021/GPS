@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/frameworks/esp-idf-v5.1.5/components/bootloader/subp
   file(MAKE_DIRECTORY "C:/Espressif/frameworks/esp-idf-v5.1.5/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader"
-  "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix"
-  "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/tmp"
-  "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src"
-  "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/VIAM LAB/Luanvan/GPS/build/bootloader"
+  "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix"
+  "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix/tmp"
+  "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix/src"
+  "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/VIAM LAB/Luanvan/ESP_luanvan/GPS_Tracker/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/VIAM LAB/Luanvan/GPS/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

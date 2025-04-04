@@ -47,9 +47,8 @@ void extract_json_payload(const char *response) {
                 size_t length = end - start;
                 if (length > 255) length = 255;  // Giới hạn độ dài tối đa 255 ký tự tránh lỗi bộ nhớ
                 strncpy(payload_json, start, length);
-                payload_json[length] = '\0';  // Đảm bảo chuỗi kết thúc
-
-                // printf("payload_json: %s\n", payload_json);   
+                payload_json[length] = '\0';  // Đảm bảo chuỗi kết thúc                
+                // printf("payload_json: %s\n", payload_json);      
                 // printf("///////////////////////////////////////////////\n");
                 // gpio_set_level(GPIO_NUM_18, 0);
                 // vTaskDelay(pdMS_TO_TICKS(2000));
@@ -58,7 +57,7 @@ void extract_json_payload(const char *response) {
         }
     }
     else{
-        //printf("start NULL\n");
+                //printf("start NULL\n");
     }
 }
 
@@ -131,7 +130,7 @@ void uart_event_task(void *pvParameters) {
                             if (buffer_index + len < BUFFER_SIZE - 1) {  
                                 strncat(mqtt_rx_buffer, (char *)data, len);  
                                 buffer_index += len;  
-                            } else {  
+                            } else {              
                                ////ESP_LOGW(TAG, "⚠️ Buffer overflow, clearing buffer!");  
                                 memset(mqtt_rx_buffer, 0, BUFFER_SIZE);  
                                 buffer_index = 0;  
@@ -144,10 +143,6 @@ void uart_event_task(void *pvParameters) {
                                 if(send_connect_mqtt_sever){ // gửi lệnh connet cuối
                                     connect_mqtt_sever = true;
                                 }
-
-                               
-
-
                                 //ESP_LOGI(TAG, "✅ Response: OK");
                                 
                                 if (start_call) {    
@@ -235,7 +230,7 @@ void uart_event_task(void *pvParameters) {
                     break;
 
                 default:
-                    //ESP_LOGI(TAG, "Other UART event: %d", event.type);
+                //ESP_LOGI(TAG, "Other UART event: %d", event.type);
                     break;
                 }
         }
@@ -351,14 +346,14 @@ void read_uart_response(void)
 
     if (total_len > 0) {
         response[total_len] = '\0';
-        //ESP_LOGI(TAG, "Total Response: %s\n", response);
+            //ESP_LOGI(TAG, "Total Response: %s\n", response);
         if(sub_topic){
             extract_json_payload(response);
         }
        
-        //ESP_LOGI(TAG, "-------------------------------------\n");
+            //ESP_LOGI(TAG, "-------------------------------------\n");
     } else {
-        //ESP_LOGI(TAG, "No response or timeout");
+            //ESP_LOGI(TAG, "No response or timeout");
     }
 }
 
@@ -386,7 +381,7 @@ void read_uart_response(void)
 //                 }
 //                 if(strstr(response, "\r\nERROR\r\n"))
 //                 {
-//                      //ESP_LOGI(TAG, "Response: ERROR");
+//                      ESP_LOGI(TAG, "Response: ERROR");
 //                 }
 //                 break;    
 //             }
@@ -396,10 +391,10 @@ void read_uart_response(void)
 //     }
 //     if (total_len > 0) {
 //         response[total_len] = '\0';
-//          //ESP_LOGI(TAG, "Total Response: %s\n", response);
-//          //ESP_LOGI(TAG, "-------------------------------------\n");
+//                  ESP_LOGI(TAG, "Total Response: %s\n", response);
+//                  ESP_LOGI(TAG, "-------------------------------------\n");
 //     } else {
-//          //ESP_LOGI(TAG, "No response or timeout");
+//                ESP_LOGI(TAG, "No response or timeout");
 //     }
 // }
 
@@ -433,7 +428,7 @@ void read_uart_response(void)
 //                 }
 //                 if(strstr(response, "\r\nERROR\r\n"))
 //                 {
-//                      //ESP_LOGI(TAG, "Response: ERROR");
+//                     ESP_LOGI(TAG, "Response: ERROR");
 //                     flag_call = false;
 //                     // //gpio_set_level(GPIO_NUM_18, 1);
 //                     // vTaskDelay(pdMS_TO_TICKS(5000));
@@ -443,10 +438,10 @@ void read_uart_response(void)
 //                 if(strstr(response, "\r\nVOICE CALL: END\r\n"))
 //                 {
 //                     flag_call = true;
-//                      //ESP_LOGI(TAG, "Response: ERROR");
+//                    ESP_LOGI(TAG, "Response: ERROR");
 //                     out_time_call = false;
 //                     // elapsed_time = (esp_timer_get_time() - start_call_time) / 1000000; // Tính thời gian đã gọi (giây)
-//                     // //printf("Cuộc gọi kết thúc sau %lld giây!\n", elapsed_time);
+//                      printf("Cuộc gọi kết thúc sau %lld giây!\n", elapsed_time);
 //                     break;    
 //                 }     
 //             }
@@ -462,40 +457,40 @@ void mqtt_publish(const char *topic, const char *message) {
     send_command_pub = false; 
 
     snprintf(cmd, sizeof(cmd), "AT+CMQTTTOPIC=0,%d", (int)strlen(topic));
-    ////ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTTOPIC=0,%d",(int)strlen(topic));
+    //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTTOPIC=0,%d",(int)strlen(topic));
     send_at_command(cmd); 
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ////ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
-    ////ESP_LOGI(TAG, "Begin send AT command: GPS/Status/G001");
+    //ESP_LOGI(TAG, "Begin send AT command: GPS/Status/G001");
     send_at_command(topic);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ////ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
     snprintf(cmd, sizeof(cmd), "AT+CMQTTPAYLOAD=0,%d", (int)strlen(message));
-    ////ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTPAYLOAD=0,%d",(int)strlen(message));
+    //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTPAYLOAD=0,%d",(int)strlen(message));
     send_at_command(cmd);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ////ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
-    ////ESP_LOGI(TAG, "Begin send AT command: message");
+    //ESP_LOGI(TAG, "Begin send AT command: message");
     send_at_command(message);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ////ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
     send_command_pub = true;
-    ////ESP_LOGI(TAG, "Begin send AT command:AT+CMQTTPUB=0,1,60,1");
+    //ESP_LOGI(TAG, "Begin send AT command:AT+CMQTTPUB=0,1,60,1");
     send_at_command("AT+CMQTTPUB=0,1,60,1");
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-    ////ESP_LOGI(TAG, "Begin read_uart_response");
+    //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
 
-            gpio_set_level(GPIO_NUM_18, 1);
-            vTaskDelay(pdMS_TO_TICKS(1000));   
-            gpio_set_level(GPIO_NUM_18, 0); 
+            // gpio_set_level(GPIO_NUM_18, 1);
+            // vTaskDelay(pdMS_TO_TICKS(1000));   
+            // gpio_set_level(GPIO_NUM_18, 0); 
 }
 
 void mqtt_connect(void)
@@ -514,7 +509,7 @@ void mqtt_connect(void)
             //ESP_LOGI(TAG, "Attempt %d to connect MQTT", retry_count + 1);
             //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTDISC=0,60");
             send_connect_mqtt_sever = false;
-           //   //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTREL=0\n");
+           // ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTREL=0\n");
             send_at_command("AT+CMQTTDISC=0,60");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
             //ESP_LOGI(TAG, "Begin read_uart_response");
@@ -529,7 +524,7 @@ void mqtt_connect(void)
             //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSTOP\n");
             send_at_command("AT+CMQTTSTOP");
             vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-            //ESP_LOGI(TAG, "Begin read_uart_response");
+            //SP_LOGI(TAG, "Begin read_uart_response");
             //read_uart_response();
             
             //ESP_LOGI(TAG, "Begin send AT command: AT+CMQTTSTART\n");
@@ -555,17 +550,17 @@ void mqtt_connect(void)
             //read_uart_response();
             
             if (connect_mqtt_sever == true) {
-            //ESP_LOGI(TAG, "CONNECTED SUCESSFULLY");   
+                //ESP_LOGI(TAG, "CONNECTED SUCESSFULLY");   
                 connect_mqtt_sever = false;
                 send_connect_mqtt_sever = false;
 
-                gpio_set_level(GPIO_NUM_18, 1);
-                vTaskDelay(pdMS_TO_TICKS(3000));
-                gpio_set_level(GPIO_NUM_18, 0); 
+                // gpio_set_level(GPIO_NUM_18, 1);
+                // vTaskDelay(pdMS_TO_TICKS(3000));
+                // gpio_set_level(GPIO_NUM_18, 0); 
                 
                 break;
             } else {
-            //ESP_LOGI(TAG, "CONNECTED UNSUCESSFULLY");
+                //ESP_LOGI(TAG, "CONNECTED UNSUCESSFULLY");
                 retry_count++;
                 vTaskDelay(pdMS_TO_TICKS(1000));  // Đợi trước khi thử lại
                 send_connect_mqtt_sever = false;
@@ -620,7 +615,6 @@ void mqtt_reconnect_task(void *pvParameters) {
  
 void module_sim_call_sms(void)
 {  
-    
     //ESP_LOGI(TAG, "=== CALL START ===");    
         
     int count_reset_sim  = 0; // số lần reset chân gpio_sim
@@ -628,24 +622,24 @@ void module_sim_call_sms(void)
     int retry_count = 0; // số lần gọi điện
 
     while(count_reset_sim < 10){
-        //ESP_LOGI(TAG, "Bật chân sim lần %d\n", count_reset_sim );
+    //ESP_LOGI(TAG, "Bật chân sim lần %d\n", count_reset_sim );
         while(count_AT_sim < 10 ){
             
-                //ESP_LOGI(TAG, "Gửi lệnh sẵn sàng lần %d\n", count_AT_sim);
+        //ESP_LOGI(TAG, "Gửi lệnh sẵn sàng lần %d\n", count_AT_sim);
             start_call = true;
 
             send_at_command("AT+CPIN?");
             vTaskDelay(pdMS_TO_TICKS(2000));
             //read_uart_response();
             if(ready_sim){
-                //ESP_LOGI(TAG, "Sim sẵn sàng \n");
+        //ESP_LOGI(TAG, "Sim sẵn sàng \n");
                 break;
             }
             count_AT_sim++;
         }
 
         if( count_AT_sim == 10 || count_AT_sim > 10  ){    // sim bị treo, cần reset
-            //ESP_LOGI(TAG, "sim bị treo, cần reset \n");
+        //ESP_LOGI(TAG, "sim bị treo, cần reset \n");
             //gpio_set_level(GPIO_SIM_TRIGGER, 0);
             vTaskDelay(pdMS_TO_TICKS(5000));   
             //gpio_set_level(GPIO_SIM_TRIGGER, 1); 
@@ -656,10 +650,20 @@ void module_sim_call_sms(void)
                 ready_sim = false;
                 while (retry_count < 10) {   
                         send_command_call = true;
-                        //ESP_LOGI(TAG, "Attempt %d to Call", retry_count + 1);
-                        send_at_command("ATD0559687397;"); 
-                        vTaskDelay(pdMS_TO_TICKS(5000));
-                        //read_uart_response_call_sms();
+                //ESP_LOGI(TAG, "Attempt %d to Call", retry_count + 1);
+                        //send_at_command("ATD0971237458;"); 
+                        
+                        // Tạo chuỗi AT command với số điện thoại
+                        char at_command[25]; 
+
+                        snprintf(at_command, sizeof(at_command), "ATD%s;", phone_number); 
+                        
+                        // printf("phone: %s\n", at_command);
+                        
+                        send_at_command(at_command);
+                           
+                        vTaskDelay(pdMS_TO_TICKS(5000));   
+                        //read_uart_response_call_sms();   
 
                         if(end_call){
                             break;
@@ -668,9 +672,9 @@ void module_sim_call_sms(void)
                 }
         }
 
-        if(end_call){
-            send_command_call = false;
-            end_call = false;
+        if(end_call){      
+            send_command_call = false;          
+            end_call = false;       
             break;
         }
         if(retry_count == 5 || retry_count > 5){
@@ -683,9 +687,9 @@ void module_sim_call_sms(void)
         flag_call = false;
     }
 
-    int count_sms = 7;
+    int count_sms = 10;
     //// Gửi SMS
-    while (count_sms < 1)
+    while (count_sms < 2)
     {             
         //ESP_LOGI(TAG, "Begin send SMS");
         send_at_command("AT");
@@ -731,14 +735,19 @@ void module_sim_call_sms(void)
         send_at_command("AT+CSCS=\"GSM\"");
         vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
         //read_uart_response_SMS();
+
+        char at_command[35]; 
+
+        snprintf(at_command, sizeof(at_command), "AT+CMGS=\"%s\"", phone_number); 
     
-        send_at_command("AT+CMGS=\"0559687397\"");
+        send_at_command(at_command); 
+        //send_at_command("AT+CMGS=\"0559687397\"");
         vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
        // read_uart_response_SMS();
     
         // char cmd_buffer[BUFFER_SIZE] = ;
         // sn//printf(cmd_buffer, sizeof(cmd_buffer), "%s\r\n", command);      
-        //  //ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
+        //ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
         // uart_write_bytes(UART_SIM, cmd_buffer, strlen(cmd_buffer));
     
         send_at_command("ALARM GPS 001"); // Gửi nội dung tin nhắn
@@ -760,7 +769,6 @@ void mqtt_subcribe(const char *topic){
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
     //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
-
     //ESP_LOGI(TAG, "Begin send AT command: GPS/Setting/G001");
     send_at_command(topic);
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
@@ -803,7 +811,8 @@ void send_gps_data_to_mqtt(void) {
                 "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                 "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
                 "{\"name\":\"Stolen\",\"value\":%s,\"timestamp\":\"%s\"},"
-                "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
+                "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
                 "{\"name\":\"Move\",\"value\":%s,\"timestamp\":\"%s\"}"
                 "]",
                 global_gps_data.latitude,
@@ -814,8 +823,10 @@ void send_gps_data_to_mqtt(void) {
                 global_gps_data.time,
                 global_gps_data.Stolen ? "true" : "false",
                 global_gps_data.time, 
-                global_gps_data.bluetooth ? "true" : "false",
-                global_gps_data.time,  
+                global_gps_data.bluetooth ? "ON" : "OFF",
+                global_gps_data.time,
+                global_gps_data.buzzer ? "ON" : "OFF",
+                global_gps_data.time,   
                 global_gps_data.Stolen ? "true" : "false",
                 global_gps_data.time     
             );
@@ -829,7 +840,8 @@ void send_gps_data_to_mqtt(void) {
                     "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                     "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"   
                     "{\"name\":\"Stolen\",\"value\":true,\"timestamp\":\"%s\"},"
-                    "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                    "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
                     "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"
                     "]",
                     global_gps_data.latitude,
@@ -840,8 +852,10 @@ void send_gps_data_to_mqtt(void) {
                     global_gps_data.time,
                     // global_gps_data.Stolen ? "true" : "false",
                     global_gps_data.time, 
-                    global_gps_data.bluetooth ? "true" : "false",
+                    global_gps_data.bluetooth ? "ON" : "OFF",
                     global_gps_data.time,  
+                    global_gps_data.buzzer ? "ON" : "OFF",
+                    global_gps_data.time, 
                     // global_gps_data.move ? "true" : "false",
                     global_gps_data.time     
                 );
@@ -854,28 +868,31 @@ void send_gps_data_to_mqtt(void) {
                 "{\"name\":\"Longitude\",\"value\":%.5f,\"timestamp\":\"%s\"},"
                 "{\"name\":\"Battery\",\"value\":%d,\"timestamp\":\"%s\"},"
                 "{\"name\":\"Stolen\",\"value\":%s,\"timestamp\":\"%s\"},"
-                "{\"name\":\"Bluetooth\",\"value\":%s,\"timestamp\":\"%s\"},"
+                "{\"name\":\"Bluetooth\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
+                "{\"name\":\"Buzzer\",\"value\":\"%s\",\"timestamp\":\"%s\"},"
                 "{\"name\":\"Move\",\"value\":true,\"timestamp\":\"%s\"}"
                 "]",
-                global_gps_data.latitude,
-                global_gps_data.time,
-                global_gps_data.longitude,  
-                global_gps_data.time,
-                global_gps_data.battery_capacity,  
+                global_gps_data.latitude,  
+                global_gps_data.time,  
+                global_gps_data.longitude,    
+                global_gps_data.time, 
+                global_gps_data.battery_capacity,   
                 global_gps_data.time,
                 global_gps_data.Stolen ? "true" : "false",
                 global_gps_data.time, 
-                global_gps_data.bluetooth ? "true" : "false",
-                global_gps_data.time,                                    
+                global_gps_data.bluetooth ? "ON" : "OFF",
+                global_gps_data.time,  
+                global_gps_data.buzzer ? "ON" : "OFF",
+                global_gps_data.time,                             
                 //global_gps_data.move ? "true" : "false",                                                      
                 global_gps_data.time                                                                                        
                 );
-            }
-        }    
-        mqtt_publish("GPS/Status/G002", mqtt_payload);
-}
+            }   
+        }      
+        mqtt_publish("GPS/Status/G001", mqtt_payload);                          
+}                    
 
-void subcribe_topic_mqtt(void) {
-        mqtt_subcribe("GPS/Setting/G002");          
+void subcribe_topic_mqtt(void) {  
+        mqtt_subcribe("GPS/Setting/G001");             
 }  
 
