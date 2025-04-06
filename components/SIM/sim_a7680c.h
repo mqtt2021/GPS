@@ -28,7 +28,7 @@
 #define CTS_PIN         UART_PIN_NO_CHANGE
 #define UART_BUFFER     1024
 #define BAUD_RATE       115200
-#define BUFFER_SIZE     400   
+#define BUFFER_SIZE     1024    
 #define READ_TIMEOUT_MS 10000
 #define COMMAND_DELAY_MS 1000
 #define READ_TIMEOUT_CALL 30000

@@ -103,7 +103,7 @@ void my_timer_connect_mqtt_init(void)
     timer_set_counter_value(TIMER_GROUP_1, TIMER_0, 0);
 
     // 5 phút = 300 giây = 300 * 1.000.000 tick = 300.000.000
-    timer_set_alarm_value(TIMER_GROUP_1, TIMER_0, 900000000ULL);
+    timer_set_alarm_value(TIMER_GROUP_1, TIMER_0, 300000000ULL);
 
     // Cho phép interrupt
     timer_enable_intr(TIMER_GROUP_1, TIMER_0);

@@ -94,21 +94,7 @@ void extract_time(const char* response, char* buffer) {
     buffer[time_length] = '\0'; // Kết thúc chuỗi
 }
 
-// void uartsim_init(void) {
-//     uart_config_t uart_config = {  
-//         .baud_rate = BAUD_RATE,
-//         .data_bits = UART_DATA_8_BITS,
-//         .parity    = UART_PARITY_DISABLE,
-//         .stop_bits = UART_STOP_BITS_1,
-//         .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
-//         .source_clk = UART_SCLK_DEFAULT
-//     };
 
-//     // Use UART0 and configure its pins
-//     ESP_ERROR_CHECK(uart_driver_install(UART_SIM, UART_BUFFER * 2, 0, 0, NULL, 0));
-//     ESP_ERROR_CHECK(uart_param_config(UART_SIM, &uart_config));
-//     ESP_ERROR_CHECK(uart_set_pin(UART_SIM, TXD_PIN, RXD_PIN, RTS_PIN, CTS_PIN));
-// }
 
 void uart_event_task(void *pvParameters) {
     uart_event_t event;
@@ -264,48 +250,7 @@ void send_at_command(const char *command) {
     uart_write_bytes(UART_SIM, cmd_buffer, strlen(cmd_buffer));
 }
 
-// void extract_length_json(const char *response) {
-//     // Tìm vị trí của chuỗi "+CMQTTRXPAYLOAD: 0,"
-//     const char *start_pos_1 = strstr(response, "+CMQTTRXPAYLOAD: 0,");      
-//     if (start_pos_1 != NULL) {
-//         start_pos_1 += strlen("+CMQTTRXPAYLOAD: 0,");  // Chuyển con trỏ đến sau "+CMQTTRXlength_json: 0,"
 
-//         // Tìm ký tự xuống dòng '\r\n' sau chuỗi "+CMQTTRXPAYLOAD: 0,"
-//         const char *end_pos_1 = strchr(start_pos_1, '\r\n');
-//         if (end_pos_1 != NULL) {
-//             // Tính độ dài chuỗi cần cắt
-//             size_t length = end_pos_1 - start_pos_1;
-
-//             // Cắt chuỗi con từ start_pos đến end_pos
-//             char length_json[length + 1];
-//             strncpy(length_json, start_pos_1, length);   
-//             length_json[length] = '\0';  // Kết thúc chuỗi bằng '\0'
-
-//             //printf("length_json: %s\n", length_json);
-            
-//             //printf("///////////////////////////////////////////////\n");
-
-//             char str1[100] = "+CMQTTRXPAYLOAD: 0,";
-//             // Ghép str1 với str2
-//             strcat(str1, length_json);
-//             //printf("ghep chuoi %s\n", str1);
-
-//             const char *start_pos_2 = strstr(response, str1);
-//             if (start_pos_2 != NULL) {   
-//                 start_pos_2 += strlen("+CMQTTRXPAYLOAD: 0,");  // Chuyển con trỏ đến sau "+CMQTTRXlength_json: 0,"
-
-//                 // Tìm ký tự xuống dòng '\r\n' sau chuỗi "+CMQTTRXPAYLOAD: 0,"
-//                 const char *end_pos_2 = strchr(start_pos_2, '\r\n');
-//                 if (end_pos_2 != NULL) {
-
-//                 }
-//             }
-
-//             xEventGroupSetBits(event_group_sub_topic, EVENT_SUB_TOPIC);   
-
-//         }
-//     }
-// }
 
 void read_uart_response(void)
 {
@@ -357,99 +302,6 @@ void read_uart_response(void)
     }
 }
 
-// void read_uart_response_SMS(void)
-// {
-//     uint8_t buf[BUFFER_SIZE];
-//     int total_len = 0;
-//     char response[UART_BUFFER];
-//     memset(response, 0, sizeof(response));
-//     int64_t start_time = esp_timer_get_time();
-//     while (true) {
-//         int64_t now = esp_timer_get_time();
-//         if ((now - start_time) / 2000 > READ_TIMEOUT_MS) {
-//             break;
-//         }
-//         int len = uart_read_bytes(UART_SIM, buf, BUFFER_SIZE , 20 / portTICK_PERIOD_MS);
-//         if (len > 0) {
-//             if (total_len + len < UART_BUFFER) {
-//                 memcpy(response + total_len, buf, len);
-//                 total_len += len;
-//             }
-//             if (strstr(response, "\r\nOK\r\n") || strstr(response, "\r\nERROR\r\n")) {
-//                 if(strstr(response, "\r\nOK\r\n"))
-//                 {                
-//                 }
-//                 if(strstr(response, "\r\nERROR\r\n"))
-//                 {
-//                      ESP_LOGI(TAG, "Response: ERROR");
-//                 }
-//                 break;    
-//             }
-//         } else {
-//             vTaskDelay(pdMS_TO_TICKS(10));
-//         }
-//     }
-//     if (total_len > 0) {
-//         response[total_len] = '\0';
-//                  ESP_LOGI(TAG, "Total Response: %s\n", response);
-//                  ESP_LOGI(TAG, "-------------------------------------\n");
-//     } else {
-//                ESP_LOGI(TAG, "No response or timeout");
-//     }
-// }
-
-
-
-// void read_uart_response_call_sms(void)
-// {
-//     uint8_t buf[BUFFER_SIZE];
-//     int total_len = 0;
-//     char response[UART_BUFFER];
-//     memset(response, 0, sizeof(response));
-//     start_call_time = esp_timer_get_time(); // Lưu thời gian bắt đầu cuộc gọi
-//     //printf("Cuộc gọi bắt đầu %lld giây!\n", start_call_time);
-//     int64_t start_time = esp_timer_get_time();
-//     while (true) {
-//         int64_t now = esp_timer_get_time();
-//         if ((now - start_time) / 1000 > READ_TIMEOUT_CALL) {
-//             out_time_call = true;
-//             break;
-//         }
-//         int len = uart_read_bytes(UART_SIM, buf, BUFFER_SIZE , 20 / portTICK_PERIOD_MS);
-//         if (len > 0) {
-//             if (total_len + len < UART_BUFFER) {
-//                 memcpy(response + total_len, buf, len);
-//                 total_len += len;
-//             }
-//             if (strstr(response, "\r\nOK\r\n") || strstr(response, "\r\nERROR\r\n") || strstr(response, "\r\nVOICE CALL: END\r\n") ) {
-//                 if(strstr(response, "\r\nOK\r\n"))
-//                 {
-//                     flag_call = true;
-//                 }
-//                 if(strstr(response, "\r\nERROR\r\n"))
-//                 {
-//                     ESP_LOGI(TAG, "Response: ERROR");
-//                     flag_call = false;
-//                     // //gpio_set_level(GPIO_NUM_18, 1);
-//                     // vTaskDelay(pdMS_TO_TICKS(5000));
-//                     // //gpio_set_level(GPIO_NUM_18, 0); 
-//                     break;    
-//                 }
-//                 if(strstr(response, "\r\nVOICE CALL: END\r\n"))
-//                 {
-//                     flag_call = true;
-//                    ESP_LOGI(TAG, "Response: ERROR");
-//                     out_time_call = false;
-//                     // elapsed_time = (esp_timer_get_time() - start_call_time) / 1000000; // Tính thời gian đã gọi (giây)
-//                      printf("Cuộc gọi kết thúc sau %lld giây!\n", elapsed_time);
-//                     break;    
-//                 }     
-//             }
-//         } else {
-//             vTaskDelay(pdMS_TO_TICKS(10));
-//         }
-//     }
-// }
 
 
 void mqtt_publish(const char *topic, const char *message) {
@@ -487,10 +339,7 @@ void mqtt_publish(const char *topic, const char *message) {
     vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
     //ESP_LOGI(TAG, "Begin read_uart_response");
     //read_uart_response();
-
-            // gpio_set_level(GPIO_NUM_18, 1);
-            // vTaskDelay(pdMS_TO_TICKS(1000));   
-            // gpio_set_level(GPIO_NUM_18, 0); 
+       
 }
 
 void mqtt_connect(void)
@@ -648,9 +497,9 @@ void module_sim_call_sms(void)
         }
         else{
                 ready_sim = false;
-                while (retry_count < 10) {   
+                while (retry_count < 5) {   
                         send_command_call = true;
-                //ESP_LOGI(TAG, "Attempt %d to Call", retry_count + 1);
+                        //ESP_LOGI(TAG, "Attempt %d to Call", retry_count + 1);
                         //send_at_command("ATD0971237458;"); 
                         
                         // Tạo chuỗi AT command với số điện thoại
@@ -743,12 +592,7 @@ void module_sim_call_sms(void)
         send_at_command(at_command); 
         //send_at_command("AT+CMGS=\"0559687397\"");
         vTaskDelay(pdMS_TO_TICKS(COMMAND_DELAY_MS));
-       // read_uart_response_SMS();
-    
-        // char cmd_buffer[BUFFER_SIZE] = ;
-        // sn//printf(cmd_buffer, sizeof(cmd_buffer), "%s\r\n", command);      
-        //ESP_LOGI(TAG, "Send AT: %s", cmd_buffer);   
-        // uart_write_bytes(UART_SIM, cmd_buffer, strlen(cmd_buffer));
+       // read_uart_response_SMS();        
     
         send_at_command("ALARM GPS 001"); // Gửi nội dung tin nhắn
         vTaskDelay(pdMS_TO_TICKS(300));  // Chờ một chút trước khi gửi Ctrl+Z
@@ -799,7 +643,6 @@ void handle_create_event(void){
 void send_gps_data_to_mqtt(void) {
 
     char mqtt_payload[BUFFER_SIZE];     
-
     float voltage = read_battery_voltage();    
     int percentage = voltage_to_percentage(voltage);
     global_gps_data.battery_capacity = percentage;
@@ -888,11 +731,12 @@ void send_gps_data_to_mqtt(void) {
                 global_gps_data.time                                                                                        
                 );
             }   
-        }      
-        mqtt_publish("GPS/Status/G001", mqtt_payload);                          
+        }   
+           
+        mqtt_publish("GPS/Status/G139", mqtt_payload);                          
 }                    
 
 void subcribe_topic_mqtt(void) {  
-        mqtt_subcribe("GPS/Setting/G001");             
+        mqtt_subcribe("GPS/Setting/G139");             
 }  
 

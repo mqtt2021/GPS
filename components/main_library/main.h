@@ -58,7 +58,6 @@ extern bool call_case_normal;
 extern bool stop_task_scan_bluetooth;
 extern char time_buffer_module_sim[10];  // ✅ Khai báo extern đúng kiểu
 
-
 extern RTC_DATA_ATTR float stored_roll;
 extern RTC_DATA_ATTR float stored_pitch;
 extern RTC_DATA_ATTR float stored_yaw;

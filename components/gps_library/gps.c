@@ -143,9 +143,13 @@ void processGNRMC(char *gpsData) {
             if(global_gps_data.latitude > 0 && global_gps_data.longitude > 0 ){
                 if (strcmp(global_gps_data.status, "Successfully located") == 0 && global_gps_data.distance > (double)radius / 1000) {
                     
-                    if(fix_lattitude != 0){
+                    if(fix_lattitude != 0){   
                         diff_location = true;
                         global_gps_data.Stolen = true;
+                        
+                        //   gpio_set_level(GPIO_NUM_18, 1);   
+                        //   vTaskDelay(pdMS_TO_TICKS(10000));  
+                        //   gpio_set_level(GPIO_NUM_18, 0);  
                     }
                     
                     if(fix_lattitude != 0){
@@ -177,6 +181,10 @@ void processGNRMC(char *gpsData) {
             
                 diff_location = true;
                 global_gps_data.Stolen = true;
+
+                // gpio_set_level(GPIO_NUM_18, 1);
+                // vTaskDelay(pdMS_TO_TICKS(10000));
+                // gpio_set_level(GPIO_NUM_18, 0); 
 
                 if(!call_case_normal){
                     module_sim_call_sms();

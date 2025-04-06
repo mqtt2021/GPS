@@ -1,0 +1,136 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\GPS\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/VIAM LAB/Luanvan/GPS/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/SIM/CMakeFiles/__idf_SIM.dir/sim_a7680c.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/gps_library/gps.h:11,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:24,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.h:18,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.c:1:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.c:22:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   22 | static const char *TAG = "SIM_A7680C";
+      |                    ^~~
+[5/11] Linking C static library esp-idf\SIM\libSIM.a
+[6/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/VIAM LAB/Luanvan/GPS/components/adc_battery/adc.h:5,
+                 from D:/VIAM LAB/Luanvan/GPS/components/SIM/sim_a7680c.h:19,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:23,
+                 from D:/VIAM LAB/Luanvan/GPS/main/main.c:2:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/VIAM LAB/Luanvan/GPS/components/my_timer/my_timer.h:6,
+                 from D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:25:
+C:/Espressif/frameworks/esp-idf-v5.1.5/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: In function 'uart0_task':
+D:/VIAM LAB/Luanvan/GPS/main/main.c:268:48: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  268 |                                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:334:48: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  334 |                                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:399:44: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  399 |                                 TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:457:48: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  457 |                                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: In function 'deep_sleep_task':
+D:/VIAM LAB/Luanvan/GPS/main/main.c:654:21: warning: unused variable 'pin' [-Wunused-variable]
+  654 |                 int pin = __builtin_ffsll(wakeup_pin_mask) - 1;
+      |                     ^~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/GPS/main/main.c:733:1: warning: ignoring attribute 'section (".rtc.data.8")' because it conflicts with previous 'section (".rtc.data.0")' [-Wattributes]
+  733 | RTC_DATA_ATTR float stored_roll = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:62:28: note: previous declaration here
+   62 | extern RTC_DATA_ATTR float stored_roll;
+      |                            ^~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:734:1: warning: ignoring attribute 'section (".rtc.data.9")' because it conflicts with previous 'section (".rtc.data.1")' [-Wattributes]
+  734 | RTC_DATA_ATTR float stored_pitch = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:63:28: note: previous declaration here
+   63 | extern RTC_DATA_ATTR float stored_pitch;
+      |                            ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:735:1: warning: ignoring attribute 'section (".rtc.data.10")' because it conflicts with previous 'section (".rtc.data.2")' [-Wattributes]
+  735 | RTC_DATA_ATTR float stored_yaw = -9999.0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:64:28: note: previous declaration here
+   64 | extern RTC_DATA_ATTR float stored_yaw;
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:736:1: warning: ignoring attribute 'section (".rtc.data.11")' because it conflicts with previous 'section (".rtc.data.6")' [-Wattributes]
+  736 | RTC_DATA_ATTR int emergency = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:68:26: note: previous declaration here
+   68 | extern RTC_DATA_ATTR int emergency;
+      |                          ^~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:737:1: warning: ignoring attribute 'section (".rtc.data.12")' because it conflicts with previous 'section (".rtc.data.3")' [-Wattributes]
+  737 | RTC_DATA_ATTR double fix_lattitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:65:29: note: previous declaration here
+   65 | extern RTC_DATA_ATTR double fix_lattitude;
+      |                             ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:738:1: warning: ignoring attribute 'section (".rtc.data.13")' because it conflicts with previous 'section (".rtc.data.4")' [-Wattributes]
+  738 | RTC_DATA_ATTR double fix_longtitude = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:66:29: note: previous declaration here
+   66 | extern RTC_DATA_ATTR double fix_longtitude;
+      |                             ^~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:739:1: warning: ignoring attribute 'section (".rtc.data.14")' because it conflicts with previous 'section (".rtc.data.5")' [-Wattributes]
+  739 | RTC_DATA_ATTR int radius = 0;
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:67:26: note: previous declaration here
+   67 | extern RTC_DATA_ATTR int radius;
+      |                          ^~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:741:1: warning: ignoring attribute 'section (".rtc.data.15")' because it conflicts with previous 'section (".rtc.data.7")' [-Wattributes]
+  741 | RTC_DATA_ATTR char phone_number[PHONE_NUMBER_SIZE] = "+84901234567";  // 15 ký tự đủ lưu số quốc tế
+      | ^~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/components/main_library/main.h:69:27: note: previous declaration here
+   69 | extern RTC_DATA_ATTR char phone_number[PHONE_NUMBER_SIZE];
+      |                           ^~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: In function 'app_main':
+D:/VIAM LAB/Luanvan/GPS/main/main.c:824:28: warning: unused variable 'start_time' [-Wunused-variable]
+  824 |                 TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                            ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:891:32: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  891 |                     TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:961:44: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+  961 |                                 TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:1052:44: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+ 1052 |                                 TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:1186:24: warning: unused variable 'start_time' [-Wunused-variable]
+ 1186 |             TickType_t start_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c:1203:24: warning: unused variable 'start_time_get_current_time' [-Wunused-variable]
+ 1203 |             TickType_t start_time_get_current_time = xTaskGetTickCount(); // Lưu thời gian bắt đầu nhận dữ liệu
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/VIAM LAB/Luanvan/GPS/main/main.c: At top level:
+D:/VIAM LAB/Luanvan/GPS/main/main.c:639:13: warning: 'deep_sleep_task' defined but not used [-Wunused-function]
+  639 | static void deep_sleep_task(void *args)
+      |             ^~~~~~~~~~~~~~~
+[7/11] Linking C static library esp-idf\main\libmain.a
+[8/11] Generating ld/sections.ld
+[9/11] Linking CXX executable GPS_Tracker.elf
+[10/11] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 27 ELF sections
+Successfully created esp32 image.
+Generated D:/VIAM LAB/Luanvan/GPS/build/GPS_Tracker.bin
+[11/11] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\VIAM LAB\Luanvan\GPS\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/VIAM LAB/Luanvan/GPS/build/partition_table/partition-table.bin" "D:/VIAM LAB/Luanvan/GPS/build/GPS_Tracker.bin""
+GPS_Tracker.bin binary size 0xbfe90 bytes. Smallest app partition is 0x100000 bytes. 0x40170 bytes (25%) free.

@@ -47,9 +47,9 @@ typedef struct {
     double longitude;      // Kinh độ                       
     double distance;       // Khoảng cách từ vị trí cố định                   
     int battery_capacity;  // Dung lượng pin (%)
-    char date[11];         // Ngày (dd/mm/yyyy)    
-    bool Stolen;           // Status
-    bool bluetooth;           // bluetooth
+    char date[11];         // Ngày (dd/mm/yyyy)       
+    bool Stolen;           // stolen   
+    bool bluetooth;           // bluetooth   
     bool buzzer;           // buzzer  
     bool move;           // move   
 } gps_data_t;

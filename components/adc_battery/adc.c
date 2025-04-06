@@ -19,15 +19,6 @@ battery_lookup_t battery_table[] = {
 };   
 
 
-// battery_lookup_t battery_table[] = {
-//     {3.300, 100},{3.259, 98}, {3.219, 96}, {3.181, 94}, {3.141, 92}, {3.104, 90},
-//     {3.064, 88}, {3.024, 86}, {2.986, 84}, {2.945, 82}, {2.907, 80}, {2.867, 78},
-//     {2.827, 76}, {2.791, 74}, {2.751, 72}, {2.713, 70}, {2.673, 68}, {2.635, 66},
-//     {2.594, 64}, {2.555, 62}, {2.516, 60}, {2.476, 58}, {2.438, 56}, {2.398, 54},
-//     {2.358, 52}, {2.320, 50}, {2.280, 48}, {2.220, 46}, {2.202, 44}, {2.164, 42},
-//     {2.084, 30}, {2.045, 10}, {2.005, 0}
-// };
-
 static const char *TAG = "BATTERY";
 
 adc_oneshot_unit_handle_t adc_handle;
@@ -105,8 +96,6 @@ float read_battery_voltage(void) {
         float reference_voltage = 3.3; // Điện áp tham chiếu khi phân áp
         voltage_mv = (raw_value * reference_voltage) / max_adc_value * 1000;
     // }
-
-
 
     float battery_voltage = voltage_mv / 1000.0; // Chuyển đổi mV -> V
 
